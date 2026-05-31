@@ -3,27 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LaraCroft-AI</title>
+  <title>LaraCroft-AI — Сводка каналов</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      display: flex; align-items: center; justify-content: center;
-      min-height: 100vh; background: #0d1117; color: #c9d1d9;
+      background: #0d1117; color: #c9d1d9;
+      padding: 2rem;
     }
-    .container { text-align: center; }
-    h1 { font-size: 2.5rem; color: #58a6ff; margin-bottom: 0.5rem; }
-    p { font-size: 1.1rem; opacity: 0.7; }
-    .status { margin-top: 2rem; padding: 0.5rem 1.5rem;
-      border: 1px solid #238636; border-radius: 8px; color: #3fb950;
-      display: inline-block; font-size: 0.9rem; }
+    h1 { font-size: 1.8rem; color: #58a6ff; margin-bottom: 1rem; }
+    h2 { font-size: 1.3rem; color: #58a6ff; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid #21262d; padding-bottom: 0.3rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+    th, td { text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid #21262d; }
+    th { color: #8b949e; font-weight: 600; }
+    .status {
+      display: inline-block; padding: 0.2rem 0.8rem; border-radius: 12px;
+      font-size: 0.8rem; font-weight: 600;
+    }
+    .on { background: #238636; color: #fff; }
+    .off { background: #30363d; color: #8b949e; }
+    .updated { color: #8b949e; font-size: 0.85rem; margin-left: 0.5rem; }
+    .footer { margin-top: 2rem; color: #8b949e; font-size: 0.85rem; text-align: center; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>⚡ LaraCroft-AI</h1>
-    <p>GitHub Pages is live.</p>
-    <div class="status">● All systems operational</div>
+
+  <h1>🏹 LaraCroft-AI — Сводка каналов</h1>
+  <p style="color:#8b949e; margin-bottom:1rem;">Состояние подключений и конфигурация каналов в реальном времени.</p>
+
+  <h2>Каналы</h2>
+  <table>
+    <tr><th>Канал</th><th>Статус</th><th>Настройка</th><th>Описание</th></tr>
+    <tr>
+      <td><strong>Telegram</strong></td>
+      <td><span class="status on">Включён</span></td>
+      <td>dmPolicy: pairing · groupPolicy: allowlist</td>
+      <td>Основной канал связи. DM через pairing, группы через allowlist.</td>
+    </tr>
+  </table>
+
+  <h2>Группы</h2>
+  <table>
+    <tr><th>Chat ID</th><th>requireMention</th><th>Примечание</th></tr>
+    <tr>
+      <td><code>-1003819324038</code></td>
+      <td>❌ false (не обязательно)</td>
+      <td>OpenClaw group</td>
+    </tr>
+    <tr>
+      <td><code>*</code> (остальные)</td>
+      <td>✅ true (обязательно)</td>
+      <td>Все остальные группы</td>
+    </tr>
+  </table>
+
+  <h2>Сессии</h2>
+  <table>
+    <tr><th>Канал</th><th>peer</th><th>Kind</th><th>Последняя активность</th></tr>
+    <tr>
+      <td>Telegram</td>
+      <td>227303264 (Тапок)</td>
+      <td>main</td>
+      <td>Сегодня, 09:40 MSK</td>
+    </tr>
+  </table>
+
+  <h2>Система</h2>
+  <table>
+    <tr><th>Параметр</th><th>Значение</th></tr>
+    <tr><td>Модель</td><td>ollama/qwen3.6:latest (35B)</td></tr>
+    <tr><td>ОС</td><td>Darwin 25.5.0 (arm64)</td></tr>
+    <tr><td>ТЗ</td><td>Europe/Moscow (UTC+3)</td></tr>
+    <tr><td>Порт gateway</td><td>18789</td></tr>
+    <tr><td>bind</td><td>lan</td></tr>
+    <tr><td>tailscale</td><td>off</td></tr>
+  </table>
+
+  <div class="footer">
+    Сгенерировано LaraCroft-AI · lara-pages.laracroft-ai.github.io · 31.05.2026
   </div>
+
 </body>
 </html>
