@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китайский язык — Duolingo Модуль 1 и 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .search-box {
+            margin: 20px 0;
+            text-align: center;
+        }
+        #searchInput {
+            padding: 12px 20px;
+            width: 80%;
+            max-width: 500px;
+            border: 2px solid #2575fc;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        #searchInput:focus {
+            width: 85%;
+            box-shadow: 0 0 15px rgba(37, 117, 252, 0.3);
+        }
+        .vocab-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .word-card {
+            background: #f8f9fa;
+            border-left: 5px solid #2575fc;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .word-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .chinese {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .pinyin {
+            font-size: 1.2em;
+            color: #2575fc;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .russian {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .notes {
+            font-size: 0.9em;
+            color: #888;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .vocab-list {
+                grid-template-columns: 1fr;
+            }
+            #searchInput {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Китайский язык</h1>
+            <p>Duolingo — Модуль 1 и Модуль 2 (разделы 1–6)</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Поиск по иероглифам, пиньинь или переводу...">
+        </div>
+
+        <div class="vocab-list" id="vocabList">
+            <!-- Слова будут добавлены сюда через JavaScript -->
+        </div>
+
+        <footer>
+            <p>Создано с ❤️ для Максима | Обновлено: 21 июня 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // Данные будут загружены сюда
+        const vocabulary = [];
+
+        // Функция поиска
+        function searchVocabulary() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const list = document.getElementById('vocabList');
+            list.innerHTML = '';
+
+            const filtered = vocabulary.filter(item =>
+                item.chinese.toLowerCase().includes(input) ||
+                item.pinyin.toLowerCase().includes(input) ||
+                item.russian.toLowerCase().includes(input) ||
+                (item.notes && item.notes.toLowerCase().includes(input))
+            );
+
+            if (filtered.length === 0) {
+                list.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">Ничего не найдено.</p>';
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'word-card';
+                card.innerHTML = `
+                    <div class="chinese">${item.chinese}</div>
+                    <div class="pinyin">${item.pinyin}</div>
+                    <div class="russian">${item.russian}</div>
+                    ${item.notes ? `<div class="notes">${item.notes}</div>` : ''}
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        // Инициализация
+        document.getElementById('searchInput').addEventListener('input', searchVocabulary);
+
+        // Загрузка данных (пример)
+        // В реальной версии сюда будут подгружаться данные из CSV
+        window.onload = () => {
+            // Пример данных — заменить на реальные
+            vocabulary.push(
+                { chinese: '你好', pinyin: 'nǐ hǎo', russian: 'привет', notes: '' },
+                { chinese: '谢谢', pinyin: 'xièxie', russian: 'спасибо', notes: '' }
+            );
+            searchVocabulary();
+        };
+    </script>
+</body>
+</html>
