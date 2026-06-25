@@ -4,273 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Китайский язык — Галерея</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            text-align: center;
-            padding: 30px 0;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        /* Global Dictionary Selector */
-        .global-selector {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            gap: 10px;
-        }
-        .dict-label {
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        #dictSelect {
-            padding: 12px 20px;
-            border-radius: 25px;
-            border: 2px solid #2575fc;
-            font-size: 16px;
-            outline: none;
-            cursor: pointer;
-            background: white;
-            min-width: 200px;
-        }
-
-        /* Navigation Tabs */
-        .nav-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-        .tab-btn {
-            padding: 12px 24px;
-            border: none;
-            background: #eee;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .tab-btn.active {
-            background: #2575fc;
-            color: white;
-            box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
-        }
-
-        /* Section Visibility */
-        .page-section {
-            display: none;
-        }
-        .page-section.active {
-            display: block;
-        }
-
-        /* Gallery Styles */
-        .search-box {
-            margin: 20px 0;
-            text-align: center;
-        }
-        #searchInput {
-            padding: 12px 20px;
-            width: 80%;
-            max-width: 500px;
-            border: 2px solid #2575fc;
-            border-radius: 25px;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.3s;
-        }
-        #searchInput:focus {
-            width: 85%;
-            box-shadow: 0 0 15px rgba(37, 117, 252, 0.3);
-        }
-        .vocab-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .word-card {
-            background: #f8f9fa;
-            border-left: 5px solid #2575fc;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .word-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .chinese {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .pinyin {
-            font-size: 1.2em;
-            color: #2575fc;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .russian {
-            font-size: 1em;
-            color: #555;
-            text-align: center;
-        }
-
-        /* Flashcard Styles */
-        .training-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .flashcard {
-            width: 100%;
-            min-height: 250px;
-            background: #fdfdfd;
-            border: 3px solid #2575fc;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        .flashcard-word {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            width: 100%;
-        }
-        .option-btn {
-            padding: 15px;
-            font-size: 1.3em;
-            border: 2px solid #ddd;
-            background: white;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .option-btn:hover {
-            border-color: #2575fc;
-            background: #f0f7ff;
-        }
-        .option-btn.correct {
-            background: #d4edda;
-            border-color: #28a745;
-            color: #155724;
-        }
-        .option-btn.wrong {
-            background: #f8d7da;
-            border-color: #dc3545;
-            color: #721c24;
-        }
-        .option-btn .opt-pinyin {
-            font-size: 0.7em;
-            color: #666;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .vocab-list {
-                grid-template-columns: 1fr;
-            }
-            #searchInput {
-                width: 90%;
-            }
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        .option-btn.correct { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .option-btn.wrong { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Китайский язык</h1>
-            <p>Персональный интерактивный словарь</p>
+<body class="bg-gradient-to-br from-slate-50 to-slate-200 min-h-screen p-4 md:p-8">
+    <div class="max-w-5xl mx-auto">
+        <!-- Header & Global Dict Selector -->
+        <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-3xl p-8 text-center shadow-xl mb-8 relative overflow-hidden">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Китайский язык</h1>
+                <p class="text-indigo-100 text-lg">Персональный интерактивный словарь</p>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute top-[-20px] right-[-20px] w-32 h-32 bg-white opacity-10 rounded-full"></div>
+            <div class="absolute bottom-[-20px] left-[-20px] w-24 h-24 bg-white opacity-10 rounded-full"></div>
         </header>
 
-        <div class="global-selector">
-            <div class="dict-label">Выберите словарь:</div>
-            <select id="dictSelect" onchange="onDictChange()">
-                <option value="Duolingo">Duolingo</option>
-                <option value="Жун Урок 1">Жун Урок 1</option>
-            </select>
-        </div>
+        <!-- Main Controls Area -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+            <!-- Dictionary Selection -->
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <span class="text-slate-500 font-medium">Словарь:</span>
+                <select id="dictSelect" onchange="onDictChange()" class="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-4 outline-none cursor-pointer font-semibold transition-all hover:bg-slate-100">
+                    <option value="Duolingo">Duolingo</option>
+                    <option value="Жун Урок 1">Жун Урок 1</option>
+                </select>
+            </div>
 
-        <div class="nav-tabs">
-            <button class="tab-btn active" onclick="switchTab('gallery')">📚 Словарь</button>
-            <button class="tab-btn" onclick="switchTab('training')">🎯 Тренировка</button>
+            <!-- Mode Navigation -->
+            <div class="flex p-1 bg-slate-100 rounded-full w-full md:w-auto">
+                <button onclick="switchTab('gallery')" id="btn-gallery" class="tab-btn flex-1 md:flex-none px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 active-tab bg-white text-blue-600 shadow-sm">
+                    📚 Словарь
+                </button>
+                <button onclick="switchTab('training')" id="btn-training" class="tab-btn flex-1 md:flex-none px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 text-slate-500 hover:text-slate-700">
+                    🎯 Тренировка
+                </button>
+            </div>
         </div>
 
         <!-- Section 1: Gallery -->
         <div id="gallery" class="page-section active">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Поиск по иероглифам, пиньинь или переводу...">
+            <div class="flex justify-center mb-8">
+                <div class="relative w-full max-w-md">
+                    <input type="text" id="searchInput" placeholder="Поиск иероглифов, пиньинь или перевода..." 
+                           class="w-full px-6 py-3 rounded-full border-2 border-blue-400 focus:ring-4 focus:ring-blue-200 outline-none transition-all shadow-sm text-lg">
+                    <span class="absolute right-4 top-3 text-slate-400">🔍</span>
+                </div>
             </div>
-            <div class="vocab-list" id="vocabList"></div>
+            <div class="vocab-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="vocabList">
+                <!-- Cards generated by JS -->
+            </div>
         </div>
 
         <!-- Section 2: Training -->
         <div id="training" class="page-section">
-            <div class="training-container">
-                <div class="flashcard">
-                    <div class="flashcard-word" id="questionWord">Загрузка...</div>
-                    <div id="feedback" style="font-weight: bold; height: 24px; margin-bottom: 10px;"></div>
+            <div class="max-w-2xl mx-auto flex flex-col items-center">
+                <div class="w-full bg-white border-4 border-blue-500 rounded-3xl p-12 text-center shadow-2xl mb-8 min-h-[300px] flex flex-col justify-center items-center transition-all">
+                    <div id="questionWord" class="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Загрузка...</div>
+                    <div id="feedback" class="text-xl font-bold h-8 transition-all duration-300"></div>
                 </div>
-                <div class="options-grid" id="optionsGrid"></div>
+                
+                <div class="grid grid-cols-1 gap-4 w-full" id="optionsGrid">
+                    <!-- Options generated by JS -->
+                </div>
             </div>
         </div>
 
-        <footer>
+        <footer class="text-center mt-12 pb-8 text-slate-400 text-sm">
             <p>Создано с ❤️ для Максима | Обновлено: 25 июня 2026</p>
         </footer>
     </div>
@@ -437,17 +244,22 @@
             
             if (document.getElementById('gallery').classList.contains('active')) {
                 searchVocabulary();
-            } else {
+            } else if (document.getElementById('training').classList.contains('active')) {
                 nextQuestion();
             }
         }
 
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('bg-white', 'text-blue-600', 'shadow-sm');
+                b.classList.add('text-slate-500', 'hover:text-slate-700');
+            });
             
             document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('bg-white', 'text-blue-600', 'shadow-sm');
+            activeBtn.classList.remove('text-slate-500', 'hover:text-slate-700');
 
             if (tabId === 'training') {
                 startTraining();
@@ -466,23 +278,22 @@
             );
 
             if (filtered.length === 0) {
-                list.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">Ничего не найдено.</p>';
+                list.innerHTML = '<p class="col-span-full text-center text-slate-400 py-10">Ничего не найдено.</p>';
                 return;
             }
 
             filtered.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'word-card';
+                card.className = 'bg-white p-6 rounded-2xl border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-default';
                 card.innerHTML = `
-                    <div class="chinese">${item.chinese}</div>
-                    <div class="pinyin">${item.pinyin}</div>
-                    <div class="russian">${item.russian}</div>
+                    <div class="text-3xl font-bold text-center mb-2 text-slate-800">${item.chinese}</div>
+                    <div class="text-blue-500 text-center font-medium mb-2">${item.pinyin}</div>
+                    <div class="text-slate-600 text-center text-sm">${item.russian}</div>
                 `;
                 list.appendChild(card);
             });
         }
 
-        // Training Logic
         let currentQuestion = null;
 
         function startTraining() {
@@ -516,10 +327,10 @@
             
             options.forEach(opt => {
                 const btn = document.createElement('button');
-                btn.className = 'option-btn';
+                btn.className = 'option-btn w-full p-4 text-xl border-2 border-slate-200 rounded-xl bg-white hover:border-blue-400 hover:bg-blue-50 transition-all flex flex-col items-center';
                 btn.innerHTML = `
-                    <span class="opt-chinese">${opt.chinese}</span>
-                    <span class="opt-pinyin">${opt.pinyin}</span>
+                    <span class="font-bold text-slate-800">${opt.chinese}</span>
+                    <span class="text-sm text-slate-500">${opt.pinyin}</span>
                 `;
                 btn.onclick = () => checkAnswer(btn, opt);
                 grid.appendChild(btn);
@@ -533,14 +344,14 @@
             if (selectedOpt.chinese === currentQuestion.chinese) {
                 btn.classList.add('correct');
                 document.getElementById('feedback').innerText = '✅ Правильно!';
-                document.getElementById('feedback').style.color = 'green';
+                document.getElementById('feedback').style.color = '#059669';
             } else {
                 btn.classList.add('wrong');
                 document.getElementById('feedback').innerText = '❌ Ошибка!';
-                document.getElementById('feedback').style.color = 'red';
+                document.getElementById('feedback').style.color = '#dc2626';
                 
                 allBtns.forEach(b => {
-                    if (b.querySelector('.opt-chinese').innerText === currentQuestion.chinese) {
+                    if (b.querySelector('.font-bold').innerText === currentQuestion.chinese) {
                         b.classList.add('correct');
                     }
                 });
