@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Китайский язык — Duolingo Модуль 1 и 2</title>
+    <title>Китайский язык — Duolingo Галерея</title>
     <style>
         * {
             box-sizing: border-box;
@@ -16,6 +16,7 @@
             color: #333;
             line-height: 1.6;
             padding: 20px;
+            min-height: 100vh;
         }
         .container {
             max-width: 1200px;
@@ -37,6 +38,39 @@
             font-size: 2.5em;
             margin-bottom: 10px;
         }
+        
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: #eee;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            background: #2575fc;
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+        }
+
+        /* Section Visibility */
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+
+        /* Gallery Styles */
         .search-box {
             margin: 20px 0;
             text-align: center;
@@ -87,13 +121,75 @@
         .russian {
             font-size: 1em;
             color: #555;
-            margin-bottom: 8px;
+            text-align: center;
         }
-        .notes {
-            font-size: 0.9em;
-            color: #888;
-            font-style: italic;
+
+        /* Flashcard Styles */
+        .training-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
         }
+        .flashcard {
+            width: 100%;
+            min-height: 250px;
+            background: #fdfdfd;
+            border: 3px solid #2575fc;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .flashcard-word {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            width: 100%;
+        }
+        .option-btn {
+            padding: 15px;
+            font-size: 1.3em;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .option-btn:hover {
+            border-color: #2575fc;
+            background: #f0f7ff;
+        }
+        .option-btn.correct {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        .option-btn.wrong {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        .option-btn .opt-pinyin {
+            font-size: 0.7em;
+            color: #666;
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -101,6 +197,7 @@
             color: #777;
             font-size: 0.9em;
         }
+
         @media (max-width: 768px) {
             .vocab-list {
                 grid-template-columns: 1fr;
@@ -118,21 +215,36 @@
             <p>Duolingo — Модуль 1 и Модуль 2 (разделы 1–6)</p>
         </header>
 
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Поиск по иероглифам, пиньинь или переводу...">
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('gallery')">📚 Словарь</button>
+            <button class="tab-btn" onclick="switchTab('training')">🎯 Тренировка</button>
         </div>
 
-        <div class="vocab-list" id="vocabList">
-            <!-- Слова будут добавлены сюда через JavaScript -->
+        <!-- Section 1: Gallery -->
+        <div id="gallery" class="page-section active">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск по иероглифам, пиньинь или переводу...">
+            </div>
+            <div class="vocab-list" id="vocabList"></div>
+        </div>
+
+        <!-- Section 2: Training -->
+        <div id="training" class="page-section">
+            <div class="training-container">
+                <div class="flashcard">
+                    <div class="flashcard-word" id="questionWord">Загрузка...</div>
+                    <div id="feedback" style="font-weight: bold; height: 24px; margin-bottom: 10px;"></div>
+                </div>
+                <div class="options-grid" id="optionsGrid"></div>
+            </div>
         </div>
 
         <footer>
-            <p>Создано с ❤️ для Максима | Обновлено: 21 июня 2026</p>
+            <p>Создано с ❤️ для Максима | Обновлено: 25 июня 2026</p>
         </footer>
     </div>
 
     <script>
-        // Данные будут загружены сюда
         const vocabulary = [
     {
         "chinese": "一",
@@ -796,7 +908,18 @@
     }
 ];
 
-        // Функция поиска
+        function switchTab(tabId) {
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+
+            if (tabId === 'training') {
+                startTraining();
+            }
+        }
+
         function searchVocabulary() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const list = document.getElementById('vocabList');
@@ -805,8 +928,7 @@
             const filtered = vocabulary.filter(item =>
                 item.chinese.toLowerCase().includes(input) ||
                 item.pinyin.toLowerCase().includes(input) ||
-                item.russian.toLowerCase().includes(input) ||
-                (item.notes && item.notes.toLowerCase().includes(input))
+                item.russian.toLowerCase().includes(input)
             );
 
             if (filtered.length === 0) {
@@ -821,20 +943,80 @@
                     <div class="chinese">${item.chinese}</div>
                     <div class="pinyin">${item.pinyin}</div>
                     <div class="russian">${item.russian}</div>
-                    ${item.notes ? `<div class="notes">${item.notes}</div>` : ''}
                 `;
                 list.appendChild(card);
             });
         }
 
-        // Инициализация
+        // Training Logic
+        let currentQuestion = null;
+
+        function startTraining() {
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            const feedback = document.getElementById('feedback');
+            feedback.innerText = '';
+            
+            // Select random word as the target
+            currentQuestion = vocabulary[Math.floor(Math.random() * vocabulary.length)];
+            document.getElementById('questionWord').innerText = currentQuestion.russian;
+
+            // Generate 3 options
+            let options = [currentQuestion];
+            while (options.length < 3) {
+                let randomWord = vocabulary[Math.floor(Math.random() * vocabulary.length)];
+                if (!options.find(o => o.chinese === randomWord.chinese)) {
+                    options.push(randomWord);
+                }
+            }
+            
+            // Shuffle options
+            options.sort(() => Math.random() - 0.5);
+
+            const grid = document.getElementById('optionsGrid');
+            grid.innerHTML = '';
+            
+            options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = `
+                    <span class="opt-chinese">${opt.chinese}</span>
+                    <span class="opt-pinyin">${opt.pinyin}</span>
+                `;
+                btn.onclick = () => checkAnswer(btn, opt);
+                grid.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(btn, selectedOpt) {
+            const allBtns = document.querySelectorAll('.option-btn');
+            allBtns.forEach(b => b.disabled = true);
+
+            if (selectedOpt.chinese === currentQuestion.chinese) {
+                btn.classList.add('correct');
+                document.getElementById('feedback').innerText = '✅ Правильно!';
+                document.getElementById('feedback').style.color = 'green';
+            } else {
+                btn.classList.add('wrong');
+                document.getElementById('feedback').innerText = '❌ Ошибка!';
+                document.getElementById('feedback').style.color = 'red';
+                
+                // Show the correct answer
+                allBtns.forEach(b => {
+                    if (b.querySelector('.opt-chinese').innerText === currentQuestion.chinese) {
+                        b.classList.add('correct');
+                    }
+                });
+            }
+
+            setTimeout(nextQuestion, 2000);
+        }
+
         document.getElementById('searchInput').addEventListener('input', searchVocabulary);
 
-        // Загрузка данных (пример)
-        // В реальной версии сюда будут подгружаться данные из CSV
         window.onload = () => {
-            // Пример данных — заменить на реальные
-            
             searchVocabulary();
         };
     </script>
