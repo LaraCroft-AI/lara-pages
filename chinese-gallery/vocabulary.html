@@ -22,23 +22,19 @@
                 <h1 class="text-4xl md:text-5xl font-bold mb-2">Китайский язык</h1>
                 <p class="text-indigo-100 text-lg">Персональный интерактивный словарь</p>
             </div>
-            <!-- Decorative elements -->
             <div class="absolute top-[-20px] right-[-20px] w-32 h-32 bg-white opacity-10 rounded-full"></div>
             <div class="absolute bottom-[-20px] left-[-20px] w-24 h-24 bg-white opacity-10 rounded-full"></div>
         </header>
 
         <!-- Main Controls Area -->
         <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-            <!-- Dictionary Selection -->
             <div class="flex items-center gap-3 w-full md:w-auto">
                 <span class="text-slate-500 font-medium">Словарь:</span>
                 <select id="dictSelect" onchange="onDictChange()" class="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-4 outline-none cursor-pointer font-semibold transition-all hover:bg-slate-100">
-                    <option value="Duolingo">Duolingo</option>
-                    <option value="Жун Урок 1">Жун Урок 1</option>
+                    <option value="vocab_data.json">Общий список (Lesson 4+)</option>
                 </select>
             </div>
 
-            <!-- Mode Navigation -->
             <div class="flex p-1 bg-slate-100 rounded-full w-full md:w-auto">
                 <button onclick="switchTab('gallery')" id="btn-gallery" class="tab-btn flex-1 md:flex-none px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 active-tab bg-white text-blue-600 shadow-sm">
                     📚 Словарь
@@ -78,175 +74,41 @@
         </div>
 
         <footer class="text-center mt-12 pb-8 text-slate-400 text-sm">
-            <p>Создано с ❤️ для Максима | Обновлено: 25 июня 2026</p>
+            <p>Создано с ❤️ для Максима | Обновлено: 29 июня 2026</p>
         </footer>
     </div>
 
     <script>
-        const dictionaries = {
-            "Duolingo": [
-                {"chinese": "一", "pinyin": "yī", "russian": "один", "notes": ""},
-                {"chinese": "一般般", "pinyin": "yì bān bān", "russian": "Так себе", "notes": ""},
-                {"chinese": "七", "pinyin": "qī", "russian": "семь", "notes": ""},
-                {"chinese": "三", "pinyin": "sān", "russian": "три", "notes": ""},
-                {"chinese": "不客气", "pinyin": "bú kè qi", "russian": "пожалуйста (в ответ)", "notes": ""},
-                {"chinese": "两", "pinyin": "liǎng", "russian": "два", "notes": ""},
-                {"chinese": "个", "pinyin": "gè", "russian": "счётное слово (универсальное)", "notes": ""},
-                {"chinese": "中国", "pinyin": "Zhōngguó", "russian": "Китай", "notes": ""},
-                {"chinese": "九", "pinyin": "jiǔ", "russian": "девять", "notes": ""},
-                {"chinese": "也", "pinyin": "yě", "russian": "тоже", "notes": ""},
-                {"chinese": "书", "pinyin": "shū", "russian": "книга", "notes": ""},
-                {"chinese": "买", "pinyin": "mǎi", "russian": "покупать", "notes": ""},
-                {"chinese": "二", "pinyin": "èr", "russian": "два", "notes": ""},
-                {"chinese": "五", "pinyin": "wǔ", "russian": "пять", "notes": ""},
-                {"chinese": "人", "pinyin": "rén", "russian": "человек", "notes": ""},
-                {"chinese": "什么", "pinyin": "shénme", "russian": "что", "notes": ""},
-                {"chinese": "今天", "pinyin": "jīntiān", "russian": "сегодня", "notes": ""},
-                {"chinese": "他", "pinyin": "tā", "russian": "он", "notes": ""},
-                {"chinese": "他们", "pinyin": "tāmen", "russian": "они", "notes": ""},
-                {"chinese": "你", "pinyin": "nǐ", "russian": "ты / вы", "notes": ""},
-                {"chinese": "你们", "pinyin": "nǐmen", "russian": "вы (мн.)", "notes": ""},
-                {"chinese": "你好", "pinyin": "nǐ hǎo", "russian": "привет", "notes": ""},
-                {"chinese": "你好吗", "pinyin": "nǐ hǎo ma", "russian": "как дела", "notes": ""},
-                {"chinese": "做", "pinyin": "zuò", "russian": "делать", "notes": ""},
-                {"chinese": "八", "pinyin": "bā", "russian": "восемь", "notes": ""},
-                {"chinese": "六", "pinyin": "liù", "russian": "шесть", "notes": ""},
-                {"chinese": "再见", "pinyin": "zàijiàn", "russian": "до свидания", "notes": ""},
-                {"chinese": "冷", "pinyin": "lěng", "russian": "холодный", "notes": ""},
-                {"chinese": "十", "pinyin": "shí", "russian": "десять", "notes": ""},
-                {"chinese": "去", "pinyin": "qù", "russian": "идти / ехать", "notes": ""},
-                {"chinese": "叫", "pinyin": "jiào", "russian": "называться", "notes": ""},
-                {"chinese": "吃", "pinyin": "chī", "russian": "есть (кушать)", "notes": ""},
-                {"chinese": "名字", "pinyin": "míngzi", "russian": "имя", "notes": ""},
-                {"chinese": "吗", "pinyin": "ma", "russian": "вопросительная частица", "notes": ""},
-                {"chinese": "听", "pinyin": "tīng", "russian": "слушать", "notes": ""},
-                {"chinese": "呢", "pinyin": "ne", "russian": "частица (уточнение)", "notes": ""},
-                {"chinese": "咖啡", "pinyin": "kāfēi", "russian": "кофе", "notes": ""},
-                {"chinese": "哥哥", "pinyin": "gēge", "russian": "старший брат", "notes": ""},
-                {"chinese": "哪", "pinyin": "nǎ", "russian": "какой", "notes": ""},
-                {"chinese": "哪儿", "pinyin": "nǎr", "russian": "где", "notes": ""},
-                {"chinese": "喜欢", "pinyin": "xǐhuān", "russian": "нравиться / любить", "notes": ""},
-                {"chinese": "喝", "pinyin": "hē", "russian": "пить", "notes": ""},
-                {"chinese": "四", "pinyin": "sì", "russian": "четыре", "notes": ""},
-                {"chinese": "在", "pinyin": "zài", "russian": "находиться", "notes": ""},
-                {"chinese": "多", "pinyin": "duō", "russian": "много", "notes": ""},
-                {"chinese": "多少", "pinyin": "duōshao", "russian": "сколько", "notes": ""},
-                {"chinese": "大", "pinyin": "dà", "russian": "большой", "notes": ""},
-                {"chinese": "她", "pinyin": "tā", "russian": "она", "notes": ""},
-                {"chinese": "好", "pinyin": "hǎo", "russian": "хороший", "notes": ""},
-                {"chinese": "妈妈", "pinyin": "māma", "russian": "мама", "notes": ""},
-                {"chinese": "妹妹", "pinyin": "mèimei", "russian": "младшая сестра", "notes": ""},
-                {"chinese": "姐姐", "pinyin": "jiějie", "russian": "старшая сестра", "notes": ""},
-                {"chinese": "学", "pinyin": "xué", "russian": "учиться", "notes": ""},
-                {"chinese": "学生", "pinyin": "xuéshēng", "russian": "студент / ученик", "notes": ""},
-                {"chinese": "对不起", "pinyin": "duìbuqǐ", "russian": "извини / извините", "notes": ""},
-                {"chinese": "小", "pinyin": "xiǎo", "russian": "маленький", "notes": ""},
-                {"chinese": "少", "pinyin": "shǎo", "russian": "мало", "notes": ""},
-                {"chinese": "弟弟", "pinyin": "dìdi", "russian": "младший брат", "notes": ""},
-                {"chinese": "很", "pinyin": "hěn", "russian": "очень", "notes": ""},
-                {"chinese": "怎么", "pinyin": "zěnme", "russian": "как", "notes": ""},
-                {"chinese": "您好", "pinyin": "nín hǎo", "russian": "здравствуйте (вежливо)", "notes": ""},
-                {"chinese": "想", "pinyin": "xiǎng", "russian": "хотеть / думать", "notes": ""},
-                {"chinese": "我", "pinyin": "wǒ", "russian": "я", "notes": ""},
-                {"chinese": "我们", "pinyin": "wǒmen", "russian": "мы", "notes": ""},
-                {"chinese": "我很好", "pinyin": "wǒ hěn hǎo", "russian": "у меня всё хорошо", "notes": ""},
-                {"chinese": "手机", "pinyin": "shǒujī", "russian": "телефон", "notes": ""},
-                {"chinese": "日本", "pinyin": "Rìběn", "russian": "Япония", "notes": ""},
-                {"chinese": "时候", "pinyin": "shíhou", "russian": "время / момент", "notes": ""},
-                {"chinese": "明天", "pinyin": "míngtiān", "russian": "завтра", "notes": ""},
-                {"chinese": "昨天", "pinyin": "zuótiān", "russian": "вчера", "notes": ""},
-                {"chinese": "是", "pinyin": "shì", "russian": "быть / являться", "notes": ""},
-                {"chinese": "有", "pinyin": "yǒu", "russian": "иметь / есть", "notes": ""},
-                {"chinese": "朋友", "pinyin": "péngyou", "russian": "друг", "notes": ""},
-                {"chinese": "来", "pinyin": "lái", "russian": "приходить", "notes": ""},
-                {"chinese": "桌子", "pinyin": "zhuōzi", "russian": "стол", "notes": ""},
-                {"chinese": "椅子", "pinyin": "yǐzi﹒yǐ zi", "russian": "стул", "notes": ""},
-                {"chinese": "水", "pinyin": "shuǐ", "russian": "вода", "notes": ""},
-                {"chinese": "没关系", "pinyin": "méiguānxi", "russian": "ничего страшного", "notes": ""},
-                {"chinese": "没有", "pinyin": "méiyǒu", "russian": "не иметь / нет", "notes": ""},
-                {"chinese": "热", "pinyin": "rè", "russian": "жаркий", "notes": ""},
-                {"chinese": "爱", "pinyin": "ài", "russian": "любить", "notes": ""},
-                {"chinese": "爸爸", "pinyin": "bàba", "russian": "папа", "notes": ""},
-                {"chinese": "现在", "pinyin": "xiànzài", "russian": "сейчас", "notes": ""},
-                {"chinese": "百", "pinyin": "bǎi", "russian": "сто", "notes": ""},
-                {"chinese": "的", "pinyin": "de", "russian": "притяжательная частица", "notes": ""},
-                {"chinese": "看", "pinyin": "kàn", "russian": "смотреть", "notes": ""},
-                {"chinese": "矮", "pinyin": "ǎi", "russian": "низкий", "notes": ""},
-                {"chinese": "米饭", "pinyin": "mǐfàn", "russian": "рис (еда)", "notes": ""},
-                {"chinese": "美国", "pinyin": "Měiguó", "russian": "США", "notes": ""},
-                {"chinese": "老师", "pinyin": "lǎoshī", "russian": "учитель", "notes": ""},
-                {"chinese": "英国", "pinyin": "Yīngguó", "russian": "Великобритания", "notes": ""},
-                {"chinese": "苹果", "pinyin": "píngguǒ", "russian": "яблоко", "notes": ""},
-                {"chinese": "茶", "pinyin": "chá", "russian": "чай", "notes": ""},
-                {"chinese": "要", "pinyin": "yào", "russian": "хотеть / нужно", "notes": ""},
-                {"chinese": "说", "pinyin": "shuō", "russian": "говорить", "notes": ""},
-                {"chinese": "请", "pinyin": "qǐng", "russian": "пожалуйста / прошу", "notes": ""},
-                {"chinese": "谁", "pinyin": "shéi", "russian": "кто", "notes": ""},
-                {"chinese": "谢谢", "pinyin": "xièxie", "russian": "спасибо", "notes": ""},
-                {"chinese": "还可以", "pinyin": "hái kě yǐ", "russian": "Пойдет", "notes": ""},
-                {"chinese": "还行", "pinyin": "hái xíng", "russian": "Нормально / сойдёт / терпимо", "notes": ""},
-                {"chinese": "这是", "pinyin": "zhè shì", "russian": "это есть / это", "notes": ""},
-                {"chinese": "这是我的", "pinyin": "zhè shì wǒ de", "russian": "это моё", "notes": ""},
-                {"chinese": "那是", "pinyin": "nà shì", "russian": "то есть / то", "notes": ""},
-                {"chinese": "都", "pinyin": "dōu", "russian": "все", "notes": ""},
-                {"chinese": "零", "pinyin": "líng", "russian": "ноль", "notes": ""},
-                {"chinese": "面条", "pinyin": "miàntiáo", "russian": "лапша", "notes": ""},
-                {"chinese": "韩国", "pinyin": "Hánguó", "russian": "Корея", "notes": ""},
-                {"chinese": "香蕉", "pinyin": "xiāngjiāo", "russian": "банан", "notes": ""},
-                {"chinese": "马马虎虎", "pinyin": "mǎ ma hū hū", "russian": "Так себе / ни то ни сё", "notes": ""},
-                {"chinese": "高", "pinyin": "gāo", "russian": "высокий", "notes": ""}
-            ],
-            "Жун Урок 1": [
-                {"chinese": "阿姨", "pinyin": "ā yí", "russian": "тетя", "notes": ""},
-                {"chinese": "衣服", "pinyin": "yī fu", "russian": "одежда", "notes": ""},
-                {"chinese": "淤泥", "pinyin": "yū ní", "russian": "грязь", "notes": ""},
-                {"chinese": "错误", "pinyin": "cuò wù", "russian": "ошибка", "notes": ""},
-                {"chinese": "蜈蚣", "pinyin": "wú gōng", "russian": "сороконожка, сколопендра, скорпион", "notes": ""},
-                {"chinese": "乌龟", "pinyin": "wū guī", "russian": "черепаха", "notes": ""},
-                {"chinese": "椅子", "pinyin": "yǐ zi", "russian": "стул", "notes": ""},
-                {"chinese": "娃娃", "pinyin": "wá wa", "russian": "кукла", "notes": ""},
-                {"chinese": "牙齿", "pinyin": "yá chǐ", "russian": "зубы", "notes": ""},
-                {"chinese": "玉米", "pinyin": "yù mǐ", "russian": "кукуруза", "notes": ""},
-                {"chinese": "雨", "pinyin": "yǔ", "russian": "дождь", "notes": ""},
-                {"chinese": "鱼", "pinyin": "yú", "russian": "рыба", "notes": ""},
-                {"chinese": "鱼鹰", "pinyin": "yú yīng", "russian": "баклан, скопа", "notes": ""},
-                {"chinese": "金鱼", "pinyin": "jīn yú", "russian": "золотая рыбка", "notes": ""},
-                {"chinese": "蚂蚁", "pinyin": "mǎ yǐ", "russian": "Муравей", "notes": ""},
-                {"chinese": "乌鸦", "pinyin": "wū yā", "russian": "ворона", "notes": ""},
-                {"chinese": "蜗 牛", "pinyin": "wō niú", "russian": "улитки", "notes": ""},
-                {"chinese": "雨衣", "pinyin": "yǔ yī", "russian": "дождевик", "notes": ""},
-                {"chinese": "鲤鱼", "pinyin": "lǐ yú", "russian": "карп, сазан", "notes": ""},
-                {"chinese": "大霧", "pinyin": "dà wù", "russian": "Сильный туман", "notes": ""},
-                {"chinese": "医生", "pinyin": "yī shēng", "russian": "врач, доктор", "notes": ""},
-                {"chinese": "有意思", "pinyin": "yǒu yì si", "russian": "интересный", "notes": ""},
-                {"chinese": "屋顶", "pinyin": "wū dǐng", "russian": "крыша", "notes": ""},
-                {"chinese": "橡皮", "pinyin": "", "russian": "ластик, xiàng pí", "notes": ""},
-                {"chinese": "木屋", "pinyin": "mù wū", "russian": "Изба, деревянный дом", "notes": ""},
-                {"chinese": "屋子屋子", "pinyin": "wū zi", "russian": "дом, здание", "notes": ""},
-                {"chinese": "乌云", "pinyin": "wū yún", "russian": "темные облака, туча", "notes": ""},
-                {"chinese": "鸭舌帽", "pinyin": "yā shé mào", "russian": "кепка", "notes": ""},
-                {"chinese": "鸭梨", "pinyin": "yā lí", "russian": "груша", "notes": ""},
-                {"chinese": "鸭子", "pinyin": "yā zi", "russian": "Утка", "notes": ""},
-                {"chinese": "鱼缸", "pinyin": "yú gāng", "russian": "аквариум", "notes": ""},
-                {"chinese": "鸟", "pinyin": "niǎo", "russian": "птица", "notes": ""},
-                {"chinese": "鳄鱼", "pinyin": "è yú", "russian": "Крокодил", "notes": ""},
-                {"chinese": "恶心", "pinyin": "ě xin", "russian": "тошнота", "notes": ""},
-                {"chinese": "鵝", "pinyin": "é", "russian": "Гусь", "notes": ""},
-                {"chinese": "阿胶", "pinyin": "ē jiāo", "russian": "лекарство из ослиной шкуры", "notes": ""}
-            ]
+        let currentVocab = [];
+
+        async function loadDictionary() {
+            const selectedFile = document.getElementById('dictSelect').value;
+            try {
+                const response = await fetch(selectedFile);
+                const data = await response.json();
+                
+                // Transform structure from vocab_data.json (word, pinyin, meaning) 
+                // to the format expected by the UI (chinese, pinyin, russian)
+                currentVocab = data.map(item => ({
+                    chinese: item.word,
+                    pinyin: item.pinyin,
+                    russian: item.meaning,
+                    notes: item.notes || ""
+                }));
+
+                if (document.getElementById('gallery').classList.contains('active')) {
+                    searchVocabulary();
+                } else if (document.getElementById('training').classList.contains('active')) {
+                    nextQuestion();
+                }
+            } catch (error) {
+                console.error("Ошибка загрузки словаря:", error);
+                document.getElementById('vocabList').innerHTML = '<p class="col-span-full text-center text-red-500 py-10">Ошибка загрузки файла данных.</p>';
+            }
         }
 
-        let currentVocab = dictionaries['Duolingo'];
-
         function onDictChange() {
-            const selected = document.getElementById('dictSelect').value;
-            currentVocab = dictionaries[selected];
-            
-            if (document.getElementById('gallery').classList.contains('active')) {
-                searchVocabulary();
-            } else if (document.getElementById('training').classList.contains('active')) {
-                nextQuestion();
-            }
+            loadDictionary();
         }
 
         function switchTab(tabId) {
@@ -362,7 +224,8 @@
 
         document.getElementById('searchInput').addEventListener('input', searchVocabulary);
 
-        window.onload = () => {
+        window.onload = async () => {
+            await loadDictionary();
             searchVocabulary();
         };
     </script>
