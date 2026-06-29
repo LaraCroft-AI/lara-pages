@@ -1,0 +1,30 @@
+{
+  "name": "lara-pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaraCroft-AI/lara-pages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LaraCroft-AI/lara-pages/issues"
+  },
+  "homepage": "https://github.com/LaraCroft-AI/lara-pages#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}
