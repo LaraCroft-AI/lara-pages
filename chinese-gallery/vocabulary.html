@@ -152,7 +152,7 @@
                 card.className = 'bg-white p-6 rounded-2xl border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-default';
                 card.innerHTML = `
                     <div class="text-3xl font-bold text-center mb-2 text-slate-800">${item.word}</div>
-                    <div class="text-blue-500 text-center font-medium mb-2">${item.pinyin}</div>
+                    <div class="text-blue-500 text-center font-semibold mb-2 text-xl">${item.pinyin}</div>
                     <div class="text-slate-600 text-center text-sm">${item.meaning}</div>
                 `;
                 list.appendChild(card);
@@ -195,7 +195,7 @@
                 btn.className = 'option-btn w-full p-4 text-xl border-2 border-slate-200 rounded-xl bg-white hover:border-blue-400 hover:bg-blue-50 transition-all flex flex-col items-center';
                 btn.innerHTML = `
                     <span class="font-bold text-slate-800">${opt.word}</span>
-                    <span class="text-sm text-slate-500">${opt.pinyin}</span>
+                    <span class="text-lg text-slate-500 font-medium">${opt.pinyin}</span>
                 `;
                 btn.onclick = () => checkAnswer(btn, opt);
                 grid.appendChild(btn);
