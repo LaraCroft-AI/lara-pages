@@ -63,7 +63,6 @@
         <!-- Section 2: Training -->
         <div id="training" class="page-section">
             <div class="max-w-2xl mx-auto flex flex-col items-center">
-                <!-- Progress Bar -->
                 <div class="w-full mb-4 flex justify-between items-center px-4">
                     <span id="progressText" class="text-slate-500 font-medium text-sm">Осталось слов: 0 / 0</span>
                     <div class="w-32 h-2 bg-slate-200 rounded-full overflow-hidden">
@@ -106,7 +105,7 @@
                     chip.className = 'dict-chip px-4 py-1.5 rounded-full border-2 border-slate-200 text-slate-600 text-xs font-semibold transition-all hover:border-blue-300 cursor-pointer';
                     chip.innerText = name;
                     chip.onclick = () => toggleDict(name, chip);
-                    if (index === 0) { // Default select first one
+                    if (index === 0) {
                         chip.classList.add('active');
                         activeDictNames.push(name);
                     }
@@ -134,9 +133,12 @@
         function updateCurrentVocab() {
             currentVocab = [];
             activeDictNames.forEach(name => {
-                currentVocab = [...currentVocab, ...allDictionaries[name]];
+                if (allDictionaries[name]) {
+                    currentVocab = [...currentVocab, ...allDictionaries[name]];
+                }
             });
             
+            // Force re-render based on current tab
             if (document.getElementById('gallery').classList.contains('active')) {
                 searchVocabulary();
             } else if (document.getElementById('training').classList.contains('active')) {
@@ -156,7 +158,9 @@
             activeBtn.classList.add('bg-white', 'text-blue-600', 'shadow-sm');
             activeBtn.classList.remove('text-slate-500', 'hover:text-slate-700');
 
-            if (tabId === 'training') {
+            if (tabId === 'gallery') {
+                searchVocabulary();
+            } else if (tabId === 'training') {
                 startTraining();
             }
         }
@@ -165,6 +169,11 @@
             const input = document.getElementById('searchInput').value.toLowerCase();
             const list = document.getElementById('vocabList');
             list.innerHTML = '';
+
+            if (!currentVocab || currentVocab.length === 0) {
+                list.innerHTML = '<p class="col-span-full text-center text-slate-400 py-10">Пожалуйста, выберите один или несколько словарей выше.</p>';
+                return;
+            }
 
             const filtered = currentVocab.filter(item =>
                 item.word.toLowerCase().includes(input) ||
@@ -203,7 +212,11 @@
             feedback.innerText = '';
             
             if (!trainingPool || trainingPool.length === 0) {
-                document.getElementById('questionWord').innerText = "🎉 Все слова выучены!";
+                if (totalWordsAtStart === 0) {
+                    document.getElementById('questionWord').innerText = "Словарь пуст";
+                } else {
+                    document.getElementById('questionWord').innerText = "🎉 Все слова выучены!";
+                }
                 document.getElementById('optionsGrid').innerHTML = '';
                 updateProgress();
                 return;
@@ -247,14 +260,11 @@
                 btn.classList.add('correct');
                 document.getElementById('feedback').innerText = '✅ Правильно!';
                 document.getElementById('feedback').style.color = '#059669';
-                
-                // REMOVE from training pool (Mode of decrease)
                 trainingPool = trainingPool.filter(item => item.word !== currentQuestion.word);
             } else {
                 btn.classList.add('wrong');
                 document.getElementById('feedback').innerText = '❌ Ошибка!';
                 document.getElementById('feedback').style.color = '#dc2626';
-                
                 allBtns.forEach(b => {
                     if (b.querySelector('.font-bold').innerText === currentQuestion.word) {
                         b.classList.add('correct');
