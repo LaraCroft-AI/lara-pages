@@ -392,27 +392,19 @@
                 chipsContainer.innerHTML = '';
 
                 const dictNames = Object.keys(allDictionaries);
-                dictNames.forEach((name, index) => {
+                dictNames.forEach((name) => {
                     const chip = document.createElement('button');
                     chip.className = 'dict-chip';
                     chip.innerHTML = `<span class="dot"></span><span>${name}</span>`;
                     chip.onclick = () => toggleDict(name, chip);
-                    if (index === 0) {
-                        chip.classList.add('active');
-                        activeDictNames.push(name);
-                    }
                     chipsContainer.appendChild(chip);
                 });
 
                 document.getElementById('dictCount').innerText = `(${dictNames.length})`;
-                updateCurrentVocab();
-                // Pre-warm training section so first switch is instant and never shows stale placeholders
-                if (currentVocab && currentVocab.length > 0) {
-                    trainingPool = [...currentVocab];
-                    totalWordsAtStart = trainingPool.length;
-                    updateAccuracy();
-                    nextQuestion();
-                }
+                // No dictionary is selected by default. Render the empty state for the active tab
+                // and don't pre-warm training (it has nothing to show).
+                renderEmptyStateForActiveTab();
+                updateProgress();
             } catch (error) {
                 console.error("Ошибка загрузки словарей:", error);
                 if (list) list.innerHTML = '<div class="empty-state col-span-full"><div class="text-4xl mb-3">⚠️</div><p style="color: var(--ink); font-weight: 600">Не удалось загрузить словари</p><p class="text-sm mt-1">Проверьте, что файл vocab_data.json лежит рядом со страницей</p></div>';
@@ -463,6 +455,34 @@
             }
         }
 
+function renderEmptyStateForActiveTab() {
+            const gallery = document.getElementById('gallery');
+            const training = document.getElementById('training');
+            const isGallery = gallery && gallery.classList.contains('active');
+
+            if (isGallery) {
+                const list = document.getElementById('vocabList');
+                if (list) list.innerHTML = `
+                    <div class="empty-state col-span-full">
+                        <div class="text-5xl mb-4">📚</div>
+                        <p class="font-hanzi" style="font-size: 2rem; color: var(--vermilion); margin-bottom: 0.5rem">选词</p>
+                        <p style="color: var(--ink); font-weight: 600">Выберите словари выше</p>
+                        <p class="text-sm mt-1" style="color: #8b7373">Нажмите на чипсы, чтобы начать</p>
+                    </div>`;
+                const stats = document.getElementById('searchStats');
+                if (stats) stats.innerText = '';
+            } else if (training) {
+                const q = document.getElementById('questionWord');
+                if (q) { q.innerText = '选'; q.style.fontSize = '5rem'; q.style.fontFamily = "'Noto Serif SC', serif"; }
+                const qm = document.getElementById('questionMeta');
+                if (qm) { qm.innerText = 'Выберите словари'; qm.style.color = 'var(--ink)'; }
+                const fb = document.getElementById('feedback');
+                if (fb) fb.innerText = '';
+                const grid = document.getElementById('optionsGrid');
+                if (grid) grid.innerHTML = '';
+            }
+        }
+
         function searchVocabulary() {
             const input = document.getElementById('searchInput').value.toLowerCase().trim();
             const list = document.getElementById('vocabList');
@@ -470,13 +490,7 @@
             list.innerHTML = '';
 
             if (activeDictNames.length === 0) {
-                list.innerHTML = `
-                    <div class="empty-state col-span-full">
-                        <div class="text-4xl mb-3">📚</div>
-                        <p style="color: var(--ink); font-weight: 600">Выберите словари выше</p>
-                        <p class="text-sm mt-1">Нажмите на чипсы, чтобы начать</p>
-                    </div>`;
-                stats.innerText = '';
+                renderEmptyStateForActiveTab();
                 return;
             }
 
@@ -578,6 +592,11 @@
             const questionWord = document.getElementById('questionWord');
 
             if (!trainingPool || trainingPool.length === 0) {
+                if (activeDictNames.length === 0) {
+                    renderEmptyStateForActiveTab();
+                    updateProgress();
+                    return;
+                }
                 if (totalWordsAtStart === 0) {
                     questionWord.innerText = '空';
                     questionWord.style.fontSize = '5rem';
