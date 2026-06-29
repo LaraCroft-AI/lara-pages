@@ -15,6 +15,9 @@ jobs:
     name: Playwright (${{ matrix.project.name }})
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: chinese-gallery
     strategy:
       fail-fast: false
       matrix:
@@ -29,6 +32,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: chinese-gallery/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -46,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report-${{ matrix.project }}
-          path: playwright-report
+          path: chinese-gallery/playwright-report
           retention-days: 7
 
       - name: Upload test artifacts on failure
@@ -54,5 +58,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results-${{ matrix.project }}
-          path: test-results
+          path: chinese-gallery/test-results
           retention-days: 7

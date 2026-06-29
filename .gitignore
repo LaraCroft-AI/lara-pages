@@ -1,5 +1,8 @@
 node_modules/
+chinese-gallery/node_modules/
 test-results/
+chinese-gallery/test-results/
 playwright-report/
+chinese-gallery/playwright-report/
 .DS_Store
 *.log

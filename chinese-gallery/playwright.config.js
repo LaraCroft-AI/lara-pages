@@ -24,8 +24,9 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    // Spin up the chinese-gallery folder over a tiny static server
-    command: 'cd chinese-gallery && python3 -m http.server 8765 --bind 127.0.0.1',
+    // Serve the chinese-gallery folder over a tiny static server.
+    // Config file lives next to vocabulary.html, so no cd required.
+    command: 'python3 -m http.server 8765 --bind 127.0.0.1',
     url: 'http://127.0.0.1:8765/vocabulary.html',
     reuseExistingServer: true,
     timeout: 10_000,

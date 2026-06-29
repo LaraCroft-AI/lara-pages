@@ -1,10 +1,9 @@
 {
-  "name": "lara-pages",
+  "name": "chinese-gallery",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Китайский словарь и тренажёр. Playwright e2e-тесты.",
   "directories": {
-    "doc": "docs"
+    "doc": "."
   },
   "scripts": {
     "test": "playwright test",
