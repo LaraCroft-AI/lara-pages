@@ -422,5 +422,56 @@
       "meaning": "бегать"
     }
   ],
-  "Урок 5": []
+  "Урок 5": [
+    {
+      "word": "跳舞",
+      "pinyin": "tiàowǔ",
+      "meaning": "танцевать"
+    },
+    {
+      "word": "打水",
+      "pinyin": "dǎshuǐ",
+      "meaning": "набирать воду"
+    },
+    {
+      "word": "得奖",
+      "pinyin": "déjiǎng",
+      "meaning": "получать приз"
+    },
+    {
+      "word": "低头",
+      "pinyin": "dītóu",
+      "meaning": "опустить голову"
+    },
+    {
+      "word": "读书",
+      "pinyin": "dúshū",
+      "meaning": "читать книгу"
+    },
+    {
+      "word": "他们",
+      "pinyin": "tāmen",
+      "meaning": "они"
+    },
+    {
+      "word": "特长",
+      "pinyin": "tècháng",
+      "meaning": "талант / сильная сторона"
+    },
+    {
+      "word": "体重",
+      "pinyin": "tǐzhòng",
+      "meaning": "вес"
+    },
+    {
+      "word": "图画",
+      "pinyin": "túhuà",
+      "meaning": "картина"
+    },
+    {
+      "word": "拿",
+      "pinyin": "ná",
+      "meaning": "держать"
+    }
+  ]
 }
