@@ -309,7 +309,7 @@
         </div>
 
         <!-- Gallery Section -->
-        <div id="gallery" class="page-section">
+        <div id="gallery" class="page-section active">
             <div class="mb-8 max-w-2xl mx-auto">
                 <div class="relative">
                     <input type="text" id="searchInput" placeholder="Поиск иероглифов, пиньинь или перевода..."
@@ -401,6 +401,11 @@
                 });
 
                 document.getElementById('dictCount').innerText = `(${dictNames.length})`;
+                // Ensure gallery is the visible tab on first load
+                document.getElementById('gallery').classList.add('active');
+                document.getElementById('training').classList.remove('active');
+                document.getElementById('btn-gallery').classList.add('active');
+                document.getElementById('btn-training').classList.remove('active');
                 // No dictionary is selected by default. Render the empty state for the active tab
                 // and don't pre-warm training (it has nothing to show).
                 renderEmptyStateForActiveTab();
