@@ -1,0 +1,642 @@
+[
+  {
+    "word": "一",
+    "pinyin": "yī",
+    "meaning": "один"
+  },
+  {
+    "word": "一般般",
+    "pinyin": "yì bān bān",
+    "meaning": "Так себе"
+  },
+  {
+    "word": "七",
+    "pinyin": "qī",
+    "meaning": "семь"
+  },
+  {
+    "word": "三",
+    "pinyin": "sān",
+    "meaning": "три"
+  },
+  {
+    "word": "不客气",
+    "pinyin": "bú kè qi",
+    "meaning": "пожалуйста (в ответ)"
+  },
+  {
+    "word": "两",
+    "pinyin": "liǎng",
+    "meaning": "два"
+  },
+  {
+    "word": "个",
+    "pinyin": "gè",
+    "meaning": "счётное слово (универсальное)"
+  },
+  {
+    "word": "中国",
+    "pinyin": "Zhōngguó",
+    "meaning": "Китай"
+  },
+  {
+    "word": "九",
+    "pinyin": "jiǔ",
+    "meaning": "девять"
+  },
+  {
+    "word": "也",
+    "pinyin": "yě",
+    "meaning": "тоже"
+  },
+  {
+    "word": "书",
+    "pinyin": "shū",
+    "meaning": "книга"
+  },
+  {
+    "word": "买",
+    "pinyin": "mǎi",
+    "meaning": "покупать"
+  },
+  {
+    "word": "二",
+    "pinyin": "èr",
+    "meaning": "два"
+  },
+  {
+    "word": "五",
+    "pinyin": "wǔ",
+    "meaning": "пять"
+  },
+  {
+    "word": "人",
+    "pinyin": "rén",
+    "meaning": "человек"
+  },
+  {
+    "word": "什么",
+    "pinyin": "shénme",
+    "meaning": "что"
+  },
+  {
+    "word": "今天",
+    "pinyin": "jīntiān",
+    "meaning": "сегодня"
+  },
+  {
+    "word": "他",
+    "pinyin": "tā",
+    "meaning": "он"
+  },
+  {
+    "word": "他们",
+    "pinyin": "tāmen",
+    "meaning": "они"
+  },
+  {
+    "word": "你",
+    "pinyin": "nǐ",
+    "meaning": "ты / вы"
+  },
+  {
+    "word": "你们",
+    "pinyin": "nǐmen",
+    "meaning": "вы (мн.)"
+  },
+  {
+    "word": "你好",
+    "pinyin": "nǐ hǎo",
+    "meaning": "привет"
+  },
+  {
+    "word": "你好吗",
+    "pinyin": "nǐ hǎo ma",
+    "meaning": "как дела"
+  },
+  {
+    "word": "做",
+    "pinyin": "zuò",
+    "meaning": "делать"
+  },
+  {
+    "word": "八",
+    "pinyin": "bā",
+    "meaning": "восемь"
+  },
+  {
+    "word": "六",
+    "pinyin": "liù",
+    "meaning": "шесть"
+  },
+  {
+    "word": "再见",
+    "pinyin": "zàijiàn",
+    "meaning": "до свидания"
+  },
+  {
+    "word": "冷",
+    "pinyin": "lěng",
+    "meaning": "холодный"
+  },
+  {
+    "word": "十",
+    "pinyin": "shí",
+    "meaning": "десять"
+  },
+  {
+    "word": "去",
+    "pinyin": "qù",
+    "meaning": "идти / ехать"
+  },
+  {
+    "word": "叫",
+    "pinyin": "jiào",
+    "meaning": "называться"
+  },
+  {
+    "word": "吃",
+    "pinyin": "chī",
+    "meaning": "есть (кушать)"
+  },
+  {
+    "word": "名字",
+    "pinyin": "míngzi",
+    "meaning": "имя"
+  },
+  {
+    "word": "吗",
+    "pinyin": "ma",
+    "meaning": "вопросительная частица"
+  },
+  {
+    "word": "听",
+    "pinyin": "tīng",
+    "meaning": "слушать"
+  },
+  {
+    "word": "呢",
+    "pinyin": "ne",
+    "meaning": "частица (уточнение)"
+  },
+  {
+    "word": "咖啡",
+    "pinyin": "kāfēi",
+    "meaning": "кофе"
+  },
+  {
+    "word": "哥哥",
+    "pinyin": "gēge",
+    "meaning": "старший брат"
+  },
+  {
+    "word": "哪",
+    "pinyin": "nǎ",
+    "meaning": "какой"
+  },
+  {
+    "word": "哪儿",
+    "pinyin": "nǎr",
+    "meaning": "где"
+  },
+  {
+    "word": "喜欢",
+    "pinyin": "xǐhuān",
+    "meaning": "нравиться / любить"
+  },
+  {
+    "word": "喝",
+    "pinyin": "hē",
+    "meaning": "пить"
+  },
+  {
+    "word": "四",
+    "pinyin": "sì",
+    "meaning": "четыре"
+  },
+  {
+    "word": "在",
+    "pinyin": "zài",
+    "meaning": "находиться"
+  },
+  {
+    "word": "多",
+    "pinyin": "duō",
+    "meaning": "много"
+  },
+  {
+    "word": "多少",
+    "pinyin": "duōshao",
+    "meaning": "сколько"
+  },
+  {
+    "word": "大",
+    "pinyin": "dà",
+    "meaning": "большой"
+  },
+  {
+    "word": "她",
+    "pinyin": "tā",
+    "meaning": "она"
+  },
+  {
+    "word": "好",
+    "pinyin": "hǎo",
+    "meaning": "хороший"
+  },
+  {
+    "word": "妈妈",
+    "pinyin": "māma",
+    "meaning": "мама"
+  },
+  {
+    "word": "妹妹",
+    "pinyin": "mèimei",
+    "meaning": "младшая сестра"
+  },
+  {
+    "word": "姐姐",
+    "pinyin": "jiějie",
+    "meaning": "старшая сестра"
+  },
+  {
+    "word": "学",
+    "pinyin": "xué",
+    "meaning": "учиться"
+  },
+  {
+    "word": "学生",
+    "pinyin": "xuéshēng",
+    "meaning": "студент / ученик"
+  },
+  {
+    "word": "对不起",
+    "pinyin": "duìbuqǐ",
+    "meaning": "извини / извините"
+  },
+  {
+    "word": "小",
+    "pinyin": "xiǎo",
+    "meaning": "маленький"
+  },
+  {
+    "word": "少",
+    "pinyin": "shǎo",
+    "meaning": "мало"
+  },
+  {
+    "word": "弟弟",
+    "pinyin": "dìdi",
+    "meaning": "младший брат"
+  },
+  {
+    "word": "很",
+    "pinyin": "hěn",
+    "meaning": "очень"
+  },
+  {
+    "word": "怎么",
+    "pinyin": "zěnme",
+    "meaning": "как"
+  },
+  {
+    "word": "您好",
+    "pinyin": "nín hǎo",
+    "meaning": "здравствуйте (вежливо)"
+  },
+  {
+    "word": "想",
+    "pinyin": "xiǎng",
+    "meaning": "хотеть / думать"
+  },
+  {
+    "word": "我",
+    "pinyin": "wǒ",
+    "meaning": "я"
+  },
+  {
+    "word": "我们",
+    "pinyin": "wǒmen",
+    "meaning": "мы"
+  },
+  {
+    "word": "我很好",
+    "pinyin": "wǒ hěn hǎo",
+    "meaning": "у меня всё хорошо"
+  },
+  {
+    "word": "手机",
+    "pinyin": "shǒujī",
+    "meaning": "телефон"
+  },
+  {
+    "word": "日本",
+    "pinyin": "Rìběn",
+    "meaning": "Япония"
+  },
+  {
+    "word": "时候",
+    "pinyin": "shíhou",
+    "meaning": "время / момент"
+  },
+  {
+    "word": "明天",
+    "pinyin": "míngtiān",
+    "meaning": "завтра"
+  },
+  {
+    "word": "昨天",
+    "pinyin": "zuótiān",
+    "meaning": "вчера"
+  },
+  {
+    "word": " que",
+    "pinyin": "qù",
+    "meaning": "идти / ехать"
+  },
+  {
+    "word": "是",
+    "pinyin": "shì",
+    "meaning": "быть / являться"
+  },
+  {
+    "word": "有",
+    "pinyin": "yǒu",
+    "meaning": "иметь / есть"
+  },
+  {
+    "word": "朋友",
+    "pinyin": "péngyou",
+    "meaning": "друг"
+  },
+  {
+    "word": "来",
+    "pinyin": "lái",
+    "meaning": "приходить"
+  },
+  {
+    "word": "桌子",
+    "pinyin": "zhuōzi",
+    "meaning": "стол"
+  },
+  {
+    "word": "椅子",
+    "pinyin": "yǐzi﹒yǐ zi",
+    "meaning": "стул"
+  },
+  {
+    "word": "水",
+    "pinyin": "shuǐ",
+    "meaning": "вода"
+  },
+  {
+    "word": "没关系",
+    "pinyin": "méiguānxi",
+    "meaning": "ничего страшного"
+  },
+  {
+    "word": "没有",
+    "pinyin": "méiyǒu",
+    "meaning": "не иметь / нет"
+  },
+  {
+    "word": "热",
+    "pinyin": "rè",
+    "meaning": "жаркий"
+  },
+  {
+    "word": "爱",
+    "pinyin": "ài",
+    "meaning": "любить"
+  },
+  {
+    "word": "爸爸",
+    "pinyin": "bàba",
+    "meaning": "папа"
+  },
+  {
+    "word": "现在",
+    "pinyin": "xiànzài",
+    "meaning": "сейчас"
+  },
+  {
+    "word": "百",
+    "pinyin": "bǎi",
+    "meaning": "сто"
+  },
+  {
+    "word": "的",
+    "pinyin": "de",
+    "meaning": "притяжательная частица"
+  },
+  {
+    "word": "看",
+    "pinyin": "kàn",
+    "meaning": "смотреть"
+  },
+  {
+    "word": "矮",
+    "pinyin": "ǎi",
+    "meaning": "низкий"
+  },
+  {
+    "word": "米饭",
+    "pinyin": "mǐfàn",
+    "meaning": "рис (еда)"
+  },
+  {
+    "word": "美国",
+    "pinyin": "Měiguó",
+    "meaning": "США"
+  },
+  {
+    "word": "老师",
+    "pinyin": "lǎoshī",
+    "meaning": "учитель"
+  },
+  {
+    "word": "英国",
+    "pinyin": "Yīngguó",
+    "meaning": "Великобритания"
+  },
+  {
+    "word": "苹果",
+    "pinyin": "píngguǒ",
+    "meaning": "яблоко"
+  },
+  {
+    "word": "茶",
+    "pinyin": "chá",
+    "meaning": "чай"
+  },
+  {
+    "word": "要",
+    "pinyin": "yào",
+    "meaning": "хотеть / нужно"
+  },
+  {
+    "word": "说",
+    "pinyin": "shuō",
+    "meaning": "говорить"
+  },
+  {
+    "word": "请",
+    "pinyin": "qǐng",
+    "meaning": "пожалуйста / прошу"
+  },
+  {
+    "word": "谁",
+    "pinyin": "shéi",
+    "meaning": "кто"
+  },
+  {
+    "word": "谢谢",
+    "pinyin": "xièxie",
+    "meaning": "спасибо"
+  },
+  {
+    "word": "还可以",
+    "pinyin": "hái kě yǐ",
+    "meaning": "Пойдет"
+  },
+  {
+    "word": "还行",
+    "pinyin": "hái xíng",
+    "meaning": "Нормально / сойдёт / терпимо"
+  },
+  {
+    "word": "这是",
+    "pinyin": "zhè shì",
+    "meaning": "это есть / это"
+  },
+  {
+    "word": "这是我的",
+    "pinyin": "zhè shì wǒ de",
+    "meaning": "это моё"
+  },
+  {
+    "word": "那是",
+    "pinyin": "nà shì",
+    "meaning": "то есть / то"
+  },
+  {
+    "word": "都",
+    "pinyin": "dōu",
+    "meaning": "все"
+  },
+  {
+    "word": "零",
+    "pinyin": "líng",
+    "meaning": "ноль"
+  },
+  {
+    "word": "面条",
+    "pinyin": "miàntiáo",
+    "meaning": "лапша"
+  },
+  {
+    "word": "韩国",
+    "pinyin": "Hánguó",
+    "meaning": "Корея"
+  },
+  {
+    "word": "香蕉",
+    "pinyin": "xiāngjiāo",
+    "meaning": "банан"
+  },
+  {
+    "word": "马马虎虎",
+    "pinyin": "mǎ ma hū hū",
+    "meaning": "Так себе / ни то ни сё"
+  },
+  {
+    "word": "高",
+    "pinyin": "gāo",
+    "meaning": "высокий"
+  },
+  {
+    "word": "这",
+    "pinyin": "zhè",
+    "meaning": "этот"
+  },
+  {
+    "word": "那",
+    "pinyin": "nà",
+    "meaning": "тот"
+  },
+  {
+    "word": "我的",
+    "pinyin": "wǒ de",
+    "meaning": "мой"
+  },
+  {
+    "word": "你的",
+    "pinyin": "nǐ de",
+    "meaning": "твой"
+  },
+  {
+    "word": "东西",
+    "pinyin": "dōngxi",
+    "meaning": "вещь / предмет"
+  },
+  {
+    "word": "笔",
+    "pinyin": "bǐ",
+    "meaning": "ручка / карандаш"
+  },
+  {
+    "word": "电脑",
+    "pinyin": "diànnǎo",
+    "meaning": "компьютер"
+  },
+  {
+    "word": "广播",
+    "pinyin": "guǎngbō",
+    "meaning": "радио"
+  },
+  {
+    "word": "山坡",
+    "pinyin": "shānpō",
+    "meaning": "холм"
+  },
+  {
+    "word": "摸",
+    "pinyin": "mō",
+    "meaning": "трогать"
+  },
+  {
+    "word": "风",
+    "pinyin": "fēng",
+    "meaning": "ветер"
+  },
+  {
+    "word": "拔萝卜",
+    "pinyin": "bá luóbo",
+    "meaning": "тянуть морковь"
+  },
+  {
+    "word": "靶",
+    "pinyin": "bǎ",
+    "meaning": "мишень/дротик"
+  },
+  {
+    "word": "水坝",
+    "pinyin": "shuǐbà",
+    "meaning": "дамба"
+  },
+  {
+    "word": "门把手",
+    "pinyin": "mén bǎshǒu",
+    "meaning": "дверная ручка"
+  },
+  {
+    "word": "鼻子",
+    "pinyin": "bízi",
+    "meaning": "нос"
+  },
+  {
+    "word": "瀑布",
+    "pinyin": "pùbù",
+    "meaning": "водопад"
+  }
+]
