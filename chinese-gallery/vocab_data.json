@@ -1,4 +1,76 @@
 {
+  "Урок 1": [
+    {
+      "word": "鹅",
+      "pinyin": "é",
+      "meaning": "гусь"
+    },
+    {
+      "word": "俄罗斯",
+      "pinyin": "Éluósī",
+      "meaning": "Россия"
+    },
+    {
+      "word": "俄语",
+      "pinyin": "Éyǔ",
+      "meaning": "русский язык"
+    },
+    {
+      "word": "我",
+      "pinyin": "wǒ",
+      "meaning": "я"
+    },
+    {
+      "word": "饿",
+      "pinyin": "è",
+      "meaning": "голодный"
+    },
+    {
+      "word": "阿姨",
+      "pinyin": "āyí",
+      "meaning": "тётя"
+    },
+    {
+      "word": "阿胶",
+      "pinyin": "ējiāo",
+      "meaning": "лекарство из ослиной кожи"
+    },
+    {
+      "word": "恶心",
+      "pinyin": "ěxīn",
+      "meaning": "тошнота"
+    },
+    {
+      "word": "鳄鱼",
+      "pinyin": "èyú",
+      "meaning": "крокодил"
+    },
+    {
+      "word": "大",
+      "pinyin": "dà",
+      "meaning": "большой"
+    },
+    {
+      "word": "喝",
+      "pinyin": "hē",
+      "meaning": "пить"
+    },
+    {
+      "word": "破",
+      "pinyin": "pò",
+      "meaning": "порвать / разбить"
+    },
+    {
+      "word": "他",
+      "pinyin": "tā",
+      "meaning": "он"
+    },
+    {
+      "word": "她",
+      "pinyin": "tā",
+      "meaning": "она"
+    }
+  ],
   "Урок 4": [
     {
       "word": "广播",
