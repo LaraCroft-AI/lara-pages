@@ -20,8 +20,16 @@
 
         * { -webkit-tap-highlight-color: transparent; }
 
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        /* Belt-and-suspenders: fully hide inactive section so its default
+           placeholders (e.g. hanzi "学") never flash on first paint. */
+        #training:not(.active),
+        #gallery:not(.active) { visibility: hidden; position: absolute; left: -99999px; top: 0; }
+
         body {
             font-family: 'Inter', sans-serif;
+            /* Hide non-active tabs completely so default placeholders never flash */
             background-color: var(--paper);
             background-image:
                 radial-gradient(at 20% 10%, rgba(193, 39, 45, 0.06) 0px, transparent 50%),
