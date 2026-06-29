@@ -138,7 +138,6 @@
                 }
             });
             
-            // Force re-render based on current tab
             if (document.getElementById('gallery').classList.contains('active')) {
                 searchVocabulary();
             } else if (document.getElementById('training').classList.contains('active')) {
@@ -170,8 +169,14 @@
             const list = document.getElementById('vocabList');
             list.innerHTML = '';
 
-            if (!currentVocab || currentVocab.length === 0) {
+            // PRIMARY CHECK: Are any dictionaries selected?
+            if (activeDictNames.length === 0) {
                 list.innerHTML = '<p class="col-span-full text-center text-slate-400 py-10">Пожалуйста, выберите один или несколько словарей выше.</p>';
+                return;
+            }
+
+            if (!currentVocab || currentVocab.length === 0) {
+                list.innerHTML = '<p class="col-span-full text-center text-slate-400 py-10">В выбранных словарях нет слов.</p>';
                 return;
             }
 
