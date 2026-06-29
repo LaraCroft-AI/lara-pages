@@ -22,3 +22,16 @@ server, not `file://`.
 
 - `tests/vocabulary.spec.js` — all assertions, grouped by feature.
 - Tests run in two projects: `desktop` (1280×900) and `mobile` (Pixel 5).
+
+## CI
+
+Pushing to `main` (or opening a PR) triggers `.github/workflows/tests.yml`,
+which runs the full Playwright suite on `ubuntu-latest` in both desktop
+and mobile viewports. HTML report + screenshots are uploaded as
+artifacts on failure.
+
+Status badge (replace the owner segment if you fork):
+
+```markdown
+[![Tests](https://github.com/LaraCroft-AI/lara-pages/actions/workflows/tests.yml/badge.svg)](https://github.com/LaraCroft-AI/lara-pages/actions/workflows/tests.yml)
+```
