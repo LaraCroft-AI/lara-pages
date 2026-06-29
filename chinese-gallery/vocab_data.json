@@ -118,7 +118,133 @@
       "meaning": "интересный"
     }
   ],
-  "Урок 3": [],
+  "Урок 3": [
+    {
+      "word": "房屋",
+      "pinyin": "fángwū",
+      "meaning": "дом"
+    },
+    {
+      "word": "屋顶",
+      "pinyin": "wūdǐng",
+      "meaning": "крыша"
+    },
+    {
+      "word": "乌鸦",
+      "pinyin": "wūyā",
+      "meaning": "ворона"
+    },
+    {
+      "word": "五",
+      "pinyin": "wǔ",
+      "meaning": "пять"
+    },
+    {
+      "word": "雾",
+      "pinyin": "wù",
+      "meaning": "туман"
+    },
+    {
+      "word": "椅子",
+      "pinyin": "yǐzi",
+      "meaning": "стул"
+    },
+    {
+      "word": "容易",
+      "pinyin": "róngyì",
+      "meaning": "легко"
+    },
+    {
+      "word": "蜈蚣",
+      "pinyin": "wúgōng",
+      "meaning": "сороконожка"
+    },
+    {
+      "word": "错误",
+      "pinyin": "cuòwù",
+      "meaning": "ошибка"
+    },
+    {
+      "word": "医生",
+      "pinyin": "yīshēng",
+      "meaning": "врач"
+    },
+    {
+      "word": "淤泥",
+      "pinyin": "yūní",
+      "meaning": "грязь"
+    },
+    {
+      "word": "雨",
+      "pinyin": "yǔ",
+      "meaning": "дождь"
+    },
+    {
+      "word": "下雨",
+      "pinyin": "xiàyǔ",
+      "meaning": "идёт дождь"
+    },
+    {
+      "word": "玉米",
+      "pinyin": "yùmǐ",
+      "meaning": "кукуруза"
+    },
+    {
+      "word": "金鱼",
+      "pinyin": "jīnyú",
+      "meaning": "золотая рыбка"
+    },
+    {
+      "word": "牙齿",
+      "pinyin": "yáchǐ",
+      "meaning": "зуб"
+    },
+    {
+      "word": "娃娃",
+      "pinyin": "wáwa",
+      "meaning": "кукла"
+    },
+    {
+      "word": "蜗牛",
+      "pinyin": "wōniú",
+      "meaning": "улитка"
+    },
+    {
+      "word": "鸭子",
+      "pinyin": "yāzi",
+      "meaning": "утка"
+    },
+    {
+      "word": "鱼鹰",
+      "pinyin": "yúyīng",
+      "meaning": "баклан / скопа"
+    },
+    {
+      "word": "鱼缸",
+      "pinyin": "yúgāng",
+      "meaning": "аквариум"
+    },
+    {
+      "word": "鸭梨",
+      "pinyin": "yálí",
+      "meaning": "груша (азиатская, нэши)"
+    },
+    {
+      "word": "鸭舌帽",
+      "pinyin": "yāshémào",
+      "meaning": "кепка"
+    },
+    {
+      "word": "乌云",
+      "pinyin": "wūyún",
+      "meaning": "туча"
+    },
+    {
+      "word": "雨衣",
+      "pinyin": "yǔyī",
+      "meaning": "дождевик"
+    }
+  ],
   "Урок 4": [
     {
       "word": "广播",
