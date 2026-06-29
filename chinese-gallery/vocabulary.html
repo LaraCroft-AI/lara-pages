@@ -613,11 +613,12 @@
                 const btn = document.createElement('button');
                 btn.className = 'option-btn';
                 btn.innerHTML = `
-                    <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
-                    <div class="flex-1">
-                        <div class="font-semibold" style="color: var(--ink)">${opt.meaning}</div>
+                    <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
+                    <div class="flex-1 min-w-0">
+                        <div class="font-semibold truncate" style="color: var(--ink)">${opt.meaning}</div>
+                        <div class="text-xs mt-0.5" style="color: #8b7373">${opt.pinyin}</div>
                     </div>
-                    <span class="font-hanzi text-xl opacity-50">${opt.word}</span>
+                    <span class="font-hanzi text-2xl opacity-50 shrink-0">${opt.word}</span>
                 `;
                 btn.onclick = () => checkAnswer(btn, opt);
                 grid.appendChild(btn);
