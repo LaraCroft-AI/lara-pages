@@ -119,15 +119,26 @@ test.describe('Training flow', () => {
     await expect(page.locator('.option-btn')).toHaveCount(3);
   });
 
-  test('each option shows meaning + pinyin + hanzi', async ({ page }) => {
+  test('each option shows pinyin + hanzi (no Russian translation)', async ({ page }) => {
     await page.locator('.dict-chip').first().click();
     await page.locator('#btn-training').click();
 
     const firstOption = page.locator('.option-btn').first();
     await expect(firstOption).toBeVisible();
-    await expect(firstOption.locator('.font-semibold')).not.toBeEmpty();     // meaning
-    await expect(firstOption.locator('div.text-xs')).not.toBeEmpty();          // pinyin
-    await expect(firstOption.locator('.font-hanzi')).not.toBeEmpty();          // hanzi
+
+    // Pinyin: the .font-semibold block holds the pinyin and should be reasonably large
+    const pinyinEl = firstOption.locator('.font-semibold');
+    await expect(pinyinEl).not.toBeEmpty();
+    const pinyinFontSize = await pinyinEl.evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+    expect(pinyinFontSize).toBeGreaterThanOrEqual(18);  // ~1.35rem, big enough to read tones
+
+    // Hanzi on the right
+    const hanziEl = firstOption.locator('.font-hanzi');
+    await expect(hanziEl).not.toBeEmpty();
+
+    // No Russian (Cyrillic) text inside the option button at all
+    const optionText = await firstOption.innerText();
+    expect(optionText).not.toMatch(/[а-яё]/i);
   });
 
   test('shows placeholder until a dictionary is selected', async ({ page }) => {

@@ -647,10 +647,9 @@ function renderEmptyStateForActiveTab() {
                 btn.innerHTML = `
                     <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
                     <div class="flex-1 min-w-0">
-                        <div class="font-semibold truncate" style="color: var(--ink)">${opt.meaning}</div>
-                        <div class="text-xs mt-0.5" style="color: #8b7373">${opt.pinyin}</div>
+                        <div class="font-semibold tracking-wide" style="color: var(--ink); font-size: 1.35rem; line-height: 1.2">${opt.pinyin}</div>
                     </div>
-                    <span class="font-hanzi text-2xl opacity-50 shrink-0">${opt.word}</span>
+                    <span class="font-hanzi shrink-0" style="font-size: 1.75rem; opacity: 0.65">${opt.word}</span>
                 `;
                 btn.onclick = () => checkAnswer(btn, opt);
                 grid.appendChild(btn);
