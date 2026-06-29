@@ -71,7 +71,53 @@
       "meaning": "она"
     }
   ],
-  "Урок 2": [],
+  "Урок 2": [
+    {
+      "word": "衣服",
+      "pinyin": "yīfu",
+      "meaning": "одежда"
+    },
+    {
+      "word": "乌龟",
+      "pinyin": "wūguī",
+      "meaning": "черепаха"
+    },
+    {
+      "word": "鱼",
+      "pinyin": "yú",
+      "meaning": "рыба"
+    },
+    {
+      "word": "一",
+      "pinyin": "yī",
+      "meaning": "один"
+    },
+    {
+      "word": "蜡烛",
+      "pinyin": "làzhú",
+      "meaning": "свеча"
+    },
+    {
+      "word": "铅笔",
+      "pinyin": "qiānbǐ",
+      "meaning": "карандаш"
+    },
+    {
+      "word": "橡皮",
+      "pinyin": "xiàngpí",
+      "meaning": "ластик"
+    },
+    {
+      "word": "蚂蚁",
+      "pinyin": "mǎyǐ",
+      "meaning": "муравей"
+    },
+    {
+      "word": "有意思",
+      "pinyin": "yǒuyìsi",
+      "meaning": "интересный"
+    }
+  ],
   "Урок 4": [
     {
       "word": "广播",
