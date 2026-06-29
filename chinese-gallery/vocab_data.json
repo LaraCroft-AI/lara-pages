@@ -370,6 +370,56 @@
       "word": "幸福",
       "pinyin": "xìngfú",
       "meaning": "счастье"
+    },
+    {
+      "word": "北京",
+      "pinyin": "Běijīng",
+      "meaning": "Пекин"
+    },
+    {
+      "word": "苹果",
+      "pinyin": "píngguǒ",
+      "meaning": "яблоко"
+    },
+    {
+      "word": "买",
+      "pinyin": "mǎi",
+      "meaning": "покупать"
+    },
+    {
+      "word": "卖",
+      "pinyin": "mài",
+      "meaning": "продавать"
+    },
+    {
+      "word": "明天",
+      "pinyin": "míngtiān",
+      "meaning": "завтра"
+    },
+    {
+      "word": "房间",
+      "pinyin": "fángjiān",
+      "meaning": "комната"
+    },
+    {
+      "word": "飞机",
+      "pinyin": "fēijī",
+      "meaning": "самолёт"
+    },
+    {
+      "word": "秘密",
+      "pinyin": "mìmì",
+      "meaning": "секрет"
+    },
+    {
+      "word": "密码",
+      "pinyin": "mìmǎ",
+      "meaning": "пароль"
+    },
+    {
+      "word": "跑步",
+      "pinyin": "pǎobù",
+      "meaning": "бегать"
     }
   ]
 }
