@@ -547,6 +547,81 @@
       "word": "毛驴",
       "pinyin": "máolǘ",
       "meaning": "осёл"
+    },
+    {
+      "word": "马车",
+      "pinyin": "mǎchē",
+      "meaning": "повозка"
+    },
+    {
+      "word": "尘土",
+      "pinyin": "chéntǔ",
+      "meaning": "пыль"
+    },
+    {
+      "word": "兔子",
+      "pinyin": "tùzi",
+      "meaning": "заяц"
+    },
+    {
+      "word": "来",
+      "pinyin": "lái",
+      "meaning": "приходить"
+    },
+    {
+      "word": "电视",
+      "pinyin": "diànshì",
+      "meaning": "телевизор ⚠︎ (ты написал «компьютер» — это перепутано с 电脑 ниже)"
+    },
+    {
+      "word": "电脑",
+      "pinyin": "diànnǎo",
+      "meaning": "компьютер ⚠︎ (ты написал «телевидение» — это перепутано с 电视 выше)"
+    },
+    {
+      "word": "同学",
+      "pinyin": "tóngxué",
+      "meaning": "одноклассник"
+    },
+    {
+      "word": "牛奶",
+      "pinyin": "niúnǎi",
+      "meaning": "молоко"
+    },
+    {
+      "word": "老师",
+      "pinyin": "lǎoshī",
+      "meaning": "учитель"
+    },
+    {
+      "word": "脸",
+      "pinyin": "liǎn",
+      "meaning": "лицо"
+    },
+    {
+      "word": "奶牛",
+      "pinyin": "nǎiniú",
+      "meaning": "молочная корова"
+    },
+    {
+      "word": "滴答",
+      "pinyin": "dīdā",
+      "meaning": "тик-так"
+    },
+    {
+      "word": "独立",
+      "pinyin": "dúlì",
+      "meaning": "независимый"
+    },
+    {
+      "word": "踏步",
+      "pinyin": "tàbù",
+      "meaning": "шаг"
+    },
+    {
+      "word": "地图",
+      "pinyin": "dìtú",
+      "meaning": "карта"
     }
   ]
 }
