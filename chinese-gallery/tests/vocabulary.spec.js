@@ -112,8 +112,9 @@ test.describe('Training flow', () => {
     await page.locator('#btn-training').click();
 
     await expect(page.locator('#training')).toBeVisible();
+    // Default mode is ru2hanzi: the question card shows the Russian meaning, not a hanzi placeholder.
     await expect(page.locator('#questionWord')).not.toHaveText('学');
-    await expect(page.locator('#questionMeta')).not.toBeEmpty();
+    await expect(page.locator('#questionWord')).not.toBeEmpty();
 
     // Should have 3 options
     await expect(page.locator('.option-btn')).toHaveCount(3);
@@ -143,8 +144,8 @@ test.describe('Training flow', () => {
 
   test('shows placeholder until a dictionary is selected', async ({ page }) => {
     await page.locator('#btn-training').click();
-    await expect(page.locator('#questionMeta')).toContainText('Выберите словари');
-    await expect(page.locator('#questionWord')).toContainText(/选|学/);
+    // The placeholder text now lives in #questionWord; #questionMeta has been removed.
+    await expect(page.locator('#questionWord')).toContainText('Выберите словари');
     await expect(page.locator('.option-btn')).toHaveCount(0);
   });
 
@@ -155,9 +156,11 @@ test.describe('Training flow', () => {
     const total = parseInt((await page.locator('#progressText').innerText()).match(/(\d+)/)[1], 10);
     expect(total).toBeGreaterThan(0);
 
-    // Find the option whose hanzi matches the current question word
-    const questionWord = (await page.locator('#questionWord').innerText()).trim();
-    const correct = page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: questionWord }) });
+    // The question card shows the Russian meaning; find the option whose hanzi
+    // matches the current question's underlying word via the _opt stash.
+    const correctWord = await page.evaluate(() => (window.currentQuestion && window.currentQuestion.word) || null);
+    expect(correctWord).toBeTruthy();
+    const correct = page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: correctWord }) });
     await correct.first().click();
 
     await expect(page.locator('#feedback')).toContainText(/Правильно|Попробуй/);
@@ -173,13 +176,35 @@ test.describe('Training flow', () => {
     await page.locator('#btn-training').click();
 
     for (let i = 0; i < 3; i++) {
-      const questionWord = (await page.locator('#questionWord').innerText()).trim();
-      const opt = page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: questionWord }) }).first();
+      const correctWord = await page.evaluate(() => (window.currentQuestion && window.currentQuestion.word) || null);
+      const opt = page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: correctWord }) }).first();
       await opt.click();
       await page.waitForTimeout(2100);
     }
     const acc = await page.locator('#accuracyText').innerText();
     expect(acc).toMatch(/Точность: \d+%/);
+  });
+
+  test('reverse mode shows hanzi + pinyin in the question and Russian in the options', async ({ page }) => {
+    await page.locator('.dict-chip').first().click();
+    await page.locator('#btn-training').click();
+
+    // Switch to reverse mode.
+    await page.locator('#mode-hanzi2ru').click();
+
+    // Question card now has a hanzi display plus a pinyin line; no Cyrillic in #questionWord.
+    await expect(page.locator('#questionWord')).not.toBeEmpty();
+    await expect(page.locator('#questionPinyin')).not.toBeEmpty();
+    const qWord = (await page.locator('#questionWord').innerText()).trim();
+    expect(qWord).not.toMatch(/[а-яё]/i);
+
+    // Options should show Russian meaning (Cyrillic) and no hanzi at all.
+    const options = page.locator('.option-btn');
+    await expect(options).toHaveCount(3);
+    const hanziCount = await page.locator('.option-btn .font-hanzi').count();
+    expect(hanziCount).toBe(0);
+    const firstOptionText = await options.first().innerText();
+    expect(firstOptionText).toMatch(/[а-яё]/i);
   });
 });
 
@@ -190,8 +215,8 @@ test.describe('Reset button', () => {
     const initialTotal = parseInt((await page.locator('#progressText').innerText()).match(/(\d+)/)[1], 10);
 
     // Click correct answer once to reduce the pool
-    const questionWord = (await page.locator('#questionWord').innerText()).trim();
-    await page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: questionWord }) }).first().click();
+    const correctWord = await page.evaluate(() => (window.currentQuestion && window.currentQuestion.word) || null);
+    await page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: correctWord }) }).first().click();
     await page.waitForTimeout(2100);
     const after = parseInt((await page.locator('#progressText').innerText()).match(/(\d+)/)[1], 10);
     expect(after).toBeLessThan(initialTotal);

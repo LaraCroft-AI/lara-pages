@@ -325,9 +325,19 @@
         <div id="training" class="page-section">
             <div class="max-w-2xl mx-auto">
                 <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <span id="progressText" class="text-sm font-semibold" style="color: var(--ink)">Осталось: 0 / 0</span>
-                        <span id="accuracyText" class="text-xs" style="color: #8b7373">Точность: —</span>
+                    <div class="flex flex-wrap justify-between items-center gap-3 mb-3">
+                        <div class="flex gap-1 p-1 rounded-full" style="background: rgba(26, 10, 10, 0.05)">
+                            <button onclick="setTrainingMode('ru2hanzi')" id="mode-ru2hanzi" class="tab-btn active">
+                                🇷🇺 → 🇨🇳
+                            </button>
+                            <button onclick="setTrainingMode('hanzi2ru')" id="mode-hanzi2ru" class="tab-btn">
+                                🇨🇳 → 🇷🇺
+                            </button>
+                        </div>
+                        <div class="flex gap-3">
+                            <span id="progressText" class="text-sm font-semibold" style="color: var(--ink)">Осталось: 0 / 0</span>
+                            <span id="accuracyText" class="text-xs" style="color: #8b7373">Точность: —</span>
+                        </div>
                     </div>
                     <div class="progress-track">
                         <div id="progressBar" class="progress-fill" style="width: 0%"></div>
@@ -335,8 +345,8 @@
                 </div>
 
                 <div id="questionCard" class="question-card p-10 md:p-16 text-center mb-8 min-h-[280px] flex flex-col justify-center items-center">
-                    <div id="questionWord" class="hanzi-display text-6xl md:text-7xl mb-4">学</div>
-                    <div id="questionMeta" class="text-lg mb-2" style="color: var(--vermilion); font-weight: 600"></div>
+                    <div id="questionWord" class="text-3xl md:text-5xl font-semibold mb-2" style="color: var(--ink)">Выберите словари</div>
+                    <div id="questionPinyin" class="text-xl md:text-2xl mb-4" style="color: #8b7373"></div>
                     <div id="feedback" class="text-base font-semibold h-6 mt-3 transition-all"></div>
                 </div>
 
@@ -368,6 +378,12 @@
         let totalWordsAtStart = 0;
         let correctAnswers = 0;
         let totalAnswers = 0;
+        // 'ru2hanzi': question = Russian meaning, options = pinyin + hanzi
+        // 'hanzi2ru': question = hanzi + pinyin,   options = Russian meaning
+        let trainingMode = 'ru2hanzi';
+window.trainingMode = trainingMode;
+window.currentQuestion = currentQuestion;
+window.trainingPool = trainingPool;
 
         async function init() {
             const list = document.getElementById('vocabList');
@@ -414,9 +430,9 @@
                 console.error("Ошибка загрузки словарей:", error);
                 if (list) list.innerHTML = '<div class="empty-state col-span-full"><div class="text-4xl mb-3">⚠️</div><p style="color: var(--ink); font-weight: 600">Не удалось загрузить словари</p><p class="text-sm mt-1">Проверьте, что файл vocab_data.json лежит рядом со страницей</p></div>';
                 const q = document.getElementById('questionWord');
-                if (q) { q.innerText = '⚠'; q.style.fontSize = '4rem'; q.style.fontFamily = 'Inter, sans-serif'; }
-                const qm = document.getElementById('questionMeta');
-                if (qm) qm.innerText = 'Словари не загружены';
+                if (q) { q.innerText = '⚠ Словари не загружены'; q.style.fontSize = '2rem'; q.style.fontFamily = 'Inter, sans-serif'; }
+                const qp = document.getElementById('questionPinyin');
+                if (qp) { qp.innerText = ''; qp.style.fontFamily = 'Inter, sans-serif'; }
             }
         }
 
@@ -478,9 +494,9 @@ function renderEmptyStateForActiveTab() {
                 if (stats) stats.innerText = '';
             } else if (training) {
                 const q = document.getElementById('questionWord');
-                if (q) { q.innerText = '选'; q.style.fontSize = '5rem'; q.style.fontFamily = "'Noto Serif SC', serif"; }
-                const qm = document.getElementById('questionMeta');
-                if (qm) { qm.innerText = 'Выберите словари'; qm.style.color = 'var(--ink)'; }
+                if (q) { q.innerText = 'Выберите словари'; q.style.fontSize = ''; q.style.fontFamily = 'Inter, sans-serif'; }
+                const qp = document.getElementById('questionPinyin');
+                if (qp) { qp.innerText = ''; qp.style.fontFamily = 'Inter, sans-serif'; }
                 const fb = document.getElementById('feedback');
                 if (fb) fb.innerText = '';
                 const grid = document.getElementById('optionsGrid');
@@ -588,10 +604,24 @@ function renderEmptyStateForActiveTab() {
             startTraining();
         }
 
+        function setTrainingMode(mode) {
+            if (mode !== 'ru2hanzi' && mode !== 'hanzi2ru') return;
+            if (trainingMode === mode) return;
+            trainingMode = mode;
+            // Toggle the button highlight.
+            const a = document.getElementById('mode-ru2hanzi');
+            const b = document.getElementById('mode-hanzi2ru');
+            if (a && b) {
+                a.classList.toggle('active', mode === 'ru2hanzi');
+                b.classList.toggle('active', mode === 'hanzi2ru');
+            }
+            // Reset progress so the new mode starts fresh.
+            startTraining();
+        }
+
         function nextQuestion() {
             const feedback = document.getElementById('feedback');
             feedback.innerText = '';
-            document.getElementById('questionMeta').innerText = '';
 
             const questionCard = document.getElementById('questionCard');
             const questionWord = document.getElementById('questionWord');
@@ -603,16 +633,14 @@ function renderEmptyStateForActiveTab() {
                     return;
                 }
                 if (totalWordsAtStart === 0) {
-                    questionWord.innerText = '空';
-                    questionWord.style.fontSize = '5rem';
-                    document.getElementById('questionMeta').innerText = 'Словарь пуст';
+                    questionWord.innerText = 'Словарь пуст';
+                    questionWord.style.fontSize = '2rem';
+                    questionWord.style.fontFamily = 'Inter, sans-serif';
                 } else {
                     questionCard.classList.add('celebration');
-                    questionWord.innerText = '🎉';
-                    questionWord.style.fontSize = '5rem';
+                    questionWord.innerText = '🎉 Все слова выучены!';
+                    questionWord.style.fontSize = '2rem';
                     questionWord.style.fontFamily = 'Inter, sans-serif';
-                    document.getElementById('questionMeta').innerText = 'Все слова выучены!';
-                    document.getElementById('questionMeta').style.color = 'var(--jade)';
                 }
                 document.getElementById('optionsGrid').innerHTML = '';
                 updateProgress();
@@ -622,10 +650,22 @@ function renderEmptyStateForActiveTab() {
             questionCard.classList.remove('celebration');
             questionWord.style.fontSize = '';
             questionWord.style.fontFamily = '';
+            const questionPinyin = document.getElementById('questionPinyin');
 
             currentQuestion = trainingPool[Math.floor(Math.random() * trainingPool.length)];
-            questionWord.innerText = currentQuestion.word;
-            document.getElementById('questionMeta').innerText = currentQuestion.meaning;
+
+            // Render the question card according to the active training mode.
+            if (trainingMode === 'hanzi2ru') {
+                questionWord.innerText = currentQuestion.word;
+                questionWord.style.fontFamily = "'Noto Serif SC', 'Ma Shan Zheng', serif";
+                questionPinyin.innerText = currentQuestion.pinyin;
+                questionPinyin.style.fontFamily = 'Inter, sans-serif';
+            } else {
+                // ru2hanzi (default): show only the Russian meaning, no pinyin line.
+                questionWord.innerText = currentQuestion.meaning;
+                questionWord.style.fontFamily = 'Inter, sans-serif';
+                questionPinyin.style.display = 'none';
+            }
 
             let options = [currentQuestion];
             let attempts = 0;
@@ -644,13 +684,15 @@ function renderEmptyStateForActiveTab() {
             options.forEach((opt, idx) => {
                 const btn = document.createElement('button');
                 btn.className = 'option-btn';
-                btn.innerHTML = `
-                    <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
-                    <div class="flex-1 min-w-0">
-                        <div class="font-semibold tracking-wide" style="color: var(--ink); font-size: 1.35rem; line-height: 1.2">${opt.pinyin}</div>
-                    </div>
-                    <span class="font-hanzi shrink-0" style="font-size: 1.75rem; opacity: 0.65">${opt.word}</span>
-                `;
+                // In hanzi2ru mode, options show Russian meaning; in ru2hanzi, they show pinyin + hanzi.
+                const inner = trainingMode === 'hanzi2ru'
+                    : `<span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
+                       <div class="flex-1 min-w-0">
+                         <div class="font-semibold tracking-wide" style="color: var(--ink); font-size: 1.35rem; line-height: 1.2">${opt.pinyin}</div>
+                       </div>
+                       <span class="font-hanzi shrink-0" style="font-size: 1.75rem; opacity: 0.65">${opt.word}</span>`;
+                btn.innerHTML = inner;
+                btn._opt = opt;  // store the option data so checkAnswer can find the correct one in any mode.
                 btn.onclick = () => checkAnswer(btn, opt);
                 grid.appendChild(btn);
             });
@@ -673,8 +715,9 @@ function renderEmptyStateForActiveTab() {
                 btn.classList.add('wrong');
                 document.getElementById('feedback').innerText = '✗ Попробуй ещё раз';
                 document.getElementById('feedback').style.color = '#dc2626';
+                // Highlight the correct option regardless of mode.
                 allBtns.forEach(b => {
-                    if (b.querySelector('span:last-child').innerText === currentQuestion.word) {
+                    if (b._opt && b._opt.word === currentQuestion.word) {
                         b.classList.add('correct');
                     }
                 });
