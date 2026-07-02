@@ -476,11 +476,13 @@
 
             if (tabId === 'gallery') {
                 searchVocabulary();
-            } else if (tabId === 'training') {
+             } else if (tabId === 'training') {
+                 // Highlight the default active mode button
+                const ruBtn = document.getElementById('mode-ru2hanzi');
+                if (ruBtn) ruBtn.classList.add('active');
                 startTraining();
-            }
-        }
-
+             }
+         }
 function renderEmptyStateForActiveTab() {
             const gallery = document.getElementById('gallery');
             const training = document.getElementById('training');
