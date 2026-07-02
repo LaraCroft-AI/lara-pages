@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новинки кино — RuTracker Scout</title>
+  <style>
+    :root {
+      --bg: #0f1115; --card: #181b22; --line: #262a33;
+      --fg: #e7e9ee; --muted: #9aa1ab; --accent: #ff6a3d;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+            font: 15px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; }
+    header { padding: 24px 28px; border-bottom: 1px solid var(--line);
+              display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    header h1 { margin: 0; font-size: 22px; }
+    header .meta { color: var(--muted); font-size: 13px; }
+    main { padding: 24px 28px 80px; max-width: 1180px; margin: 0 auto; }
+    .grid { display: grid; gap: 18px;
+             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--line);
+             border-radius: 12px; overflow: hidden;
+             display: flex; flex-direction: column; }
+    .card a.poster { display: block; aspect-ratio: 2/3; background: #000;
+                      position: relative; overflow: hidden; }
+    .card a.poster img { width: 100%; height: 100%; object-fit: cover;
+                          transition: transform .3s; }
+    .card a.poster:hover img { transform: scale(1.03); }
+    .body { padding: 14px 16px 16px; display: flex;
+             flex-direction: column; gap: 8px; flex: 1; }
+    .title { font-size: 16px; font-weight: 600; line-height: 1.3; }
+    .orig { color: var(--muted); font-size: 13px; }
+    .row { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; }
+    .tag { background: #232732; color: #c8cdd6;
+            padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+    .tag.q { background: #2a1f17; color: #ffb37c; }
+    .tag.r { background: #1f2a17; color: #b8e986; font-weight: 600; }
+    .desc { font-size: 13px; color: #c2c6cf; max-height: 6.5em;
+             overflow: hidden; }
+    .links { margin-top: auto; padding-top: 8px;
+              display: flex; gap: 10px; font-size: 13px; }
+    .links a { color: var(--accent); text-decoration: none;
+                border-bottom: 1px dashed transparent; }
+    .links a:hover { border-bottom-color: var(--accent); }
+    footer { color: var(--muted); padding: 24px 28px;
+              border-top: 1px solid var(--line); font-size: 12px; }
+    .empty { padding: 40px; text-align: center; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎬 Новинки кино — RuTracker Scout</h1>
+    <span class="meta">2026-07-02 14:46 MSK • 17 новых фильмов • источник: <a style="color: var(--accent)" href="https://rutracker.org/forum/viewforum.php?f=7">RuTracker f=7</a></span>
+   <a class="back-link" href="../index.html">← к оглавлению</a></header>
+  <main>
+    <div class="grid">
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877502"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0702/ca/8c41c7f452a191fa868c004d5a8c93ca.png" alt="Платья и мечты / A Vintage Bride"></a>
+      <div class="body">
+        <div class="title">Платья и мечты / A Vintage Bride <span style="color:#9aa1ab">(2023)</span></div>
+        <div class="orig">Team Bride</div>
+        <div class="row"><span class="tag q">WEB-DLRip</span><span class="tag">мелодрама</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877502">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877282"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0701/7c/1f6cabd6daaeb68f9033429747b87f7c.jpg" alt="Люблю этого грубияна"></a>
+      <div class="body">
+        <div class="title">Люблю этого грубияна <span style="color:#9aa1ab">(1950)</span></div>
+        <div class="orig">Love That Brute</div>
+        <div class="row"><span class="tag q">DVDRip</span><span class="tag">криминал</span><span class="tag">комедия</span></div>
+        <div class="desc">В Чикаго 1928-го года двое гангстеров убивают владельца магазина. Гангстер Большой Эд посылает своего главного головореза Багси Уэлча положить на трупы свою фирменную белую гвоздику, чтобы намекнуть на свою причастность к убийствам. Полиция спешит арестовать Большого Эда, но у него есть алиби: он был в парке, где встретил Рут Мэннинг, деревенскую девушку, приехавшую в Чикаго петь, но теперь работающую гувернанткой в детском саду. Большой Эд влюбляется в Рут и, притворившись вдовцом, просит её позаботиться о его ребёнке, обещая утроить её зарплату. Когда она соглашается, Большой Эд посылает Багси на поиски мальчика, который мог бы выдать себя за его сына...</div>
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877282">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877473"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0702/e0/f9207176d286db7b6e519686167e32e0.jpg" alt="Театр Амитивилля"></a>
+      <div class="body">
+        <div class="title">Театр Амитивилля <span style="color:#9aa1ab">(2015)</span></div>
+        <div class="orig">Amityville Playhouse</div>
+        <div class="row"><span class="tag q">WEBRip</span><span class="tag">ужасы</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877473">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877461"><img loading="lazy" src="https://images4.imagebam.com/7f/05/16/ME1E907V_o.png" alt="Отеклер, или Счастье в преступлении"></a>
+      <div class="body">
+        <div class="title">Отеклер, или Счастье в преступлении <span style="color:#9aa1ab">(1961)</span></div>
+        <div class="orig">Hauteclaire - Le Bonheur dans le Crime</div>
+        <div class="row"><span class="tag q">WEBRip</span><span class="tag">драма</span><span class="tag">криминал</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877461">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877387"><img loading="lazy" src="http://i5.imageban.ru/out/2018/03/24/99949e5fdb74db15b3465f1437016049.png" alt="Обитель зла"></a>
+      <div class="body">
+        <div class="title">Обитель зла <span style="color:#9aa1ab">(2002)</span></div>
+        <div class="orig">Resident Evil</div>
+        <div class="row"><span class="tag q">HDRip</span><span class="tag">Германия</span><span class="tag">ужасы</span><span class="tag">фантастика</span><span class="tag">боевик</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877387">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877364"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0702/18/47e554f8d8db17fda7483763a8098718.jpg" alt="Иисус"></a>
+      <div class="body">
+        <div class="title">Иисус <span style="color:#9aa1ab">(1999)</span></div>
+        <div class="orig">Jesus</div>
+        <div class="row"><span class="tag q">BDRip-AVC</span><span class="tag">Италия</span><span class="tag">Германия</span><span class="tag">драма</span><span class="tag">история</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877364">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6877154"><img loading="lazy" src="http://i127.fastpic.org/big/2026/0619/8a/4fd056efb3a8b1c12cc48090e5cb468a.jpg" alt="Американский психопат / Американский Психоз"></a>
+      <div class="body">
+        <div class="title">Американский психопат / Американский Психоз <span style="color:#9aa1ab">(2000)</span></div>
+        <div class="orig">American Psycho</div>
+        <div class="row"><span class="tag q">BDRip 2160p</span><span class="tag">Канада</span><span class="tag">триллер</span><span class="tag">драма</span><span class="tag">криминал</span></div>
+        <div class="desc">Патрик Бейтман - яппи с Уолл-стрит, одержимый успехом, стилем и своим статусом в обществе. Однако за глянцевой маской офисного работника скрывается настоящий психопат, насильник и убийца. Ему безразлично, кто станет очередной жертвой - это может быть как знакомый человек, так и случайный прохожий. Фильм, основанный на скандальном романе, представляет собой острую, но при этом жуткую и пугающую сатиру на тёмную сторону культуры яппи 80-х годов.</div>
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6877154">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6876064"><img loading="lazy" src="http://i67.fastpic.ru/big/2014/1202/31/5918abb11e95e41d1aab1895b315c331.jpg" alt="Звездный десант"></a>
+      <div class="body">
+        <div class="title">Звездный десант <span style="color:#9aa1ab">(1997)</span></div>
+        <div class="orig">Starship Troopers</div>
+        <div class="row"><span class="tag q">HDRip</span><span class="tag">фантастика</span><span class="tag">боевик</span><span class="tag">триллер</span><span class="tag">приключения</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6876064">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6863018"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/1bg5I0kj2CQhDwZ0Q7cNegl2sgl.jpg" alt="Кобра"></a>
+      <div class="body">
+        <div class="title">Кобра <span style="color:#9aa1ab">(1986)</span></div>
+        <div class="orig">Cobra</div>
+        <div class="row"><span class="tag r">★ 49/100 TMDb</span><span class="tag q">HDRip</span><span class="tag">боевик</span></div>
+        <div class="desc">Он - «Кобра» - штурмовой отряд полиции из одного человека, ему достаётся кровавая работёнка, за которую никто не хочет (или не осмеливается) взяться. Он выходит на след убийцы, за которым целая армия преступников-маньяков, стремящихся уничтожить свидетельницу их кровавой вакханалии. Но, к счастью, она попадает под защиту «Кобры». Доп. информация : Видеоряд отсюда https://rutracker.org/forum/viewtopic.php?t=6596819 Оцифровка лицензионной VHS &quot;Варус Видео&quot; - Fikaloid . Оцифровка записи с телеканала НТВ - Ванек20090808 и Glowamy . Синхронизация дубляжа Варус - Mr-Maximus . Синхронизация перевода НТВ ранний - ale_x2008 . В переводе НТВ роли озвучивали Андрей Ярославцев, Александр Рахленко и Любовь Германова. Сэмпл : https://www.sendspace.com/file/pum9h9 Качество видео : HDRip Формат видео : AVI Видео : 704x400, 23.976 fps, MPEG-4 Visual, 1830 Kbps, XviD 67 Аудио 1 : 48 KHz, AC3, 2 ch, 192 Kbps - Dub Варус Аудио 2 : 48 KHz, AC3, 2 ch (mono), 192 Kbps - MVO НТВ MediaInfo General Complete name : C:\Users\Sergei\Videos\Кобра (Варус + НТВ).avi Format : AVI Format/Info : Audio Video Interleave Format settings : BitmapInfoHeader / WaveFormatEx File size : 1.35 GiB Duration : 1 h 27 min Overall bit rate : 2 228 kb/s Frame rate : 23.976 FPS Writing application : VirtualDubMod 1.5.10.2 (build 2540/release) Writing library : VirtualDubMod build 2540/release Video ID : 0 Format : MPEG-4 Visual Format profile : Advanced Simple@L5 Format settings : BVOP1 Format settings, BVOP : 1 Format settings, QPel : No Format settings, GMC : No warppoints Format settings, Matrix : Default (H.263) Codec ID : XVID Codec ID/Hint : XviD Duration : 1 h 27 min Bit rate : 1 830 kb/s Width : 704 pixels Height : 400 pixels Display aspect ratio : 16:9 Frame rate : 23.976 (24000/1001) FPS Color space : YUV Chroma subsampling : 4:2:0 Bit depth : 8 bits Scan type : Progressive Compression mode : Lossy Bits/(Pixel*Frame) : 0.271 Stream size : 1.11 GiB (82%) Writing library : XviD 67 Audio #1 ID : 1 Format : AC-3 Format/Info : Audio Coding 3 Commercial name : Dolby Digital Codec ID : 2000 Duration : 1 h 27 min Bit rate mode : Constant Bit rate : 192 kb/s Channel(s) : 2 channels Channel layout : L R Sampling rate : 48.0 kHz Frame rate : 31.250 FPS (1536 SPF) Compression mode : Lossy Stream size : 120 MiB (9%) Alignment : Split across interleaves Interleave, duration : 42 ms (1.00 video frame) Interleave, preload duration : 500 ms Service kind : Complete Main Dialog Normalization : -31 dB compr : -0.28 dB ltrtcmixlev : -3.0 dB ltrtsurmixlev : -3.0 dB lorocmixlev : -3.0 dB lorosurmixlev : -3.0 dB dialnorm_Average : -31 dB dialnorm_Minimum : -31 dB dialnorm_Maximum : -31 dB Audio #2 ID : 2 Format : AC-3 Format/Info : Audio Coding 3 Commercial name : Dolby Digital Codec ID : 2000 Duration : 1 h 27 min Bit rate mode : Constant Bit rate : 192 kb/s Channel(s) : 2 channels Channel layout : L R Sampling rate : 48.0 kHz Frame rate : 31.250 FPS (1536 SPF) Compression mode : Lossy Stream size : 120 MiB (9%) Alignment : Split across interleaves Interleave, duration : 42 ms (1.00 video frame) Interleave, preload duration : 500 ms Service kind : Complete Main Dialog Normalization : -27 dB compr : -0.28 dB dsurmod : Not Dolby Surround encoded dialnorm_Average : -27 dB dialnorm_Minimum : -27 dB dialnorm_Maximum : -27 dB Скриншоты Download Скачать по magnet-ссылке 1.35 GB Rutracker.org не распространяет и не хранит электронные версии произведений, а лишь предоставляет доступ к создаваемому пользователями каталогу ссылок на торрент-файлы , которые содержат только списки хеш-сумм Как скачивать? (для скачивания .torrent файлов необходима регистрация ) [Профиль] [ЛС] Serg377 Стаж: 15 лет 4 месяца Сообщений: 5473 Serg377 · 26-Май-26 07:33 (спустя 8 мин., ред. 26-Июн-26 11:01) [Цитировать] Здесь https://rutracker.org/forum/viewtopic.php?t=4798427 этот перевод представлен в худшем качестве (звук более тихий, фоновый шум, обрезана озвучка на финальных титрах). Сравнительный сэмпл https://www.sendspace.com/file/1tamcb</div>
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6863018">RuTracker</a> · <a href="https://www.themoviedb.org/movie/49330-cobra-mission">TMDb</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6858689"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0514/19/f785216364b438415ea9acdaa5bfc219.jpg" alt="Дорога к славе"></a>
+      <div class="body">
+        <div class="title">Дорога к славе <span style="color:#9aa1ab">(2001)</span></div>
+        <div class="orig">Bojangles</div>
+        <div class="row"><span class="tag q">DVDRemux</span><span class="tag">драма</span><span class="tag">биография</span></div>
+        <div class="desc">Широкая белозубая улыбка, лихая чечеточная отбивка — ни одна женщина не могла устоять перед таким шикарным парнем, каким был виртуозный исполнитель степа Билл Робинсон. Во времена золотого Голливуда шикарные дамочки и их по-настоящему крутые кавалеры были готовы отдать все только за то, чтобы посмотреть на его выступление. Своими безукоризненными, отточенными движениями и четким ритмом, он буквально гипнотизировал аудиторию. Танцор от Бога, Билл стал первым чернокожим исполнителем чечетки, получавшим сногсшибательные гонорары за свои сольные выступления и съемки для фильмов с участием знаменитой Ширли Темпл. Легкомысленный повеса и азартный игрок, Робинсон растратил все сбережения и умер в безвестности, но до сих пор миллионы людей как зачарованные глядят на его грациозный оригинальный танец. Тип релиза : DVDRemux Контейнер : MKV Видео : MPEG-2, 720х480@640x576, 29.970 fps, 4 700 Kbps, 0.454 bit/pixel Аудио 1 : AC3, 2 ch, 48 kHz, 192 kbps | DVO Аудио 2 : AC3, 2 ch, 48 kHz, 192 kbps | Original Главы : Да</div>
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6858689">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6871449"><img loading="lazy" src="https://i3.imageban.ru/out/2026/06/17/90ed6d4087c556fe8a72131c8e138c4c.png" alt="Месть женщины / Intikam kadini"></a>
+      <div class="body">
+        <div class="title">Месть женщины / Intikam kadini <span style="color:#9aa1ab">(1979)</span></div>
+        <div class="orig">Turkish I Spit On Your Grave</div>
+        <div class="row"><span class="tag">Эротический триллер</span><span class="tag">криминал</span><span class="tag">VHSRip</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6871449">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6715994"><img loading="lazy" src="https://i125.fastpic.org/big/2025/0706/85/03fd83a6ae8ab00f3af3188eb9187e85.png" alt="39 ступеней"></a>
+      <div class="body">
+        <div class="title">39 ступеней <span style="color:#9aa1ab">(1935)</span></div>
+        <div class="orig">The 39 Steps</div>
+        <div class="row"><span class="tag q">HDRip</span><span class="tag">триллер</span><span class="tag">детектив</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6715994">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6864955"><img loading="lazy" src="https://i126.fastpic.org/big/2025/1130/82/67b7e3c9f54fa6f25ec9c373e918ea82.png" alt="Муха"></a>
+      <div class="body">
+        <div class="title">Муха <span style="color:#9aa1ab">(1986)</span></div>
+        <div class="orig">The Fly</div>
+        <div class="row"><span class="tag q">HDRip</span><span class="tag">ужасы</span><span class="tag">фантастика</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6864955">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6862648"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0525/d3/c8f0e735563056fb88b7268cef17b9d3.png" alt="Человек ноября"></a>
+      <div class="body">
+        <div class="title">Человек ноября <span style="color:#9aa1ab">(2014)</span></div>
+        <div class="orig">The November Man</div>
+        <div class="row"><span class="tag q">DVDRemux</span><span class="tag">боевик</span><span class="tag">триллер</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6862648">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6859108"><img loading="lazy" src="https://i127.fastpic.org/big/2026/0515/79/37a71e8121f6d765f0b82a6f0e86da79.jpg" alt="[БЕЗ ПЕРЕВОДА] Цветок и дракон, часть 2 / Hana to ryu - Dai-ni-bu Aijo ruten / 花と竜 第二部 愛憎流転"></a>
+      <div class="body">
+        <div class="title">[БЕЗ ПЕРЕВОДА] Цветок и дракон, часть 2 / Hana to ryu - Dai-ni-bu Aijo ruten / 花と竜 第二部 愛憎流転 <span style="color:#9aa1ab">(1954)</span></div>
+        <div class="orig">Flower and Dragon, part 2</div>
+        <div class="row"><span class="tag q">WEB-DL 480p</span><span class="tag">драма</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6859108">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6859815"><img loading="lazy" src="https://i125.fastpic.org/big/2025/0608/f3/0253a77c5ded1adff3c082c704f49ff3.jpg" alt="Питер и летающий автобус"></a>
+      <div class="body">
+        <div class="title">Питер и летающий автобус <span style="color:#9aa1ab">(1976)</span></div>
+        <div class="orig">Peter en de vliegende autobus</div>
+        <div class="row"><span class="tag q">DVDRemux</span><span class="tag">приключения</span><span class="tag">фэнтези</span><span class="tag">семейный</span></div>
+        
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6859815">RuTracker</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="poster" href="https://rutracker.org/forum/viewtopic.php?t=6859664"><img loading="lazy" src="https://i4.imageban.ru/out/2026/05/16/76235816776982ce73ae71ee1bff32aa.jpg" alt="Шахид"></a>
+      <div class="body">
+        <div class="title">Шахид <span style="color:#9aa1ab">(1965)</span></div>
+        <div class="orig">Shaheed</div>
+        <div class="row"><span class="tag q">WEBRip</span><span class="tag">Биография</span><span class="tag">драма</span><span class="tag">история</span></div>
+        <div class="desc">Фильм рассказывает о судьбе одного из величайших патриотов Индии Сардара Бхагата Сингха.</div>
+        <div class="links"><a href="https://rutracker.org/forum/viewtopic.php?t=6859664">RuTracker</a></div>
+      </div>
+    </article></div>
+  </main>
+  <footer>
+    Авто-генерация: Lara Croft AI (cron RuTracker Movie Scout).<br>
+    Рейтинг — TMDb. Постеры — TMDb. Описания — со страниц тем RuTracker.
+  </footer>
+</body>
+</html>
