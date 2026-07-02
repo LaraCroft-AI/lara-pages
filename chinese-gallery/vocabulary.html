@@ -665,6 +665,7 @@ function renderEmptyStateForActiveTab() {
             if (trainingMode === 'hanzi2ru') {
                 questionWord.innerText = currentQuestion.word;
                 questionWord.style.fontFamily = "'Noto Serif SC', 'Ma Shan Zheng', serif";
+                questionPinyin.style.display = '';
                 questionPinyin.innerText = currentQuestion.pinyin;
                 questionPinyin.style.fontFamily = 'Inter, sans-serif';
             } else {
