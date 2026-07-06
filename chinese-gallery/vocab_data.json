@@ -3,1052 +3,1260 @@
     {
       "word": "鹅",
       "pinyin": "é",
-      "meaning": "гусь"
+      "meaning": "гусь",
+      "hsk": null
     },
     {
       "word": "俄罗斯",
       "pinyin": "Éluósī",
-      "meaning": "Россия"
+      "meaning": "Россия",
+      "hsk": null
     },
     {
       "word": "俄语",
       "pinyin": "Éyǔ",
-      "meaning": "русский язык"
+      "meaning": "русский язык",
+      "hsk": null
     },
     {
       "word": "我",
       "pinyin": "wǒ",
-      "meaning": "я"
+      "meaning": "я",
+      "hsk": 1
     },
     {
       "word": "饿",
       "pinyin": "è",
-      "meaning": "голодный"
+      "meaning": "голодный",
+      "hsk": 3
     },
     {
       "word": "阿姨",
       "pinyin": "āyí",
-      "meaning": "тётя"
+      "meaning": "тётя",
+      "hsk": 3
     },
     {
       "word": "阿胶",
       "pinyin": "ējiāo",
-      "meaning": "лекарство из ослиной кожи"
+      "meaning": "лекарство из ослиной кожи",
+      "hsk": null
     },
     {
       "word": "恶心",
       "pinyin": "ěxīn",
-      "meaning": "тошнота"
+      "meaning": "тошнота",
+      "hsk": 6
     },
     {
       "word": "鳄鱼",
       "pinyin": "èyú",
-      "meaning": "крокодил"
+      "meaning": "крокодил",
+      "hsk": null
     },
     {
       "word": "大",
       "pinyin": "dà",
-      "meaning": "большой"
+      "meaning": "большой",
+      "hsk": 1
     },
     {
       "word": "喝",
       "pinyin": "hē",
-      "meaning": "пить"
+      "meaning": "пить",
+      "hsk": 1
     },
     {
       "word": "破",
       "pinyin": "pò",
-      "meaning": "порвать / разбить"
+      "meaning": "порвать / разбить",
+      "hsk": 4
     },
     {
       "word": "他",
       "pinyin": "tā",
-      "meaning": "он"
+      "meaning": "он",
+      "hsk": 1
     },
     {
       "word": "她",
       "pinyin": "tā",
-      "meaning": "она"
+      "meaning": "она",
+      "hsk": 1
     }
   ],
   "Урок 2": [
     {
       "word": "衣服",
       "pinyin": "yīfu",
-      "meaning": "одежда"
+      "meaning": "одежда",
+      "hsk": 1
     },
     {
       "word": "乌龟",
       "pinyin": "wūguī",
-      "meaning": "черепаха"
+      "meaning": "черепаха",
+      "hsk": null
     },
     {
       "word": "鱼",
       "pinyin": "yú",
-      "meaning": "рыба"
+      "meaning": "рыба",
+      "hsk": 2
     },
     {
       "word": "一",
       "pinyin": "yī",
-      "meaning": "один"
+      "meaning": "один",
+      "hsk": 1
     },
     {
       "word": "蜡烛",
       "pinyin": "làzhú",
-      "meaning": "свеча"
+      "meaning": "свеча",
+      "hsk": 5
     },
     {
       "word": "铅笔",
       "pinyin": "qiānbǐ",
-      "meaning": "карандаш"
+      "meaning": "карандаш",
+      "hsk": 3
     },
     {
       "word": "橡皮",
       "pinyin": "xiàngpí",
-      "meaning": "ластик"
+      "meaning": "ластик",
+      "hsk": 5
     },
     {
       "word": "蚂蚁",
       "pinyin": "mǎyǐ",
-      "meaning": "муравей"
+      "meaning": "муравей",
+      "hsk": null
     },
     {
       "word": "有意思",
       "pinyin": "yǒuyìsi",
-      "meaning": "интересный"
+      "meaning": "интересный",
+      "hsk": null
     }
   ],
   "Урок 3": [
     {
       "word": "房屋",
       "pinyin": "fángwū",
-      "meaning": "дом"
+      "meaning": "дом",
+      "hsk": null
     },
     {
       "word": "屋顶",
       "pinyin": "wūdǐng",
-      "meaning": "крыша"
+      "meaning": "крыша",
+      "hsk": null
     },
     {
       "word": "乌鸦",
       "pinyin": "wūyā",
-      "meaning": "ворона"
+      "meaning": "ворона",
+      "hsk": null
     },
     {
       "word": "五",
       "pinyin": "wǔ",
-      "meaning": "пять"
+      "meaning": "пять",
+      "hsk": 1
     },
     {
       "word": "雾",
       "pinyin": "wù",
-      "meaning": "туман"
+      "meaning": "туман",
+      "hsk": 5
     },
     {
       "word": "椅子",
       "pinyin": "yǐzi",
-      "meaning": "стул"
+      "meaning": "стул",
+      "hsk": 1
     },
     {
       "word": "容易",
       "pinyin": "róngyì",
-      "meaning": "легко"
+      "meaning": "легко",
+      "hsk": 3
     },
     {
       "word": "蜈蚣",
       "pinyin": "wúgōng",
-      "meaning": "сороконожка"
+      "meaning": "сороконожка",
+      "hsk": null
     },
     {
       "word": "错误",
       "pinyin": "cuòwù",
-      "meaning": "ошибка"
+      "meaning": "ошибка",
+      "hsk": 5
     },
     {
       "word": "医生",
       "pinyin": "yīshēng",
-      "meaning": "врач"
+      "meaning": "врач",
+      "hsk": 1
     },
     {
       "word": "淤泥",
       "pinyin": "yūní",
-      "meaning": "грязь"
+      "meaning": "грязь",
+      "hsk": null
     },
     {
       "word": "雨",
       "pinyin": "yǔ",
-      "meaning": "дождь"
+      "meaning": "дождь",
+      "hsk": null
     },
     {
       "word": "下雨",
       "pinyin": "xiàyǔ",
-      "meaning": "идёт дождь"
+      "meaning": "идёт дождь",
+      "hsk": 1
     },
     {
       "word": "玉米",
       "pinyin": "yùmǐ",
-      "meaning": "кукуруза"
+      "meaning": "кукуруза",
+      "hsk": 5
     },
     {
       "word": "金鱼",
       "pinyin": "jīnyú",
-      "meaning": "золотая рыбка"
+      "meaning": "золотая рыбка",
+      "hsk": null
     },
     {
       "word": "牙齿",
       "pinyin": "yáchǐ",
-      "meaning": "зуб"
+      "meaning": "зуб",
+      "hsk": null
     },
     {
       "word": "娃娃",
       "pinyin": "wáwa",
-      "meaning": "кукла"
+      "meaning": "кукла",
+      "hsk": 6
     },
     {
       "word": "蜗牛",
       "pinyin": "wōniú",
-      "meaning": "улитка"
+      "meaning": "улитка",
+      "hsk": null
     },
     {
       "word": "鸭子",
       "pinyin": "yāzi",
-      "meaning": "утка"
+      "meaning": "утка",
+      "hsk": null
     },
     {
       "word": "鱼鹰",
       "pinyin": "yúyīng",
-      "meaning": "баклан / скопа"
+      "meaning": "баклан / скопа",
+      "hsk": null
     },
     {
       "word": "鱼缸",
       "pinyin": "yúgāng",
-      "meaning": "аквариум"
+      "meaning": "аквариум",
+      "hsk": null
     },
     {
       "word": "鸭梨",
       "pinyin": "yálí",
-      "meaning": "груша (азиатская, нэши)"
+      "meaning": "груша (азиатская, нэши)",
+      "hsk": null
     },
     {
       "word": "鸭舌帽",
       "pinyin": "yāshémào",
-      "meaning": "кепка"
+      "meaning": "кепка",
+      "hsk": null
     },
     {
       "word": "乌云",
       "pinyin": "wūyún",
-      "meaning": "туча"
+      "meaning": "туча",
+      "hsk": null
     },
     {
       "word": "雨衣",
       "pinyin": "yǔyī",
-      "meaning": "дождевик"
+      "meaning": "дождевик",
+      "hsk": null
     }
   ],
   "Урок 4": [
     {
       "word": "广播",
       "pinyin": "guǎngbō",
-      "meaning": "радио"
+      "meaning": "радио",
+      "hsk": 4
     },
     {
       "word": "山坡",
       "pinyin": "shānpō",
-      "meaning": "холм"
+      "meaning": "холм",
+      "hsk": null
     },
     {
       "word": "摸",
       "pinyin": "mō",
-      "meaning": "трогать"
+      "meaning": "трогать",
+      "hsk": 5
     },
     {
       "word": "风",
       "pinyin": "fēng",
-      "meaning": "ветер"
+      "meaning": "ветер",
+      "hsk": null
     },
     {
       "word": "拔萝卜",
       "pinyin": "bá luóbo",
-      "meaning": "тянуть морковь"
+      "meaning": "тянуть морковь",
+      "hsk": null
     },
     {
       "word": "靶",
       "pinyin": "bǎ",
-      "meaning": "мишень/дротик"
+      "meaning": "мишень/дротик",
+      "hsk": null
     },
     {
       "word": "水坝",
       "pinyin": "shuǐbà",
-      "meaning": "дамба"
+      "meaning": "дамба",
+      "hsk": null
     },
     {
       "word": "门把手",
       "pinyin": "mén bǎshǒu",
-      "meaning": "дверная ручка"
+      "meaning": "дверная ручка",
+      "hsk": null
     },
     {
       "word": "鼻子",
       "pinyin": "bízi",
-      "meaning": "нос"
+      "meaning": "нос",
+      "hsk": 3
     },
     {
       "word": "瀑布",
       "pinyin": "pùbù",
-      "meaning": "водопад"
+      "meaning": "водопад",
+      "hsk": 6
     },
     {
       "word": "爬山",
       "pinyin": "páshān",
-      "meaning": "подниматься в гору"
+      "meaning": "подниматься в гору",
+      "hsk": 3
     },
     {
       "word": "破碎",
       "pinyin": "pòsuì",
-      "meaning": "разбитый"
+      "meaning": "разбитый",
+      "hsk": null
     },
     {
       "word": "披风",
       "pinyin": "pīfēng",
-      "meaning": "накидка / плащ"
+      "meaning": "накидка / плащ",
+      "hsk": null
     },
     {
       "word": "乐谱",
       "pinyin": "yuèpǔ",
-      "meaning": "музыкальные ноты"
+      "meaning": "музыкальные ноты",
+      "hsk": 6
     },
     {
       "word": "马",
       "pinyin": "mǎ",
-      "meaning": "лошадь"
+      "meaning": "лошадь",
+      "hsk": 3
     },
     {
       "word": "大米",
       "pinyin": "dàmǐ",
-      "meaning": "рис"
+      "meaning": "рис",
+      "hsk": null
     },
     {
       "word": "木头",
       "pinyin": "mùtou",
-      "meaning": "бревно"
+      "meaning": "бревно",
+      "hsk": 5
     },
     {
       "word": "发言",
       "pinyin": "fāyán",
-      "meaning": "высказаться / взять слово (на уроке)"
+      "meaning": "высказаться / взять слово (на уроке)",
+      "hsk": 5
     },
     {
       "word": "佛手",
       "pinyin": "fóshǒu",
-      "meaning": "бергамот (цитрус)"
+      "meaning": "бергамот (цитрус)",
+      "hsk": null
     },
     {
       "word": "斧子",
       "pinyin": "fǔzi",
-      "meaning": "топор"
+      "meaning": "топор",
+      "hsk": null
     },
     {
       "word": "爸爸",
       "pinyin": "bàba",
-      "meaning": "папа"
+      "meaning": "папа",
+      "hsk": 1
     },
     {
       "word": "妈妈",
       "pinyin": "māmā",
-      "meaning": "мама"
+      "meaning": "мама",
+      "hsk": 1
     },
     {
       "word": "踢足球",
       "pinyin": "tīzúqiú",
-      "meaning": "играть в футбол"
+      "meaning": "играть в футбол",
+      "hsk": null
     },
     {
       "word": "练瑜伽",
       "pinyin": "liàn yújiā",
-      "meaning": "заниматься йогой"
+      "meaning": "заниматься йогой",
+      "hsk": null
     },
     {
       "word": "幸福",
       "pinyin": "xìngfú",
-      "meaning": "счастье"
+      "meaning": "счастье",
+      "hsk": 4
     },
     {
       "word": "北京",
       "pinyin": "Běijīng",
-      "meaning": "Пекин"
+      "meaning": "Пекин",
+      "hsk": 1
     },
     {
       "word": "苹果",
       "pinyin": "píngguǒ",
-      "meaning": "яблоко"
+      "meaning": "яблоко",
+      "hsk": 1
     },
     {
       "word": "买",
       "pinyin": "mǎi",
-      "meaning": "покупать"
+      "meaning": "покупать",
+      "hsk": 1
     },
     {
       "word": "卖",
       "pinyin": "mài",
-      "meaning": "продавать"
+      "meaning": "продавать",
+      "hsk": 2
     },
     {
       "word": "明天",
       "pinyin": "míngtiān",
-      "meaning": "завтра"
+      "meaning": "завтра",
+      "hsk": 1
     },
     {
       "word": "房间",
       "pinyin": "fángjiān",
-      "meaning": "комната"
+      "meaning": "комната",
+      "hsk": 2
     },
     {
       "word": "飞机",
       "pinyin": "fēijī",
-      "meaning": "самолёт"
+      "meaning": "самолёт",
+      "hsk": 1
     },
     {
       "word": "秘密",
       "pinyin": "mìmì",
-      "meaning": "секрет"
+      "meaning": "секрет",
+      "hsk": 5
     },
     {
       "word": "密码",
       "pinyin": "mìmǎ",
-      "meaning": "пароль"
+      "meaning": "пароль",
+      "hsk": 4
     },
     {
       "word": "跑步",
       "pinyin": "pǎobù",
-      "meaning": "бегать"
+      "meaning": "бегать",
+      "hsk": 2
     }
   ],
   "Урок 5": [
     {
       "word": "跳舞",
       "pinyin": "tiàowǔ",
-      "meaning": "танцевать"
+      "meaning": "танцевать",
+      "hsk": 2
     },
     {
       "word": "打水",
       "pinyin": "dǎshuǐ",
-      "meaning": "набирать воду"
+      "meaning": "набирать воду",
+      "hsk": null
     },
     {
       "word": "得奖",
       "pinyin": "déjiǎng",
-      "meaning": "получать приз"
+      "meaning": "получать приз",
+      "hsk": null
     },
     {
       "word": "低头",
       "pinyin": "dītóu",
-      "meaning": "опустить голову"
+      "meaning": "опустить голову",
+      "hsk": null
     },
     {
       "word": "读书",
       "pinyin": "dúshū",
-      "meaning": "читать книгу"
+      "meaning": "читать книгу",
+      "hsk": null
     },
     {
       "word": "他们",
       "pinyin": "tāmen",
-      "meaning": "они"
+      "meaning": "они",
+      "hsk": null
     },
     {
       "word": "特长",
       "pinyin": "tècháng",
-      "meaning": "талант / сильная сторона"
+      "meaning": "талант / сильная сторона",
+      "hsk": 6
     },
     {
       "word": "体重",
       "pinyin": "tǐzhòng",
-      "meaning": "вес"
+      "meaning": "вес",
+      "hsk": null
     },
     {
       "word": "图画",
       "pinyin": "túhuà",
-      "meaning": "картина"
+      "meaning": "картина",
+      "hsk": null
     },
     {
       "word": "拿",
       "pinyin": "ná",
-      "meaning": "держать"
+      "meaning": "держать",
+      "hsk": 3
     },
     {
       "word": "哪吒",
       "pinyin": "Nézhā",
-      "meaning": "Нэчжа (герой мифологии)"
+      "meaning": "Нэчжа (герой мифологии)",
+      "hsk": null
     },
     {
       "word": "你们",
       "pinyin": "nǐmen",
-      "meaning": "вы"
+      "meaning": "вы",
+      "hsk": null
     },
     {
       "word": "发怒",
       "pinyin": "fānù",
-      "meaning": "злиться"
+      "meaning": "злиться",
+      "hsk": null
     },
     {
       "word": "女孩",
       "pinyin": "nǚhái",
-      "meaning": "девочка"
+      "meaning": "девочка",
+      "hsk": null
     },
     {
       "word": "拉",
       "pinyin": "lā",
-      "meaning": "тянуть"
+      "meaning": "тянуть",
+      "hsk": 4
     },
     {
       "word": "快乐",
       "pinyin": "kuàilè",
-      "meaning": "радоваться"
+      "meaning": "радоваться",
+      "hsk": 2
     },
     {
       "word": "公路",
       "pinyin": "gōnglù",
-      "meaning": "шоссе"
+      "meaning": "шоссе",
+      "hsk": null
     },
     {
       "word": "大地",
       "pinyin": "dàdì",
-      "meaning": "земля"
+      "meaning": "земля",
+      "hsk": null
     },
     {
       "word": "马路",
       "pinyin": "mǎlù",
-      "meaning": "дорога"
+      "meaning": "дорога",
+      "hsk": null
     },
     {
       "word": "泥土",
       "pinyin": " nítǔ",
-      "meaning": "почва"
+      "meaning": "почва",
+      "hsk": null
     },
     {
       "word": "大树",
       "pinyin": "dàshù",
-      "meaning": "большое дерево"
+      "meaning": "большое дерево",
+      "hsk": null
     },
     {
       "word": "大门",
       "pinyin": "dàmén",
-      "meaning": "ворота"
+      "meaning": "ворота",
+      "hsk": null
     },
     {
       "word": "礼帽",
       "pinyin": "lǐmào",
-      "meaning": "шляпа"
+      "meaning": "шляпа",
+      "hsk": null
     },
     {
       "word": "木马",
       "pinyin": "mùmǎ",
-      "meaning": "качалка-лошадка / карусель"
+      "meaning": "качалка-лошадка / карусель",
+      "hsk": null
     },
     {
       "word": "毛驴",
       "pinyin": "máolǘ",
-      "meaning": "осёл"
+      "meaning": "осёл",
+      "hsk": null
     },
     {
       "word": "马车",
       "pinyin": "mǎchē",
-      "meaning": "повозка"
+      "meaning": "повозка",
+      "hsk": null
     },
     {
       "word": "尘土",
       "pinyin": "chéntǔ",
-      "meaning": "пыль"
+      "meaning": "пыль",
+      "hsk": null
     },
     {
       "word": "兔子",
       "pinyin": "tùzi",
-      "meaning": "заяц"
+      "meaning": "заяц",
+      "hsk": 5
     },
     {
       "word": "来",
       "pinyin": "lái",
-      "meaning": "приходить"
+      "meaning": "приходить",
+      "hsk": 1
     },
     {
       "word": "电视",
       "pinyin": "diànshì",
-      "meaning": "телевизор"
+      "meaning": "телевизор",
+      "hsk": 1
     },
     {
       "word": "电脑",
       "pinyin": "diànnǎo",
-      "meaning": "компьютер"
+      "meaning": "компьютер",
+      "hsk": 1
     },
     {
       "word": "同学",
       "pinyin": "tóngxué",
-      "meaning": "одноклассник"
+      "meaning": "одноклассник",
+      "hsk": 1
     },
     {
       "word": "牛奶",
       "pinyin": "niúnǎi",
-      "meaning": "молоко"
+      "meaning": "молоко",
+      "hsk": 2
     },
     {
       "word": "老师",
       "pinyin": "lǎoshī",
-      "meaning": "учитель"
+      "meaning": "учитель",
+      "hsk": 1
     },
     {
       "word": "脸",
       "pinyin": "liǎn",
-      "meaning": "лицо"
+      "meaning": "лицо",
+      "hsk": 3
     },
     {
       "word": "奶牛",
       "pinyin": "nǎiniú",
-      "meaning": "молочная корова"
+      "meaning": "молочная корова",
+      "hsk": null
     },
     {
       "word": "滴答",
       "pinyin": "dīdā",
-      "meaning": "тик-так"
+      "meaning": "тик-так",
+      "hsk": null
     },
     {
       "word": "独立",
       "pinyin": "dúlì",
-      "meaning": "независимый"
+      "meaning": "независимый",
+      "hsk": 5
     },
     {
       "word": "踏步",
       "pinyin": "tàbù",
-      "meaning": "шаг"
+      "meaning": "шаг",
+      "hsk": null
     },
     {
       "word": "地图",
       "pinyin": "dìtú",
-      "meaning": "карта"
+      "meaning": "карта",
+      "hsk": 3
     },
     {
       "word": "大度",
       "pinyin": "dàdù",
-      "meaning": "великодушие / щедрость"
+      "meaning": "великодушие / щедрость",
+      "hsk": null
     },
     {
       "word": "肚子",
       "pinyin": "dùzi",
-      "meaning": "живот"
+      "meaning": "живот",
+      "hsk": 4
     },
     {
       "word": "哪里",
       "pinyin": "nǎli",
-      "meaning": "где"
+      "meaning": "где",
+      "hsk": null
     },
     {
       "word": "那里",
       "pinyin": "nàli",
-      "meaning": "там"
+      "meaning": "там",
+      "hsk": null
     },
     {
       "word": "喇叭",
       "pinyin": "lǎba",
-      "meaning": "труба / горн"
+      "meaning": "труба / горн",
+      "hsk": 6
     },
     {
       "word": "答题",
       "pinyin": "dátí",
-      "meaning": "отвечать на вопросы"
+      "meaning": "отвечать на вопросы",
+      "hsk": null
     },
     {
       "word": "努力",
       "pinyin": "nǔlì",
-      "meaning": "усилие"
+      "meaning": "усилие",
+      "hsk": 3
     },
     {
       "word": "蜡笔",
       "pinyin": "làbǐ",
-      "meaning": "восковой карандаш / мелок"
+      "meaning": "восковой карандаш / мелок",
+      "hsk": null
     },
     {
       "word": "理发",
       "pinyin": "lǐfà",
-      "meaning": "стрижка"
+      "meaning": "стрижка",
+      "hsk": 4
     },
     {
       "word": "弟弟",
       "pinyin": "dìdi",
-      "meaning": "младший брат"
+      "meaning": "младший брат",
+      "hsk": 2
     },
     {
       "word": "陆地",
       "pinyin": "lùdì",
-      "meaning": "суша / земля"
+      "meaning": "суша / земля",
+      "hsk": 5
     },
     {
       "word": "绿色",
       "pinyin": "lǜsè",
-      "meaning": "зелёный (цвет)"
+      "meaning": "зелёный (цвет)",
+      "hsk": null
     },
     {
       "word": "蓝色",
       "pinyin": "lánsè",
-      "meaning": "синий (цвет)"
+      "meaning": "синий (цвет)",
+      "hsk": null
     },
     {
       "word": "您",
       "pinyin": "nín",
-      "meaning": "вы (вежливая форма)"
+      "meaning": "вы (вежливая форма)",
+      "hsk": 2
     },
     {
       "word": "打赌",
       "pinyin": "dǎdǔ",
-      "meaning": "держать пари / делать ставку"
+      "meaning": "держать пари / делать ставку",
+      "hsk": null
     },
     {
       "word": "法律",
       "pinyin": "fǎlǜ",
-      "meaning": "закон"
+      "meaning": "закон",
+      "hsk": 4
     }
   ],
   "Урок 6": [
     {
       "word": "鸽子",
       "pinyin": "gēzi",
-      "meaning": "голубь"
+      "meaning": "голубь",
+      "hsk": 5
     },
     {
       "word": "蝌蚪",
       "pinyin": "kēdǒu",
-      "meaning": "головастик"
+      "meaning": "головастик",
+      "hsk": null
     },
     {
       "word": "喝水",
       "pinyin": "hē shuǐ",
-      "meaning": "пить воду"
+      "meaning": "пить воду",
+      "hsk": null
     },
     {
       "word": "荷花",
       "pinyin": "héhuā",
-      "meaning": "лотос"
+      "meaning": "лотос",
+      "hsk": null
     },
     {
       "word": "禾苗",
       "pinyin": "hémiáo",
-      "meaning": "пшеница"
+      "meaning": "пшеница",
+      "hsk": null
     },
     {
       "word": "河流",
       "pinyin": "héliú",
-      "meaning": "река"
+      "meaning": "река",
+      "hsk": null
     },
     {
       "word": "核桃",
       "pinyin": "hétáo",
-      "meaning": "грецкий орех"
+      "meaning": "грецкий орех",
+      "hsk": null
     },
     {
       "word": "哥哥",
       "pinyin": "gēge",
-      "meaning": "старший брат"
+      "meaning": "старший брат",
+      "hsk": 2
     },
     {
       "word": "唱歌",
       "pinyin": "chànggē",
-      "meaning": "петь песню"
+      "meaning": "петь песню",
+      "hsk": 2
     },
     {
       "word": "割稻",
       "pinyin": "gē dào",
-      "meaning": "сбор урожая риса"
+      "meaning": "сбор урожая риса",
+      "hsk": null
     },
     {
       "word": "西瓜",
       "pinyin": "xīguā",
-      "meaning": "арбуз"
+      "meaning": "арбуз",
+      "hsk": 2
     },
     {
       "word": "南瓜",
       "pinyin": "nánguā",
-      "meaning": "тыква"
+      "meaning": "тыква",
+      "hsk": null
     },
     {
       "word": "黄瓜",
       "pinyin": "huángguā",
-      "meaning": "огурец"
+      "meaning": "огурец",
+      "hsk": 5
     },
     {
       "word": "甜瓜",
       "pinyin": "tiánguā",
-      "meaning": "дыня"
+      "meaning": "дыня",
+      "hsk": null
     },
     {
       "word": "挂面",
       "pinyin": "guàmiàn",
-      "meaning": "лапша"
+      "meaning": "лапша",
+      "hsk": null
     },
     {
       "word": "火锅",
       "pinyin": "huǒguō",
-      "meaning": "хо-го"
+      "meaning": "хо-го",
+      "hsk": null
     },
     {
       "word": "夸奖",
       "pinyin": "kuājiǎng",
-      "meaning": "хвалить"
+      "meaning": "хвалить",
+      "hsk": null
     },
     {
       "word": "宽阔",
       "pinyin": "kuānkuò",
-      "meaning": "широкий"
+      "meaning": "широкий",
+      "hsk": null
     },
     {
       "word": "轮滑",
       "pinyin": "lúnhuá",
-      "meaning": "кататься на роликах"
+      "meaning": "кататься на роликах",
+      "hsk": null
     },
     {
       "word": "火",
       "pinyin": "huǒ",
-      "meaning": "огонь"
+      "meaning": "огонь",
+      "hsk": 4
     },
     {
       "word": "苹果",
       "pinyin": "píngguǒ",
-      "meaning": "яблоко"
+      "meaning": "яблоко",
+      "hsk": 1
     },
     {
       "word": "果汁",
       "pinyin": "guǒzhī",
-      "meaning": "сок"
+      "meaning": "сок",
+      "hsk": 3
     },
     {
       "word": "松果",
       "pinyin": "sōngguǒ",
-      "meaning": "шишка"
+      "meaning": "шишка",
+      "hsk": null
     },
     {
       "word": "梅花",
       "pinyin": "méihuā",
-      "meaning": "цветок сливы"
+      "meaning": "цветок сливы",
+      "hsk": null
     },
     {
       "word": "窗花",
       "pinyin": "chuānghuā",
-      "meaning": "наклейка на окне"
+      "meaning": "наклейка на окне",
+      "hsk": null
     },
     {
       "word": "挂",
       "pinyin": "guà",
-      "meaning": "вешать"
+      "meaning": "вешать",
+      "hsk": 4
     },
     {
       "word": "铁锅",
       "pinyin": "tiěguō",
-      "meaning": "котёл"
+      "meaning": "котёл",
+      "hsk": null
     },
     {
       "word": "国画",
       "pinyin": "guóhuà",
-      "meaning": "китайская живопись"
+      "meaning": "китайская живопись",
+      "hsk": null
     },
     {
       "word": "冲垮",
       "pinyin": "chōngkuǎ",
-      "meaning": "размывать"
+      "meaning": "размывать",
+      "hsk": null
     },
     {
       "word": "跨栏",
       "pinyin": "kuàlán",
-      "meaning": "прыгать с препятствиями"
+      "meaning": "прыгать с препятствиями",
+      "hsk": null
     },
     {
       "word": "花朵",
       "pinyin": "huāduǒ",
-      "meaning": "цветок"
+      "meaning": "цветок",
+      "hsk": null
     },
     {
       "word": "滑雪",
       "pinyin": "huáxuě",
-      "meaning": "кататься на лыжах"
+      "meaning": "кататься на лыжах",
+      "hsk": null
     },
     {
       "word": "画画",
       "pinyin": "huàhuà",
-      "meaning": "рисовать"
+      "meaning": "рисовать",
+      "hsk": null
     },
     {
       "word": "火柴",
       "pinyin": "huǒchái",
-      "meaning": "спичка"
+      "meaning": "спичка",
+      "hsk": 5
     },
     {
       "word": "弟弟",
       "pinyin": "dìdi",
-      "meaning": "младший брат"
+      "meaning": "младший брат",
+      "hsk": 2
     },
     {
       "word": "大哥",
       "pinyin": "dàgē",
-      "meaning": "самый старший брат"
+      "meaning": "самый старший брат",
+      "hsk": null
     },
     {
       "word": "表哥",
       "pinyin": "biǎogē",
-      "meaning": "двоюродный старший брат"
+      "meaning": "двоюродный старший брат",
+      "hsk": null
     },
     {
       "word": "表姐",
       "pinyin": "biǎojiě",
-      "meaning": "двоюродная старшая сестра"
+      "meaning": "двоюродная старшая сестра",
+      "hsk": null
     },
     {
       "word": "表弟",
       "pinyin": "biǎodì",
-      "meaning": "двоюродный младший брат"
+      "meaning": "двоюродный младший брат",
+      "hsk": null
     },
     {
       "word": "表妹",
       "pinyin": "biǎomèi",
-      "meaning": "двоюродная младшая сестра"
+      "meaning": "двоюродная младшая сестра",
+      "hsk": null
     },
     {
       "word": "兄弟",
       "pinyin": "xiōngdì",
-      "meaning": "брат"
+      "meaning": "брат",
+      "hsk": 5
     },
     {
       "word": "徒弟",
       "pinyin": "túdì",
-      "meaning": "ученик"
+      "meaning": "ученик",
+      "hsk": 6
     },
     {
       "word": "姐妹",
       "pinyin": "jiěmèi",
-      "meaning": "сестра"
+      "meaning": "сестра",
+      "hsk": null
     },
     {
       "word": "画家",
       "pinyin": "huàjiā",
-      "meaning": "художник"
+      "meaning": "художник",
+      "hsk": null
     },
     {
       "word": "画笔",
       "pinyin": "huàbǐ",
-      "meaning": "кисть"
+      "meaning": "кисть",
+      "hsk": null
     },
     {
       "word": "葵花",
       "pinyin": "kuíhuā",
-      "meaning": "подсолнух"
+      "meaning": "подсолнух",
+      "hsk": null
     },
     {
       "word": "桃花",
       "pinyin": "táohuā",
-      "meaning": "цветок персика"
+      "meaning": "цветок персика",
+      "hsk": null
     },
     {
       "word": "玫瑰花",
       "pinyin": "méiguīhuā",
-      "meaning": "роза"
+      "meaning": "роза",
+      "hsk": null
     },
     {
       "word": "水果",
       "pinyin": "shuǐguǒ",
-      "meaning": "фрукты"
+      "meaning": "фрукты",
+      "hsk": 1
     },
     {
       "word": "说话",
       "pinyin": "shuōhuà",
-      "meaning": "говорить"
+      "meaning": "говорить",
+      "hsk": 1
     },
     {
       "word": "高兴",
       "pinyin": "gāoxìng",
-      "meaning": "радоваться"
+      "meaning": "радоваться",
+      "hsk": 1
     },
     {
       "word": "狗",
       "pinyin": "gǒu",
-      "meaning": "собака"
+      "meaning": "собака",
+      "hsk": 1
     },
     {
       "word": "渴",
       "pinyin": "kě",
-      "meaning": "жажда"
+      "meaning": "жажда",
+      "hsk": 3
     },
     {
       "word": "可乐",
       "pinyin": "kělè",
-      "meaning": "кола"
+      "meaning": "кола",
+      "hsk": null
     },
     {
       "word": "好吃",
       "pinyin": "hǎochī",
-      "meaning": "вкусно"
+      "meaning": "вкусно",
+      "hsk": 2
     },
     {
       "word": "很好",
       "pinyin": "hěnhǎo",
-      "meaning": "хорошо"
+      "meaning": "хорошо",
+      "hsk": null
     },
     {
       "word": "蘑菇",
       "pinyin": "mógu",
-      "meaning": "гриб"
+      "meaning": "гриб",
+      "hsk": null
     },
     {
       "word": "隔壁",
       "pinyin": "gébì",
-      "meaning": "сосед"
+      "meaning": "сосед",
+      "hsk": 5
     },
     {
       "word": "刻苦",
       "pinyin": "kèkǔ",
-      "meaning": "старательно"
+      "meaning": "старательно",
+      "hsk": 5
     },
     {
       "word": "贺卡",
       "pinyin": "hèkǎ",
-      "meaning": "открытка"
+      "meaning": "открытка",
+      "hsk": null
     },
     {
       "word": "可怕",
       "pinyin": "kěpà",
-      "meaning": "страшно"
+      "meaning": "страшно",
+      "hsk": 5
     },
     {
       "word": "狐狸",
       "pinyin": "húlí",
-      "meaning": "лиса"
+      "meaning": "лиса",
+      "hsk": null
     },
     {
       "word": "打鼓",
       "pinyin": "dǎgǔ",
-      "meaning": "играть в барабан"
+      "meaning": "играть в барабан",
+      "hsk": null
     },
     {
       "word": "河马",
       "pinyin": "hémǎ",
-      "meaning": "бегемот"
+      "meaning": "бегемот",
+      "hsk": null
     },
     {
       "word": "西葫芦",
       "pinyin": "xīhúlu",
-      "meaning": "кабачок"
+      "meaning": "кабачок",
+      "hsk": null
     },
     {
       "word": "顾客",
       "pinyin": "gùkè",
-      "meaning": "покупатель (клиент)"
+      "meaning": "покупатель (клиент)",
+      "hsk": 4
     },
     {
       "word": "姑姑",
       "pinyin": "gūgu",
-      "meaning": "тётя (сестра папы)"
+      "meaning": "тётя (сестра папы)",
+      "hsk": 5
     },
     {
       "word": "拔河",
       "pinyin": "báhé",
-      "meaning": "перетягивать канаты"
+      "meaning": "перетягивать канаты",
+      "hsk": null
     },
     {
       "word": "八个",
       "pinyin": "bā ge",
-      "meaning": "8 штук"
+      "meaning": "8 штук",
+      "hsk": null
     }
   ]
 }
