@@ -1649,6 +1649,286 @@
       "meaning": "пар / газ",
       "hsk": 1,
       "hsk30": 1
+    },
+    {
+      "word": "洗",
+      "pinyin": "xǐ",
+      "meaning": "мыть, стирать",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "家",
+      "pinyin": "jiā",
+      "meaning": "семья",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "虾",
+      "pinyin": "xiā",
+      "meaning": "креветка",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "晚霞",
+      "pinyin": "wǎnxiá",
+      "meaning": "вечерняя заря",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "朝霞",
+      "pinyin": "zhāoxiá",
+      "meaning": "утренняя заря",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "掐腰",
+      "pinyin": "qiāyāo",
+      "meaning": "руки в боки",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "飞机",
+      "pinyin": "fēijī",
+      "meaning": "самолёт",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "木柜",
+      "pinyin": "mùguì",
+      "meaning": "шкаф (деревянный)",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "菊花",
+      "pinyin": "júhuā",
+      "meaning": "хризантема",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "象棋",
+      "pinyin": "xiàngqí",
+      "meaning": "шахматы (китайские)",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "趣味",
+      "pinyin": "qùwèi",
+      "meaning": "интерес",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "西风",
+      "pinyin": "xīfēng",
+      "meaning": "западный ветер",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "夏天",
+      "pinyin": "xiàtiān",
+      "meaning": "лето",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "打鼓",
+      "pinyin": "dǎgǔ",
+      "meaning": "играть в барабан",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "下棋",
+      "pinyin": "xiàqí",
+      "meaning": "играть в шахматы",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "搭积木",
+      "pinyin": "dā jīmù",
+      "meaning": "строить из кубиков",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "打球",
+      "pinyin": "dǎqiú",
+      "meaning": "играть в мяч",
+      "hsk": 2,
+      "hsk30": 2
+    },
+    {
+      "word": "打扫",
+      "pinyin": "dǎsǎo",
+      "meaning": "убираться",
+      "hsk": null,
+      "hsk30": 3
+    },
+    {
+      "word": "打针",
+      "pinyin": "dǎzhēn",
+      "meaning": "делать укол",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "meaning": "звонить (по телефону)",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "棋子",
+      "pinyin": "qízǐ",
+      "meaning": "шашка / фигура (в настолке)",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "积水",
+      "pinyin": "jīshuǐ",
+      "meaning": "лужа",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "积雪",
+      "pinyin": "jīxuě",
+      "meaning": "сугроб",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "木柴",
+      "pinyin": "mùchái",
+      "meaning": "дрова",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "木箱",
+      "pinyin": "mùxiāng",
+      "meaning": "деревянный ящик",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "树木",
+      "pinyin": "shùmù",
+      "meaning": "дерево",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "欢喜",
+      "pinyin": "huānxǐ",
+      "meaning": "радоваться",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "一起",
+      "pinyin": "yìqǐ",
+      "meaning": "вместе",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "机器",
+      "pinyin": "jīqì",
+      "meaning": "станок / машина",
+      "hsk": 2,
+      "hsk30": 2
+    },
+    {
+      "word": "机器人",
+      "pinyin": "jīqìrén",
+      "meaning": "робот",
+      "hsk": 4,
+      "hsk30": 3
+    },
+    {
+      "word": "复习",
+      "pinyin": "fùxí",
+      "meaning": "повторять (урок)",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "纪律",
+      "pinyin": "jìlǜ",
+      "meaning": "правило / дисциплина",
+      "hsk": 5,
+      "hsk30": 5
+    },
+    {
+      "word": "过去",
+      "pinyin": "guòqù",
+      "meaning": "прошлое",
+      "hsk": 2,
+      "hsk30": 2
+    },
+    {
+      "word": "巨大",
+      "pinyin": "jùdà",
+      "meaning": "огромный",
+      "hsk": 4,
+      "hsk30": 4
+    },
+    {
+      "word": "必须",
+      "pinyin": "bìxū",
+      "meaning": "необходимый / обязательно",
+      "hsk": 4,
+      "hsk30": 3
+    },
+    {
+      "word": "继续",
+      "pinyin": "jìxù",
+      "meaning": "продолжать",
+      "hsk": 3,
+      "hsk30": 3
+    },
+    {
+      "word": "歌曲",
+      "pinyin": "gēqǔ",
+      "meaning": "песня",
+      "hsk": 3,
+      "hsk30": 2
+    },
+    {
+      "word": "马戏",
+      "pinyin": "mǎxì",
+      "meaning": "цирк",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "起立",
+      "pinyin": "qǐlì",
+      "meaning": "вставать",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "国家",
+      "pinyin": "guójiā",
+      "meaning": "государство",
+      "hsk": 3,
+      "hsk30": 3
     }
   ]
 }
