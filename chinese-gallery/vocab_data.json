@@ -1544,6 +1544,111 @@
       "meaning": "собирать(ся)",
       "hsk": null,
       "hsk30": null
+    },
+    {
+      "word": "挤牙膏",
+      "pinyin": "jǐ yágāo",
+      "meaning": "выдавить зубную пасту",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "纪念品",
+      "pinyin": "jìniànpǐn",
+      "meaning": "сувенир",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "七",
+      "pinyin": "qī",
+      "meaning": "семь",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "骑马",
+      "pinyin": "qí mǎ",
+      "meaning": "кататься на лошади (верхом)",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "企鹅",
+      "pinyin": "qǐ'é",
+      "meaning": "пингвин",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "汽车",
+      "pinyin": "qìchē",
+      "meaning": "автомобиль",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "小溪",
+      "pinyin": "xiǎoxī",
+      "meaning": "ручей",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "凉席",
+      "pinyin": "liángxí",
+      "meaning": "циновка",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "洗脸",
+      "pinyin": "xǐliǎn",
+      "meaning": "умываться",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "唱戏",
+      "pinyin": "chàngxì",
+      "meaning": "петь оперу",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "鞠躬",
+      "pinyin": "jūgōng",
+      "meaning": "кланяться",
+      "hsk": 5,
+      "hsk30": 6
+    },
+    {
+      "word": "蛐蛐",
+      "pinyin": "qūqū",
+      "meaning": "сверчок",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "胡须",
+      "pinyin": "húxū",
+      "meaning": "борода",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "刮胡子",
+      "pinyin": "guā húzi",
+      "meaning": "брить бороду (усы)",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "气",
+      "pinyin": "qì",
+      "meaning": "пар / газ",
+      "hsk": 1,
+      "hsk30": 1
     }
   ]
 }
