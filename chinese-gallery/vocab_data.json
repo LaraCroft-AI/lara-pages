@@ -1466,5 +1466,84 @@
       "hsk": null,
       "hsk30": null
     }
+  ],
+  "Урок 7": [
+    {
+      "word": "母鸡",
+      "pinyin": "mǔ jī",
+      "meaning": "курица",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "公鸡",
+      "pinyin": "gōng jī",
+      "meaning": "петух",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "小鸡",
+      "pinyin": "xiǎo jī",
+      "meaning": "цыплёнок",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "鸡蛋",
+      "pinyin": "jīdàn",
+      "meaning": "яйцо",
+      "hsk": 4,
+      "hsk30": 4
+    },
+    {
+      "word": "气球",
+      "pinyin": "qìqiú",
+      "meaning": "воздушный шар",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "西瓜",
+      "pinyin": "xīguā",
+      "meaning": "арбуз",
+      "hsk": 2,
+      "hsk30": 4
+    },
+    {
+      "word": "着急",
+      "pinyin": "zháojí",
+      "meaning": "волноваться / нервничать",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "起床",
+      "pinyin": "qǐchuáng",
+      "meaning": "вставать с кровати",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "游戏",
+      "pinyin": "yóuxì",
+      "meaning": "игры",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "积木",
+      "pinyin": "jīmù",
+      "meaning": "кубики",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "集合",
+      "pinyin": "jíhé",
+      "meaning": "собирать(ся)",
+      "hsk": null,
+      "hsk30": null
+    }
   ]
 }
