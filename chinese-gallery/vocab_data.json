@@ -2755,6 +2755,186 @@
       "word": "大厦",
       "pinyin": "dà shà",
       "meaning": "высокое здание / небоскрёб"
+    },
+    {
+      "word": "蛇",
+      "pinyin": "shé",
+      "meaning": "змея 🐍",
+      "hsk": null,
+      "hsk30": 4
+    },
+    {
+      "word": "桌子",
+      "pinyin": "zhuō zi",
+      "meaning": "стол",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "刷墙",
+      "pinyin": "shuā qiáng",
+      "meaning": "красить стену",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "戳泡泡",
+      "pinyin": "chuō pào pao",
+      "meaning": "протыкать мыльные пузыри 🫧",
+      "hsk": null,
+      "hsk30": 7
+    },
+    {
+      "word": "说话",
+      "pinyin": "shuō huà",
+      "meaning": "говорить, сказать что-то 💬",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "弱小",
+      "pinyin": "ruò xiǎo",
+      "meaning": "слабый",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "手抓饭",
+      "pinyin": "shǒu zhuā fàn",
+      "meaning": "плов руками/есть руками 🍲",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "爪子",
+      "pinyin": "zhǎo zi",
+      "meaning": "лапа (животного) 🐾",
+      "hsk": null,
+      "hsk30": 7
+    },
+    {
+      "word": "捉迷藏",
+      "pinyin": "zhuō mí cáng",
+      "meaning": "играть в прятки 👀",
+      "hsk": 5,
+      "hsk30": 6
+    },
+    {
+      "word": "手镯",
+      "pinyin": "shǒu zhuó",
+      "meaning": "браслет 💍",
+      "hsk": null,
+      "hsk30": 7
+    },
+    {
+      "word": "啜泣",
+      "pinyin": "chuò qì",
+      "meaning": "рыдать, плакать 🥺",
+      "hsk": 6,
+      "hsk30": null
+    },
+    {
+      "word": "邮戳",
+      "pinyin": "yóu chuō",
+      "meaning": "почтамтовый штемпель / штамп ✉️",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "牙刷",
+      "pinyin": "yá shuā",
+      "meaning": "зубная щетка 🪥",
+      "hsk": 4,
+      "hsk30": 7
+    },
+    {
+      "word": "刷牙",
+      "pinyin": "shuā yá",
+      "meaning": "чистить зубы 🦷",
+      "hsk": 5,
+      "hsk30": 1
+    },
+    {
+      "word": "玩耍",
+      "pinyin": "wán shuǎ",
+      "meaning": "играть, резвиться 😄",
+      "hsk": null,
+      "hsk30": 7
+    },
+    {
+      "word": "蛇",
+      "pinyin": "shé",
+      "meaning": "змея 🐍"
+    },
+    {
+      "word": "桌子",
+      "pinyin": "zhuō zi",
+      "meaning": "стол"
+    },
+    {
+      "word": "刷墙",
+      "pinyin": "shuā qiáng",
+      "meaning": "красить стену"
+    },
+    {
+      "word": "戳泡泡",
+      "pinyin": "chuō pào pao",
+      "meaning": "протыкать мыльные пузыри 🫧"
+    },
+    {
+      "word": "说话",
+      "pinyin": "shuō huà",
+      "meaning": "говорить, сказать что-то 💬"
+    },
+    {
+      "word": "弱小",
+      "pinyin": "ruò xiǎo",
+      "meaning": "слабый"
+    },
+    {
+      "word": "手抓饭",
+      "pinyin": "shǒu zhuā fàn",
+      "meaning": "плов руками 🍲"
+    },
+    {
+      "word": "爪子",
+      "pinyin": "zhǎo zi",
+      "meaning": "лапа (животного) 🐾"
+    },
+    {
+      "word": "捉迷藏",
+      "pinyin": "zhuō mí cáng",
+      "meaning": "играть в прятки 👀"
+    },
+    {
+      "word": "手镯",
+      "pinyin": "shǒu zhuó",
+      "meaning": "браслет 💍"
+    },
+    {
+      "word": "啜泣",
+      "pinyin": "chuò qì",
+      "meaning": "рыдать, плакать 🥺"
+    },
+    {
+      "word": "邮戳",
+      "pinyin": "yóu chuō",
+      "meaning": "почтамтовый штемпель / штамп ✉️"
+    },
+    {
+      "word": "牙刷",
+      "pinyin": "yá shuā",
+      "meaning": "зубная щетка 🪥"
+    },
+    {
+      "word": "刷牙",
+      "pinyin": "shuā yá",
+      "meaning": "чистить зубы 🦷"
+    },
+    {
+      "word": "玩耍",
+      "pinyin": "wán shuǎ",
+      "meaning": "играть, резвиться 😄"
     }
   ]
 }
