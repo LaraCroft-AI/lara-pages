@@ -1930,5 +1930,779 @@
       "hsk": 3,
       "hsk30": 3
     }
+  ],
+  "Урок 8": [
+    {
+      "word": "紫色",
+      "pinyin": "zǐ sè",
+      "meaning": "фиолетовый цвет",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "刺猬",
+      "pinyin": "cì wei",
+      "meaning": "ежик",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "蚕丝",
+      "pinyin": "cán sī",
+      "meaning": "шёлк",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "桌子",
+      "pinyin": "zhuō zi",
+      "meaning": "стол",
+      "hsk": 1,
+      "hsk30": 1
+    },
+    {
+      "word": "磁铁",
+      "pinyin": "cí tiě",
+      "meaning": "магнит",
+      "hsk": 4,
+      "hsk30": 6
+    },
+    {
+      "word": "肉丝",
+      "pinyin": "ròu sī",
+      "meaning": "мясные полоски (фарш)",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "茄子",
+      "pinyin": "qié zi",
+      "meaning": "баклажан",
+      "hsk": 5,
+      "hsk30": 7
+    },
+    {
+      "word": "砸",
+      "pinyin": "zá",
+      "meaning": "разбить",
+      "hsk": 5,
+      "hsk30": 6
+    },
+    {
+      "word": "擦玻璃",
+      "pinyin": "cā bō li",
+      "meaning": "вытирать стекло",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "洒水车",
+      "pinyin": "sǎ shuǐ chē",
+      "meaning": "полиальная машина",
+      "hsk": 5,
+      "hsk30": 7
+    },
+    {
+      "word": "杂技",
+      "pinyin": "zá jì",
+      "meaning": "цирковое искусство",
+      "hsk": 5,
+      "hsk30": null
+    },
+    {
+      "word": "洒水",
+      "pinyin": "sǎ shuǐ",
+      "meaning": "поливать",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "防备",
+      "pinyin": "fang4 bei4",
+      "meaning": "ругать",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "选择",
+      "pinyin": "xuan3 ze2",
+      "meaning": "выбирать",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "祖国",
+      "pinyin": "zu3 guo2",
+      "meaning": "родина",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "组长",
+      "pinyin": "zu3 chang2",
+      "meaning": "руководитель группы",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "擦汗",
+      "pinyin": "ca1 han4",
+      "meaning": "вытирать пот",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "擦黑板",
+      "pinyin": "ca1 hei3 ban4",
+      "meaning": "вытирать школьную доску",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "厕所",
+      "pinyin": "ce4 suo3",
+      "meaning": "туалет",
+      "hsk": 2,
+      "hsk30": 1
+    },
+    {
+      "word": "测量",
+      "pinyin": "ce4 liang2",
+      "meaning": "измерять",
+      "hsk": null,
+      "hsk30": 7
+    },
+    {
+      "word": "粗",
+      "pinyin": "cu1",
+      "meaning": "толстый / грубый",
+      "hsk": 3,
+      "hsk30": 2
+    },
+    {
+      "word": "粗心",
+      "pinyin": "cu1 xin1",
+      "meaning": "халатный / невнимательный",
+      "hsk": 5,
+      "hsk30": 4
+    },
+    {
+      "word": "撒种",
+      "pinyin": "sa3 zhong3",
+      "meaning": "сеять",
+      "hsk": null,
+      "hsk30": null
+    },
+    {
+      "word": "颜色",
+      "pinyin": "yan2 se4",
+      "meaning": "цвет (оттенок)",
+      "hsk": 3,
+      "hsk30": 2
+    },
+    {
+      "word": "彩色",
+      "pinyin": "cai3 se4",
+      "meaning": "разноцветный / цветной",
+      "hsk": 3,
+      "hsk30": 1
+    },
+    {
+      "word": "塑料",
+      "pinyin": "sù liào",
+      "meaning": "пластик",
+      "hsk": 5,
+      "hsk30": 7
+    },
+    {
+      "word": "塑像",
+      "pinyin": "sù xiàng",
+      "meaning": "статуя / скульптура"
+    },
+    {
+      "word": "搓手",
+      "pinyin": "cuō shǒu",
+      "meaning": "вытирать руки / растирать ладони"
+    },
+    {
+      "word": "锁",
+      "pinyin": "suǒ",
+      "meaning": "замок / запереть"
+    },
+    {
+      "word": "柿子",
+      "pinyin": "shì zi",
+      "meaning": "хурма"
+    },
+    {
+      "word": "昨天",
+      "pinyin": "zuó tiān",
+      "meaning": "вчера"
+    },
+    {
+      "word": "左手",
+      "pinyin": "zuǒ shǒu",
+      "meaning": "левая рука / левша"
+    },
+    {
+      "word": "作业",
+      "pinyin": "zuò yè",
+      "meaning": "домашнее задание"
+    },
+    {
+      "word": "错误",
+      "pinyin": "cuò wù",
+      "meaning": "ошибка / неверный"
+    },
+    {
+      "word": "搓衣板",
+      "pinyin": "cuō yī bǎn",
+      "meaning": "стиральная доска / верёвка для стирки"
+    },
+    {
+      "word": "痤疮",
+      "pinyin": "cuó chuáng",
+      "meaning": "прыщ / чёрные точки"
+    },
+    {
+      "word": "蓑衣",
+      "pinyin": "suō yī",
+      "meaning": "соломенный плащ, дождевик из соломы"
+    },
+    {
+      "word": "字",
+      "pinyin": "zì",
+      "meaning": "иероглиф / слово / письменность"
+    },
+    {
+      "word": "同",
+      "pinyin": "tóng",
+      "meaning": "тот же / один и тот же"
+    },
+    {
+      "word": "旬",
+      "pinyin": "xún",
+      "meaning": "десять дней / декада / фраза (рифма)"
+    },
+    {
+      "word": "塑像",
+      "pinyin": "sù xiàng",
+      "meaning": "статуя / скульптура"
+    },
+    {
+      "word": "搓手",
+      "pinyin": "cuō shǒu",
+      "meaning": "вытирать руки / растирать ладони"
+    },
+    {
+      "word": "锁",
+      "pinyin": "suǒ",
+      "meaning": "замок / запереть"
+    },
+    {
+      "word": "柿子",
+      "pinyin": "shì zi",
+      "meaning": "хурма (кусать хурму = 吃柿子)"
+    },
+    {
+      "word": "昨天",
+      "pinyin": "zuó tiān",
+      "meaning": "вчера"
+    },
+    {
+      "word": "左手",
+      "pinyin": "zuǒ shǒu",
+      "meaning": "левая рука / левша"
+    },
+    {
+      "word": "作业",
+      "pinyin": "zuò yè",
+      "meaning": "домашнее задание (写作业 = делать ДЗ)"
+    },
+    {
+      "word": "错误",
+      "pinyin": "cuò wù",
+      "meaning": "ошибка / неверный"
+    },
+    {
+      "word": "搓衣板",
+      "pinyin": "cuō yī bǎn",
+      "meaning": "стиральная доска / верёвка для стирки"
+    },
+    {
+      "word": "痤疮",
+      "pinyin": "cuó chuāng",
+      "meaning": "прыщ / акне"
+    },
+    {
+      "word": "蓑衣",
+      "pinyin": "suō yī",
+      "meaning": "соломенный плащ, дождевик из рогозы"
+    },
+    {
+      "word": "字",
+      "pinyin": "zì",
+      "meaning": "иероглиф / слово / письменность"
+    },
+    {
+      "word": "同",
+      "pinyin": "tóng",
+      "meaning": "тот же / один и тот же"
+    },
+    {
+      "word": "旬",
+      "pinyin": "xún",
+      "meaning": "десять дней; декада"
+    },
+    {
+      "word": "识字",
+      "pinyin": "shí zì",
+      "meaning": "учить иероглиф"
+    },
+    {
+      "word": "诗词",
+      "pinyin": "shī cí",
+      "meaning": "поэзия"
+    },
+    {
+      "word": "组词",
+      "pinyin": "zǔ cí",
+      "meaning": "составлять слово"
+    },
+    {
+      "word": "歌词",
+      "pinyin": "gē cí",
+      "meaning": "слова песни"
+    },
+    {
+      "word": "凳子",
+      "pinyin": "dèng zi",
+      "meaning": "стул"
+    },
+    {
+      "word": "本子",
+      "pinyin": "běn zi",
+      "meaning": "тетрадь"
+    },
+    {
+      "word": "房子",
+      "pinyin": "fáng zi",
+      "meaning": "дом"
+    },
+    {
+      "word": "早上",
+      "pinyin": "zǎo shang",
+      "meaning": "утро"
+    },
+    {
+      "word": "词典",
+      "pinyin": "cí diǎn",
+      "meaning": "словарь"
+    },
+    {
+      "word": "草莓",
+      "pinyin": "cǎo méi",
+      "meaning": "клубника"
+    },
+    {
+      "word": "司机",
+      "pinyin": "sī jī",
+      "meaning": "водитель"
+    },
+    {
+      "word": "三",
+      "pinyin": "sān",
+      "meaning": "три"
+    },
+    {
+      "word": "四",
+      "pinyin": "sì",
+      "meaning": "четыре"
+    },
+    {
+      "word": "瓷器",
+      "pinyin": "cí qí",
+      "meaning": "фарфор"
+    },
+    {
+      "word": "橘子",
+      "pinyin": "jú zi",
+      "meaning": "мандарин"
+    },
+    {
+      "word": "识字",
+      "pinyin": "shí zì",
+      "meaning": "учить иероглиф"
+    },
+    {
+      "word": "诗词",
+      "pinyin": "shī cí",
+      "meaning": "поэзия"
+    },
+    {
+      "word": "组词",
+      "pinyin": "zǔ cí",
+      "meaning": "составлять слово"
+    },
+    {
+      "word": "歌词",
+      "pinyin": "gē cí",
+      "meaning": "слова песни"
+    },
+    {
+      "word": "凳子",
+      "pinyin": "dèng zi",
+      "meaning": "стул"
+    },
+    {
+      "word": "本子",
+      "pinyin": "běn zi",
+      "meaning": "тетрадь"
+    },
+    {
+      "word": "房子",
+      "pinyin": "fáng zi",
+      "meaning": "дом"
+    },
+    {
+      "word": "早上",
+      "pinyin": "zǎo shang",
+      "meaning": "утро"
+    },
+    {
+      "word": "字典",
+      "pinyin": "zì diǎn",
+      "meaning": "словарь"
+    },
+    {
+      "word": "草莓",
+      "pinyin": "cǎo méi",
+      "meaning": "клубника"
+    },
+    {
+      "word": "司机",
+      "pinyin": "sī jī",
+      "meaning": "водитель"
+    },
+    {
+      "word": "三",
+      "pinyin": "sān",
+      "meaning": "три"
+    },
+    {
+      "word": "四",
+      "pinyin": "sì",
+      "meaning": "четыре"
+    },
+    {
+      "word": "瓷器",
+      "pinyin": "cí qí",
+      "meaning": "фарфор / керамика"
+    },
+    {
+      "word": "橘子",
+      "pinyin": "jú zi",
+      "meaning": "мандарин (плод)"
+    },
+    {
+      "word": "识字",
+      "pinyin": "shí zì",
+      "meaning": "учить иероглиф"
+    },
+    {
+      "word": "诗词",
+      "pinyin": "shī cí",
+      "meaning": "поэзия"
+    },
+    {
+      "word": "组词",
+      "pinyin": "zǔ cí",
+      "meaning": "составлять слово"
+    },
+    {
+      "word": "歌词",
+      "pinyin": "gē cí",
+      "meaning": "слова песни"
+    },
+    {
+      "word": "凳子",
+      "pinyin": "dèng zi",
+      "meaning": "стул"
+    },
+    {
+      "word": "本子",
+      "pinyin": "běn zi",
+      "meaning": "тетрадь"
+    },
+    {
+      "word": "房子",
+      "pinyin": "fáng zi",
+      "meaning": "дом"
+    },
+    {
+      "word": "早上",
+      "pinyin": "zǎo shang",
+      "meaning": "утро"
+    },
+    {
+      "word": "字典",
+      "pinyin": "zì diǎn",
+      "meaning": "словарь"
+    },
+    {
+      "word": "草莓",
+      "pinyin": "cǎo méi",
+      "meaning": "клубника"
+    },
+    {
+      "word": "司机",
+      "pinyin": "sī jī",
+      "meaning": "водитель"
+    },
+    {
+      "word": "三",
+      "pinyin": "sān",
+      "meaning": "три"
+    },
+    {
+      "word": "四",
+      "pinyin": "sì",
+      "meaning": "четыре"
+    },
+    {
+      "word": "瓷器",
+      "pinyin": "cí qí",
+      "meaning": "фарфор / керамика"
+    },
+    {
+      "word": "橘子",
+      "pinyin": "jú zi",
+      "meaning": "мандарин"
+    },
+    {
+      "word": "识字",
+      "pinyin": "shi zi",
+      "meaning": "учить иероглиф"
+    },
+    {
+      "word": "诗词",
+      "pinyin": "shi ci",
+      "meaning": "поэзия"
+    },
+    {
+      "word": "组词",
+      "pinyin": "zu ci",
+      "meaning": "составлять слово"
+    },
+    {
+      "word": "歌词",
+      "pinyin": "ge ci",
+      "meaning": "слова песни"
+    },
+    {
+      "word": "凳子",
+      "pinyin": "deng zi",
+      "meaning": "стул"
+    },
+    {
+      "word": "本子",
+      "pinyin": "ben zi",
+      "meaning": "тетрадь"
+    },
+    {
+      "word": "房子",
+      "pinyin": "fang zi",
+      "meaning": "дом"
+    },
+    {
+      "word": "早上",
+      "pinyin": "zao shang",
+      "meaning": "утро"
+    },
+    {
+      "word": "字典",
+      "pinyin": "zi dian",
+      "meaning": "словарь"
+    },
+    {
+      "word": "草莓",
+      "pinyin": "cao mei",
+      "meaning": "клубника"
+    },
+    {
+      "word": "司机",
+      "pinyin": "si ji",
+      "meaning": "водитель"
+    },
+    {
+      "word": "三",
+      "pinyin": "san",
+      "meaning": "три"
+    },
+    {
+      "word": "四",
+      "pinyin": "si",
+      "meaning": "четыре"
+    },
+    {
+      "word": "瓷器",
+      "pinyin": "qi ci",
+      "meaning": "фарфор"
+    },
+    {
+      "word": "橘子",
+      "pinyin": "ju zi",
+      "meaning": "мандарин"
+    },
+    {
+      "word": "祖父",
+      "pinyin": "zǔ fù",
+      "meaning": "дедушка"
+    },
+    {
+      "word": "盒子",
+      "pinyin": "hé zi",
+      "meaning": "коробка"
+    },
+    {
+      "word": "速度",
+      "pinyin": "sù dù",
+      "meaning": "скорость"
+    },
+    {
+      "word": "祖母",
+      "pinyin": "zǔ mǔ",
+      "meaning": "бабушка"
+    },
+    {
+      "word": "自己",
+      "pinyin": "zì jǐ",
+      "meaning": "сам, себе"
+    },
+    {
+      "word": "字母",
+      "pinyin": "zì mǔ",
+      "meaning": "буква"
+    },
+    {
+      "word": "仔细",
+      "pinyin": "zǐ xì",
+      "meaning": "внимательно"
+    },
+    {
+      "word": "子女",
+      "pinyin": "zǐ nǚ",
+      "meaning": "ребенок"
+    },
+    {
+      "word": "打字",
+      "pinyin": "dǎ zì",
+      "meaning": "печатать"
+    },
+    {
+      "word": "喜滋滋",
+      "pinyin": "xǐ zī zī",
+      "meaning": "радоваться"
+    },
+    {
+      "word": "祖父",
+      "pinyin": "zǔ fu",
+      "meaning": "дедушка"
+    },
+    {
+      "word": "盒子",
+      "pinyin": "hé zi",
+      "meaning": "коробка"
+    },
+    {
+      "word": "速度",
+      "pinyin": "sù dù",
+      "meaning": "скорость"
+    },
+    {
+      "word": "祖母",
+      "pinyin": "zǔ mǔ",
+      "meaning": "бабушка"
+    },
+    {
+      "word": "自己",
+      "pinyin": "zì jǐ",
+      "meaning": "сам, себе"
+    },
+    {
+      "word": "字母",
+      "pinyin": "zì mǔ",
+      "meaning": "буква"
+    },
+    {
+      "word": "仔细",
+      "pinyin": "zǐ xì",
+      "meaning": "внимательно"
+    },
+    {
+      "word": "子女",
+      "pinyin": "zǐ nǚ",
+      "meaning": "ребёнок"
+    },
+    {
+      "word": "打字",
+      "pinyin": "dǎ zì",
+      "meaning": "печатать"
+    },
+    {
+      "word": "喜孜孜",
+      "pinyin": "xǐ zi zi",
+      "meaning": "радоваться"
+    },
+    {
+      "word": "祖父",
+      "pinyin": "zǔ fu",
+      "meaning": "дедушка"
+    },
+    {
+      "word": "盒子",
+      "pinyin": "hé zi",
+      "meaning": "коробка"
+    },
+    {
+      "word": "速度",
+      "pinyin": "sù dù",
+      "meaning": "скорость"
+    },
+    {
+      "word": "祖母",
+      "pinyin": "zǔ mǔ",
+      "meaning": "бабушка"
+    },
+    {
+      "word": "自己",
+      "pinyin": "zì jǐ",
+      "meaning": "сам, себе"
+    },
+    {
+      "word": "字母",
+      "pinyin": "zì mǔ",
+      "meaning": "буква"
+    },
+    {
+      "word": "仔细",
+      "pinyin": "zǐ xì",
+      "meaning": "внимательно"
+    },
+    {
+      "word": "子女",
+      "pinyin": "zǐ nǚ",
+      "meaning": "ребёнок"
+    },
+    {
+      "word": "打字",
+      "pinyin": "dă zì",
+      "meaning": "печатать"
+    },
+    {
+      "word": "喜滋滋",
+      "pinyin": "xǐ zī zī",
+      "meaning": "радоваться (счастливая улыбка)"
+    }
   ]
 }
