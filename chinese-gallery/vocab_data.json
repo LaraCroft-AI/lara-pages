@@ -3439,21 +3439,6 @@
       "meaning": "желе / фруктовое желе 🍮"
     },
     {
-      "word": "排队",
-      "pinyin": "pái duì",
-      "meaning": "стоять в очереди 🚶‍♂️🚶‍♀️"
-    },
-    {
-      "word": "萝卜",
-      "pinyin": "luó bo",
-      "meaning": "редис / редька 🥕"
-    },
-    {
-      "word": "白菜",
-      "pinyin": "bái cài",
-      "meaning": "пекинская капуста 🥬"
-    },
-    {
       "word": "鸭梨",
       "pinyin": "yā lí",
       "meaning": "груша (азиатская, нэши) 🍐"
@@ -3464,724 +3449,9 @@
       "meaning": "арбуз 🍉"
     },
     {
-      "word": "洁白",
-      "pinyin": "jié bái",
-      "meaning": "чистый белый 🤍"
-    },
-    {
-      "word": "白糖",
-      "pinyin": "bái táng",
-      "meaning": "белый сахар 🧂"
-    },
-    {
-      "word": "菜园",
-      "pinyin": "cài yuán",
-      "meaning": "огород 🌱"
-    },
-    {
-      "word": "菜刀",
-      "pinyin": "cài dāo",
-      "meaning": "овощной нож 🔪"
-    },
-    {
-      "word": "东西",
-      "pinyin": "dōng xi",
-      "meaning": "предмет / вещь 📦"
-    },
-    {
       "word": "南瓜",
       "pinyin": "nán guā",
       "meaning": "тыква 🎃"
-    },
-    {
-      "word": "西药",
-      "pinyin": "xī yào",
-      "meaning": "лекарство (западная медицина) 💊"
-    },
-    {
-      "word": "冬瓜",
-      "pinyin": "dōng guā",
-      "meaning": "восковая тыква 🍈"
-    },
-    {
-      "word": "果冻",
-      "pinyin": "guǒ dòng",
-      "meaning": "желе / фруктовое желе 🍮"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
-    },
-    {
-      "word": "果盘",
-      "pinyin": "guǒ pán",
-      "meaning": "фруктовая тарелка 🍇"
-    },
-    {
-      "word": "茶杯",
-      "pinyin": "chá bēi",
-      "meaning": "кружка для чая ☕"
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸"
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢"
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔"
-    },
-    {
-      "word": "洗手",
-      "pinyin": "xǐ shǒu",
-      "meaning": "мыть руки 🚿"
-    },
-    {
-      "word": "肥皂",
-      "pinyin": "féi zào",
-      "meaning": "мыло 🧼"
-    },
-    {
-      "word": "毛巾",
-      "pinyin": "máo jīn",
-      "meaning": "полотенце 🧺"
-    },
-    {
-      "word": "废纸",
-      "pinyin": "fèi zhǐ",
-      "meaning": "макулатура 📰"
-    },
-    {
-      "word": "回来",
-      "pinyin": "huí lái",
-      "meaning": "возвращаться ↩️"
-    },
-    {
-      "word": "白鹅",
-      "pinyin": "bái é",
-      "meaning": "белый гусь 🦢"
-    },
-    {
-      "word": "奇怪",
-      "pinyin": "qí guài",
-      "meaning": "странно 🤔"
-    },
-    {
-      "word": "袋鼠",
-      "pinyin": "dài shǔ",
-      "meaning": "кенгуру 🦘"
-    },
-    {
-      "word": "麦子",
-      "pinyin": "mài zi",
-      "meaning": "пшеница 🌾"
-    },
-    {
-      "word": "队伍",
-      "pinyin": "duì wu",
-      "meaning": "очередь / колонна 🚶‍♂️"
     },
     {
       "word": "果盘",
@@ -4297,6 +3567,86 @@
       "word": "乖孩子",
       "pinyin": "guāi hái zi",
       "meaning": "послушный ребёнок 👶"
+    },
+    {
+      "word": "果汁",
+      "pinyin": "guǒ zhī",
+      "meaning": "сок 🧃"
+    },
+    {
+      "word": "美丽",
+      "pinyin": "měi lì",
+      "meaning": "красивый 🌸"
+    },
+    {
+      "word": "蟋蟀",
+      "pinyin": "xī shuài",
+      "meaning": "сверчок 🦗"
+    },
+    {
+      "word": "黑色",
+      "pinyin": "hēi sè",
+      "meaning": "чёрный цвет ⚫"
+    },
+    {
+      "word": "书柜",
+      "pinyin": "shū guì",
+      "meaning": "книжный шкаф 📚"
+    },
+    {
+      "word": "开水",
+      "pinyin": "kāi shuǐ",
+      "meaning": "кипяток 💧"
+    },
+    {
+      "word": "来回",
+      "pinyin": "lái huí",
+      "meaning": "туда и обратно ↔️"
+    },
+    {
+      "word": "美术",
+      "pinyin": "měi shù",
+      "meaning": "искусство 🎨"
+    },
+    {
+      "word": "孩子",
+      "pinyin": "hái zi",
+      "meaning": "ребёнок 👶"
+    },
+    {
+      "word": "吹笛",
+      "pinyin": "chuī dí",
+      "meaning": "играть на флейте 🎶"
+    },
+    {
+      "word": "栽树",
+      "pinyin": "zāi shù",
+      "meaning": "сажать дерево 🌱"
+    },
+    {
+      "word": "回家",
+      "pinyin": "huí jiā",
+      "meaning": "идти домой 🏠"
+    },
+    {
+      "word": "入睡",
+      "pinyin": "rù shuì",
+      "meaning": "уснуть 😴"
+    },
+    {
+      "word": "海带",
+      "pinyin": "hǎi dài",
+      "meaning": "морская капуста 🌊"
+    },
+    {
+      "word": "追逐",
+      "pinyin": "zhuī zhú",
+      "meaning": "догонять 🏃"
+    },
+    {
+      "word": "自来水",
+      "pinyin": "zì lái shuǐ",
+      "meaning": "вода из крана 🚰"
     }
   ]
 }
