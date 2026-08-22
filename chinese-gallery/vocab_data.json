@@ -3779,6 +3779,276 @@
       "word": "面条",
       "pinyin": "miàn tiáo",
       "meaning": "лапша 🍜"
+    },
+    {
+      "word": "喵",
+      "pinyin": "miāo",
+      "meaning": "мяукать 🐱"
+    },
+    {
+      "word": "跳",
+      "pinyin": "tiào",
+      "meaning": "прыгать 🤸"
+    },
+    {
+      "word": "红烧肉",
+      "pinyin": "hóng shāo ròu",
+      "meaning": "мясо в соевом соусе (свинина) 🍖"
+    },
+    {
+      "word": "丢垃圾",
+      "pinyin": "diū lā jī",
+      "meaning": "выкинуть мусор 🗑️"
+    },
+    {
+      "word": "舅舅",
+      "pinyin": "jiù jiu",
+      "meaning": "дядя (брат мамы) 👨"
+    },
+    {
+      "word": "小鸟",
+      "pinyin": "xiǎo niǎo",
+      "meaning": "птица (маленькая) 🐦"
+    },
+    {
+      "word": "多少",
+      "pinyin": "duō shao",
+      "meaning": "сколько ❓"
+    },
+    {
+      "word": "红枣",
+      "pinyin": "hóng zǎo",
+      "meaning": "финик (красный, сушёный) 🟤"
+    },
+    {
+      "word": "跳高",
+      "pinyin": "tiào gāo",
+      "meaning": "прыгать в высоту 🏅"
+    },
+    {
+      "word": "头发",
+      "pinyin": "tóu fa",
+      "meaning": "волосы 💇"
+    },
+    {
+      "word": "走路",
+      "pinyin": "zǒu lù",
+      "meaning": "ходить пешком 🚶"
+    },
+    {
+      "word": "秋收",
+      "pinyin": "qiū shōu",
+      "meaning": "осенняя уборка (жатва) 🌾"
+    },
+    {
+      "word": "门口",
+      "pinyin": "mén kǒu",
+      "meaning": "вход (у двери) 🚪"
+    },
+    {
+      "word": "小牛",
+      "pinyin": "xiǎo niú",
+      "meaning": "бычок (маленькая корова) 🐂"
+    },
+    {
+      "word": "休息",
+      "pinyin": "xiū xi",
+      "meaning": "отдыхать 😴"
+    },
+    {
+      "word": "桥",
+      "pinyin": "qiáo",
+      "meaning": "мост 🌉"
+    },
+    {
+      "word": "流水",
+      "pinyin": "liú shuǐ",
+      "meaning": "текущая вода, поток 💧"
+    },
+    {
+      "word": "垂柳",
+      "pinyin": "chuí liǔ",
+      "meaning": "ива (плакучая) 🌳"
+    },
+    {
+      "word": "桃花",
+      "pinyin": "táo huā",
+      "meaning": "цветок персика 🌸"
+    },
+    {
+      "word": "小孩儿",
+      "pinyin": "xiǎo háir",
+      "meaning": "маленький ребёнок 👶"
+    },
+    {
+      "word": "小路",
+      "pinyin": "xiǎo lù",
+      "meaning": "дорожка (тропинка) 🛤️"
+    },
+    {
+      "word": "小树",
+      "pinyin": "xiǎo shù",
+      "meaning": "молодое дерево 🌱"
+    },
+    {
+      "word": "天桥",
+      "pinyin": "tiān qiáo",
+      "meaning": "пешеходный мост (надземный) 🌉"
+    },
+    {
+      "word": "小山",
+      "pinyin": "xiǎo shān",
+      "meaning": "холм ⛰️"
+    },
+    {
+      "word": "木桥",
+      "pinyin": "mù qiáo",
+      "meaning": "деревянный мост 🪵"
+    },
+    {
+      "word": "石桥",
+      "pinyin": "shí qiáo",
+      "meaning": "каменный мост 🪨"
+    },
+    {
+      "word": "流汗",
+      "pinyin": "liú hàn",
+      "meaning": "потеть 💦"
+    },
+    {
+      "word": "流星",
+      "pinyin": "liú xīng",
+      "meaning": "метеор ☄️"
+    },
+    {
+      "word": "流沙",
+      "pinyin": "liú shā",
+      "meaning": "песок (сыпучий) ⏳"
+    },
+    {
+      "word": "河流",
+      "pinyin": "hé liú",
+      "meaning": "река 🏞️"
+    },
+    {
+      "word": "柳条",
+      "pinyin": "liǔ tiáo",
+      "meaning": "ветка ивы 🌿"
+    },
+    {
+      "word": "柳絮",
+      "pinyin": "liǔ xù",
+      "meaning": "пух ивы 🤍"
+    },
+    {
+      "word": "柳叶",
+      "pinyin": "liǔ yè",
+      "meaning": "лист ивы 🍃"
+    },
+    {
+      "word": "蜗牛",
+      "pinyin": "wō niú",
+      "meaning": "улитка 🐌"
+    },
+    {
+      "word": "老虎",
+      "pinyin": "lǎo hǔ",
+      "meaning": "тигр 🐯"
+    },
+    {
+      "word": "毛笔",
+      "pinyin": "máo bǐ",
+      "meaning": "кисть для каллиграфии 🖌️"
+    },
+    {
+      "word": "书包",
+      "pinyin": "shū bāo",
+      "meaning": "портфель 🎒"
+    },
+    {
+      "word": "吵闹",
+      "pinyin": "chǎo nào",
+      "meaning": "шумно 🔊"
+    },
+    {
+      "word": "早操",
+      "pinyin": "zǎo cāo",
+      "meaning": "утренняя зарядка 🤸"
+    },
+    {
+      "word": "头脑",
+      "pinyin": "tóu nǎo",
+      "meaning": "мозг 🧠"
+    },
+    {
+      "word": "教室",
+      "pinyin": "jiào shì",
+      "meaning": "класс (комната) 🏫"
+    },
+    {
+      "word": "禾苗",
+      "pinyin": "hé miáo",
+      "meaning": "пшеница (всходы) 🌾"
+    },
+    {
+      "word": "梳头",
+      "pinyin": "shū tóu",
+      "meaning": "причёсывать 💇"
+    },
+    {
+      "word": "哈哈笑",
+      "pinyin": "hā hā xiào",
+      "meaning": "ха-ха-ха (смеяться) 😆"
+    },
+    {
+      "word": "优秀",
+      "pinyin": "yōu xiù",
+      "meaning": "отлично (отличный) 🌟"
+    },
+    {
+      "word": "韭菜",
+      "pinyin": "jiǔ cài",
+      "meaning": "зелёный лук (китайский) 🧅"
+    },
+    {
+      "word": "过桥",
+      "pinyin": "guò qiáo",
+      "meaning": "проходить через (мост) 🚶🌉"
+    },
+    {
+      "word": "老师",
+      "pinyin": "lǎo shī",
+      "meaning": "учитель 🍎"
+    },
+    {
+      "word": "道理",
+      "pinyin": "dào lǐ",
+      "meaning": "смысл / принцип 💡"
+    },
+    {
+      "word": "要求",
+      "pinyin": "yāo qiú",
+      "meaning": "требовать ✋"
+    },
+    {
+      "word": "绿油油",
+      "pinyin": "lǜ yóu yóu",
+      "meaning": "зелёный (сочный, яркий) 🟢"
+    },
+    {
+      "word": "牙膏",
+      "pinyin": "yá gāo",
+      "meaning": "зубная паста 🪥"
+    },
+    {
+      "word": "手表",
+      "pinyin": "shǒu biǎo",
+      "meaning": "часы (наручные) ⌚"
+    },
+    {
+      "word": "水蜜桃",
+      "pinyin": "shuǐ mì táo",
+      "meaning": "персик (сочный) 🍑"
     }
   ]
 }
