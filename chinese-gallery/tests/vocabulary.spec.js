@@ -34,6 +34,17 @@ test.describe('Initial load and structure', () => {
     expect(lesson12[82]).toMatchObject({ word: '第二个', pinyin: 'dì èr gè' });
   });
 
+  test('includes all 73 words from lesson 13', async ({ page }) => {
+    const lesson13Chip = page.getByRole('button', { name: 'Урок 13' });
+    await expect(lesson13Chip).toBeVisible();
+    const lesson13 = await page.evaluate(() => allDictionaries['Урок 13']);
+    expect(lesson13).toHaveLength(73);
+    expect(lesson13[0]).toMatchObject({ word: '天安门', pinyin: 'tiān ān mén' });
+    expect(lesson13[72]).toMatchObject({ word: '海军', pinyin: 'hǎi jūn' });
+    await lesson13Chip.click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(73);
+  });
+
   test('does NOT pre-select any dictionary', async ({ page }) => {
     const activeChips = await page.locator('.dict-chip.active').count();
     expect(activeChips).toBe(0);

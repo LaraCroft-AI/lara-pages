@@ -4467,5 +4467,372 @@
       "pinyin": "dì èr gè",
       "meaning": "второй 2️⃣"
     }
+  ],
+  "Урок 13": [
+    {
+      "word": "天安门",
+      "pinyin": "tiān ān mén",
+      "meaning": "площадь Тяньаньмэнь 🏛️"
+    },
+    {
+      "word": "饮料",
+      "pinyin": "yǐn liào",
+      "meaning": "напиток 🥤"
+    },
+    {
+      "word": "摁按钮",
+      "pinyin": "èn àn niǔ",
+      "meaning": "нажимать кнопку 🔘"
+    },
+    {
+      "word": "条纹",
+      "pinyin": "tiáo wén",
+      "meaning": "полоски 🦓"
+    },
+    {
+      "word": "白云",
+      "pinyin": "bái yún",
+      "meaning": "белое облако ☁️"
+    },
+    {
+      "word": "平安",
+      "pinyin": "píng ān",
+      "meaning": "безопасность 🛡️"
+    },
+    {
+      "word": "感恩",
+      "pinyin": "gǎn ēn",
+      "meaning": "благодарить 🙏"
+    },
+    {
+      "word": "印象",
+      "pinyin": "yìn xiàng",
+      "meaning": "впечатление 💭"
+    },
+    {
+      "word": "讨论",
+      "pinyin": "tǎo lùn",
+      "meaning": "обсуждать 🗣️"
+    },
+    {
+      "word": "阴天",
+      "pinyin": "yīn tiān",
+      "meaning": "пасмурный день 🌥️"
+    },
+    {
+      "word": "银",
+      "pinyin": "yín",
+      "meaning": "серебро 🥈"
+    },
+    {
+      "word": "蚯蚓",
+      "pinyin": "qiū yǐn",
+      "meaning": "дождевой червь 🪱"
+    },
+    {
+      "word": "脚印",
+      "pinyin": "jiǎo yìn",
+      "meaning": "след 👣"
+    },
+    {
+      "word": "头晕",
+      "pinyin": "tóu yūn",
+      "meaning": "головокружение 💫"
+    },
+    {
+      "word": "云",
+      "pinyin": "yún",
+      "meaning": "облако ☁️"
+    },
+    {
+      "word": "陨石",
+      "pinyin": "yǔn shí",
+      "meaning": "метеорит ☄️"
+    },
+    {
+      "word": "运动",
+      "pinyin": "yùn dòng",
+      "meaning": "спорт 🏃"
+    },
+    {
+      "word": "圆",
+      "pinyin": "yuán",
+      "meaning": "круглый ⭕"
+    },
+    {
+      "word": "鸳鸯",
+      "pinyin": "yuān yang",
+      "meaning": "утка-мандаринка 🦆"
+    },
+    {
+      "word": "桂圆",
+      "pinyin": "guì yuán",
+      "meaning": "лонган 🟤"
+    },
+    {
+      "word": "远",
+      "pinyin": "yuǎn",
+      "meaning": "далеко 🔭"
+    },
+    {
+      "word": "庭院",
+      "pinyin": "tíng yuàn",
+      "meaning": "двор 🏡"
+    },
+    {
+      "word": "宽敞",
+      "pinyin": "kuān chǎng",
+      "meaning": "просторный ↔️"
+    },
+    {
+      "word": "欢乐",
+      "pinyin": "huān lè",
+      "meaning": "весёлый 😄"
+    },
+    {
+      "word": "开关",
+      "pinyin": "kāi guān",
+      "meaning": "выключатель 🎚️"
+    },
+    {
+      "word": "捐款",
+      "pinyin": "juān kuǎn",
+      "meaning": "жертвовать деньги 💝"
+    },
+    {
+      "word": "呼拉圈",
+      "pinyin": "hū lā quān",
+      "meaning": "обруч ⭕"
+    },
+    {
+      "word": "喧闹",
+      "pinyin": "xuān nào",
+      "meaning": "шумно 📣"
+    },
+    {
+      "word": "嘴馋",
+      "pinyin": "zuǐ chán",
+      "meaning": "любитель вкусно поесть 😋"
+    },
+    {
+      "word": "盘子",
+      "pinyin": "pán zi",
+      "meaning": "тарелка 🍽️"
+    },
+    {
+      "word": "搬桌子",
+      "pinyin": "bān zhuō zi",
+      "meaning": "нести стол 💪"
+    },
+    {
+      "word": "翻书",
+      "pinyin": "fān shū",
+      "meaning": "перелистывать книгу 📖"
+    },
+    {
+      "word": "短裤",
+      "pinyin": "duǎn kù",
+      "meaning": "шорты 🩳"
+    },
+    {
+      "word": "短笛",
+      "pinyin": "duǎn dí",
+      "meaning": "флейта 🪈"
+    },
+    {
+      "word": "泉水",
+      "pinyin": "quán shuǐ",
+      "meaning": "источник 💧"
+    },
+    {
+      "word": "拳头",
+      "pinyin": "quán tou",
+      "meaning": "кулак ✊"
+    },
+    {
+      "word": "喷泉",
+      "pinyin": "pēn quán",
+      "meaning": "фонтан ⛲"
+    },
+    {
+      "word": "粉色",
+      "pinyin": "fěn sè",
+      "meaning": "розовый цвет 🩷"
+    },
+    {
+      "word": "奔跑",
+      "pinyin": "bēn pǎo",
+      "meaning": "быстро бегать 🏃💨"
+    },
+    {
+      "word": "开门",
+      "pinyin": "kāi mén",
+      "meaning": "открывать дверь 🚪"
+    },
+    {
+      "word": "老人",
+      "pinyin": "lǎo rén",
+      "meaning": "старик 👴"
+    },
+    {
+      "word": "衬衫",
+      "pinyin": "chèn shān",
+      "meaning": "рубашка 👔"
+    },
+    {
+      "word": "别针",
+      "pinyin": "bié zhēn",
+      "meaning": "булавка 🧷"
+    },
+    {
+      "word": "品尝",
+      "pinyin": "pǐn cháng",
+      "meaning": "дегустировать 👅"
+    },
+    {
+      "word": "树林",
+      "pinyin": "shù lín",
+      "meaning": "роща 🌳"
+    },
+    {
+      "word": "金黄色",
+      "pinyin": "jīn huáng sè",
+      "meaning": "золотой цвет 🟡"
+    },
+    {
+      "word": "车轮",
+      "pinyin": "chē lún",
+      "meaning": "колесо 🛞"
+    },
+    {
+      "word": "昏倒",
+      "pinyin": "hūn dǎo",
+      "meaning": "падать в обморок 😵"
+    },
+    {
+      "word": "春天",
+      "pinyin": "chūn tiān",
+      "meaning": "весна 🌸"
+    },
+    {
+      "word": "吮吸",
+      "pinyin": "shǔn xī",
+      "meaning": "сосать 👶"
+    },
+    {
+      "word": "军人",
+      "pinyin": "jūn rén",
+      "meaning": "солдат (военный) 🪖"
+    },
+    {
+      "word": "训练",
+      "pinyin": "xùn liàn",
+      "meaning": "тренироваться 🏋️"
+    },
+    {
+      "word": "人群",
+      "pinyin": "rén qún",
+      "meaning": "толпа 👥"
+    },
+    {
+      "word": "熏肉",
+      "pinyin": "xūn ròu",
+      "meaning": "копчёное мясо 🥓"
+    },
+    {
+      "word": "轮船",
+      "pinyin": "lún chuán",
+      "meaning": "корабль 🚢"
+    },
+    {
+      "word": "音乐",
+      "pinyin": "yīn yuè",
+      "meaning": "музыка 🎵"
+    },
+    {
+      "word": "亲吻",
+      "pinyin": "qīn wěn",
+      "meaning": "целовать 💋"
+    },
+    {
+      "word": "蓝天",
+      "pinyin": "lán tiān",
+      "meaning": "синее небо 🌤️"
+    },
+    {
+      "word": "草原",
+      "pinyin": "cǎo yuán",
+      "meaning": "степь 🌾"
+    },
+    {
+      "word": "森林",
+      "pinyin": "sēn lín",
+      "meaning": "лес 🌲"
+    },
+    {
+      "word": "蓝鲸",
+      "pinyin": "lán jīng",
+      "meaning": "синий кит 🐋"
+    },
+    {
+      "word": "蓝色",
+      "pinyin": "lán sè",
+      "meaning": "синий цвет 🔵"
+    },
+    {
+      "word": "蓝牙",
+      "pinyin": "lán yá",
+      "meaning": "Bluetooth (буквально: синий зуб) 🦷"
+    },
+    {
+      "word": "乌云",
+      "pinyin": "wū yún",
+      "meaning": "туча 🌩️"
+    },
+    {
+      "word": "小草",
+      "pinyin": "xiǎo cǎo",
+      "meaning": "трава 🌱"
+    },
+    {
+      "word": "草地",
+      "pinyin": "cǎo dì",
+      "meaning": "луг 🌿"
+    },
+    {
+      "word": "草莓",
+      "pinyin": "cǎo méi",
+      "meaning": "клубника 🍓"
+    },
+    {
+      "word": "原野",
+      "pinyin": "yuán yě",
+      "meaning": "поле 🌾"
+    },
+    {
+      "word": "原因",
+      "pinyin": "yuán yīn",
+      "meaning": "причина 💡"
+    },
+    {
+      "word": "平原",
+      "pinyin": "píng yuán",
+      "meaning": "равнина 🏞️"
+    },
+    {
+      "word": "原始",
+      "pinyin": "yuán shǐ",
+      "meaning": "первобытный 🗿"
+    },
+    {
+      "word": "大门",
+      "pinyin": "dà mén",
+      "meaning": "ворота 🚪"
+    },
+    {
+      "word": "海军",
+      "pinyin": "hǎi jūn",
+      "meaning": "военный моряк ⚓"
+    }
   ]
 }
