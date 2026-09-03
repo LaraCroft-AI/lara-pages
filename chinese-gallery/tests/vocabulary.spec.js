@@ -26,6 +26,14 @@ test.describe('Initial load and structure', () => {
     expect(knownCount).toBeGreaterThanOrEqual(1);
   });
 
+  test('includes all 83 words from lesson 12', async ({ page }) => {
+    await expect(page.getByRole('button', { name: 'Урок 12' })).toBeVisible();
+    const lesson12 = await page.evaluate(() => allDictionaries['Урок 12']);
+    expect(lesson12).toHaveLength(83);
+    expect(lesson12[0]).toMatchObject({ word: '椰子树', pinyin: 'yē zi shù' });
+    expect(lesson12[82]).toMatchObject({ word: '第二个', pinyin: 'dì èr gè' });
+  });
+
   test('does NOT pre-select any dictionary', async ({ page }) => {
     const activeChips = await page.locator('.dict-chip.active').count();
     expect(activeChips).toBe(0);
