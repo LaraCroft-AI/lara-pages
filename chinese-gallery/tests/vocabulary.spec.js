@@ -26,23 +26,38 @@ test.describe('Initial load and structure', () => {
     expect(knownCount).toBeGreaterThanOrEqual(1);
   });
 
-  test('includes all 83 words from lesson 12', async ({ page }) => {
+  test('includes the 74 unique words from lesson 12', async ({ page }) => {
     await expect(page.getByRole('button', { name: 'Урок 12' })).toBeVisible();
     const lesson12 = await page.evaluate(() => allDictionaries['Урок 12']);
-    expect(lesson12).toHaveLength(83);
+    expect(lesson12).toHaveLength(74);
     expect(lesson12[0]).toMatchObject({ word: '椰子树', pinyin: 'yē zi shù' });
-    expect(lesson12[82]).toMatchObject({ word: '第二个', pinyin: 'dì èr gè' });
+    expect(lesson12[73]).toMatchObject({ word: '第二个', pinyin: 'dì èr gè' });
   });
 
-  test('includes all 73 words from lesson 13', async ({ page }) => {
+  test('includes the 65 unique words from lesson 13', async ({ page }) => {
     const lesson13Chip = page.getByRole('button', { name: 'Урок 13' });
     await expect(lesson13Chip).toBeVisible();
     const lesson13 = await page.evaluate(() => allDictionaries['Урок 13']);
-    expect(lesson13).toHaveLength(73);
+    expect(lesson13).toHaveLength(65);
     expect(lesson13[0]).toMatchObject({ word: '天安门', pinyin: 'tiān ān mén' });
-    expect(lesson13[72]).toMatchObject({ word: '海军', pinyin: 'hǎi jūn' });
+    expect(lesson13[64]).toMatchObject({ word: '海军', pinyin: 'hǎi jūn' });
     await lesson13Chip.click();
-    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(73);
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(65);
+  });
+
+  test('keeps every word only in its earliest lesson', async ({ page }) => {
+    const duplicateWords = await page.evaluate(() => {
+      const seen = new Set();
+      const duplicates = new Set();
+      for (const entries of Object.values(allDictionaries)) {
+        for (const entry of entries) {
+          if (seen.has(entry.word)) duplicates.add(entry.word);
+          seen.add(entry.word);
+        }
+      }
+      return [...duplicates];
+    });
+    expect(duplicateWords).toEqual([]);
   });
 
   test('does NOT pre-select any dictionary', async ({ page }) => {

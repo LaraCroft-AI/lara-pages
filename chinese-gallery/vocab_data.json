@@ -965,12 +965,6 @@
       "hsk30": 3
     },
     {
-      "word": "苹果",
-      "pinyin": "píngguǒ",
-      "meaning": "яблоко 🍎",
-      "hsk30": 3
-    },
-    {
       "word": "果汁",
       "pinyin": "guǒzhī",
       "meaning": "сок 🧃",
@@ -1047,12 +1041,6 @@
       "pinyin": "huǒchái",
       "meaning": "спичка 🔥",
       "hsk30": 5
-    },
-    {
-      "word": "弟弟",
-      "pinyin": "dìdi",
-      "meaning": "младший брат 👦",
-      "hsk30": 1
     },
     {
       "word": "大哥",
@@ -1291,12 +1279,6 @@
       "hsk30": 4
     },
     {
-      "word": "西瓜",
-      "pinyin": "xīguā",
-      "meaning": "арбуз 🍉",
-      "hsk30": 4
-    },
-    {
       "word": "着急",
       "pinyin": "zháojí",
       "meaning": "волноваться / нервничать 😟",
@@ -1453,12 +1435,6 @@
       "hsk30": null
     },
     {
-      "word": "飞机",
-      "pinyin": "fēijī",
-      "meaning": "самолёт ✈️",
-      "hsk30": 1
-    },
-    {
       "word": "木柜",
       "pinyin": "mùguì",
       "meaning": "шкаф (деревянный) 🗄️",
@@ -1493,12 +1469,6 @@
       "pinyin": "xiàtiān",
       "meaning": "лето ☀️",
       "hsk30": 2
-    },
-    {
-      "word": "打鼓",
-      "pinyin": "dǎgǔ",
-      "meaning": "играть в барабан 🎮",
-      "hsk30": null
     },
     {
       "word": "下棋",
@@ -1857,12 +1827,6 @@
       "hsk30": 2
     },
     {
-      "word": "错误",
-      "pinyin": "cuò wù",
-      "meaning": "ошибка / неверный ❌",
-      "hsk30": 3
-    },
-    {
       "word": "搓衣板",
       "pinyin": "cuō yī bǎn",
       "meaning": "стиральная доска / верёвка для стирки  🪢",
@@ -1896,90 +1860,6 @@
       "word": "旬",
       "pinyin": "xún",
       "meaning": "десять дней / декада / фраза (рифма) 🔟",
-      "hsk30": null
-    },
-    {
-      "word": "塑像",
-      "pinyin": "sù xiàng",
-      "meaning": "статуя / скульптура 🗿",
-      "hsk30": null
-    },
-    {
-      "word": "搓手",
-      "pinyin": "cuō shǒu",
-      "meaning": "вытирать руки / растирать ладони 🧽",
-      "hsk30": null
-    },
-    {
-      "word": "锁",
-      "pinyin": "suǒ",
-      "meaning": "замок / запереть 🔒",
-      "hsk30": 5
-    },
-    {
-      "word": "柿子",
-      "pinyin": "shì zi",
-      "meaning": "хурма (кусать хурму = 吃柿子) 🟠",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "昨天",
-      "pinyin": "zuó tiān",
-      "meaning": "вчера 📅",
-      "hsk30": 1
-    },
-    {
-      "word": "左手",
-      "pinyin": "zuǒ shǒu",
-      "meaning": "левая рука / левша 🦁",
-      "hsk30": null
-    },
-    {
-      "word": "作业",
-      "pinyin": "zuò yè",
-      "meaning": "домашнее задание (写作业 = делать ДЗ) 📝",
-      "hsk30": 2
-    },
-    {
-      "word": "错误",
-      "pinyin": "cuò wù",
-      "meaning": "ошибка / неверный ❌",
-      "hsk30": 3
-    },
-    {
-      "word": "搓衣板",
-      "pinyin": "cuō yī bǎn",
-      "meaning": "стиральная доска / верёвка для стирки  🪢",
-      "hsk30": null
-    },
-    {
-      "word": "痤疮",
-      "pinyin": "cuó chuāng",
-      "meaning": "прыщ / акне 🩹",
-      "hsk30": null
-    },
-    {
-      "word": "蓑衣",
-      "pinyin": "suō yī",
-      "meaning": "соломенный плащ, дождевик из рогозы 🧥",
-      "hsk30": null
-    },
-    {
-      "word": "字",
-      "pinyin": "zì",
-      "meaning": "иероглиф / слово / письменность 👃",
-      "hsk30": 1
-    },
-    {
-      "word": "同",
-      "pinyin": "tóng",
-      "meaning": "тот же / один и тот же 🟰",
-      "hsk30": 6
-    },
-    {
-      "word": "旬",
-      "pinyin": "xún",
-      "meaning": "десять дней; декада 🔟",
       "hsk30": null
     },
     {
@@ -2073,274 +1953,10 @@
       "hsk30": "7–9"
     },
     {
-      "word": "识字",
-      "pinyin": "shí zì",
-      "meaning": "учить иероглиф 🈶",
-      "hsk30": 6
-    },
-    {
-      "word": "诗词",
-      "pinyin": "shī cí",
-      "meaning": "поэзия 📜",
-      "hsk30": null
-    },
-    {
-      "word": "组词",
-      "pinyin": "zǔ cí",
-      "meaning": "составлять слово 🔤",
-      "hsk30": null
-    },
-    {
-      "word": "歌词",
-      "pinyin": "gē cí",
-      "meaning": "слова песни 🎵",
-      "hsk30": 6
-    },
-    {
-      "word": "凳子",
-      "pinyin": "dèng zi",
-      "meaning": "стул 🪑",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "本子",
-      "pinyin": "běn zi",
-      "meaning": "тетрадь 📓",
-      "hsk30": 1
-    },
-    {
-      "word": "房子",
-      "pinyin": "fáng zi",
-      "meaning": "дом 🏠",
-      "hsk30": 1
-    },
-    {
-      "word": "早上",
-      "pinyin": "zǎo shang",
-      "meaning": "утро 🌅",
-      "hsk30": 1
-    },
-    {
       "word": "字典",
       "pinyin": "zì diǎn",
       "meaning": "словарь 📖",
       "hsk30": 2
-    },
-    {
-      "word": "草莓",
-      "pinyin": "cǎo méi",
-      "meaning": "клубника 🍓",
-      "hsk30": null
-    },
-    {
-      "word": "司机",
-      "pinyin": "sī jī",
-      "meaning": "водитель 🧑‍✈️",
-      "hsk30": 2
-    },
-    {
-      "word": "三",
-      "pinyin": "sān",
-      "meaning": "три 3️⃣",
-      "hsk30": 1
-    },
-    {
-      "word": "四",
-      "pinyin": "sì",
-      "meaning": "четыре 4️⃣",
-      "hsk30": 1
-    },
-    {
-      "word": "瓷器",
-      "pinyin": "cí qí",
-      "meaning": "фарфор / керамика 🏺",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "橘子",
-      "pinyin": "jú zi",
-      "meaning": "мандарин (плод) 🍊",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "识字",
-      "pinyin": "shí zì",
-      "meaning": "учить иероглиф 🈶",
-      "hsk30": 6
-    },
-    {
-      "word": "诗词",
-      "pinyin": "shī cí",
-      "meaning": "поэзия 📜",
-      "hsk30": null
-    },
-    {
-      "word": "组词",
-      "pinyin": "zǔ cí",
-      "meaning": "составлять слово 🔤",
-      "hsk30": null
-    },
-    {
-      "word": "歌词",
-      "pinyin": "gē cí",
-      "meaning": "слова песни 🎵",
-      "hsk30": 6
-    },
-    {
-      "word": "凳子",
-      "pinyin": "dèng zi",
-      "meaning": "стул 🪑",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "本子",
-      "pinyin": "běn zi",
-      "meaning": "тетрадь 📓",
-      "hsk30": 1
-    },
-    {
-      "word": "房子",
-      "pinyin": "fáng zi",
-      "meaning": "дом 🏠",
-      "hsk30": 1
-    },
-    {
-      "word": "早上",
-      "pinyin": "zǎo shang",
-      "meaning": "утро 🌅",
-      "hsk30": 1
-    },
-    {
-      "word": "字典",
-      "pinyin": "zì diǎn",
-      "meaning": "словарь 📖",
-      "hsk30": 2
-    },
-    {
-      "word": "草莓",
-      "pinyin": "cǎo méi",
-      "meaning": "клубника 🍓",
-      "hsk30": null
-    },
-    {
-      "word": "司机",
-      "pinyin": "sī jī",
-      "meaning": "водитель 🧑‍✈️",
-      "hsk30": 2
-    },
-    {
-      "word": "三",
-      "pinyin": "sān",
-      "meaning": "три 3️⃣",
-      "hsk30": 1
-    },
-    {
-      "word": "四",
-      "pinyin": "sì",
-      "meaning": "четыре 4️⃣",
-      "hsk30": 1
-    },
-    {
-      "word": "瓷器",
-      "pinyin": "cí qí",
-      "meaning": "фарфор / керамика 🏺",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "橘子",
-      "pinyin": "jú zi",
-      "meaning": "мандарин 🍊",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "识字",
-      "pinyin": "shi zi",
-      "meaning": "учить иероглиф 🈶",
-      "hsk30": 6
-    },
-    {
-      "word": "诗词",
-      "pinyin": "shi ci",
-      "meaning": "поэзия 📜",
-      "hsk30": null
-    },
-    {
-      "word": "组词",
-      "pinyin": "zu ci",
-      "meaning": "составлять слово 🔤",
-      "hsk30": null
-    },
-    {
-      "word": "歌词",
-      "pinyin": "ge ci",
-      "meaning": "слова песни 🎵",
-      "hsk30": 6
-    },
-    {
-      "word": "凳子",
-      "pinyin": "deng zi",
-      "meaning": "стул 🪑",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "本子",
-      "pinyin": "ben zi",
-      "meaning": "тетрадь 📓",
-      "hsk30": 1
-    },
-    {
-      "word": "房子",
-      "pinyin": "fang zi",
-      "meaning": "дом 🏠",
-      "hsk30": 1
-    },
-    {
-      "word": "早上",
-      "pinyin": "zao shang",
-      "meaning": "утро 🌅",
-      "hsk30": 1
-    },
-    {
-      "word": "字典",
-      "pinyin": "zi dian",
-      "meaning": "словарь 📖",
-      "hsk30": 2
-    },
-    {
-      "word": "草莓",
-      "pinyin": "cao mei",
-      "meaning": "клубника 🍓",
-      "hsk30": null
-    },
-    {
-      "word": "司机",
-      "pinyin": "si ji",
-      "meaning": "водитель 🧑‍✈️",
-      "hsk30": 2
-    },
-    {
-      "word": "三",
-      "pinyin": "san",
-      "meaning": "три 3️⃣",
-      "hsk30": 1
-    },
-    {
-      "word": "四",
-      "pinyin": "si",
-      "meaning": "четыре 4️⃣",
-      "hsk30": 1
-    },
-    {
-      "word": "瓷器",
-      "pinyin": "qi ci",
-      "meaning": "фарфор 🏺",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "橘子",
-      "pinyin": "ju zi",
-      "meaning": "мандарин 🍊",
-      "hsk30": "7–9"
     },
     {
       "word": "祖父",
@@ -2403,123 +2019,9 @@
       "hsk30": null
     },
     {
-      "word": "祖父",
-      "pinyin": "zǔ fu",
-      "meaning": "дедушка 👴",
-      "hsk30": 6
-    },
-    {
-      "word": "盒子",
-      "pinyin": "hé zi",
-      "meaning": "коробка 📦",
-      "hsk30": 5
-    },
-    {
-      "word": "速度",
-      "pinyin": "sù dù",
-      "meaning": "скорость ⚡",
-      "hsk30": 3
-    },
-    {
-      "word": "祖母",
-      "pinyin": "zǔ mǔ",
-      "meaning": "бабушка 👵",
-      "hsk30": 6
-    },
-    {
-      "word": "自己",
-      "pinyin": "zì jǐ",
-      "meaning": "сам, себе 🙋",
-      "hsk30": 2
-    },
-    {
-      "word": "字母",
-      "pinyin": "zì mǔ",
-      "meaning": "буква  🔤",
-      "hsk30": 4
-    },
-    {
-      "word": "仔细",
-      "pinyin": "zǐ xì",
-      "meaning": "внимательно 🔍",
-      "hsk30": 5
-    },
-    {
-      "word": "子女",
-      "pinyin": "zǐ nǚ",
-      "meaning": "ребёнок 🧒",
-      "hsk30": 3
-    },
-    {
-      "word": "打字",
-      "pinyin": "dǎ zì",
-      "meaning": "печатать ⌨️",
-      "hsk30": null
-    },
-    {
       "word": "喜孜孜",
       "pinyin": "xǐ zi zi",
       "meaning": "радоваться 😊",
-      "hsk30": null
-    },
-    {
-      "word": "祖父",
-      "pinyin": "zǔ fu",
-      "meaning": "дедушка 👴",
-      "hsk30": 6
-    },
-    {
-      "word": "盒子",
-      "pinyin": "hé zi",
-      "meaning": "коробка 📦",
-      "hsk30": 5
-    },
-    {
-      "word": "速度",
-      "pinyin": "sù dù",
-      "meaning": "скорость ⚡",
-      "hsk30": 3
-    },
-    {
-      "word": "祖母",
-      "pinyin": "zǔ mǔ",
-      "meaning": "бабушка 👵",
-      "hsk30": 6
-    },
-    {
-      "word": "自己",
-      "pinyin": "zì jǐ",
-      "meaning": "сам, себе 🙋",
-      "hsk30": 2
-    },
-    {
-      "word": "字母",
-      "pinyin": "zì mǔ",
-      "meaning": "буква  🔤",
-      "hsk30": 4
-    },
-    {
-      "word": "仔细",
-      "pinyin": "zǐ xì",
-      "meaning": "внимательно 🔍",
-      "hsk30": 5
-    },
-    {
-      "word": "子女",
-      "pinyin": "zǐ nǚ",
-      "meaning": "ребёнок 🧒",
-      "hsk30": 3
-    },
-    {
-      "word": "打字",
-      "pinyin": "dă zì",
-      "meaning": "печатать ⌨️",
-      "hsk30": null
-    },
-    {
-      "word": "喜滋滋",
-      "pinyin": "xǐ zī zī",
-      "meaning": "радоваться (счастливая улыбка) 😊",
       "hsk30": null
     }
   ],
@@ -2591,12 +2093,6 @@
       "hsk30": 5
     },
     {
-      "word": "桌子",
-      "pinyin": "zhuō zi",
-      "meaning": "стол 🪑",
-      "hsk30": 1
-    },
-    {
       "word": "刷墙",
       "pinyin": "shuā qiáng",
       "meaning": "красить стену 🧱",
@@ -2607,12 +2103,6 @@
       "pinyin": "chuō pào pao",
       "meaning": "протыкать мыльные пузыри 🫧",
       "hsk30": null
-    },
-    {
-      "word": "说话",
-      "pinyin": "shuō huà",
-      "meaning": "говорить, сказать что-то 💬",
-      "hsk30": 1
     },
     {
       "word": "弱小",
@@ -2624,96 +2114,6 @@
       "word": "手抓饭",
       "pinyin": "shǒu zhuā fàn",
       "meaning": "плов руками/есть руками 🍲",
-      "hsk30": null
-    },
-    {
-      "word": "爪子",
-      "pinyin": "zhǎo zi",
-      "meaning": "лапа (животного) 🐾",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "捉迷藏",
-      "pinyin": "zhuō mí cáng",
-      "meaning": "играть в прятки 👀",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "手镯",
-      "pinyin": "shǒu zhuó",
-      "meaning": "браслет 💍",
-      "hsk30": null
-    },
-    {
-      "word": "啜泣",
-      "pinyin": "chuò qì",
-      "meaning": "рыдать, плакать 🥺",
-      "hsk30": null
-    },
-    {
-      "word": "邮戳",
-      "pinyin": "yóu chuō",
-      "meaning": "почтамтовый штемпель / штамп ✉️",
-      "hsk30": null
-    },
-    {
-      "word": "牙刷",
-      "pinyin": "yá shuā",
-      "meaning": "зубная щетка 🪥",
-      "hsk30": 4
-    },
-    {
-      "word": "刷牙",
-      "pinyin": "shuā yá",
-      "meaning": "чистить зубы 🦷",
-      "hsk30": 4
-    },
-    {
-      "word": "玩耍",
-      "pinyin": "wán shuǎ",
-      "meaning": "играть, резвиться 😄",
-      "hsk30": "7–9"
-    },
-    {
-      "word": "蛇",
-      "pinyin": "shé",
-      "meaning": "змея 🐍",
-      "hsk30": 5
-    },
-    {
-      "word": "桌子",
-      "pinyin": "zhuō zi",
-      "meaning": "стол 🪑",
-      "hsk30": 1
-    },
-    {
-      "word": "刷墙",
-      "pinyin": "shuā qiáng",
-      "meaning": "красить стену 🧱",
-      "hsk30": null
-    },
-    {
-      "word": "戳泡泡",
-      "pinyin": "chuō pào pao",
-      "meaning": "протыкать мыльные пузыри 🫧",
-      "hsk30": null
-    },
-    {
-      "word": "说话",
-      "pinyin": "shuō huà",
-      "meaning": "говорить, сказать что-то 💬",
-      "hsk30": 1
-    },
-    {
-      "word": "弱小",
-      "pinyin": "ruò xiǎo",
-      "meaning": "слабый 🐣",
-      "hsk30": null
-    },
-    {
-      "word": "手抓饭",
-      "pinyin": "shǒu zhuā fàn",
-      "meaning": "плов руками 🍲",
       "hsk30": null
     },
     {
@@ -2781,12 +2181,6 @@
       "pinyin": "zhé zhǐ",
       "meaning": "оригами / складывать из бумаги 📦",
       "hsk30": null
-    },
-    {
-      "word": "读书",
-      "pinyin": "dú shū",
-      "meaning": "читать книгу 📖",
-      "hsk30": 1
     },
     {
       "word": "课桌",
@@ -3367,24 +2761,6 @@
       "hsk30": null
     },
     {
-      "word": "鸭梨",
-      "pinyin": "yā lí",
-      "meaning": "груша (азиатская, нэши) 🍐",
-      "hsk30": null
-    },
-    {
-      "word": "西瓜",
-      "pinyin": "xī guā",
-      "meaning": "арбуз 🍉",
-      "hsk30": 4
-    },
-    {
-      "word": "南瓜",
-      "pinyin": "nán guā",
-      "meaning": "тыква 🎃",
-      "hsk30": "7–9"
-    },
-    {
       "word": "果盘",
       "pinyin": "guǒ pán",
       "meaning": "фруктовая тарелка 🍇",
@@ -3394,24 +2770,6 @@
       "word": "茶杯",
       "pinyin": "chá bēi",
       "meaning": "кружка для чая ☕",
-      "hsk30": null
-    },
-    {
-      "word": "梅花",
-      "pinyin": "méi huā",
-      "meaning": "цветок сливы 🌸",
-      "hsk30": 6
-    },
-    {
-      "word": "乌龟",
-      "pinyin": "wū guī",
-      "meaning": "черепаха 🐢",
-      "hsk30": null
-    },
-    {
-      "word": "刺猬",
-      "pinyin": "cì wei",
-      "meaning": "ёж 🦔",
       "hsk30": null
     },
     {
@@ -3521,12 +2879,6 @@
       "pinyin": "guāi hái zi",
       "meaning": "послушный ребёнок 👶",
       "hsk30": null
-    },
-    {
-      "word": "果汁",
-      "pinyin": "guǒ zhī",
-      "meaning": "сок 🧃",
-      "hsk30": 3
     },
     {
       "word": "美丽",
@@ -3885,12 +3237,6 @@
       "hsk30": null
     },
     {
-      "word": "桃花",
-      "pinyin": "táo huā",
-      "meaning": "цветок персика 🌸",
-      "hsk30": 5
-    },
-    {
       "word": "小孩儿",
       "pinyin": "xiǎo háir",
       "meaning": "маленький ребёнок 👶",
@@ -3951,12 +3297,6 @@
       "hsk30": null
     },
     {
-      "word": "河流",
-      "pinyin": "hé liú",
-      "meaning": "река 🏞️",
-      "hsk30": "7–9"
-    },
-    {
       "word": "柳条",
       "pinyin": "liǔ tiáo",
       "meaning": "ветка ивы 🌿",
@@ -3975,12 +3315,6 @@
       "hsk30": null
     },
     {
-      "word": "蜗牛",
-      "pinyin": "wō niú",
-      "meaning": "улитка 🐌",
-      "hsk30": null
-    },
-    {
       "word": "老虎",
       "pinyin": "lǎo hǔ",
       "meaning": "тигр 🐯",
@@ -3991,12 +3325,6 @@
       "pinyin": "máo bǐ",
       "meaning": "кисть для каллиграфии 🖌️",
       "hsk30": 5
-    },
-    {
-      "word": "书包",
-      "pinyin": "shū bāo",
-      "meaning": "портфель 🎒",
-      "hsk30": 1
     },
     {
       "word": "吵闹",
@@ -4021,12 +3349,6 @@
       "pinyin": "jiào shì",
       "meaning": "класс (комната) 🏫",
       "hsk30": 2
-    },
-    {
-      "word": "禾苗",
-      "pinyin": "hé miáo",
-      "meaning": "пшеница (всходы) 🌾",
-      "hsk30": "7–9"
     },
     {
       "word": "梳头",
@@ -4057,12 +3379,6 @@
       "pinyin": "guò qiáo",
       "meaning": "проходить через (мост) 🚶🌉",
       "hsk30": null
-    },
-    {
-      "word": "老师",
-      "pinyin": "lǎo shī",
-      "meaning": "учитель 🍎",
-      "hsk30": 1
     },
     {
       "word": "道理",
@@ -4247,12 +3563,6 @@
       "hsk30": null
     },
     {
-      "word": "茄子",
-      "pinyin": "qié zi",
-      "meaning": "баклажан 🍆",
-      "hsk30": 6
-    },
-    {
       "word": "雪花",
       "pinyin": "xuě huā",
       "meaning": "снежинка ❄️",
@@ -4281,12 +3591,6 @@
       "pinyin": "kāi guān",
       "meaning": "выключатель 🎚️",
       "hsk30": 6
-    },
-    {
-      "word": "开门",
-      "pinyin": "kāi mén",
-      "meaning": "открывать дверь 🚪",
-      "hsk30": null
     },
     {
       "word": "开窗",
@@ -4331,12 +3635,6 @@
       "hsk30": null
     },
     {
-      "word": "黑夜",
-      "pinyin": "hēi yè",
-      "meaning": "тёмная ночь 🌑",
-      "hsk30": 6
-    },
-    {
       "word": "熬夜",
       "pinyin": "áo yè",
       "meaning": "бодрствовать ночью 🦉",
@@ -4349,27 +3647,9 @@
       "hsk30": 2
     },
     {
-      "word": "绿色",
-      "pinyin": "lǜ sè",
-      "meaning": "зелёный цвет 🟢",
-      "hsk30": 2
-    },
-    {
-      "word": "紫色",
-      "pinyin": "zǐ sè",
-      "meaning": "фиолетовый цвет 🟣",
-      "hsk30": null
-    },
-    {
       "word": "景色",
       "pinyin": "jǐng sè",
       "meaning": "пейзаж 🏞️",
-      "hsk30": 3
-    },
-    {
-      "word": "美丽",
-      "pinyin": "měi lì",
-      "meaning": "красивый ✨",
       "hsk30": 3
     },
     {
@@ -4383,12 +3663,6 @@
       "pinyin": "měi nǚ",
       "meaning": "красавица 👸",
       "hsk30": 4
-    },
-    {
-      "word": "美术",
-      "pinyin": "měi shù",
-      "meaning": "искусство 🎨",
-      "hsk30": 3
     },
     {
       "word": "麻雀",
@@ -4443,12 +3717,6 @@
       "pinyin": "xuě bái",
       "meaning": "белоснежный ⚪",
       "hsk30": null
-    },
-    {
-      "word": "阅读",
-      "pinyin": "yuè dú",
-      "meaning": "чтение 📖",
-      "hsk30": 4
     },
     {
       "word": "学校",
@@ -4526,12 +3794,6 @@
       "word": "野兔",
       "pinyin": "yě tù",
       "meaning": "заяц 🐇",
-      "hsk30": null
-    },
-    {
-      "word": "磁铁",
-      "pinyin": "cí tiě",
-      "meaning": "магнит 🧲",
       "hsk30": null
     },
     {
@@ -4669,12 +3931,6 @@
       "hsk30": 3
     },
     {
-      "word": "蚯蚓",
-      "pinyin": "qiū yǐn",
-      "meaning": "дождевой червь 🪱",
-      "hsk30": null
-    },
-    {
       "word": "脚印",
       "pinyin": "jiǎo yìn",
       "meaning": "след 👣",
@@ -4745,12 +4001,6 @@
       "pinyin": "huān lè",
       "meaning": "весёлый 😄",
       "hsk30": 3
-    },
-    {
-      "word": "开关",
-      "pinyin": "kāi guān",
-      "meaning": "выключатель 🎚️",
-      "hsk30": 6
     },
     {
       "word": "捐款",
@@ -4837,12 +4087,6 @@
       "hsk30": 6
     },
     {
-      "word": "开门",
-      "pinyin": "kāi mén",
-      "meaning": "открывать дверь 🚪",
-      "hsk30": null
-    },
-    {
       "word": "老人",
       "pinyin": "lǎo rén",
       "meaning": "старик 👴",
@@ -4853,12 +4097,6 @@
       "pinyin": "chèn shān",
       "meaning": "рубашка 👔",
       "hsk30": 3
-    },
-    {
-      "word": "别针",
-      "pinyin": "bié zhēn",
-      "meaning": "булавка 🧷",
-      "hsk30": null
     },
     {
       "word": "品尝",
@@ -4969,22 +4207,10 @@
       "hsk30": null
     },
     {
-      "word": "蓝色",
-      "pinyin": "lán sè",
-      "meaning": "синий цвет 🔵",
-      "hsk30": 2
-    },
-    {
       "word": "蓝牙",
       "pinyin": "lán yá",
       "meaning": "Bluetooth (буквально: синий зуб) 🦷",
       "hsk30": null
-    },
-    {
-      "word": "乌云",
-      "pinyin": "wū yún",
-      "meaning": "туча 🌩️",
-      "hsk30": 6
     },
     {
       "word": "小草",
@@ -4997,12 +4223,6 @@
       "pinyin": "cǎo dì",
       "meaning": "луг 🌿",
       "hsk30": 2
-    },
-    {
-      "word": "草莓",
-      "pinyin": "cǎo méi",
-      "meaning": "клубника 🍓",
-      "hsk30": null
     },
     {
       "word": "原野",
@@ -5027,12 +4247,6 @@
       "pinyin": "yuán shǐ",
       "meaning": "первобытный 🗿",
       "hsk30": 5
-    },
-    {
-      "word": "大门",
-      "pinyin": "dà mén",
-      "meaning": "ворота 🚪",
-      "hsk30": 2
     },
     {
       "word": "海军",
