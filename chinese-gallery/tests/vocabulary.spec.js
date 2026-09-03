@@ -125,6 +125,30 @@ test.describe('Search', () => {
   });
 });
 
+test.describe('HSK labels', () => {
+  test('shows only the modern HSK 3.0 label', async ({ page }) => {
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    const firstCard = page.locator('.vocab-card').first();
+    await expect(firstCard).toContainText(/HSK 3\.0: (?:[1-6]|7–9|—)/);
+    await expect(firstCard).not.toContainText(/HSK (?!3\.0)/);
+  });
+
+  test('all entries have recalculated HSK 3.0 data and no legacy HSK field', async ({ page }) => {
+    const stats = await page.evaluate(() => {
+      const entries = Object.values(allDictionaries).flat();
+      return {
+        total: entries.length,
+        modern: entries.filter(item => Object.prototype.hasOwnProperty.call(item, 'hsk30')).length,
+        legacy: entries.filter(item => Object.prototype.hasOwnProperty.call(item, 'hsk')).length,
+        invalid: entries.filter(item => ![null, 1, 2, 3, 4, 5, 6, '7–9'].includes(item.hsk30)).length,
+      };
+    });
+    expect(stats.modern).toBe(stats.total);
+    expect(stats.legacy).toBe(0);
+    expect(stats.invalid).toBe(0);
+  });
+});
+
 test.describe('Training flow', () => {
   test('clicking the Training tab reveals it and prepares a question', async ({ page }) => {
     await page.locator('.dict-chip').first().click();
