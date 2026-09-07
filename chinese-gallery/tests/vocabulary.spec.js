@@ -56,6 +56,36 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
+  test('includes three HSK 3.0 dictionaries without repeating earlier words', async ({ page }) => {
+    const expected = [
+      { name: 'HSK 3.0 — Уровень 1', level: 1, count: 403, first: '爱好', last: '做' },
+      { name: 'HSK 3.0 — Уровень 2', level: 2, count: 685, first: '啊', last: '做饭' },
+      { name: 'HSK 3.0 — Уровень 3', level: 3, count: 901, first: '爱心', last: '做客' }
+    ];
+
+    for (const dictionary of expected) {
+      await expect(page.getByRole('button', { name: dictionary.name, exact: true })).toBeVisible();
+      const summary = await page.evaluate((name) => {
+        const words = allDictionaries[name];
+        return {
+          count: words.length,
+          first: words[0].word,
+          last: words[words.length - 1].word,
+          levels: [...new Set(words.map(item => item.hsk30))]
+        };
+      }, dictionary.name);
+      expect(summary).toEqual({
+        count: dictionary.count,
+        first: dictionary.first,
+        last: dictionary.last,
+        levels: [dictionary.level]
+      });
+    }
+
+    await page.getByRole('button', { name: 'HSK 3.0 — Уровень 3', exact: true }).click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(901);
+  });
+
   test('keeps every word only in its earliest lesson', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
