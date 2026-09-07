@@ -45,6 +45,17 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(65);
   });
 
+  test('includes the 63 unique words from lesson 14', async ({ page }) => {
+    const lesson14Chip = page.getByRole('button', { name: 'Урок 14' });
+    await expect(lesson14Chip).toBeVisible();
+    const lesson14 = await page.evaluate(() => allDictionaries['Урок 14']);
+    expect(lesson14).toHaveLength(63);
+    expect(lesson14[0]).toMatchObject({ word: '床', pinyin: 'chuáng' });
+    expect(lesson14[62]).toMatchObject({ word: '生活', pinyin: 'shēng huó' });
+    await lesson14Chip.click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
+  });
+
   test('keeps every word only in its earliest lesson', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();

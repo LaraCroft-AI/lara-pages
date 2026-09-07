@@ -4254,5 +4254,385 @@
       "meaning": "военный моряк ⚓",
       "hsk30": 6
     }
+  ],
+  "Урок 14": [
+    {
+      "word": "床",
+      "pinyin": "chuáng",
+      "meaning": "кровать 🛏️",
+      "hsk30": 1
+    },
+    {
+      "word": "窗户",
+      "pinyin": "chuāng hu",
+      "meaning": "окно 🪟",
+      "hsk30": 4
+    },
+    {
+      "word": "灯",
+      "pinyin": "dēng",
+      "meaning": "лампа 💡",
+      "hsk30": 2
+    },
+    {
+      "word": "婴儿",
+      "pinyin": "yīng ér",
+      "meaning": "ребёнок, младенец 👶",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "猫头鹰",
+      "pinyin": "māo tóu yīng",
+      "meaning": "сова 🦉",
+      "hsk30": null
+    },
+    {
+      "word": "时钟",
+      "pinyin": "shí zhōng",
+      "meaning": "часы 🕰️",
+      "hsk30": null
+    },
+    {
+      "word": "山羊",
+      "pinyin": "shān yáng",
+      "meaning": "козёл, коза 🐐",
+      "hsk30": null
+    },
+    {
+      "word": "微风",
+      "pinyin": "wēi fēng",
+      "meaning": "бриз, ветерок 🍃",
+      "hsk30": null
+    },
+    {
+      "word": "星星",
+      "pinyin": "xīng xing",
+      "meaning": "звезда ⭐",
+      "hsk30": 2
+    },
+    {
+      "word": "彩虹",
+      "pinyin": "cǎi hóng",
+      "meaning": "радуга 🌈",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "蒲公英",
+      "pinyin": "pú gōng yīng",
+      "meaning": "одуванчик 🌼",
+      "hsk30": null
+    },
+    {
+      "word": "萤火虫",
+      "pinyin": "yíng huǒ chóng",
+      "meaning": "светлячок ✨",
+      "hsk30": null
+    },
+    {
+      "word": "影子",
+      "pinyin": "yǐng zi",
+      "meaning": "тень 👤",
+      "hsk30": 4
+    },
+    {
+      "word": "映山红",
+      "pinyin": "yìng shān hóng",
+      "meaning": "красная азалия 🌺",
+      "hsk30": null
+    },
+    {
+      "word": "杏",
+      "pinyin": "xìng",
+      "meaning": "абрикос 🍑",
+      "hsk30": null
+    },
+    {
+      "word": "冬天",
+      "pinyin": "dōng tiān",
+      "meaning": "зима ❄️",
+      "hsk30": 2
+    },
+    {
+      "word": "雄鹰",
+      "pinyin": "xióng yīng",
+      "meaning": "орёл 🦅",
+      "hsk30": null
+    },
+    {
+      "word": "跳绳",
+      "pinyin": "tiào shéng",
+      "meaning": "скакалка 🪢",
+      "hsk30": null
+    },
+    {
+      "word": "听广播",
+      "pinyin": "tīng guǎng bō",
+      "meaning": "слушать радио 📻",
+      "hsk30": null
+    },
+    {
+      "word": "电影",
+      "pinyin": "diàn yǐng",
+      "meaning": "кино 🎬",
+      "hsk30": 1
+    },
+    {
+      "word": "灯笼",
+      "pinyin": "dēng lóng",
+      "meaning": "фонарь 🏮",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "电冰箱",
+      "pinyin": "diàn bīng xiāng",
+      "meaning": "холодильник 🧊",
+      "hsk30": null
+    },
+    {
+      "word": "黄河",
+      "pinyin": "huáng hé",
+      "meaning": "Жёлтая река 🌊",
+      "hsk30": null
+    },
+    {
+      "word": "墙壁",
+      "pinyin": "qiáng bì",
+      "meaning": "стена 🧱",
+      "hsk30": 5
+    },
+    {
+      "word": "帮忙",
+      "pinyin": "bāng máng",
+      "meaning": "помогать 🤝",
+      "hsk30": 1
+    },
+    {
+      "word": "台灯",
+      "pinyin": "tái dēng",
+      "meaning": "настольная лампа 💡",
+      "hsk30": 6
+    },
+    {
+      "word": "扔掉",
+      "pinyin": "rēng diào",
+      "meaning": "бросать 🗑️",
+      "hsk30": null
+    },
+    {
+      "word": "平衡木",
+      "pinyin": "píng héng mù",
+      "meaning": "гимнастическое бревно 🤸",
+      "hsk30": null
+    },
+    {
+      "word": "水井",
+      "pinyin": "shuǐ jǐng",
+      "meaning": "колодец 🪣",
+      "hsk30": null
+    },
+    {
+      "word": "听课",
+      "pinyin": "tīng kè",
+      "meaning": "слушать лекцию 🎓",
+      "hsk30": null
+    },
+    {
+      "word": "青蛙",
+      "pinyin": "qīng wā",
+      "meaning": "лягушка 🐸",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "烧饼",
+      "pinyin": "shāo bǐng",
+      "meaning": "булочки 🫓",
+      "hsk30": null
+    },
+    {
+      "word": "哄孩子",
+      "pinyin": "hǒng hái zi",
+      "meaning": "укачивать ребёнка 🫶",
+      "hsk30": null
+    },
+    {
+      "word": "送来",
+      "pinyin": "sòng lái",
+      "meaning": "принести 📦",
+      "hsk30": null
+    },
+    {
+      "word": "穷人",
+      "pinyin": "qióng rén",
+      "meaning": "бедный человек 🪙",
+      "hsk30": 4
+    },
+    {
+      "word": "明亮",
+      "pinyin": "míng liang",
+      "meaning": "светлый 🌟",
+      "hsk30": 5
+    },
+    {
+      "word": "滑冰",
+      "pinyin": "huá bīng",
+      "meaning": "кататься на коньках ⛸️",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "骑自行车",
+      "pinyin": "qí zì xíng che",
+      "meaning": "кататься на велосипеде 🚲",
+      "hsk30": null
+    },
+    {
+      "word": "打乒乓球",
+      "pinyin": "dǎ pīng pāng qiú",
+      "meaning": "играть в настольный теннис 🏓",
+      "hsk30": null
+    },
+    {
+      "word": "冰",
+      "pinyin": "bīng",
+      "meaning": "лёд 🧊",
+      "hsk30": 4
+    },
+    {
+      "word": "冰雹",
+      "pinyin": "bīng báo",
+      "meaning": "град 🌨️",
+      "hsk30": null
+    },
+    {
+      "word": "冰雪",
+      "pinyin": "bīng xuě",
+      "meaning": "лёд и снег ❄️",
+      "hsk30": 4
+    },
+    {
+      "word": "冰霜",
+      "pinyin": "bīng shuāng",
+      "meaning": "иней 🥶",
+      "hsk30": null
+    },
+    {
+      "word": "自豪",
+      "pinyin": "zì háo",
+      "meaning": "гордый 🏅",
+      "hsk30": 5
+    },
+    {
+      "word": "自习",
+      "pinyin": "zì xí",
+      "meaning": "самостоятельно учиться 📖",
+      "hsk30": null
+    },
+    {
+      "word": "自然",
+      "pinyin": "zì rán",
+      "meaning": "природа 🌿",
+      "hsk30": 3
+    },
+    {
+      "word": "行走",
+      "pinyin": "xíng zǒu",
+      "meaning": "ходить пешком 🚶",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "行人",
+      "pinyin": "xíng rén",
+      "meaning": "пешеходы 🚶",
+      "hsk30": 2
+    },
+    {
+      "word": "直行",
+      "pinyin": "zhí xíng",
+      "meaning": "идти прямо ⬆️",
+      "hsk30": null
+    },
+    {
+      "word": "不行",
+      "pinyin": "bù xíng",
+      "meaning": "нельзя 🚫",
+      "hsk30": 2
+    },
+    {
+      "word": "火车",
+      "pinyin": "huǒ chē",
+      "meaning": "поезд 🚆",
+      "hsk30": 1
+    },
+    {
+      "word": "电动车",
+      "pinyin": "diàn dòng chē",
+      "meaning": "электровелосипед 🚲",
+      "hsk30": 4
+    },
+    {
+      "word": "滑板车",
+      "pinyin": "huá bǎn chē",
+      "meaning": "самокат 🛴",
+      "hsk30": null
+    },
+    {
+      "word": "水缸",
+      "pinyin": "shuǐ gāng",
+      "meaning": "чан 🏺",
+      "hsk30": null
+    },
+    {
+      "word": "蜜蜂",
+      "pinyin": "mì fēng",
+      "meaning": "пчела 🐝",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "蜂蜜",
+      "pinyin": "fēng mì",
+      "meaning": "мёд 🍯",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "恐龙",
+      "pinyin": "kǒng lóng",
+      "meaning": "динозавр 🦕",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "红星",
+      "pinyin": "hóng xīng",
+      "meaning": "красная звезда ⭐",
+      "hsk30": null
+    },
+    {
+      "word": "望远镜",
+      "pinyin": "wàng yuǎn jìng",
+      "meaning": "телескоп 🔭",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "花丛",
+      "pinyin": "huā cóng",
+      "meaning": "цветник 🌸",
+      "hsk30": null
+    },
+    {
+      "word": "相信",
+      "pinyin": "xiāng xìn",
+      "meaning": "верить 🙏",
+      "hsk30": 2
+    },
+    {
+      "word": "庄稼",
+      "pinyin": "zhuāng jia",
+      "meaning": "урожай 🌾",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "生活",
+      "pinyin": "shēng huó",
+      "meaning": "жизнь 🌱",
+      "hsk30": 2
+    }
   ]
 }
