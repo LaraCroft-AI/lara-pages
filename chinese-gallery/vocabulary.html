@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sections.css">
     <style>
         :root {
             --ink: #1a0a0a;
@@ -284,6 +285,16 @@
             </div>
         </header>
 
+        <nav class="site-nav" aria-label="Разделы сайта">
+            <a href="#lessons" id="nav-lessons" aria-current="page"><span class="nav-glyph" aria-hidden="true">学</span> Уроки</a>
+            <a href="#maps" id="nav-maps"><span class="nav-glyph" aria-hidden="true">字</span> Карты</a>
+        </nav>
+        <main>
+        <section id="lessons" aria-labelledby="lessons-title">
+            <div class="section-intro">
+                <h2 id="lessons-title">Уроки</h2>
+                <p>Выберите один или несколько уроков: изучайте слова и закрепляйте их в тренировке.</p>
+            </div>
         <!-- Controls -->
         <div class="ink-card rounded-2xl p-6 mb-8">
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
@@ -360,11 +371,78 @@
             </div>
         </div>
 
+        </section>
+        <section id="maps" aria-labelledby="maps-title" hidden>
+            <div class="section-intro">
+                <h2 id="maps-title">Карты иероглифов</h2>
+                <p>Исследуйте связи между словами ваших уроков. Выберите ключ, чтобы увидеть иероглифы с общим элементом, или иероглиф — чтобы найти слова, в которые он входит.</p>
+            </div>
+            <div id="maps-loading" role="status">Загружаем карты…</div>
+            <div id="maps-content" hidden>
+                <div class="map-filters" role="group" aria-label="Уровень слов HSK 3.0">
+                    <span class="map-filter-label">Уровень слов · HSK 3.0</span>
+                    <button class="map-button" data-level="all" aria-pressed="true">Все</button>
+                    <button class="map-button" data-level="1" aria-pressed="false">HSK 1</button>
+                    <button class="map-button" data-level="2" aria-pressed="false">HSK 2</button>
+                    <button class="map-button" data-level="3" aria-pressed="false">HSK 3</button>
+                    <button class="map-button" data-level="4" aria-pressed="false">HSK 4</button>
+                    <button class="map-button" data-level="5" aria-pressed="false">HSK 5</button>
+                    <button class="map-button" data-level="6" aria-pressed="false">HSK 6</button>
+                    <button class="map-button" data-level="7–9" aria-pressed="false">HSK 7–9</button>
+                    <button class="map-button" data-level="none" aria-pressed="false">Вне списка HSK</button>
+                </div>
+                <div class="map-workspace">
+                    <div class="map-main">
+                        <div class="map-heading">
+                            <div><h3 id="map-title"></h3><p id="map-summary" role="status"></p></div>
+                            <div class="map-view-toggle" role="group" aria-label="Вид карты">
+                                <button class="map-button" data-view="map" aria-pressed="true">Карта</button>
+                                <button class="map-button" data-view="list" aria-pressed="false">Список</button>
+                            </div>
+                        </div>
+                        <div id="map-empty" class="map-no-results" hidden>На этом уровне пока нет слов для выбранного узла.<br><button class="map-button" id="map-reset-level">Показать все уровни</button></div>
+                        <div class="map-scroll" id="map-scroll" tabindex="0" aria-label="Карта связей; прокрутите по горизонтали, если она не помещается">
+                            <div id="map-canvas" class="map-canvas"></div>
+                        </div>
+                        <div id="map-word-list" class="map-word-list" hidden></div>
+                        <div class="map-pagination" id="map-pagination">
+                            <button class="map-button" id="map-prev" aria-label="Предыдущие слова">Назад</button>
+                            <span id="map-page" role="status"></span>
+                            <button class="map-button" id="map-next" aria-label="Следующие слова">Далее</button>
+                        </div>
+                        <p id="map-word-detail" class="map-word-detail" role="status" hidden></p>
+                        <p class="map-tip">Нажмите на слово, чтобы услышать произношение. На карте выделен связанный иероглиф. Если карта не помещается, прокрутите её или выберите «Список».</p>
+                    </div>
+                    <aside class="map-sidebar" aria-label="Выбор узла карты">
+                        <div class="map-tabs" role="group" aria-label="Тип карты">
+                            <button class="map-button" data-map-type="radical" aria-pressed="true">Ключи</button>
+                            <button class="map-button" data-map-type="character" aria-pressed="false">Иероглифы</button>
+                        </div>
+                        <p id="map-type-description"></p>
+                        <label class="sr-only" for="map-search">Поиск узла карты</label>
+                        <input id="map-search" class="map-search" type="search" placeholder="Знак, пиньинь, перевод" autocomplete="off">
+                        <div id="map-node-list" class="map-node-list"></div>
+                        <p id="map-node-empty" hidden>Узел не найден. Попробуйте другой запрос.</p>
+                    </aside>
+                </div>
+                <div class="map-materials">
+                    <div><h3>Материалы для печати</h3><p>Все слова выбранного узла с учётом уровня HSK.<br>В окне печати можно сохранить материал как PDF.</p></div>
+                    <div class="map-materials-actions">
+                        <button id="map-print" class="map-button">Печатать карту</button>
+                        <button id="map-practice" class="map-button">Печатать прописи</button>
+                    </div>
+                </div>
+                <p class="map-source">Слова, переводы и уровни HSK 3.0 — из словарей уроков. Ключи — по <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noopener noreferrer">Make Me a Hanzi</a> (<a href="data/licenses/LGPL-3.0.txt">LGPL 3.0</a>). Форма ⺼ означает «плоть» и отличается от ключа 月 «луна».</p>
+            </div>
+        </section>
+        </main>
         <footer class="text-center mt-16 pb-8 text-xs" style="color: #a89494">
             <p class="font-hanzi mb-1" style="font-size: 1.2rem; color: var(--vermilion)">学而时习之</p>
             <p>«Учиться и время от времени повторять изученное» · Конфуций</p>
         </footer>
     </div>
+    <script src="maps-data.js"></script>
+    <script src="maps.js"></script>
     <script>
         // State. Kept in the script's lexical scope; mirror the live values on
         // window via getters so tests/console always see the current binding.
@@ -396,6 +474,7 @@
 
                 if (!data || typeof data !== 'object') throw new Error('no data');
                 allDictionaries = data;
+                window.ChineseMaps.init(data);
 
                 const chipsContainer = document.getElementById('dictChips');
                 chipsContainer.innerHTML = '';
@@ -421,6 +500,7 @@
                 updateProgress();
             } catch (error) {
                 console.error("Ошибка загрузки словарей:", error);
+                window.ChineseMaps.showError();
                 if (list) list.innerHTML = '<div class="empty-state col-span-full"><div class="text-4xl mb-3">⚠️</div><p style="color: var(--ink); font-weight: 600">Не удалось загрузить словари</p><p class="text-sm mt-1">Проверьте, что файл vocab_data.json лежит рядом со страницей</p></div>';
                 const q = document.getElementById('questionWord');
                 if (q) { q.innerText = '⚠ Словари не загружены'; q.style.fontSize = '2rem'; q.style.fontFamily = 'Inter, sans-serif'; }
@@ -457,7 +537,7 @@
 
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('#btn-gallery, #btn-training').forEach(b => b.classList.remove('active'));
 
             document.getElementById(tabId).classList.add('active');
             document.getElementById('btn-' + tabId).classList.add('active');
@@ -467,7 +547,8 @@
              } else if (tabId === 'training') {
                  // Highlight the default active mode button
                 const ruBtn = document.getElementById('mode-ru2hanzi');
-                if (ruBtn) ruBtn.classList.add('active');
+                if (ruBtn) ruBtn.classList.toggle('active', trainingMode === 'ru2hanzi');
+                document.getElementById('mode-hanzi2ru').classList.toggle('active', trainingMode === 'hanzi2ru');
                 startTraining();
              }
          }
