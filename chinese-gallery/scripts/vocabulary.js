@@ -139,6 +139,7 @@ function renderEmptyStateForActiveTab() {
 
 function searchVocabulary() {
     const input = document.getElementById('searchInput').value.toLowerCase().trim();
+    const pinyinQuery = input.replace(/[\s'’]/g, '');
     const list = document.getElementById('vocabList');
     const stats = document.getElementById('searchStats');
     list.innerHTML = '';
@@ -160,7 +161,7 @@ function searchVocabulary() {
 
     const filtered = currentVocab.filter(item =>
         item.word.toLowerCase().includes(input) ||
-        item.pinyin.toLowerCase().includes(input) ||
+        (pinyinQuery && item.pinyin.toLowerCase().replace(/[\s'’]/g, '').includes(pinyinQuery)) ||
         item.meaning.toLowerCase().includes(input)
     );
 

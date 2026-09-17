@@ -126,6 +126,22 @@ test.describe('Dictionary selection', () => {
 });
 
 test.describe('Search', () => {
+  test('finds spaced pinyin with compact, spaced and apostrophe-separated queries', async ({ page }) => {
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    for (const query of ['Éluósī', 'é luó sī', 'é  luó  sī']) {
+      await page.locator('#searchInput').fill(query);
+      await expect(page.locator('.vocab-card')).toHaveCount(1);
+      await expect(page.locator('.vocab-card')).toContainText('俄罗斯');
+      await expect(page.locator('.vocab-card')).toContainText('É luó sī');
+    }
+    await page.getByRole('button', { name: 'Урок 7', exact: true }).click();
+    for (const query of ["qǐ'é", 'qǐ é']) {
+      await page.locator('#searchInput').fill(query);
+      await expect(page.locator('.vocab-card')).toHaveCount(1);
+      await expect(page.locator('.vocab-card')).toContainText('企鹅');
+    }
+  });
+
   test('filters cards by hanzi, pinyin, and Russian meaning', async ({ page }) => {
     await page.locator('.dict-chip').first().click();
     const cardsBefore = await page.locator('.vocab-card').count();
