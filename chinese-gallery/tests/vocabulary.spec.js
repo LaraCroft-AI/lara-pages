@@ -285,6 +285,48 @@ test.describe('Training flow', () => {
 });
 
 test.describe('Reset button', () => {
+  test('completed reverse training clears the previous pronunciation', async ({ page }) => {
+    await page.clock.install();
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.locator('#btn-training').click();
+    await page.locator('#mode-hanzi2ru').click();
+    const total = await page.evaluate(() => window.trainingPool.length);
+    for (let i = 0; i < total; i++) {
+      const word = await page.evaluate(() => window.currentQuestion.word);
+      await page.locator('.option-btn').evaluateAll((buttons, value) => {
+        buttons.find(button => button._opt.word === value).click();
+      }, word);
+      await page.clock.fastForward(2000);
+    }
+    await expect(page.locator('#questionWord')).toContainText('Все слова выучены');
+    await expect(page.locator('#questionPinyin')).toBeEmpty();
+    expect(await page.evaluate(() => window.currentQuestion)).toBeNull();
+  });
+
+  test('reset and mode change cancel the pending question', async ({ page }) => {
+    await page.clock.install();
+    await page.locator('.dict-chip').first().click();
+    await page.locator('#btn-training').click();
+    await page.evaluate(() => {
+      const original = window.nextQuestion;
+      window.nextQuestionCalls = 0;
+      window.nextQuestion = function () {
+        window.nextQuestionCalls++;
+        return original();
+      };
+    });
+
+    for (const action of ['reset', 'mode']) {
+      const correctWord = await page.evaluate(() => window.currentQuestion.word);
+      await page.locator('.option-btn', { has: page.locator('.font-hanzi', { hasText: correctWord }) }).first().click();
+      if (action === 'reset') await page.getByRole('button', { name: /Начать заново/ }).click();
+      else await page.locator('#mode-hanzi2ru').click();
+      const calls = await page.evaluate(() => window.nextQuestionCalls);
+      await page.clock.fastForward(2000);
+      expect(await page.evaluate(() => window.nextQuestionCalls)).toBe(calls);
+    }
+  });
+
   test('training reset button restores the original pool size', async ({ page }) => {
     await page.locator('.dict-chip').first().click();
     await page.locator('#btn-training').click();

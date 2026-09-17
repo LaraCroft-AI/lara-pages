@@ -8,259 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sections.css">
-    <style>
-        :root {
-            --ink: #1a0a0a;
-            --vermilion: #c1272d;
-            --gold: #c9a96e;
-            --paper: #f5efe3;
-            --jade: #2d5a4f;
-            --shadow: 0 10px 40px -10px rgba(26, 10, 10, 0.25);
-        }
-
-        * { -webkit-tap-highlight-color: transparent; }
-
-        .page-section { display: none; }
-        .page-section.active { display: block; }
-        /* Belt-and-suspenders: fully hide inactive section so its default
-           placeholders (e.g. hanzi "学") never flash on first paint. */
-        #training:not(.active),
-        #gallery:not(.active) { visibility: hidden; position: absolute; left: -99999px; top: 0; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            /* Hide non-active tabs completely so default placeholders never flash */
-            background-color: var(--paper);
-            background-image:
-                radial-gradient(at 20% 10%, rgba(193, 39, 45, 0.06) 0px, transparent 50%),
-                radial-gradient(at 80% 90%, rgba(45, 90, 79, 0.05) 0px, transparent 50%),
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(193, 39, 45, 0.015) 35px, rgba(193, 39, 45, 0.015) 36px);
-            min-height: 100vh;
-        }
-
-        .font-hanzi { font-family: 'Noto Serif SC', 'Ma Shan Zheng', serif; }
-        .font-brush { font-family: 'Ma Shan Zheng', cursive; }
-
-        .ink-card {
-            background: #fffdf7;
-            border: 1px solid rgba(26, 10, 10, 0.08);
-            box-shadow: var(--shadow), inset 0 0 60px rgba(193, 39, 45, 0.02);
-            position: relative;
-            overflow: hidden;
-        }
-        .ink-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--vermilion), var(--gold), var(--jade));
-            opacity: 0.7;
-        }
-
-        .chinese-seal {
-            display: inline-block;
-            padding: 2px 8px;
-            background: var(--vermilion);
-            color: var(--paper);
-            font-family: 'Noto Serif SC', serif;
-            font-weight: 700;
-            font-size: 0.65rem;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-            text-transform: uppercase;
-            box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-        }
-
-        .dict-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border: 1.5px solid rgba(26, 10, 10, 0.15);
-            border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            background: #fffdf7;
-            color: #4a3535;
-            transition: all 0.25s ease;
-            cursor: pointer;
-        }
-        .dict-chip:hover { border-color: var(--vermilion); transform: translateY(-1px); }
-        .dict-chip.active {
-            background: var(--ink);
-            color: var(--paper);
-            border-color: var(--ink);
-            box-shadow: 0 4px 12px rgba(26, 10, 10, 0.3);
-        }
-        .dict-chip .dot {
-            width: 6px; height: 6px; border-radius: 50%;
-            background: currentColor; opacity: 0.5;
-        }
-        .dict-chip.active .dot { background: var(--gold); opacity: 1; box-shadow: 0 0 8px var(--gold); }
-
-        .tab-btn {
-            padding: 8px 18px;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            color: #6b5b5b;
-            display: inline-flex; align-items: center; gap: 6px;
-        }
-        .tab-btn.active {
-            background: var(--ink);
-            color: var(--paper);
-            box-shadow: 0 4px 12px rgba(26, 10, 10, 0.25);
-        }
-        .tab-btn:hover:not(.active) { color: var(--ink); }
-
-        .option-btn {
-            position: relative;
-            padding: 18px 24px;
-            border: 1.5px solid rgba(26, 10, 10, 0.1);
-            border-radius: 14px;
-            background: #fffdf7;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .option-btn:hover:not(:disabled) {
-            border-color: var(--vermilion);
-            background: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(26, 10, 10, 0.08);
-        }
-        .option-btn.correct {
-            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-            border-color: #10b981;
-            color: #065f46;
-            animation: pulse-correct 0.5s ease;
-        }
-        .option-btn.wrong {
-            background: linear-gradient(135deg, #fef2f2, #fee2e2);
-            border-color: #ef4444;
-            color: #991b1b;
-            animation: shake 0.4s ease;
-        }
-        .option-btn:disabled { cursor: not-allowed; opacity: 0.85; }
-
-        @keyframes pulse-correct {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-8px); }
-            75% { transform: translateX(8px); }
-        }
-
-        .question-card {
-            background: linear-gradient(135deg, #fffdf7, #faf6ec);
-            border: 2px solid var(--ink);
-            border-radius: 24px;
-            position: relative;
-            overflow: hidden;
-        }
-        .question-card::before {
-            content: '';
-            position: absolute;
-            top: 9px; right: 11px;
-            width: 28px; height: 28px;
-            background: var(--vermilion);
-            border-radius: 50%;
-            opacity: 0.85;
-        }
-        .question-card::after {
-            content: '中';
-            position: absolute;
-            top: 14px; right: 17px;
-            color: var(--paper);
-            font-family: 'Noto Serif SC', serif;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1;
-        }
-
-        .hanzi-display {
-            font-family: 'Noto Serif SC', serif;
-            font-weight: 700;
-            line-height: 1;
-            color: var(--ink);
-            text-shadow: 2px 2px 0 rgba(193, 39, 45, 0.1);
-        }
-
-        .vocab-card {
-            animation: cardEnter 0.4s ease backwards;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .vocab-card:hover {
-            transform: translateY(-4px) rotate(-0.5deg);
-            box-shadow: 0 20px 40px -15px rgba(26, 10, 10, 0.3);
-        }
-        @keyframes cardEnter {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .progress-track {
-            height: 6px;
-            background: rgba(26, 10, 10, 0.08);
-            border-radius: 999px;
-            overflow: hidden;
-            position: relative;
-        }
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--vermilion), var(--gold));
-            border-radius: 999px;
-            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            right: 0; top: 0; bottom: 0;
-            width: 20px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5));
-        }
-
-        .search-input {
-            background: #fffdf7;
-            border: 2px solid rgba(26, 10, 10, 0.1);
-            border-radius: 999px;
-            padding: 14px 24px 14px 50px;
-            font-size: 1rem;
-            transition: all 0.25s ease;
-            width: 100%;
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: var(--vermilion);
-            box-shadow: 0 0 0 4px rgba(193, 39, 45, 0.1);
-        }
-
-        .celebration {
-            animation: celebrate 0.6s ease;
-        }
-        @keyframes celebrate {
-            0% { transform: scale(0.5); opacity: 0; }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        .empty-state {
-            padding: 4rem 2rem;
-            text-align: center;
-            color: #8b7373;
-        }
-
-        @media (max-width: 640px) {
-            .hanzi-display { font-size: 3.5rem !important; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/vocabulary.css">
 </head>
 <body class="p-4 md:p-8">
     <div class="max-w-6xl mx-auto">
@@ -269,18 +18,18 @@
         <header class="relative mb-10">
             <div class="ink-card rounded-3xl p-8 md:p-12 text-center">
                 <div class="flex items-center justify-center gap-3 mb-3">
-                    <span class="font-hanzi text-5xl md:text-6xl text-vermilion" style="color: var(--vermilion)">汉字</span>
+                    <span class="font-hanzi text-5xl md:text-6xl text-vermilion">汉字</span>
                 </div>
-                <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2" style="color: var(--ink)">
+                <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2">
                     Китайский язык
                 </h1>
-                <p class="text-sm md:text-base" style="color: #8b7373">
+                <p class="text-sm md:text-base text-muted">
                     Персональный интерактивный словарь · 通往汉语之路
                 </p>
                 <div class="mt-6 flex justify-center gap-2 text-xs">
                     <span class="chinese-seal">HSK</span>
-                    <span class="chinese-seal" style="background: var(--jade)">中文</span>
-                    <span class="chinese-seal" style="background: var(--gold); color: var(--ink)">学习</span>
+                    <span class="chinese-seal seal-jade">中文</span>
+                    <span class="chinese-seal seal-gold">学习</span>
                 </div>
             </div>
         </header>
@@ -300,7 +49,7 @@
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                 <div class="flex flex-col gap-3">
                     <div class="flex items-center gap-2">
-                        <span class="text-xs font-semibold uppercase tracking-widest" style="color: var(--vermilion)">⌘ Словари</span>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-vermilion">⌘ Словари</span>
                         <span id="dictCount" class="text-xs text-gray-400"></span>
                     </div>
                     <div id="dictChips" class="flex flex-wrap gap-2">
@@ -308,11 +57,11 @@
                     </div>
                 </div>
 
-                <div class="flex gap-1 p-1 rounded-full self-start lg:self-center" style="background: rgba(26, 10, 10, 0.05)">
-                    <button onclick="switchTab('gallery')" id="btn-gallery" class="tab-btn active">
+                <div class="flex gap-1 p-1 rounded-full self-start lg:self-center tab-group">
+                    <button id="btn-gallery" class="tab-btn active">
                         📖 Словарь
                     </button>
-                    <button onclick="switchTab('training')" id="btn-training" class="tab-btn">
+                    <button id="btn-training" class="tab-btn">
                         🎯 Тренировка
                     </button>
                 </div>
@@ -327,7 +76,7 @@
                            class="search-input">
                     <span class="absolute left-4 top-1/2 -translate-y-1/2 text-xl">🔍</span>
                 </div>
-                <div id="searchStats" class="text-xs text-center mt-3" style="color: #8b7373"></div>
+                <div id="searchStats" class="text-xs text-center mt-3 text-muted"></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="vocabList"></div>
         </div>
@@ -337,34 +86,34 @@
             <div class="max-w-2xl mx-auto">
                 <div class="mb-6">
                     <div class="flex flex-wrap justify-between items-center gap-3 mb-3">
-                        <div class="flex gap-1 p-1 rounded-full" style="background: rgba(26, 10, 10, 0.05)">
-                            <button onclick="setTrainingMode('ru2hanzi')" id="mode-ru2hanzi" class="tab-btn active">
+                        <div class="flex gap-1 p-1 rounded-full tab-group">
+                            <button id="mode-ru2hanzi" class="tab-btn active">
                                 🇷🇺 → 🇨🇳
                             </button>
-                            <button onclick="setTrainingMode('hanzi2ru')" id="mode-hanzi2ru" class="tab-btn">
+                            <button id="mode-hanzi2ru" class="tab-btn">
                                 🇨🇳 → 🇷🇺
                             </button>
                         </div>
                         <div class="flex gap-3">
-                            <span id="progressText" class="text-sm font-semibold" style="color: var(--ink)">Осталось: 0 / 0</span>
-                            <span id="accuracyText" class="text-xs" style="color: #8b7373">Точность: —</span>
+                            <span id="progressText" class="text-sm font-semibold text-ink">Осталось: 0 / 0</span>
+                            <span id="accuracyText" class="text-xs text-muted">Точность: —</span>
                         </div>
                     </div>
                     <div class="progress-track">
-                        <div id="progressBar" class="progress-fill" style="width: 0%"></div>
+                        <div id="progressBar" class="progress-fill"></div>
                     </div>
                 </div>
 
                 <div id="questionCard" class="question-card p-10 md:p-16 text-center mb-8 min-h-[280px] flex flex-col justify-center items-center">
-                    <div id="questionWord" class="text-3xl md:text-5xl font-semibold mb-2" style="color: var(--ink)">Выберите словари</div>
-                    <div id="questionPinyin" class="text-xl md:text-2xl mb-4" style="color: #8b7373"></div>
+                    <div id="questionWord" class="text-3xl md:text-5xl font-semibold mb-2 text-ink">Выберите словари</div>
+                    <div id="questionPinyin" class="text-xl md:text-2xl mb-4 text-muted"></div>
                     <div id="feedback" class="text-base font-semibold h-6 mt-3 transition-all"></div>
                 </div>
 
                 <div class="grid grid-cols-1 gap-3" id="optionsGrid"></div>
 
                 <div class="text-center mt-8">
-                    <button onclick="resetTraining()" class="text-xs px-4 py-2 rounded-full border border-gray-300 hover:border-gray-500 transition-all" style="color: #6b5b5b">
+                    <button id="reset-training" class="text-xs px-4 py-2 rounded-full border border-gray-300 hover:border-gray-500 transition-all text-secondary">
                         ↻ Начать заново
                     </button>
                 </div>
@@ -400,7 +149,8 @@
                                 <button class="map-button" data-view="list" aria-pressed="false">Список</button>
                             </div>
                         </div>
-                        <div id="map-empty" class="map-no-results" hidden>На этом уровне пока нет слов для выбранного узла.<br><button class="map-button" id="map-reset-level">Показать все уровни</button></div>
+                        <div id="map-relations" class="map-relations" aria-label="Связи ключей и иероглифов"></div>
+                        <div id="map-empty" class="map-no-results" hidden><span id="map-empty-message"></span><br><button class="map-button" id="map-reset-level">Показать все уровни</button></div>
                         <div class="map-scroll" id="map-scroll" tabindex="0" aria-label="Карта связей; прокрутите по горизонтали, если она не помещается">
                             <div id="map-canvas" class="map-canvas"></div>
                         </div>
@@ -420,7 +170,7 @@
                         </div>
                         <p id="map-type-description"></p>
                         <label class="sr-only" for="map-search">Поиск узла карты</label>
-                        <input id="map-search" class="map-search" type="search" placeholder="Знак, пиньинь, перевод" autocomplete="off">
+                        <input id="map-search" class="map-search" type="search" placeholder="Знак, пиньинь, перевод, №" autocomplete="off">
                         <div id="map-node-list" class="map-node-list"></div>
                         <p id="map-node-empty" hidden>Узел не найден. Попробуйте другой запрос.</p>
                     </aside>
@@ -432,403 +182,16 @@
                         <button id="map-practice" class="map-button">Печатать прописи</button>
                     </div>
                 </div>
-                <p class="map-source">Слова, переводы и уровни HSK 3.0 — из словарей уроков. Ключи — по <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noopener noreferrer">Make Me a Hanzi</a> (<a href="data/licenses/LGPL-3.0.txt">LGPL 3.0</a>). Форма ⺼ означает «плоть» и отличается от ключа 月 «луна».</p>
+                <p class="map-source">Слова, переводы и уровни HSK 3.0 — из словарей уроков. Нумерация 214 ключей — <a href="https://www.unicode.org/Public/UCD/latest/ucd/CJKRadicals.txt" target="_blank" rel="noopener noreferrer">Unicode</a>. Связи иероглифов с ключами — по <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noopener noreferrer">Make Me a Hanzi</a> (<a href="data/licenses/LGPL-3.0.txt">LGPL 3.0</a>). Форма ⺼ означает «плоть» и отличается от ключа 月 «луна».</p>
             </div>
         </section>
         </main>
-        <footer class="text-center mt-16 pb-8 text-xs" style="color: #a89494">
-            <p class="font-hanzi mb-1" style="font-size: 1.2rem; color: var(--vermilion)">学而时习之</p>
+        <footer class="text-center mt-16 pb-8 text-xs text-faint">
+            <p class="font-hanzi mb-1 footer-motto">学而时习之</p>
             <p>«Учиться и время от времени повторять изученное» · Конфуций</p>
         </footer>
     </div>
-    <script src="maps-data.js"></script>
-    <script src="maps.js"></script>
-    <script>
-        // State. Kept in the script's lexical scope; mirror the live values on
-        // window via getters so tests/console always see the current binding.
-        let allDictionaries = {};
-        let activeDictNames = [];
-        let currentVocab = [];
-        let trainingPool = [];
-        let currentQuestion = null;
-        let totalWordsAtStart = 0;
-        let correctAnswers = 0;
-        let totalAnswers = 0;
-        // 'ru2hanzi': question = Russian meaning, options = pinyin + hanzi
-        // 'hanzi2ru': question = hanzi + pinyin,   options = Russian meaning
-        let trainingMode = 'ru2hanzi';
-        Object.defineProperties(window, {
-            allDictionaries: { configurable: true, get: () => allDictionaries },
-            currentQuestion:  { configurable: true, get: () => currentQuestion },
-            trainingMode:     { configurable: true, get: () => trainingMode },
-            trainingPool:     { configurable: true, get: () => trainingPool },
-        });
-
-        async function init() {
-            const list = document.getElementById('vocabList');
-            try {
-                let data = null;
-                // Загружаем словари из vocab_data.json (единственный источник данных)
-                const response = await fetch('vocab_data.json', { cache: 'no-store' });
-                if (response.ok) data = await response.json();
-
-                if (!data || typeof data !== 'object') throw new Error('no data');
-                allDictionaries = data;
-                window.ChineseMaps.init(data);
-
-                const chipsContainer = document.getElementById('dictChips');
-                chipsContainer.innerHTML = '';
-
-                const dictNames = Object.keys(allDictionaries);
-                dictNames.forEach((name) => {
-                    const chip = document.createElement('button');
-                    chip.className = 'dict-chip';
-                    chip.innerHTML = `<span class="dot"></span><span>${name}</span>`;
-                    chip.onclick = () => toggleDict(name, chip);
-                    chipsContainer.appendChild(chip);
-                });
-
-                document.getElementById('dictCount').innerText = `(${dictNames.length})`;
-                // Ensure gallery is the visible tab on first load
-                document.getElementById('gallery').classList.add('active');
-                document.getElementById('training').classList.remove('active');
-                document.getElementById('btn-gallery').classList.add('active');
-                document.getElementById('btn-training').classList.remove('active');
-                // No dictionary is selected by default. Render the empty state for the active tab
-                // and don't pre-warm training (it has nothing to show).
-                renderEmptyStateForActiveTab();
-                updateProgress();
-            } catch (error) {
-                console.error("Ошибка загрузки словарей:", error);
-                window.ChineseMaps.showError();
-                if (list) list.innerHTML = '<div class="empty-state col-span-full"><div class="text-4xl mb-3">⚠️</div><p style="color: var(--ink); font-weight: 600">Не удалось загрузить словари</p><p class="text-sm mt-1">Проверьте, что файл vocab_data.json лежит рядом со страницей</p></div>';
-                const q = document.getElementById('questionWord');
-                if (q) { q.innerText = '⚠ Словари не загружены'; q.style.fontSize = '2rem'; q.style.fontFamily = 'Inter, sans-serif'; }
-                const qp = document.getElementById('questionPinyin');
-                if (qp) { qp.innerText = ''; qp.style.fontFamily = 'Inter, sans-serif'; }
-            }
-        }
-
-        function toggleDict(name, element) {
-            if (activeDictNames.includes(name)) {
-                activeDictNames = activeDictNames.filter(n => n !== name);
-                element.classList.remove('active');
-            } else {
-                activeDictNames.push(name);
-                element.classList.add('active');
-            }
-            updateCurrentVocab();
-        }
-
-        function updateCurrentVocab() {
-            currentVocab = [];
-            activeDictNames.forEach(name => {
-                if (allDictionaries[name]) {
-                    currentVocab = [...currentVocab, ...allDictionaries[name]];
-                }
-            });
-
-            if (document.getElementById('gallery').classList.contains('active')) {
-                searchVocabulary();
-            } else if (document.getElementById('training').classList.contains('active')) {
-                startTraining();
-            }
-        }
-
-        function switchTab(tabId) {
-            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('#btn-gallery, #btn-training').forEach(b => b.classList.remove('active'));
-
-            document.getElementById(tabId).classList.add('active');
-            document.getElementById('btn-' + tabId).classList.add('active');
-
-            if (tabId === 'gallery') {
-                searchVocabulary();
-             } else if (tabId === 'training') {
-                 // Highlight the default active mode button
-                const ruBtn = document.getElementById('mode-ru2hanzi');
-                if (ruBtn) ruBtn.classList.toggle('active', trainingMode === 'ru2hanzi');
-                document.getElementById('mode-hanzi2ru').classList.toggle('active', trainingMode === 'hanzi2ru');
-                startTraining();
-             }
-         }
-function renderEmptyStateForActiveTab() {
-            const gallery = document.getElementById('gallery');
-            const training = document.getElementById('training');
-            const isGallery = gallery && gallery.classList.contains('active');
-
-            if (isGallery) {
-                const list = document.getElementById('vocabList');
-                if (list) list.innerHTML = `
-                    <div class="empty-state col-span-full">
-                        <div class="text-5xl mb-4">📚</div>
-                        <p class="font-hanzi" style="font-size: 2rem; color: var(--vermilion); margin-bottom: 0.5rem">选词</p>
-                        <p style="color: var(--ink); font-weight: 600">Выберите словари выше</p>
-                        <p class="text-sm mt-1" style="color: #8b7373">Нажмите на чипсы, чтобы начать</p>
-                    </div>`;
-                const stats = document.getElementById('searchStats');
-                if (stats) stats.innerText = '';
-            } else if (training) {
-                const q = document.getElementById('questionWord');
-                if (q) { q.innerText = 'Выберите словари'; q.style.fontSize = ''; q.style.fontFamily = 'Inter, sans-serif'; }
-                const qp = document.getElementById('questionPinyin');
-                if (qp) { qp.innerText = ''; qp.style.fontFamily = 'Inter, sans-serif'; }
-                const fb = document.getElementById('feedback');
-                if (fb) fb.innerText = '';
-                const grid = document.getElementById('optionsGrid');
-                if (grid) grid.innerHTML = '';
-            }
-        }
-
-        function searchVocabulary() {
-            const input = document.getElementById('searchInput').value.toLowerCase().trim();
-            const list = document.getElementById('vocabList');
-            const stats = document.getElementById('searchStats');
-            list.innerHTML = '';
-
-            if (activeDictNames.length === 0) {
-                renderEmptyStateForActiveTab();
-                return;
-            }
-
-            if (!currentVocab || currentVocab.length === 0) {
-                list.innerHTML = `
-                    <div class="empty-state col-span-full">
-                        <div class="text-4xl mb-3">🈳</div>
-                        <p style="color: var(--ink); font-weight: 600">В словарях пока пусто</p>
-                    </div>`;
-                stats.innerText = '';
-                return;
-            }
-
-            const filtered = currentVocab.filter(item =>
-                item.word.toLowerCase().includes(input) ||
-                item.pinyin.toLowerCase().includes(input) ||
-                item.meaning.toLowerCase().includes(input)
-            );
-
-            stats.innerText = input
-                ? `Найдено: ${filtered.length} из ${currentVocab.length}`
-                : `Всего слов: ${currentVocab.length}`;
-
-            if (filtered.length === 0) {
-                list.innerHTML = `
-                    <div class="empty-state col-span-full">
-                        <div class="text-4xl mb-3">🔍</div>
-                        <p style="color: var(--ink); font-weight: 600">Ничего не найдено</p>
-                        <p class="text-sm mt-1">Попробуйте другой запрос</p>
-                    </div>`;
-                return;
-            }
-
-            filtered.forEach((item, index) => {
-                const card = document.createElement('div');
-                card.className = 'vocab-card ink-card rounded-2xl p-6 cursor-pointer';
-                card.style.animationDelay = `${Math.min(index * 0.02, 0.4)}s`;
-
-                // Tone color markers for pinyin
-                const pinyinHtml = item.pinyin.split(' ').map(syllable => {
-                    const tones = syllable.match(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g);
-                    const tone = tones ? tones[0] : null;
-                    const toneColor = {
-                        'ā': '#c1272d', 'á': '#c1272d', 'ǎ': '#c1272d', 'à': '#c1272d',
-                        'ē': '#2d5a4f', 'é': '#2d5a4f', 'ě': '#2d5a4f', 'è': '#2d5a4f',
-                        'ī': '#c9a96e', 'í': '#c9a96e', 'ǐ': '#c9a96e', 'ì': '#c9a96e',
-                        'ō': '#5b6ca8', 'ó': '#5b6ca8', 'ǒ': '#5b6ca8', 'ò': '#5b6ca8',
-                        'ū': '#8b5a8e', 'ú': '#8b5a8e', 'ǔ': '#8b5a8e', 'ù': '#8b5a8e'
-                    }[tone] || 'inherit';
-                    return `<span style="color: ${toneColor}">${syllable}</span>`;
-                }).join(' ');
-
-                card.innerHTML = `
-                    <div class="flex items-start justify-between mb-3">
-                        <div class="hanzi-display text-4xl">${item.word}</div>
-                        <div class="flex flex-col items-end gap-1">
-                            <span class="text-xs px-2 py-0.5 rounded-full" style="background: rgba(45, 90, 79, 0.1); color: var(--jade)">${item.hsk30 ? 'HSK 3.0: ' + item.hsk30 : 'HSK 3.0: —'}</span>
-                        </div>
-                    </div>
-                    <div class="font-medium text-base mb-2 tracking-wide">${pinyinHtml}</div>
-                    <div class="text-sm" style="color: #6b5b5b">${item.meaning}</div>
-                    <div class="mt-3 pt-3 flex items-center justify-between" style="border-top: 1px dashed rgba(26, 10, 10, 0.1)">
-                        <span class="text-xs" style="color: #a89494">коснитесь для озвучки</span>
-                        <span class="text-xs opacity-50">🔊</span>
-                    </div>
-                `;
-                card.onclick = () => speak(item.word);
-                list.appendChild(card);
-            });
-        }
-
-        function speak(text) {
-            if ('speechSynthesis' in window) {
-                const utter = new SpeechSynthesisUtterance(text);
-                utter.lang = 'zh-CN';
-                utter.rate = 0.8;
-                window.speechSynthesis.cancel();
-                window.speechSynthesis.speak(utter);
-            }
-        }
-
-        function startTraining() {
-            trainingPool = [...currentVocab];
-            totalWordsAtStart = trainingPool.length;
-            correctAnswers = 0;
-            totalAnswers = 0;
-            updateAccuracy();
-            nextQuestion();
-        }
-
-        function resetTraining() {
-            startTraining();
-        }
-
-        function setTrainingMode(mode) {
-            if (mode !== 'ru2hanzi' && mode !== 'hanzi2ru') return;
-            if (trainingMode === mode) return;
-            trainingMode = mode;
-            // Toggle the button highlight.
-            const a = document.getElementById('mode-ru2hanzi');
-            const b = document.getElementById('mode-hanzi2ru');
-            if (a && b) {
-                a.classList.toggle('active', mode === 'ru2hanzi');
-                b.classList.toggle('active', mode === 'hanzi2ru');
-            }
-            // Reset progress so the new mode starts fresh.
-            startTraining();
-        }
-
-        function nextQuestion() {
-            const feedback = document.getElementById('feedback');
-            feedback.innerText = '';
-
-            const questionCard = document.getElementById('questionCard');
-            const questionWord = document.getElementById('questionWord');
-
-            if (!trainingPool || trainingPool.length === 0) {
-                if (activeDictNames.length === 0) {
-                    renderEmptyStateForActiveTab();
-                    updateProgress();
-                    return;
-                }
-                if (totalWordsAtStart === 0) {
-                    questionWord.innerText = 'Словарь пуст';
-                    questionWord.style.fontSize = '2rem';
-                    questionWord.style.fontFamily = 'Inter, sans-serif';
-                } else {
-                    questionCard.classList.add('celebration');
-                    questionWord.innerText = '🎉 Все слова выучены!';
-                    questionWord.style.fontSize = '2rem';
-                    questionWord.style.fontFamily = 'Inter, sans-serif';
-                }
-                document.getElementById('optionsGrid').innerHTML = '';
-                updateProgress();
-                return;
-            }
-
-            questionCard.classList.remove('celebration');
-            questionWord.style.fontSize = '';
-            questionWord.style.fontFamily = '';
-            const questionPinyin = document.getElementById('questionPinyin');
-
-            currentQuestion = trainingPool[Math.floor(Math.random() * trainingPool.length)];
-
-            // Render the question card according to the active training mode.
-            if (trainingMode === 'hanzi2ru') {
-                questionWord.innerText = currentQuestion.word;
-                questionWord.style.fontFamily = "'Noto Serif SC', 'Ma Shan Zheng', serif";
-                questionPinyin.style.display = '';
-                questionPinyin.innerText = currentQuestion.pinyin;
-                questionPinyin.style.fontFamily = 'Inter, sans-serif';
-            } else {
-                // ru2hanzi (default): show only the Russian meaning, no pinyin line.
-                questionWord.innerText = currentQuestion.meaning;
-                questionWord.style.fontFamily = 'Inter, sans-serif';
-                questionPinyin.style.display = 'none';
-            }
-
-            let options = [currentQuestion];
-            let attempts = 0;
-            while (options.length < 3 && currentVocab.length > options.length && attempts < 50) {
-                attempts++;
-                let randomWord = currentVocab[Math.floor(Math.random() * currentVocab.length)];
-                if (!options.find(o => o.word === randomWord.word)) {
-                    options.push(randomWord);
-                }
-            }
-            options.sort(() => Math.random() - 0.5);
-
-            const grid = document.getElementById('optionsGrid');
-            grid.innerHTML = '';
-
-            options.forEach((opt, idx) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                // In hanzi2ru mode, options show Russian meaning; in ru2hanzi, they show pinyin + hanzi.
-                const inner = trainingMode === 'hanzi2ru'
-                    ? `<span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
-                       <div class="flex-1 min-w-0">
-                         <div class="font-semibold tracking-wide" style="color: var(--ink); font-size: 1.35rem; line-height: 1.2">${opt.meaning}</div>
-                       </div>`
-                    : `<span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style="background: rgba(26, 10, 10, 0.08)">${idx + 1}</span>
-                       <div class="flex-1 min-w-0">
-                         <div class="font-semibold tracking-wide" style="color: var(--ink); font-size: 1.35rem; line-height: 1.2">${opt.pinyin}</div>
-                       </div>
-                       <span class="font-hanzi shrink-0" style="font-size: 1.75rem; opacity: 0.65">${opt.word}</span>`;
-                btn.innerHTML = inner;
-                btn._opt = opt;  // store the option data so checkAnswer can find the correct one in any mode.
-                btn.onclick = () => checkAnswer(btn, opt);
-                grid.appendChild(btn);
-            });
-
-            updateProgress();
-        }
-
-        function checkAnswer(btn, selectedOpt) {
-            const allBtns = document.querySelectorAll('.option-btn');
-            allBtns.forEach(b => b.disabled = true);
-            totalAnswers++;
-
-            if (selectedOpt.word === currentQuestion.word) {
-                btn.classList.add('correct');
-                correctAnswers++;
-                document.getElementById('feedback').innerText = '✓ Правильно!';
-                document.getElementById('feedback').style.color = '#059669';
-                trainingPool = trainingPool.filter(item => item.word !== currentQuestion.word);
-            } else {
-                btn.classList.add('wrong');
-                document.getElementById('feedback').innerText = '✗ Попробуй ещё раз';
-                document.getElementById('feedback').style.color = '#dc2626';
-                // Highlight the correct option regardless of mode.
-                allBtns.forEach(b => {
-                    if (b._opt && b._opt.word === currentQuestion.word) {
-                        b.classList.add('correct');
-                    }
-                });
-            }
-
-            updateAccuracy();
-            setTimeout(nextQuestion, 1800);
-        }
-
-        function updateProgress() {
-            const remaining = trainingPool.length;
-            document.getElementById('progressText').innerText = `Осталось: ${remaining} / ${totalWordsAtStart}`;
-            const percent = totalWordsAtStart === 0 ? 0 : ((totalWordsAtStart - remaining) / totalWordsAtStart) * 100;
-            document.getElementById('progressBar').style.width = `${percent}%`;
-        }
-
-        function updateAccuracy() {
-            const acc = totalAnswers === 0 ? '—' : Math.round((correctAnswers / totalAnswers) * 100) + '%';
-            document.getElementById('accuracyText').innerText = `Точность: ${acc}`;
-        }
-
-        document.getElementById('searchInput').addEventListener('input', searchVocabulary);
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
-        } else {
-            init();
-        }
-    </script>
+    <script src="scripts/maps.js"></script>
+    <script src="scripts/vocabulary.js"></script>
 </body>
 </html>

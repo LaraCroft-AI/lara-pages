@@ -1,0 +1,278 @@
+:root {
+    --ink: #1a0a0a;
+    --vermilion: #c1272d;
+    --gold: #c9a96e;
+    --paper: #f5efe3;
+    --jade: #2d5a4f;
+    --shadow: 0 10px 40px -10px rgba(26, 10, 10, 0.25);
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+.page-section { display: none; }
+.page-section.active { display: block; }
+/* Belt-and-suspenders: fully hide inactive section so its default
+   placeholders (e.g. hanzi "学") never flash on first paint. */
+#training:not(.active),
+#gallery:not(.active) { visibility: hidden; position: absolute; left: -99999px; top: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Hide non-active tabs completely so default placeholders never flash */
+    background-color: var(--paper);
+    background-image:
+        radial-gradient(at 20% 10%, rgba(193, 39, 45, 0.06) 0px, transparent 50%),
+        radial-gradient(at 80% 90%, rgba(45, 90, 79, 0.05) 0px, transparent 50%),
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(193, 39, 45, 0.015) 35px, rgba(193, 39, 45, 0.015) 36px);
+    min-height: 100vh;
+}
+
+.font-hanzi { font-family: 'Noto Serif SC', 'Ma Shan Zheng', serif; }
+.font-brush { font-family: 'Ma Shan Zheng', cursive; }
+
+.ink-card {
+    background: #fffdf7;
+    border: 1px solid rgba(26, 10, 10, 0.08);
+    box-shadow: var(--shadow), inset 0 0 60px rgba(193, 39, 45, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+.ink-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--vermilion), var(--gold), var(--jade));
+    opacity: 0.7;
+}
+
+.chinese-seal {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--vermilion);
+    color: var(--paper);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.dict-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1.5px solid rgba(26, 10, 10, 0.15);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #fffdf7;
+    color: #4a3535;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.dict-chip:hover { border-color: var(--vermilion); transform: translateY(-1px); }
+.dict-chip.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+    box-shadow: 0 4px 12px rgba(26, 10, 10, 0.3);
+}
+.dict-chip .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor; opacity: 0.5;
+}
+.dict-chip.active .dot { background: var(--gold); opacity: 1; box-shadow: 0 0 8px var(--gold); }
+
+.tab-btn {
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #6b5b5b;
+    display: inline-flex; align-items: center; gap: 6px;
+}
+.tab-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 0 4px 12px rgba(26, 10, 10, 0.25);
+}
+.tab-btn:hover:not(.active) { color: var(--ink); }
+
+.option-btn {
+    position: relative;
+    padding: 18px 24px;
+    border: 1.5px solid rgba(26, 10, 10, 0.1);
+    border-radius: 14px;
+    background: #fffdf7;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.option-btn:hover:not(:disabled) {
+    border-color: var(--vermilion);
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 10, 10, 0.08);
+}
+.option-btn.correct {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border-color: #10b981;
+    color: #065f46;
+    animation: pulse-correct 0.5s ease;
+}
+.option-btn.wrong {
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+    border-color: #ef4444;
+    color: #991b1b;
+    animation: shake 0.4s ease;
+}
+.option-btn:disabled { cursor: not-allowed; opacity: 0.85; }
+
+@keyframes pulse-correct {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+.question-card {
+    background: linear-gradient(135deg, #fffdf7, #faf6ec);
+    border: 2px solid var(--ink);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.question-card::before {
+    content: '';
+    position: absolute;
+    top: 9px; right: 11px;
+    width: 28px; height: 28px;
+    background: var(--vermilion);
+    border-radius: 50%;
+    opacity: 0.85;
+}
+.question-card::after {
+    content: '中';
+    position: absolute;
+    top: 14px; right: 17px;
+    color: var(--paper);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.hanzi-display {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+    text-shadow: 2px 2px 0 rgba(193, 39, 45, 0.1);
+}
+
+.vocab-card {
+    animation: cardEnter 0.4s ease backwards;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.vocab-card:hover {
+    transform: translateY(-4px) rotate(-0.5deg);
+    box-shadow: 0 20px 40px -15px rgba(26, 10, 10, 0.3);
+}
+@keyframes cardEnter {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.progress-track {
+    height: 6px;
+    background: rgba(26, 10, 10, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+}
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--vermilion), var(--gold));
+    border-radius: 999px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 20px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5));
+}
+
+.search-input {
+    background: #fffdf7;
+    border: 2px solid rgba(26, 10, 10, 0.1);
+    border-radius: 999px;
+    padding: 14px 24px 14px 50px;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+.search-input:focus {
+    outline: none;
+    border-color: var(--vermilion);
+    box-shadow: 0 0 0 4px rgba(193, 39, 45, 0.1);
+}
+
+.celebration {
+    animation: celebrate 0.6s ease;
+}
+@keyframes celebrate {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.empty-state {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #8b7373;
+}
+
+@media (max-width: 640px) {
+    .hanzi-display { font-size: 3.5rem !important; }
+}
+.text-vermilion { color: var(--vermilion); }
+.text-ink { color: var(--ink); }
+.text-muted { color: #8b7373; }
+.seal-jade { background: var(--jade); }
+.seal-gold { background: var(--gold); color: var(--ink); }
+.tab-group { background: rgba(26, 10, 10, 0.05); }
+#progressBar { width: 0%; }
+.text-secondary { color: #6b5b5b; }
+.text-faint { color: #a89494; }
+.footer-motto { font-size: 1.2rem; color: var(--vermilion); }
+.empty-state-heading { color: var(--ink); font-weight: 600; }
+.empty-state-glyph { font-size: 2rem; color: var(--vermilion); margin-bottom: 0.5rem; }
+.hsk-badge { background: rgba(45, 90, 79, 0.1); color: var(--jade); }
+.vocab-card-footer { border-top: 1px dashed rgba(26, 10, 10, 0.1); }
+.option-number { background: rgba(26, 10, 10, 0.08); }
+.option-label { color: var(--ink); font-size: 1.35rem; line-height: 1.2; }
+.option-hanzi { font-size: 1.75rem; opacity: 0.65; }
+.pinyin-a { color: #c1272d; }
+.pinyin-e { color: #2d5a4f; }
+.pinyin-i { color: #c9a96e; }
+.pinyin-o { color: #5b6ca8; }
+.pinyin-u { color: #8b5a8e; }
+
+#questionWord.question-message { font-size: 2rem; }
+#questionWord.question-hanzi { font-family: 'Noto Serif SC', 'Ma Shan Zheng', serif; }
+#feedback[data-result="correct"] { color: #059669; }
+#feedback[data-result="wrong"] { color: #dc2626; }
+.pinyin-neutral { color: inherit; }

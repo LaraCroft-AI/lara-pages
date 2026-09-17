@@ -2,7 +2,7 @@
     'use strict';
     const $ = id => document.getElementById(id);
     const PAGE_SIZE = 8;
-    const state = { type: 'radical', node: '亻', level: 'all', page: 0,
+    const state = { type: 'radical', node: '人', level: 'all', page: 0,
         view: window.matchMedia('(max-width: 760px)').matches ? 'list' : 'map', query: '' };
     let vocabulary = [], radicals = {}, catalogs = {}, ready = false;
     let loading = null;
@@ -28,7 +28,11 @@
         state.type = params.get('type') === 'character' ? 'character' : 'radical';
         const level = params.get('level');
         state.level = ['all', '1', '2', '3', '4', '5', '6', '7–9', 'none'].includes(level) ? level : 'all';
-        state.node = catalogs[state.type].find(node => node.id === params.get('node'))?.id || catalogs[state.type][0].id;
+        const requested = params.get('node');
+        state.node = catalogs[state.type].find(node => node.id === requested)?.id
+            || (state.type === 'radical' && catalogs.radical.find(node => node.forms.includes(requested)
+                || (requested?.includes(' / ') && requested.split(' / ').every(form => node.forms.includes(form))))?.id)
+            || catalogs[state.type][0].id;
         state.page = 0;
         state.query = '';
         $('map-search').value = '';
@@ -52,6 +56,41 @@
 
     function currentNode() { return catalogs[state.type].find(node => node.id === state.node); }
     function wordsForNode(node) { return filterLevel(node.words); }
+
+    function nodeLink(node, type) {
+        const link = document.createElement('a');
+        link.className = 'map-button';
+        link.textContent = `${node.id}${node.pinyin ? ' · ' + node.pinyin : ''}`;
+        link.title = node.meaning;
+        link.href = '#maps?' + new URLSearchParams({ type, node: node.id, level: state.level });
+        return link;
+    }
+
+    function renderRelations(node, words) {
+        const panel = $('map-relations');
+        panel.replaceChildren();
+        const description = document.createElement('p');
+        if (state.type === 'radical') {
+            description.textContent = `Канси №${node.number} · Черт в основной форме: ${node.strokes} · Формы: ${[...node.forms].join(' / ')}`;
+            if (node.id === '邑') description.textContent += ' · 阝 справа';
+            if (node.id === '阜') description.textContent += ' · 阝 слева';
+            if (node.id === '肉') description.textContent += ' · В составе знака часто выглядит как 月; связь определяется словарным ключом.';
+            panel.appendChild(description);
+            const chars = new Set(words.flatMap(item => [...item.word].filter(char => node.forms.includes(radicals[char]))));
+            if (chars.size) {
+                const label = document.createElement('p');
+                label.textContent = `Связанные иероглифы (${chars.size}). Откройте иероглиф, чтобы увидеть слова с ним:`;
+                const links = document.createElement('div'); links.className = 'map-related-links';
+                for (const char of chars) links.appendChild(nodeLink(catalogs.character.find(item => item.id === char), 'character'));
+                panel.append(label, links);
+            }
+        } else {
+            const parent = catalogs.radical.find(item => item.forms.includes(radicals[node.id]));
+            description.textContent = parent ? `Словарный ключ: №${parent.number} · ${parent.meaning}` : 'Словарный ключ не назначен.';
+            panel.appendChild(description);
+            if (parent) panel.appendChild(nodeLink(parent, 'radical'));
+        }
+    }
 
     function wordMarkup(item, node) {
         const word = [...item.word].map(char => {
@@ -80,16 +119,16 @@
         list.replaceChildren();
         let count = 0;
         for (const node of catalogs[state.type]) {
-            if (!normalize([node.id, node.pinyin, node.meaning].join(' ')).includes(normalize(state.query))) continue;
+            if (!normalize([node.id, node.pinyin, node.meaning, node.forms || '', node.number || '',
+                ['邑', '阜'].includes(node.id) ? '阝' : ''].join(' ')).includes(normalize(state.query))) continue;
             const words = wordsForNode(node);
-            if (!words.length && node.id !== state.node) continue;
             const button = document.createElement('button');
             button.className = 'map-node';
             button.setAttribute('aria-pressed', String(node.id === state.node));
             button.setAttribute('aria-label', `${node.id} — ${node.meaning}, слов: ${words.length}`);
             button.dataset.node = node.id;
-            button.innerHTML = `<span class="map-glyph" lang="zh-CN">${escapeHTML(node.id)}</span><span class="map-pinyin">${escapeHTML(node.pinyin)}</span><small>${words.length} сл.</small>`;
-            button.disabled = words.length === 0 && node.id !== state.node;
+            button.innerHTML = `${node.number ? `<small>№${node.number}</small>` : ''}<span class="map-glyph" lang="zh-CN">${escapeHTML(node.id)}</span><span class="map-pinyin">${escapeHTML(node.pinyin)}</span><small>${words.length} сл.</small>`;
+            button.title = `${node.meaning}${node.forms ? ' · ' + [...node.forms].join(' / ') : ''}`;
             button.addEventListener('click', () => {
                 state.node = node.id; state.page = 0; render(); saveRoute();
                 // Keep keyboard focus on the selected node after rebuilding the list.
@@ -109,6 +148,11 @@
         $('map-title').textContent = `${node.id} · ${node.pinyin} · ${node.meaning}`;
         $('map-title').title = $('map-title').textContent;
         $('map-summary').textContent = `${state.type === 'radical' ? 'Ключ' : 'Иероглиф'} · ${words.length} из ${node.words.length} слов`;
+        renderRelations(node, words);
+        $('map-empty-message').textContent = node.words.length
+            ? 'На этом уровне пока нет слов для выбранного узла.'
+            : state.type === 'radical' ? 'В словарях уроков пока нет слов с этим ключом.' : 'В словарях уроков пока нет составных слов с этим иероглифом.';
+        $('map-reset-level').hidden = !node.words.length;
         $('map-empty').hidden = words.length > 0;
         $('map-scroll').hidden = state.view !== 'map' || !words.length;
         $('map-word-list').hidden = state.view !== 'list' || !words.length;
@@ -155,7 +199,7 @@
         document.querySelectorAll('[data-level]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.level === state.level)));
         document.querySelectorAll('[data-map-type]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mapType === state.type)));
         $('map-type-description').textContent = state.type === 'radical'
-            ? `${catalogs.radical.length} ключей. Строительные элементы иероглифов.`
+            ? `${catalogs.radical.length} ключей Канси. Включая ключи без примеров в уроках.`
             : `${catalogs.character.length} иероглифов. Знакомые знаки в составе слов.`;
         renderNodes(); renderMap();
     }
@@ -211,19 +255,28 @@
         if (loading) return loading;
         loading = (async () => {
             try {
-                const response = await fetch('data/character-radicals.json');
-                if (!response.ok) throw new Error('Radical data unavailable');
-                radicals = await response.json();
+                const [radicalData, mapCatalog] = await Promise.all(
+                    ['data/character-radicals.json', 'data/map-catalog.json'].map(async path => {
+                        const response = await fetch(path);
+                        if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+                        return response.json();
+                    })
+                );
+                radicals = radicalData;
                 vocabulary = [...new Map(Object.values(dictionaries).flat().map(item => [item.word, item])).values()];
-                catalogs.radical = window.mapCatalog.radicals.map(([id, pinyin, meaning, forms]) => ({ id, pinyin, meaning, forms }));
-                const characters = new Map(window.mapCatalog.characters.map(([id, pinyin, meaning]) => [id, { id, pinyin, meaning }]));
+                catalogs.radical = mapCatalog.radicals.map(([id, pinyin, meaning, forms, number, strokes]) => ({ id, pinyin, meaning, forms, number, strokes }));
+                const characters = new Map(mapCatalog.characters.map(([id, pinyin, meaning]) => [id, { id, pinyin, meaning }]));
                 for (const item of vocabulary) {
                     if ([...item.word].length === 1 && !characters.has(item.word)) characters.set(item.word, { id: item.word, pinyin: item.pinyin, meaning: item.meaning });
+                }
+                for (const item of vocabulary) {
+                    for (const char of item.word) {
+                        if (!characters.has(char)) characters.set(char, { id: char, pinyin: '', meaning: 'Иероглиф из слов уроков' });
+                    }
                 }
                 catalogs.character = [...characters.values()];
                 for (const type of ['radical', 'character']) {
                     catalogs[type].forEach(node => { node.words = matchingWords(node, type); });
-                    catalogs[type] = catalogs[type].filter(node => node.words.length > 0);
                 }
                 ready = true;
                 readRoute(); render();

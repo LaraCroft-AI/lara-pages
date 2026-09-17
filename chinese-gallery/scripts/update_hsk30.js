@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 // Official standard (GF 0025—2021), vocabulary table on PDF pages 42–175:
 // https://www.moe.gov.cn/jyb_sjzl/ziliao/A19/202111/W020211118507389477190.pdf
@@ -7,10 +8,10 @@ const fs = require('fs');
 
 const mainCsvPath = process.argv[2];
 const expandedCsvPath = process.argv[3];
-const vocabularyPath = process.argv[4] || './vocab_data.json';
+const vocabularyPath = process.argv[4] || path.join(__dirname, '..', 'data', 'vocab_data.json');
 
 if (!mainCsvPath || !expandedCsvPath) {
-    console.error('Usage: node update_hsk30.js <hsk30.csv> <hsk30-expanded.csv> [vocab_data.json]');
+    console.error('Usage: node scripts/update_hsk30.js <hsk30.csv> <hsk30-expanded.csv> [vocab_data.json]');
     process.exit(1);
 }
 

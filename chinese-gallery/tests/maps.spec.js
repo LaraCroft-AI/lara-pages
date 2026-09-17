@@ -33,14 +33,14 @@ test('section navigation preserves lesson selection and training mode', async ({
 test('radical map uses character radicals from the remaining lessons', async ({ page }) => {
   await openMaps(page);
   await listView(page);
-  await expect(page.locator('#map-title')).toContainText('亻');
+  await expect(page.locator('#map-title')).toContainText('人');
   const words = await page.locator('#map-word-list .map-glyph').allTextContents();
   expect(words).toContain('他');
   expect(words).not.toContain('你');
   expect(words).toContain('他们');
   expect(words).not.toContain('她');
   expect(words).not.toContain('喝');
-  await expect(page.locator('[data-node="亻"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('[data-node="人"]')).toHaveAttribute('aria-pressed', 'true');
 });
 
 test('character map, exact HSK filters, deep link and reload agree', async ({ page }) => {
@@ -65,7 +65,7 @@ test('search supports hanzi, toneless pinyin, Russian and empty results', async 
   await openMaps(page);
   await page.locator('#map-search').fill('shui');
   await expect(page.locator('#map-node-list .map-node')).toHaveCount(1);
-  await expect(page.locator('#map-node-list')).toContainText('氵');
+  await expect(page.locator('#map-node-list')).toContainText('水');
   await page.locator('#map-search').fill('дерево');
   await page.locator('[data-node="木"]').click();
   await expect(page.locator('#map-title')).toContainText('木');
@@ -152,12 +152,78 @@ test('print maps and worksheets include every filtered word, including later pag
   await page.screenshot({ path: testInfo.outputPath('practice-print.png') });
 });
 
-test('map data failure offers retry without breaking lessons', async ({ page }) => {
-  await page.route('**/data/character-radicals.json', route => route.fulfill({ status: 503, body: 'Unavailable' }));
-  await page.goto(BASE + '#maps');
-  await expect(page.locator('#maps-loading')).toContainText('Не удалось загрузить карты');
-  await expect(page.getByRole('button', { name: 'Повторить', exact: true })).toBeVisible();
-  await page.locator('#nav-lessons').click();
-  await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
-  await expect(page.locator('#vocabList .vocab-card')).toHaveCount(14);
+for (const file of ['character-radicals.json', 'map-catalog.json']) {
+  test(`${file} failure offers retry without breaking lessons`, async ({ page }) => {
+    await page.route(`**/data/${file}`, route => route.fulfill({ status: 503, body: 'Unavailable' }));
+    await page.goto(BASE + '#maps');
+    await expect(page.locator('#maps-loading')).toContainText('Не удалось загрузить карты');
+    await expect(page.getByRole('button', { name: 'Повторить', exact: true })).toBeVisible();
+    await page.locator('#nav-lessons').click();
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(14);
+  });
+}
+
+test('all 214 Kangxi radicals remain selectable, including rare radicals and empty levels', async ({ page }) => {
+  await openMaps(page);
+  await expect(page.locator('#map-node-list .map-node')).toHaveCount(214);
+  await expect(page.locator('#map-type-description')).toContainText('214 ключей Канси');
+  await page.locator('#map-search').fill('214');
+  await expect(page.locator('#map-node-list .map-node')).toHaveCount(1);
+  await page.locator('[data-node="龠"]').click();
+  await expect(page.locator('#map-title')).toContainText('флейта');
+  await expect(page.locator('#map-relations')).toContainText('Черт в основной форме: 17');
+  await expect(page.locator('#map-empty')).toContainText('В словарях уроков пока нет слов с этим ключом');
+  await expect(page.locator('#map-reset-level')).toBeHidden();
+  await expect(page.locator('#map-print')).toBeDisabled();
+  await page.reload();
+  await expect(page.locator('#map-title')).toContainText('龠');
+  await page.locator('[data-level="7–9"]').click();
+  await expect(page.locator('#map-node-list .map-node')).toHaveCount(214);
+  await page.locator('#map-search').fill('дракон');
+  await page.locator('[data-node="龍"]').click();
+  await expect(page.locator('#map-title')).toContainText('龍');
+});
+
+test('catalog covers every classified lesson character exactly once in canonical order', async ({ page }) => {
+  await openMaps(page);
+  const result = await page.evaluate(async () => {
+    const nodes = (await (await fetch('data/map-catalog.json')).json()).radicals;
+    const assignments = await (await fetch('data/character-radicals.json')).json();
+    const vocabulary = await (await fetch('data/vocab_data.json')).json();
+    return {
+      canonical: nodes.every((n, i) => n[0] === String.fromCodePoint(0x2f00 + i).normalize('NFKC') && n[4] === i + 1),
+      missing: [...new Set(Object.values(vocabulary).flat().flatMap(item => [...item.word]))].filter(c => !(c in assignments)),
+      invalid: Object.entries(assignments).filter(([c, radical]) => radical !== null && nodes.filter(n => n[3].includes(radical)).length !== 1),
+      uniqueForms: new Set(nodes.flatMap(n => [...n[3]])).size === nodes.reduce((sum, n) => sum + [...n[3]].length, 0),
+    };
+  });
+  expect(result).toEqual({ canonical: true, missing: [], invalid: [], uniqueForms: true });
+});
+
+test('variant deep links preserve families and distinguish meat, moon and left/right ear', async ({ page }) => {
+  for (const [alias, canonical, include, exclude] of [
+    ['亻', '人', '他', '她'], ['氵', '水', '喝水', '电脑'],
+    ['心 / 忄', '心', '恶心', '喝水'], ['⺼', '肉', '电脑', '月亮'],
+    ['月', '月', '月亮', '电脑'], ['⻏', '邑', '那里', '队伍'], ['⻖', '阜', '队伍', '那里'],
+  ]) {
+    await openMaps(page, '#maps?' + new URLSearchParams({ type: 'radical', node: alias, level: 'all' }));
+    await listView(page);
+    await expect(page.locator('#map-title')).toContainText(canonical);
+    const words = await page.locator('#map-word-list .map-glyph').allTextContents();
+    expect(words).toContain(include);
+    expect(words).not.toContain(exclude);
+  }
+});
+
+test('radical and character maps have bidirectional links that retain HSK selection', async ({ page }) => {
+  await openMaps(page, '#maps?type=radical&node=水&level=1');
+  await page.locator('#map-relations a').filter({ hasText: /^水/ }).click();
+  await expect(page).toHaveURL(/type=character/);
+  await expect(page).toHaveURL(/level=1/);
+  await expect(page.locator('#map-title')).toContainText('水');
+  await expect(page.locator('#map-relations')).toContainText('Словарный ключ: №85');
+  await page.locator('#map-relations a').click();
+  await expect(page).toHaveURL(/type=radical/);
+  await expect(page.locator('#map-relations')).toContainText('水 / 氵 / 氺');
 });
