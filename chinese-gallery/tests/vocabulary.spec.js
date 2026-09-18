@@ -21,7 +21,7 @@ test.describe('Initial load and structure', () => {
 
   test('renders dictionary chips for every loaded dictionary', async ({ page }) => {
     const chipCount = await page.locator('.dict-chip').count();
-    const knownCount = await page.evaluate(() => Object.keys(allDictionaries).length);
+    const knownCount = await page.evaluate(() => Object.keys(allDictionaries).filter(id => !id.startsWith('rukodelnikova-')).length);
     expect(chipCount).toBe(knownCount);
     expect(knownCount).toBeGreaterThanOrEqual(1);
   });
@@ -56,18 +56,19 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
-  test('contains only the 14 lessons, without separate HSK dictionaries', async ({ page }) => {
+  test('contains 14 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
-    expect(names).toEqual(Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`));
+    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
-    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(768);
+    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1049);
   });
 
   test('keeps every word only in its earliest lesson', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
       const duplicates = new Set();
-      for (const entries of Object.values(allDictionaries)) {
+      for (const [id, entries] of Object.entries(allDictionaries)) {
+        if (id.startsWith('rukodelnikova-')) continue;
         for (const entry of entries) {
           if (seen.has(entry.word)) duplicates.add(entry.word);
           seen.add(entry.word);
@@ -380,4 +381,119 @@ test.describe('Stability', () => {
     await page.waitForFunction(() => typeof allDictionaries !== 'undefined' && Object.keys(allDictionaries).length > 0);
     await expect(page.locator('#vocabList')).toContainText('Выберите словари');
   });
+});
+
+
+test.describe('Schools', () => {
+  test('filters lessons and loads the approved textbook vocabulary', async ({ page }) => {
+    await expect(page.getByLabel('Школа', { exact: true })).toHaveValue('zhun');
+    await expect(page.locator('.dict-chip')).toHaveCount(14);
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await expect(page.locator('.vocab-card')).toHaveCount(14);
+    await page.selectOption('#schoolSelect', 'rukodelnikova');
+    await expect(page.locator('.dict-chip')).toHaveCount(7);
+    await expect(page.locator('.vocab-card')).toHaveCount(0);
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await expect(page.locator('.vocab-card')).toHaveCount(42);
+    await page.locator('#btn-training').click();
+    expect(await page.evaluate(() => allDictionaries['rukodelnikova-lesson-1'].some(item => item.word === currentQuestion.word))).toBe(true);
+    await expect(page.locator('.option-btn')).toHaveCount(3);
+    await expect(page.locator('#progressText')).toHaveText('Осталось: 42 / 42');
+  });
+
+  test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
+    await page.selectOption('#schoolSelect', 'all');
+    await expect(page.locator('.dict-chip')).toHaveCount(21);
+    await page.getByRole('button', { name: 'Жун · Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
+    await expect(page.locator('.dict-chip.active')).toHaveCount(2);
+    await expect(page.locator('.vocab-card')).toHaveCount(56);
+    await page.locator('#nav-maps').click();
+    await page.locator('#nav-lessons').click();
+    await expect(page.locator('#schoolSelect')).toHaveValue('all');
+    await expect(page.locator('.dict-chip.active')).toHaveCount(2);
+    await page.selectOption('#schoolSelect', 'rukodelnikova');
+    await expect(page.locator('.dict-chip.active')).toHaveCount(1);
+    await expect(page.locator('.vocab-card')).toHaveCount(42);
+  });
+
+  test('changing school cancels a pending training question', async ({ page }) => {
+    await page.clock.install();
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.locator('#btn-training').click();
+    await page.locator('.option-btn').first().click();
+    await page.selectOption('#schoolSelect', 'rukodelnikova');
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.clock.fastForward(2000);
+    expect(await page.evaluate(() => allDictionaries['rukodelnikova-lesson-1'].some(item => item.word === currentQuestion.word))).toBe(true);
+    await expect(page.locator('.option-btn')).toHaveCount(3);
+    await expect(page.locator('#progressText')).toHaveText('Осталось: 42 / 42');
+    await page.selectOption('#schoolSelect', 'zhun');
+    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await expect(page.locator('.option-btn')).toHaveCount(3);
+  });
+});
+
+
+test('textbook lesson contains every approved entry once, with searchable pinyin', async ({ page }) => {
+  const expected = '老师 吗 我 很 也 上课 老 师 上 课 妈妈 哥哥 姥姥 呢 您 杨 米沙 列娜 丁 土 工 王 人 大 木 剪纸 喜 囍 火 山 囗 月 日 灭 林 仙 炎 囚 森 明 天 夫'.split(' ');
+  const words = await page.evaluate(() => allDictionaries['rukodelnikova-lesson-1'].map(item => item.word));
+  expect(words).toEqual(expected);
+  expect(new Set(words).size).toBe(42);
+  await page.selectOption('#schoolSelect', 'rukodelnikova');
+  await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+  await page.locator('#searchInput').fill('jiǎn zhǐ');
+  await expect(page.locator('.vocab-card')).toHaveCount(1);
+  await expect(page.locator('.vocab-card')).toContainText('剪纸');
+});
+
+
+const textbookLessons = [
+  [2, 26, '谁', '王明'],
+  [3, 56, '多大', '九十九'],
+  [4, 51, '哦', '梅德韦杰夫'],
+  [5, 20, '看', '中国结'],
+  [6, 35, '下课', '咬'],
+  [7, 51, '上午', '电话'],
+];
+for (const [lesson, count, firstWord, sample] of textbookLessons) {
+  test(`Rukodelnikova lesson ${lesson} opens, searches and trains in both directions`, async ({ page }) => {
+    await page.selectOption('#schoolSelect', 'rukodelnikova');
+    await page.getByRole('button', { name: `Урок ${lesson}`, exact: true }).click();
+    await expect(page.locator('.vocab-card')).toHaveCount(count);
+    await expect(page.locator('.vocab-card').first()).toContainText(firstWord);
+    await page.locator('#searchInput').fill(sample);
+    await expect(page.locator('.vocab-card')).toHaveCount(1);
+    await page.locator('#btn-training').click();
+    for (const mode of ['ru2hanzi', 'hanzi2ru']) {
+      await page.locator(`#mode-${mode}`).click();
+      await expect(page.locator('.option-btn')).toHaveCount(3);
+      await expect(page.locator('#progressText')).toHaveText(`Осталось: ${count} / ${count}`);
+      expect(await page.evaluate(id => allDictionaries[id].some(item => item.word === currentQuestion.word),
+        `rukodelnikova-lesson-${lesson}`)).toBe(true);
+    }
+  });
+}
+
+test('Rukodelnikova lessons have no repeated words and preserve all groups', async ({ page }) => {
+  const data = await page.evaluate(() => Object.entries(allDictionaries)
+    .filter(([id]) => id.startsWith('rukodelnikova-')).flatMap(([, rows]) => rows));
+  const words = data.map(item => item.word);
+  expect(words).toHaveLength(281);
+  expect(new Set(words).size).toBe(words.length);
+  expect(words).toEqual(expect.arrayContaining([
+    '谁', '爷爷', '王明', '曰', '外', '艮', '水', '二十九', '九十九',
+    '丁华兰', '百家姓', '普希金', '厶', '明明', '她们', '鱼', '轰', '车',
+    '国画', '山水', '肚子', '操场', '夜里', '戌', '酉', '电脑',
+  ]));
+  expect(words).not.toEqual(expect.arrayContaining(['魚', '轟', '車']));
+  for (const word of ['鱼', '轰', '车']) expect(data.find(item => item.word === word).meaning).toContain('традиционная');
+  expect(data.find(item => item.word === '艮').pinyin).toBe('gěn');
+  expect(data.find(item => item.word === '哪儿').pinyin).toBe('nǎr');
+  expect(data.every(item => item.pinyin && item.meaning)).toBe(true);
+  await page.selectOption('#schoolSelect', 'rukodelnikova');
+  for (let lesson = 1; lesson <= 7; lesson++) {
+    await page.getByRole('button', { name: `Урок ${lesson}`, exact: true }).click();
+  }
+  await expect(page.locator('.vocab-card')).toHaveCount(281);
 });

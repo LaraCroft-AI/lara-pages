@@ -276,3 +276,9 @@ body {
 #feedback[data-result="correct"] { color: #059669; }
 #feedback[data-result="wrong"] { color: #dc2626; }
 .pinyin-neutral { color: inherit; }
+
+.school-filter { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.school-filter label { font-size: 14px; font-weight: 600; }
+.school-filter select { max-width: 100%; min-width: 190px; padding: 10px 12px; border: 1px solid var(--vermilion); border-radius: 10px; background: var(--paper); color: var(--ink); font: inherit; }
+.school-filter select:focus-visible { outline: 3px solid var(--jade); outline-offset: 3px; }
+.school-filter p { flex-basis: 100%; color: #6b5b5b; font-size: 12px; }

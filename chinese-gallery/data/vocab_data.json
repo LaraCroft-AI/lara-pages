@@ -4634,5 +4634,1705 @@
       "meaning": "жизнь 🌱",
       "hsk30": 2
     }
+  ],
+  "rukodelnikova-lesson-1": [
+    {
+      "word": "老师",
+      "pinyin": "lǎo shī",
+      "meaning": "учитель",
+      "hsk30": 1
+    },
+    {
+      "word": "吗",
+      "pinyin": "ma",
+      "meaning": "вопросительная частица общего вопроса",
+      "hsk30": 1
+    },
+    {
+      "word": "我",
+      "pinyin": "wǒ",
+      "meaning": "я",
+      "hsk30": 1
+    },
+    {
+      "word": "很",
+      "pinyin": "hěn",
+      "meaning": "очень",
+      "hsk30": 1
+    },
+    {
+      "word": "也",
+      "pinyin": "yě",
+      "meaning": "тоже, также",
+      "hsk30": 1
+    },
+    {
+      "word": "上课",
+      "pinyin": "shàng kè",
+      "meaning": "быть на уроке; начинать урок",
+      "hsk30": 1
+    },
+    {
+      "word": "老",
+      "pinyin": "lǎo",
+      "meaning": "старый; уважаемый",
+      "hsk30": 1
+    },
+    {
+      "word": "师",
+      "pinyin": "shī",
+      "meaning": "наставник, мастер (в составе слов)",
+      "hsk30": null
+    },
+    {
+      "word": "上",
+      "pinyin": "shàng",
+      "meaning": "подниматься; наверху",
+      "hsk30": 1
+    },
+    {
+      "word": "课",
+      "pinyin": "kè",
+      "meaning": "урок",
+      "hsk30": 1
+    },
+    {
+      "word": "妈妈",
+      "pinyin": "mā ma",
+      "meaning": "мама",
+      "hsk30": 1
+    },
+    {
+      "word": "哥哥",
+      "pinyin": "gē ge",
+      "meaning": "старший брат",
+      "hsk30": 1
+    },
+    {
+      "word": "姥姥",
+      "pinyin": "lǎo lao",
+      "meaning": "бабушка по маминой линии",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "呢",
+      "pinyin": "ne",
+      "meaning": "частица встречного, неполного вопроса",
+      "hsk30": 1
+    },
+    {
+      "word": "您",
+      "pinyin": "nín",
+      "meaning": "Вы (уважительное обращение к одному человеку)",
+      "hsk30": 1
+    },
+    {
+      "word": "杨",
+      "pinyin": "Yáng",
+      "meaning": "Ян (фамилия учительницы)",
+      "hsk30": null
+    },
+    {
+      "word": "米沙",
+      "pinyin": "Mǐ shā",
+      "meaning": "Миша",
+      "hsk30": null
+    },
+    {
+      "word": "列娜",
+      "pinyin": "Liè nà",
+      "meaning": "Лена",
+      "hsk30": null
+    },
+    {
+      "word": "丁",
+      "pinyin": "dīng",
+      "meaning": "гвоздь (значение графемы в учебнике)",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "土",
+      "pinyin": "tǔ",
+      "meaning": "земля",
+      "hsk30": 3
+    },
+    {
+      "word": "工",
+      "pinyin": "gōng",
+      "meaning": "работа",
+      "hsk30": null
+    },
+    {
+      "word": "王",
+      "pinyin": "wáng",
+      "meaning": "государь, правитель",
+      "hsk30": 4
+    },
+    {
+      "word": "人",
+      "pinyin": "rén",
+      "meaning": "человек; 亻 — вариант компонента в сложных иероглифах",
+      "hsk30": 1
+    },
+    {
+      "word": "大",
+      "pinyin": "dà",
+      "meaning": "большой",
+      "hsk30": 1
+    },
+    {
+      "word": "木",
+      "pinyin": "mù",
+      "meaning": "дерево",
+      "hsk30": null
+    },
+    {
+      "word": "剪纸",
+      "pinyin": "jiǎn zhǐ",
+      "meaning": "вырезание из бумаги",
+      "hsk30": null
+    },
+    {
+      "word": "喜",
+      "pinyin": "xǐ",
+      "meaning": "радость; радостный, счастливый",
+      "hsk30": null
+    },
+    {
+      "word": "囍",
+      "pinyin": "xǐ",
+      "meaning": "двойное счастье (свадебный символ)",
+      "hsk30": null
+    },
+    {
+      "word": "火",
+      "pinyin": "huǒ",
+      "meaning": "огонь",
+      "hsk30": 3
+    },
+    {
+      "word": "山",
+      "pinyin": "shān",
+      "meaning": "гора",
+      "hsk30": 1
+    },
+    {
+      "word": "囗",
+      "pinyin": "wéi",
+      "meaning": "ограда (графема)",
+      "hsk30": null
+    },
+    {
+      "word": "月",
+      "pinyin": "yuè",
+      "meaning": "луна; месяц",
+      "hsk30": 1
+    },
+    {
+      "word": "日",
+      "pinyin": "rì",
+      "meaning": "солнце; день",
+      "hsk30": 1
+    },
+    {
+      "word": "灭",
+      "pinyin": "miè",
+      "meaning": "гасить, тушить",
+      "hsk30": 6
+    },
+    {
+      "word": "林",
+      "pinyin": "lín",
+      "meaning": "роща",
+      "hsk30": null
+    },
+    {
+      "word": "仙",
+      "pinyin": "xiān",
+      "meaning": "отшельник; бессмертный",
+      "hsk30": null
+    },
+    {
+      "word": "炎",
+      "pinyin": "yán",
+      "meaning": "жар, пламя (в упражнении: «горячий»)",
+      "hsk30": null
+    },
+    {
+      "word": "囚",
+      "pinyin": "qiú",
+      "meaning": "заключённый",
+      "hsk30": null
+    },
+    {
+      "word": "森",
+      "pinyin": "sēn",
+      "meaning": "лес",
+      "hsk30": null
+    },
+    {
+      "word": "明",
+      "pinyin": "míng",
+      "meaning": "светлый, яркий",
+      "hsk30": null
+    },
+    {
+      "word": "天",
+      "pinyin": "tiān",
+      "meaning": "небо",
+      "hsk30": 1
+    },
+    {
+      "word": "夫",
+      "pinyin": "fū",
+      "meaning": "муж",
+      "hsk30": null
+    }
+  ],
+  "rukodelnikova-lesson-2": [
+    {
+      "word": "谁",
+      "pinyin": "shéi",
+      "meaning": "кто; 讠 — компонент «речь»",
+      "hsk30": 1
+    },
+    {
+      "word": "是",
+      "pinyin": "shì",
+      "meaning": "быть, являться; нижняя часть — графема «нога», без самостоятельного чтения в учебнике",
+      "hsk30": 1
+    },
+    {
+      "word": "她",
+      "pinyin": "tā",
+      "meaning": "она",
+      "hsk30": 1
+    },
+    {
+      "word": "他",
+      "pinyin": "tā",
+      "meaning": "он",
+      "hsk30": 1
+    },
+    {
+      "word": "不",
+      "pinyin": "bù",
+      "meaning": "не, нет",
+      "hsk30": 1
+    },
+    {
+      "word": "爸爸",
+      "pinyin": "bà ba",
+      "meaning": "папа",
+      "hsk30": 1
+    },
+    {
+      "word": "爷爷",
+      "pinyin": "yé ye",
+      "meaning": "дедушка по папиной линии",
+      "hsk30": 1
+    },
+    {
+      "word": "奶奶",
+      "pinyin": "nǎi nai",
+      "meaning": "бабушка по папиной линии",
+      "hsk30": 1
+    },
+    {
+      "word": "弟弟",
+      "pinyin": "dì di",
+      "meaning": "младший брат",
+      "hsk30": 1
+    },
+    {
+      "word": "王明",
+      "pinyin": "Wáng Míng",
+      "meaning": "Ван Мин (имя)",
+      "hsk30": null
+    },
+    {
+      "word": "女",
+      "pinyin": "nǚ",
+      "meaning": "женщина",
+      "hsk30": 1
+    },
+    {
+      "word": "隹",
+      "pinyin": "zhuī",
+      "meaning": "короткохвостая птица (графема)",
+      "hsk30": null
+    },
+    {
+      "word": "本",
+      "pinyin": "běn",
+      "meaning": "корень",
+      "hsk30": 1
+    },
+    {
+      "word": "马",
+      "pinyin": "mǎ",
+      "meaning": "лошадь",
+      "hsk30": 3
+    },
+    {
+      "word": "口",
+      "pinyin": "kǒu",
+      "meaning": "рот",
+      "hsk30": 1
+    },
+    {
+      "word": "曰",
+      "pinyin": "yuē",
+      "meaning": "говорить",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "妈",
+      "pinyin": "mā",
+      "meaning": "мама",
+      "hsk30": 1
+    },
+    {
+      "word": "一",
+      "pinyin": "yī",
+      "meaning": "один",
+      "hsk30": 1
+    },
+    {
+      "word": "三",
+      "pinyin": "sān",
+      "meaning": "три",
+      "hsk30": 1
+    },
+    {
+      "word": "兰",
+      "pinyin": "lán",
+      "meaning": "орхидея",
+      "hsk30": null
+    },
+    {
+      "word": "十",
+      "pinyin": "shí",
+      "meaning": "десять",
+      "hsk30": 1
+    },
+    {
+      "word": "好",
+      "pinyin": "hǎo",
+      "meaning": "хороший; хорошо",
+      "hsk30": 1
+    },
+    {
+      "word": "妹妹",
+      "pinyin": "mèi mei",
+      "meaning": "младшая сестра",
+      "hsk30": 1
+    },
+    {
+      "word": "你",
+      "pinyin": "nǐ",
+      "meaning": "ты",
+      "hsk30": 1
+    },
+    {
+      "word": "你们",
+      "pinyin": "nǐ men",
+      "meaning": "вы",
+      "hsk30": 1
+    },
+    {
+      "word": "外",
+      "pinyin": "wài",
+      "meaning": "внешний; снаружи",
+      "hsk30": 1
+    }
+  ],
+  "rukodelnikova-lesson-3": [
+    {
+      "word": "多大",
+      "pinyin": "duō dà",
+      "meaning": "сколько лет; какого размера",
+      "hsk30": null
+    },
+    {
+      "word": "岁",
+      "pinyin": "suì",
+      "meaning": "год (о возрасте)",
+      "hsk30": 1
+    },
+    {
+      "word": "五",
+      "pinyin": "wǔ",
+      "meaning": "пять",
+      "hsk30": 1
+    },
+    {
+      "word": "六",
+      "pinyin": "liù",
+      "meaning": "шесть",
+      "hsk30": 1
+    },
+    {
+      "word": "几",
+      "pinyin": "jǐ",
+      "meaning": "сколько; несколько",
+      "hsk30": 1
+    },
+    {
+      "word": "八",
+      "pinyin": "bā",
+      "meaning": "восемь",
+      "hsk30": 1
+    },
+    {
+      "word": "多",
+      "pinyin": "duō",
+      "meaning": "много",
+      "hsk30": 1
+    },
+    {
+      "word": "四",
+      "pinyin": "sì",
+      "meaning": "четыре",
+      "hsk30": 1
+    },
+    {
+      "word": "九",
+      "pinyin": "jiǔ",
+      "meaning": "девять",
+      "hsk30": 1
+    },
+    {
+      "word": "都",
+      "pinyin": "dōu",
+      "meaning": "все; 阝 справа обозначает 邑, слева в других знаках — 阜",
+      "hsk30": 1
+    },
+    {
+      "word": "水",
+      "pinyin": "shuǐ",
+      "meaning": "вода; 氵 — вариант компонента",
+      "hsk30": 1
+    },
+    {
+      "word": "夕",
+      "pinyin": "xī",
+      "meaning": "вечер",
+      "hsk30": null
+    },
+    {
+      "word": "艮",
+      "pinyin": "gěn",
+      "meaning": "крепкий (значение графемы в учебнике); в 很 также используется компонент 彳 «шаг»",
+      "hsk30": null
+    },
+    {
+      "word": "小",
+      "pinyin": "xiǎo",
+      "meaning": "маленький",
+      "hsk30": 1
+    },
+    {
+      "word": "少",
+      "pinyin": "shǎo",
+      "meaning": "мало",
+      "hsk30": 1
+    },
+    {
+      "word": "可",
+      "pinyin": "kě",
+      "meaning": "можно; но",
+      "hsk30": 5
+    },
+    {
+      "word": "门",
+      "pinyin": "mén",
+      "meaning": "дверь, ворота",
+      "hsk30": 1
+    },
+    {
+      "word": "米",
+      "pinyin": "mǐ",
+      "meaning": "рис",
+      "hsk30": 2
+    },
+    {
+      "word": "未",
+      "pinyin": "wèi",
+      "meaning": "ещё не; фонетик в 妹; также период 13–15 часов, час Барана",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "哥",
+      "pinyin": "gē",
+      "meaning": "старший брат",
+      "hsk30": 1
+    },
+    {
+      "word": "妹",
+      "pinyin": "mèi",
+      "meaning": "младшая сестра",
+      "hsk30": 1
+    },
+    {
+      "word": "们",
+      "pinyin": "men",
+      "meaning": "суффикс множественного числа личных местоимений",
+      "hsk30": 1
+    },
+    {
+      "word": "沙",
+      "pinyin": "shā",
+      "meaning": "песок",
+      "hsk30": null
+    },
+    {
+      "word": "问",
+      "pinyin": "wèn",
+      "meaning": "спрашивать",
+      "hsk30": 1
+    },
+    {
+      "word": "间",
+      "pinyin": "jiān",
+      "meaning": "промежуток; комната",
+      "hsk30": 1
+    },
+    {
+      "word": "二",
+      "pinyin": "èr",
+      "meaning": "два",
+      "hsk30": 1
+    },
+    {
+      "word": "七",
+      "pinyin": "qī",
+      "meaning": "семь",
+      "hsk30": 1
+    },
+    {
+      "word": "他们",
+      "pinyin": "tā men",
+      "meaning": "они (мужчины или смешанная группа)",
+      "hsk30": 1
+    },
+    {
+      "word": "我们",
+      "pinyin": "wǒ men",
+      "meaning": "мы",
+      "hsk30": 1
+    },
+    {
+      "word": "八岁",
+      "pinyin": "bā suì",
+      "meaning": "восемь лет (о возрасте)",
+      "hsk30": null
+    },
+    {
+      "word": "六岁",
+      "pinyin": "liù suì",
+      "meaning": "шесть лет (о возрасте)",
+      "hsk30": null
+    },
+    {
+      "word": "四岁",
+      "pinyin": "sì suì",
+      "meaning": "четыре года (о возрасте)",
+      "hsk30": null
+    },
+    {
+      "word": "十一",
+      "pinyin": "shí yī",
+      "meaning": "11 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十二",
+      "pinyin": "shí èr",
+      "meaning": "12 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十三",
+      "pinyin": "shí sān",
+      "meaning": "13 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十四",
+      "pinyin": "shí sì",
+      "meaning": "14 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十五",
+      "pinyin": "shí wǔ",
+      "meaning": "15 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十六",
+      "pinyin": "shí liù",
+      "meaning": "16 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十七",
+      "pinyin": "shí qī",
+      "meaning": "17 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十八",
+      "pinyin": "shí bā",
+      "meaning": "18 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "十九",
+      "pinyin": "shí jiǔ",
+      "meaning": "19 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十",
+      "pinyin": "èr shí",
+      "meaning": "20 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十一",
+      "pinyin": "èr shí yī",
+      "meaning": "21 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十二",
+      "pinyin": "èr shí èr",
+      "meaning": "22 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十三",
+      "pinyin": "èr shí sān",
+      "meaning": "23 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十四",
+      "pinyin": "èr shí sì",
+      "meaning": "24 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十五",
+      "pinyin": "èr shí wǔ",
+      "meaning": "25 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十六",
+      "pinyin": "èr shí liù",
+      "meaning": "26 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十七",
+      "pinyin": "èr shí qī",
+      "meaning": "27 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十八",
+      "pinyin": "èr shí bā",
+      "meaning": "28 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "二十九",
+      "pinyin": "èr shí jiǔ",
+      "meaning": "29 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "三十",
+      "pinyin": "sān shí",
+      "meaning": "30 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "四十",
+      "pinyin": "sì shí",
+      "meaning": "40 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "五十",
+      "pinyin": "wǔ shí",
+      "meaning": "50 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "九十一",
+      "pinyin": "jiǔ shí yī",
+      "meaning": "91 (число)",
+      "hsk30": null
+    },
+    {
+      "word": "九十九",
+      "pinyin": "jiǔ shí jiǔ",
+      "meaning": "99 (число)",
+      "hsk30": null
+    }
+  ],
+  "rukodelnikova-lesson-4": [
+    {
+      "word": "哦",
+      "pinyin": "ò",
+      "meaning": "о, неужели (междометие)",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "还",
+      "pinyin": "hái",
+      "meaning": "ещё, всё ещё; 辶 — компонент движения",
+      "hsk30": 1
+    },
+    {
+      "word": "可以",
+      "pinyin": "kě yǐ",
+      "meaning": "можно; неплохо, сносно",
+      "hsk30": 2
+    },
+    {
+      "word": "这",
+      "pinyin": "zhè",
+      "meaning": "это, этот",
+      "hsk30": 1
+    },
+    {
+      "word": "朋友",
+      "pinyin": "péng you",
+      "meaning": "друг, подруга",
+      "hsk30": 1
+    },
+    {
+      "word": "姓",
+      "pinyin": "xìng",
+      "meaning": "фамилия; называться по фамилии",
+      "hsk30": 2
+    },
+    {
+      "word": "叫",
+      "pinyin": "jiào",
+      "meaning": "звать, называться",
+      "hsk30": 1
+    },
+    {
+      "word": "什么",
+      "pinyin": "shén me",
+      "meaning": "что, какой",
+      "hsk30": 1
+    },
+    {
+      "word": "名字",
+      "pinyin": "míng zi",
+      "meaning": "имя",
+      "hsk30": 1
+    },
+    {
+      "word": "要",
+      "pinyin": "yào",
+      "meaning": "хотеть; нужно",
+      "hsk30": 1
+    },
+    {
+      "word": "再见",
+      "pinyin": "zài jiàn",
+      "meaning": "до свидания",
+      "hsk30": 1
+    },
+    {
+      "word": "名",
+      "pinyin": "míng",
+      "meaning": "имя (в составе слов)",
+      "hsk30": 2
+    },
+    {
+      "word": "字",
+      "pinyin": "zì",
+      "meaning": "иероглиф; 宀 — компонент «крыша»",
+      "hsk30": 1
+    },
+    {
+      "word": "再",
+      "pinyin": "zài",
+      "meaning": "снова, опять",
+      "hsk30": 1
+    },
+    {
+      "word": "见",
+      "pinyin": "jiàn",
+      "meaning": "видеть; встречаться",
+      "hsk30": 1
+    },
+    {
+      "word": "马马虎虎",
+      "pinyin": "mǎ ma hū hū",
+      "meaning": "так себе; кое-как",
+      "hsk30": null
+    },
+    {
+      "word": "姐姐",
+      "pinyin": "jiě jie",
+      "meaning": "старшая сестра",
+      "hsk30": 1
+    },
+    {
+      "word": "虎",
+      "pinyin": "hǔ",
+      "meaning": "тигр",
+      "hsk30": 5
+    },
+    {
+      "word": "丁华兰",
+      "pinyin": "Dīng Huá lán",
+      "meaning": "Дин Хуалань (имя)",
+      "hsk30": null
+    },
+    {
+      "word": "又",
+      "pinyin": "yòu",
+      "meaning": "снова; ладонь (значение графемы в учебнике)",
+      "hsk30": 2
+    },
+    {
+      "word": "子",
+      "pinyin": "zǐ",
+      "meaning": "ребёнок; также период 23–1 часов, час Мыши",
+      "hsk30": 1
+    },
+    {
+      "word": "厶",
+      "pinyin": "sī",
+      "meaning": "личный (графема)",
+      "hsk30": null
+    },
+    {
+      "word": "匕",
+      "pinyin": "bǐ",
+      "meaning": "черпак; кинжал",
+      "hsk30": null
+    },
+    {
+      "word": "巾",
+      "pinyin": "jīn",
+      "meaning": "платок",
+      "hsk30": null
+    },
+    {
+      "word": "心",
+      "pinyin": "xīn",
+      "meaning": "сердце; 忄 — вариант компонента",
+      "hsk30": 3
+    },
+    {
+      "word": "尸",
+      "pinyin": "shī",
+      "meaning": "труп (графема)",
+      "hsk30": null
+    },
+    {
+      "word": "文",
+      "pinyin": "wén",
+      "meaning": "знак, письменность",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "朋",
+      "pinyin": "péng",
+      "meaning": "друг (в составе 朋友)",
+      "hsk30": null
+    },
+    {
+      "word": "友",
+      "pinyin": "yǒu",
+      "meaning": "друг (в составе 朋友)",
+      "hsk30": null
+    },
+    {
+      "word": "什",
+      "pinyin": "shén",
+      "meaning": "часть слова 什么 «что»",
+      "hsk30": null
+    },
+    {
+      "word": "么",
+      "pinyin": "me",
+      "meaning": "часть слова 什么 «что»",
+      "hsk30": null
+    },
+    {
+      "word": "华",
+      "pinyin": "huá",
+      "meaning": "китайский; часть имени 丁华兰",
+      "hsk30": null
+    },
+    {
+      "word": "还可以",
+      "pinyin": "hái kě yǐ",
+      "meaning": "неплохо, сносно",
+      "hsk30": null
+    },
+    {
+      "word": "你好",
+      "pinyin": "nǐ hǎo",
+      "meaning": "здравствуй",
+      "hsk30": null
+    },
+    {
+      "word": "问好",
+      "pinyin": "wèn hǎo",
+      "meaning": "передавать привет",
+      "hsk30": null
+    },
+    {
+      "word": "同学",
+      "pinyin": "tóng xué",
+      "meaning": "одноклассник, соученик",
+      "hsk30": 1
+    },
+    {
+      "word": "王同学",
+      "pinyin": "Wáng tóng xué",
+      "meaning": "одноклассник Ван (обращение)",
+      "hsk30": null
+    },
+    {
+      "word": "小明",
+      "pinyin": "Xiǎo Míng",
+      "meaning": "Сяо Мин (ласкательное имя)",
+      "hsk30": null
+    },
+    {
+      "word": "明明",
+      "pinyin": "Míng míng",
+      "meaning": "Минмин (ласкательное имя)",
+      "hsk30": 5
+    },
+    {
+      "word": "小王",
+      "pinyin": "Xiǎo Wáng",
+      "meaning": "Сяо Ван (дружеское обращение)",
+      "hsk30": null
+    },
+    {
+      "word": "百家姓",
+      "pinyin": "Bǎi jiā xìng",
+      "meaning": "«Сто фамилий» (традиционный список фамилий)",
+      "hsk30": null
+    },
+    {
+      "word": "百姓",
+      "pinyin": "bǎi xìng",
+      "meaning": "простой народ",
+      "hsk30": null
+    },
+    {
+      "word": "老百姓",
+      "pinyin": "lǎo bǎi xìng",
+      "meaning": "простой народ",
+      "hsk30": 3
+    },
+    {
+      "word": "弗拉迪米尔",
+      "pinyin": "Fú lā dí mǐ ěr",
+      "meaning": "Владимир",
+      "hsk30": null
+    },
+    {
+      "word": "安娜",
+      "pinyin": "Ān nà",
+      "meaning": "Анна",
+      "hsk30": null
+    },
+    {
+      "word": "萨沙",
+      "pinyin": "Sà shā",
+      "meaning": "Саша",
+      "hsk30": null
+    },
+    {
+      "word": "玛莎",
+      "pinyin": "Mǎ shā",
+      "meaning": "Маша",
+      "hsk30": null
+    },
+    {
+      "word": "普希金",
+      "pinyin": "Pǔ xī jīn",
+      "meaning": "Пушкин",
+      "hsk30": null
+    },
+    {
+      "word": "托尔斯泰",
+      "pinyin": "Tuō ěr sī tài",
+      "meaning": "Толстой",
+      "hsk30": null
+    },
+    {
+      "word": "普京",
+      "pinyin": "Pǔ jīng",
+      "meaning": "Путин",
+      "hsk30": null
+    },
+    {
+      "word": "梅德韦杰夫",
+      "pinyin": "Méi dé wéi jié fū",
+      "meaning": "Медведев",
+      "hsk30": null
+    }
+  ],
+  "rukodelnikova-lesson-5": [
+    {
+      "word": "看",
+      "pinyin": "kàn",
+      "meaning": "смотреть, читать",
+      "hsk30": 1
+    },
+    {
+      "word": "忙",
+      "pinyin": "máng",
+      "meaning": "занятый",
+      "hsk30": 1
+    },
+    {
+      "word": "爱",
+      "pinyin": "ài",
+      "meaning": "любить; 爫 — компонент «когти», 冖 — «крышка»",
+      "hsk30": 1
+    },
+    {
+      "word": "书法",
+      "pinyin": "shū fǎ",
+      "meaning": "каллиграфия",
+      "hsk30": 5
+    },
+    {
+      "word": "书",
+      "pinyin": "shū",
+      "meaning": "книга",
+      "hsk30": 1
+    },
+    {
+      "word": "法",
+      "pinyin": "fǎ",
+      "meaning": "закон",
+      "hsk30": 4
+    },
+    {
+      "word": "英文",
+      "pinyin": "Yīng wén",
+      "meaning": "английский язык",
+      "hsk30": 2
+    },
+    {
+      "word": "法文",
+      "pinyin": "Fǎ wén",
+      "meaning": "французский язык",
+      "hsk30": null
+    },
+    {
+      "word": "目",
+      "pinyin": "mù",
+      "meaning": "глаз",
+      "hsk30": null
+    },
+    {
+      "word": "果",
+      "pinyin": "guǒ",
+      "meaning": "плод",
+      "hsk30": null
+    },
+    {
+      "word": "手",
+      "pinyin": "shǒu",
+      "meaning": "рука; в 看 используется изменённая форма компонента",
+      "hsk30": 1
+    },
+    {
+      "word": "戈",
+      "pinyin": "gē",
+      "meaning": "алебарда (оружие)",
+      "hsk30": null
+    },
+    {
+      "word": "奶",
+      "pinyin": "nǎi",
+      "meaning": "бабушка (в составе 奶奶); молоко",
+      "hsk30": 1
+    },
+    {
+      "word": "她们",
+      "pinyin": "tā men",
+      "meaning": "они (женщины)",
+      "hsk30": 1
+    },
+    {
+      "word": "中国结",
+      "pinyin": "Zhōng guó jié",
+      "meaning": "китайский декоративный узел",
+      "hsk30": null
+    },
+    {
+      "word": "鱼",
+      "pinyin": "yú",
+      "meaning": "рыба; 魚 — традиционная форма из учебника",
+      "hsk30": 2
+    },
+    {
+      "word": "轰",
+      "pinyin": "hōng",
+      "meaning": "грохот; 轟 — традиционная форма из учебника",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "晶",
+      "pinyin": "jīng",
+      "meaning": "светлый, сияющий",
+      "hsk30": null
+    },
+    {
+      "word": "车",
+      "pinyin": "chē",
+      "meaning": "колесница, повозка; 車 — традиционная форма из учебника",
+      "hsk30": 1
+    },
+    {
+      "word": "休",
+      "pinyin": "xiū",
+      "meaning": "отдыхать",
+      "hsk30": null
+    }
+  ],
+  "rukodelnikova-lesson-6": [
+    {
+      "word": "下课",
+      "pinyin": "xià kè",
+      "meaning": "заканчивать урок",
+      "hsk30": 1
+    },
+    {
+      "word": "俄罗斯人",
+      "pinyin": "É luó sī rén",
+      "meaning": "россиянин",
+      "hsk30": null
+    },
+    {
+      "word": "认识",
+      "pinyin": "rèn shi",
+      "meaning": "знать; быть знакомым",
+      "hsk30": 1
+    },
+    {
+      "word": "的",
+      "pinyin": "de",
+      "meaning": "частица определения и принадлежности; 勹 — компонент «охватывать»",
+      "hsk30": 1
+    },
+    {
+      "word": "学生",
+      "pinyin": "xué sheng",
+      "meaning": "ученик, ученица",
+      "hsk30": 1
+    },
+    {
+      "word": "哪",
+      "pinyin": "nǎ",
+      "meaning": "который, какой",
+      "hsk30": 1
+    },
+    {
+      "word": "中国人",
+      "pinyin": "Zhōng guó rén",
+      "meaning": "китаец, китаянка",
+      "hsk30": null
+    },
+    {
+      "word": "中文",
+      "pinyin": "Zhōng wén",
+      "meaning": "китайский язык",
+      "hsk30": 1
+    },
+    {
+      "word": "难",
+      "pinyin": "nán",
+      "meaning": "трудный",
+      "hsk30": 1
+    },
+    {
+      "word": "下",
+      "pinyin": "xià",
+      "meaning": "спускаться; внизу",
+      "hsk30": 1
+    },
+    {
+      "word": "俄",
+      "pinyin": "É",
+      "meaning": "Россия (сокращение в составе слов)",
+      "hsk30": null
+    },
+    {
+      "word": "学",
+      "pinyin": "xué",
+      "meaning": "учить, изучать; верхняя часть — несамостоятельный компонент",
+      "hsk30": 1
+    },
+    {
+      "word": "生",
+      "pinyin": "shēng",
+      "meaning": "рождаться; сырой, незрелый",
+      "hsk30": 2
+    },
+    {
+      "word": "俄罗斯",
+      "pinyin": "É luó sī",
+      "meaning": "Россия",
+      "hsk30": null
+    },
+    {
+      "word": "小龙",
+      "pinyin": "Xiǎo Lóng",
+      "meaning": "Сяо Лун (имя)",
+      "hsk30": null
+    },
+    {
+      "word": "中国",
+      "pinyin": "Zhōng guó",
+      "meaning": "Китай",
+      "hsk30": 1
+    },
+    {
+      "word": "龙",
+      "pinyin": "lóng",
+      "meaning": "дракон",
+      "hsk30": 3
+    },
+    {
+      "word": "中",
+      "pinyin": "zhōng",
+      "meaning": "середина",
+      "hsk30": 1
+    },
+    {
+      "word": "国",
+      "pinyin": "guó",
+      "meaning": "государство",
+      "hsk30": 1
+    },
+    {
+      "word": "美国",
+      "pinyin": "Měi guó",
+      "meaning": "США",
+      "hsk30": null
+    },
+    {
+      "word": "美国人",
+      "pinyin": "Měi guó rén",
+      "meaning": "американец, американка",
+      "hsk30": null
+    },
+    {
+      "word": "英国",
+      "pinyin": "Yīng guó",
+      "meaning": "Великобритания (в учебнике: Англия)",
+      "hsk30": null
+    },
+    {
+      "word": "英国人",
+      "pinyin": "Yīng guó rén",
+      "meaning": "британец (в учебнике: англичанин)",
+      "hsk30": null
+    },
+    {
+      "word": "法国",
+      "pinyin": "Fǎ guó",
+      "meaning": "Франция",
+      "hsk30": null
+    },
+    {
+      "word": "法国人",
+      "pinyin": "Fǎ guó rén",
+      "meaning": "француз, француженка",
+      "hsk30": null
+    },
+    {
+      "word": "只",
+      "pinyin": "zhǐ",
+      "meaning": "только",
+      "hsk30": 2
+    },
+    {
+      "word": "白",
+      "pinyin": "bái",
+      "meaning": "белый",
+      "hsk30": 1
+    },
+    {
+      "word": "玉",
+      "pinyin": "yù",
+      "meaning": "яшма, нефрит",
+      "hsk30": 4
+    },
+    {
+      "word": "认",
+      "pinyin": "rèn",
+      "meaning": "узнавать (в составе 认识)",
+      "hsk30": 5
+    },
+    {
+      "word": "识",
+      "pinyin": "shí",
+      "meaning": "знать (в составе 认识)",
+      "hsk30": 6
+    },
+    {
+      "word": "国画",
+      "pinyin": "guó huà",
+      "meaning": "традиционная китайская живопись",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "山水",
+      "pinyin": "shān shuǐ",
+      "meaning": "пейзаж",
+      "hsk30": null
+    },
+    {
+      "word": "兔子",
+      "pinyin": "tù zi",
+      "meaning": "заяц, кролик",
+      "hsk30": null
+    },
+    {
+      "word": "肚子",
+      "pinyin": "dù zi",
+      "meaning": "живот",
+      "hsk30": 4
+    },
+    {
+      "word": "咬",
+      "pinyin": "yǎo",
+      "meaning": "кусать",
+      "hsk30": 5
+    }
+  ],
+  "rukodelnikova-lesson-7": [
+    {
+      "word": "上午",
+      "pinyin": "shàng wǔ",
+      "meaning": "первая половина дня, до полудня",
+      "hsk30": 1
+    },
+    {
+      "word": "去",
+      "pinyin": "qù",
+      "meaning": "идти, ехать",
+      "hsk30": 1
+    },
+    {
+      "word": "哪儿",
+      "pinyin": "nǎr",
+      "meaning": "куда, где",
+      "hsk30": 1
+    },
+    {
+      "word": "学校",
+      "pinyin": "xué xiào",
+      "meaning": "школа, учебное заведение",
+      "hsk30": 1
+    },
+    {
+      "word": "那儿",
+      "pinyin": "nàr",
+      "meaning": "туда, там",
+      "hsk30": 1
+    },
+    {
+      "word": "下午",
+      "pinyin": "xià wǔ",
+      "meaning": "вторая половина дня, после полудня",
+      "hsk30": 1
+    },
+    {
+      "word": "食堂",
+      "pinyin": "shí táng",
+      "meaning": "столовая",
+      "hsk30": 4
+    },
+    {
+      "word": "一起",
+      "pinyin": "yī qǐ",
+      "meaning": "вместе",
+      "hsk30": 1
+    },
+    {
+      "word": "在",
+      "pinyin": "zài",
+      "meaning": "находиться; в, на",
+      "hsk30": 1
+    },
+    {
+      "word": "喜欢",
+      "pinyin": "xǐ huan",
+      "meaning": "нравиться, любить",
+      "hsk30": 1
+    },
+    {
+      "word": "电影",
+      "pinyin": "diàn yǐng",
+      "meaning": "фильм, кино",
+      "hsk30": 1
+    },
+    {
+      "word": "有意思",
+      "pinyin": "yǒu yì si",
+      "meaning": "интересный",
+      "hsk30": 2
+    },
+    {
+      "word": "午",
+      "pinyin": "wǔ",
+      "meaning": "полдень; в традиционном счёте времени — период 11–13 часов, час Лошади",
+      "hsk30": null
+    },
+    {
+      "word": "校",
+      "pinyin": "xiào",
+      "meaning": "школа (в составе слов)",
+      "hsk30": null
+    },
+    {
+      "word": "那",
+      "pinyin": "nà",
+      "meaning": "то, тот",
+      "hsk30": 1
+    },
+    {
+      "word": "食",
+      "pinyin": "shí",
+      "meaning": "еда, пища",
+      "hsk30": null
+    },
+    {
+      "word": "堂",
+      "pinyin": "táng",
+      "meaning": "зал",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "电",
+      "pinyin": "diàn",
+      "meaning": "электричество",
+      "hsk30": 1
+    },
+    {
+      "word": "影",
+      "pinyin": "yǐng",
+      "meaning": "тень",
+      "hsk30": null
+    },
+    {
+      "word": "有",
+      "pinyin": "yǒu",
+      "meaning": "иметь",
+      "hsk30": 1
+    },
+    {
+      "word": "意思",
+      "pinyin": "yì si",
+      "meaning": "смысл, интерес",
+      "hsk30": 2
+    },
+    {
+      "word": "操场",
+      "pinyin": "cāo chǎng",
+      "meaning": "спортивная площадка",
+      "hsk30": 4
+    },
+    {
+      "word": "礼堂",
+      "pinyin": "lǐ táng",
+      "meaning": "актовый зал",
+      "hsk30": 6
+    },
+    {
+      "word": "儿",
+      "pinyin": "ér",
+      "meaning": "сын, ребёнок; в 哪儿 и 那儿 обозначает эризацию",
+      "hsk30": null
+    },
+    {
+      "word": "士",
+      "pinyin": "shì",
+      "meaning": "воин; учёный",
+      "hsk30": null
+    },
+    {
+      "word": "欠",
+      "pinyin": "qiàn",
+      "meaning": "зевать (значение графемы); быть должным",
+      "hsk30": 5
+    },
+    {
+      "word": "列",
+      "pinyin": "liè",
+      "meaning": "ряд; часть имени 列娜; 刂 — вариант компонента «нож»",
+      "hsk30": 4
+    },
+    {
+      "word": "娜",
+      "pinyin": "nà",
+      "meaning": "часть имени 列娜",
+      "hsk30": null
+    },
+    {
+      "word": "欢",
+      "pinyin": "huān",
+      "meaning": "радость; часть слова 喜欢",
+      "hsk30": null
+    },
+    {
+      "word": "早上",
+      "pinyin": "zǎo shang",
+      "meaning": "утро",
+      "hsk30": 1
+    },
+    {
+      "word": "中午",
+      "pinyin": "zhōng wǔ",
+      "meaning": "полдень",
+      "hsk30": 1
+    },
+    {
+      "word": "晚上",
+      "pinyin": "wǎn shang",
+      "meaning": "вечер",
+      "hsk30": 1
+    },
+    {
+      "word": "夜里",
+      "pinyin": "yè lǐ",
+      "meaning": "ночью, в ночное время",
+      "hsk30": 2
+    },
+    {
+      "word": "戌",
+      "pinyin": "xū",
+      "meaning": "период 19–21 часов; час Собаки",
+      "hsk30": null
+    },
+    {
+      "word": "亥",
+      "pinyin": "hài",
+      "meaning": "период 21–23 часов; час Свиньи",
+      "hsk30": null
+    },
+    {
+      "word": "丑",
+      "pinyin": "chǒu",
+      "meaning": "период 1–3 часов; час Быка",
+      "hsk30": 5
+    },
+    {
+      "word": "寅",
+      "pinyin": "yín",
+      "meaning": "период 3–5 часов; час Тигра",
+      "hsk30": null
+    },
+    {
+      "word": "卯",
+      "pinyin": "mǎo",
+      "meaning": "период 5–7 часов; час Зайца",
+      "hsk30": null
+    },
+    {
+      "word": "辰",
+      "pinyin": "chén",
+      "meaning": "период 7–9 часов; час Дракона",
+      "hsk30": null
+    },
+    {
+      "word": "巳",
+      "pinyin": "sì",
+      "meaning": "период 9–11 часов; час Змеи",
+      "hsk30": null
+    },
+    {
+      "word": "申",
+      "pinyin": "shēn",
+      "meaning": "период 15–17 часов; час Обезьяны",
+      "hsk30": null
+    },
+    {
+      "word": "酉",
+      "pinyin": "yǒu",
+      "meaning": "период 17–19 часов; час Петуха",
+      "hsk30": null
+    },
+    {
+      "word": "脑",
+      "pinyin": "nǎo",
+      "meaning": "мозг",
+      "hsk30": null
+    },
+    {
+      "word": "梯",
+      "pinyin": "tī",
+      "meaning": "лестница",
+      "hsk30": null
+    },
+    {
+      "word": "话",
+      "pinyin": "huà",
+      "meaning": "слова, речь",
+      "hsk30": 1
+    },
+    {
+      "word": "视",
+      "pinyin": "shì",
+      "meaning": "смотреть",
+      "hsk30": null
+    },
+    {
+      "word": "电脑",
+      "pinyin": "diàn nǎo",
+      "meaning": "компьютер",
+      "hsk30": 1
+    },
+    {
+      "word": "电视",
+      "pinyin": "diàn shì",
+      "meaning": "телевизор, телевидение",
+      "hsk30": 1
+    },
+    {
+      "word": "电车",
+      "pinyin": "diàn chē",
+      "meaning": "трамвай, троллейбус",
+      "hsk30": 6
+    },
+    {
+      "word": "电梯",
+      "pinyin": "diàn tī",
+      "meaning": "лифт",
+      "hsk30": 4
+    },
+    {
+      "word": "电话",
+      "pinyin": "diàn huà",
+      "meaning": "телефон",
+      "hsk30": 1
+    }
   ]
 }

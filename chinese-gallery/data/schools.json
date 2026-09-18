@@ -1,0 +1,98 @@
+[
+  {
+    "id": "zhun",
+    "name": "Жун",
+    "lessons": [
+      {
+        "id": "Урок 1",
+        "title": "Урок 1"
+      },
+      {
+        "id": "Урок 2",
+        "title": "Урок 2"
+      },
+      {
+        "id": "Урок 3",
+        "title": "Урок 3"
+      },
+      {
+        "id": "Урок 4",
+        "title": "Урок 4"
+      },
+      {
+        "id": "Урок 5",
+        "title": "Урок 5"
+      },
+      {
+        "id": "Урок 6",
+        "title": "Урок 6"
+      },
+      {
+        "id": "Урок 7",
+        "title": "Урок 7"
+      },
+      {
+        "id": "Урок 8",
+        "title": "Урок 8"
+      },
+      {
+        "id": "Урок 9",
+        "title": "Урок 9"
+      },
+      {
+        "id": "Урок 10",
+        "title": "Урок 10"
+      },
+      {
+        "id": "Урок 11",
+        "title": "Урок 11"
+      },
+      {
+        "id": "Урок 12",
+        "title": "Урок 12"
+      },
+      {
+        "id": "Урок 13",
+        "title": "Урок 13"
+      },
+      {
+        "id": "Урок 14",
+        "title": "Урок 14"
+      }
+    ]
+  },
+  {
+    "id": "rukodelnikova",
+    "name": "Рукодельникова",
+    "lessons": [
+      {
+        "id": "rukodelnikova-lesson-1",
+        "title": "Урок 1"
+      },
+      {
+        "id": "rukodelnikova-lesson-2",
+        "title": "Урок 2"
+      },
+      {
+        "id": "rukodelnikova-lesson-3",
+        "title": "Урок 3"
+      },
+      {
+        "id": "rukodelnikova-lesson-4",
+        "title": "Урок 4"
+      },
+      {
+        "id": "rukodelnikova-lesson-5",
+        "title": "Урок 5"
+      },
+      {
+        "id": "rukodelnikova-lesson-6",
+        "title": "Урок 6"
+      },
+      {
+        "id": "rukodelnikova-lesson-7",
+        "title": "Урок 7"
+      }
+    ]
+  }
+]

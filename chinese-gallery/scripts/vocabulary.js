@@ -2,6 +2,8 @@
 // window via getters so tests/console always see the current binding.
 let allDictionaries = {};
 let activeDictNames = [];
+let schools = [];
+let selectedSchool = 'zhun';
 let currentVocab = [];
 let trainingPool = [];
 let currentQuestion = null;
@@ -22,28 +24,27 @@ Object.defineProperties(window, {
 async function init() {
     const list = document.getElementById('vocabList');
     try {
-        let data = null;
-        // Загружаем словари из data/vocab_data.json (единственный источник данных)
-        const response = await fetch('data/vocab_data.json', { cache: 'no-store' });
-        if (response.ok) data = await response.json();
-
-        if (!data || typeof data !== 'object') throw new Error('no data');
+        const responses = await Promise.all([
+            fetch('data/vocab_data.json', { cache: 'no-store' }),
+            fetch('data/schools.json', { cache: 'no-store' }),
+        ]);
+        if (responses.some(response => !response.ok)) throw new Error('no data');
+        const [data, schoolData] = await Promise.all(responses.map(response => response.json()));
+        const lessonIds = schoolData.flatMap(school => school.lessons.map(lesson => lesson.id));
+        if (new Set(lessonIds).size !== lessonIds.length ||
+            lessonIds.length !== Object.keys(data).length ||
+            lessonIds.some(id => !Array.isArray(data[id]))) throw new Error('invalid school catalog');
+        schools = schoolData;
         allDictionaries = data;
         window.ChineseMaps.init(data);
 
-        const chipsContainer = document.getElementById('dictChips');
-        chipsContainer.innerHTML = '';
-
-        const dictNames = Object.keys(allDictionaries);
-        dictNames.forEach((name) => {
-            const chip = document.createElement('button');
-            chip.className = 'dict-chip';
-            chip.innerHTML = `<span class="dot"></span><span>${name}</span>`;
-            chip.onclick = () => toggleDict(name, chip);
-            chipsContainer.appendChild(chip);
-        });
-
-        document.getElementById('dictCount').innerText = `(${dictNames.length})`;
+        const select = document.getElementById('schoolSelect');
+        select.replaceChildren(new Option('Все школы', 'all'));
+        schools.forEach(school => select.add(new Option(school.name, school.id)));
+        selectedSchool = schools.some(school => school.id === selectedSchool) ? selectedSchool : 'all';
+        select.value = selectedSchool;
+        select.disabled = false;
+        renderDictionaries();
         // Ensure gallery is the visible tab on first load
         document.getElementById('gallery').classList.add('active');
         document.getElementById('training').classList.remove('active');
@@ -56,12 +57,47 @@ async function init() {
     } catch (error) {
         console.error("Ошибка загрузки словарей:", error);
         window.ChineseMaps.showError();
-        if (list) list.innerHTML = '<div class="empty-state col-span-full"><div class="text-4xl mb-3">⚠️</div><p class="empty-state-heading">Не удалось загрузить словари</p><p class="text-sm mt-1">Проверьте, что файл data/vocab_data.json доступен</p></div>';
+        if (list) list.innerHTML = '<div class="empty-state col-span-full"><div class="text-4xl mb-3">⚠️</div><p class="empty-state-heading">Не удалось загрузить словари</p><p class="text-sm mt-1">Проверьте, что файлы data/vocab_data.json и data/schools.json доступны</p></div>';
         const q = document.getElementById('questionWord');
         if (q) { q.innerText = '⚠ Словари не загружены'; q.classList.add('question-message'); q.classList.remove('question-hanzi'); }
         const qp = document.getElementById('questionPinyin');
         if (qp) { qp.innerText = '';  }
     }
+}
+
+function visibleLessons() {
+    return schools.filter(school => selectedSchool === 'all' || school.id === selectedSchool)
+        .flatMap(school => school.lessons.map(lesson => ({ ...lesson, schoolName: school.name })));
+}
+
+function renderDictionaries() {
+    const lessons = visibleLessons();
+    const chipsContainer = document.getElementById('dictChips');
+    chipsContainer.replaceChildren();
+    lessons.forEach(lesson => {
+        const chip = document.createElement('button');
+        chip.className = 'dict-chip';
+        chip.dataset.lessonId = lesson.id;
+        const active = activeDictNames.includes(lesson.id);
+        chip.classList.toggle('active', active);
+        chip.setAttribute('aria-pressed', String(active));
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        const label = document.createElement('span');
+        label.textContent = selectedSchool === 'all' ? `${lesson.schoolName} · ${lesson.title}` : lesson.title;
+        chip.append(dot, label);
+        chip.onclick = () => toggleDict(lesson.id, chip);
+        chipsContainer.appendChild(chip);
+    });
+    document.getElementById('dictCount').innerText = `(${lessons.length})`;
+}
+
+function changeSchool() {
+    selectedSchool = document.getElementById('schoolSelect').value;
+    const visibleIds = new Set(visibleLessons().map(lesson => lesson.id));
+    activeDictNames = activeDictNames.filter(id => visibleIds.has(id));
+    renderDictionaries();
+    updateCurrentVocab();
 }
 
 function toggleDict(name, element) {
@@ -72,6 +108,7 @@ function toggleDict(name, element) {
         activeDictNames.push(name);
         element.classList.add('active');
     }
+    element.setAttribute('aria-pressed', String(activeDictNames.includes(name)));
     updateCurrentVocab();
 }
 
@@ -264,6 +301,7 @@ function nextQuestion() {
     const questionCard = document.getElementById('questionCard');
     const questionWord = document.getElementById('questionWord');
 
+    questionCard.classList.remove('celebration');
     if (!trainingPool || trainingPool.length === 0) {
         currentQuestion = null;
         document.getElementById('questionPinyin').innerText = '';
@@ -387,6 +425,7 @@ function updateAccuracy() {
     document.getElementById('accuracyText').innerText = `Точность: ${acc}`;
 }
 
+document.getElementById('schoolSelect').addEventListener('change', changeSchool);
 document.getElementById('btn-gallery').addEventListener('click', () => switchTab('gallery'));
 document.getElementById('btn-training').addEventListener('click', () => switchTab('training'));
 document.getElementById('mode-ru2hanzi').addEventListener('click', () => setTrainingMode('ru2hanzi'));

@@ -22,6 +22,10 @@ for item in source:
 # Keep it explicitly unclassified instead of assigning an invented radical.
 if '〇' in characters:
     radicals['〇'] = None
+# 囍 is absent from Make Me a Hanzi; ZDIC lists 口 as its radical.
+# https://www.zdic.net/hans/囍 (verified 2026-09-18).
+if '囍' in characters:
+    radicals['囍'] = '口'
 missing = characters - radicals.keys()
 if missing:
     raise ValueError(f'Missing characters: {"".join(sorted(missing))}')
