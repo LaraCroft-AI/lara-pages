@@ -27,7 +27,7 @@ test.describe('Initial load and structure', () => {
   });
 
   test('includes the 74 unique words from lesson 12', async ({ page }) => {
-    await expect(page.getByRole('button', { name: 'Урок 12' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Урок Ф12' })).toBeVisible();
     const lesson12 = await page.evaluate(() => allDictionaries['Урок 12']);
     expect(lesson12).toHaveLength(74);
     expect(lesson12[0]).toMatchObject({ word: '椰子树', pinyin: 'yē zi shù' });
@@ -35,7 +35,7 @@ test.describe('Initial load and structure', () => {
   });
 
   test('includes the 65 unique words from lesson 13', async ({ page }) => {
-    const lesson13Chip = page.getByRole('button', { name: 'Урок 13' });
+    const lesson13Chip = page.getByRole('button', { name: 'Урок Ф13' });
     await expect(lesson13Chip).toBeVisible();
     const lesson13 = await page.evaluate(() => allDictionaries['Урок 13']);
     expect(lesson13).toHaveLength(65);
@@ -46,7 +46,7 @@ test.describe('Initial load and structure', () => {
   });
 
   test('includes the 63 unique words from lesson 14', async ({ page }) => {
-    const lesson14Chip = page.getByRole('button', { name: 'Урок 14' });
+    const lesson14Chip = page.getByRole('button', { name: 'Урок Ф14' });
     await expect(lesson14Chip).toBeVisible();
     const lesson14 = await page.evaluate(() => allDictionaries['Урок 14']);
     expect(lesson14).toHaveLength(63);
@@ -128,14 +128,14 @@ test.describe('Dictionary selection', () => {
 
 test.describe('Search', () => {
   test('finds spaced pinyin with compact, spaced and apostrophe-separated queries', async ({ page }) => {
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     for (const query of ['Éluósī', 'é luó sī', 'é  luó  sī']) {
       await page.locator('#searchInput').fill(query);
       await expect(page.locator('.vocab-card')).toHaveCount(1);
       await expect(page.locator('.vocab-card')).toContainText('俄罗斯');
       await expect(page.locator('.vocab-card')).toContainText('É luó sī');
     }
-    await page.getByRole('button', { name: 'Урок 7', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф7', exact: true }).click();
     for (const query of ["qǐ'é", 'qǐ é']) {
       await page.locator('#searchInput').fill(query);
       await expect(page.locator('.vocab-card')).toHaveCount(1);
@@ -177,7 +177,7 @@ test.describe('Search', () => {
 
 test.describe('HSK labels', () => {
   test('shows only the modern HSK 3.0 label', async ({ page }) => {
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     const firstCard = page.locator('.vocab-card').first();
     await expect(firstCard).toContainText(/HSK 3\.0: (?:[1-6]|7–9|—)/);
     await expect(firstCard).not.toContainText(/HSK (?!3\.0)/);
@@ -304,7 +304,7 @@ test.describe('Training flow', () => {
 test.describe('Reset button', () => {
   test('completed reverse training clears the previous pronunciation', async ({ page }) => {
     await page.clock.install();
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await page.locator('#btn-training').click();
     await page.locator('#mode-hanzi2ru').click();
     const total = await page.evaluate(() => window.trainingPool.length);
@@ -388,7 +388,7 @@ test.describe('Schools', () => {
   test('filters lessons and loads the approved textbook vocabulary', async ({ page }) => {
     await expect(page.getByLabel('Школа', { exact: true })).toHaveValue('zhun');
     await expect(page.locator('.dict-chip')).toHaveCount(14);
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('.vocab-card')).toHaveCount(14);
     await page.selectOption('#schoolSelect', 'rukodelnikova');
     await expect(page.locator('.dict-chip')).toHaveCount(7);
@@ -404,7 +404,7 @@ test.describe('Schools', () => {
   test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
     await page.selectOption('#schoolSelect', 'all');
     await expect(page.locator('.dict-chip')).toHaveCount(21);
-    await page.getByRole('button', { name: 'Жун · Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Жун · Урок Ф1', exact: true }).click();
     await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
     await expect(page.locator('.dict-chip.active')).toHaveCount(2);
     await expect(page.locator('.vocab-card')).toHaveCount(56);
@@ -419,7 +419,7 @@ test.describe('Schools', () => {
 
   test('changing school cancels a pending training question', async ({ page }) => {
     await page.clock.install();
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await page.locator('#btn-training').click();
     await page.locator('.option-btn').first().click();
     await page.selectOption('#schoolSelect', 'rukodelnikova');
@@ -429,7 +429,7 @@ test.describe('Schools', () => {
     await expect(page.locator('.option-btn')).toHaveCount(3);
     await expect(page.locator('#progressText')).toHaveText('Осталось: 42 / 42');
     await page.selectOption('#schoolSelect', 'zhun');
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('.option-btn')).toHaveCount(3);
   });
 });

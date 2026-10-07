@@ -11,7 +11,7 @@ async function listView(page) {
 
 test('section navigation preserves lesson selection and training mode', async ({ page }) => {
   await page.goto(BASE);
-  await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+  await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
   await page.locator('#btn-training').click();
   await page.locator('#mode-hanzi2ru').click();
   const question = await page.locator('#questionWord').textContent();
@@ -159,7 +159,7 @@ for (const file of ['character-radicals.json', 'map-catalog.json']) {
     await expect(page.locator('#maps-loading')).toContainText('Не удалось загрузить карты');
     await expect(page.getByRole('button', { name: 'Повторить', exact: true })).toBeVisible();
     await page.locator('#nav-lessons').click();
-    await page.getByRole('button', { name: 'Урок 1', exact: true }).click();
+    await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(14);
   });
 }
