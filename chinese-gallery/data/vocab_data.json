@@ -4847,6 +4847,440 @@
       "hsk30": 1
     }
   ],
+  "Урок Гр2": [
+    {
+      "word": "金",
+      "pinyin": "jīn",
+      "meaning": "золото",
+      "hsk30": 3
+    },
+    {
+      "word": "木",
+      "pinyin": "mù",
+      "meaning": "бревно",
+      "hsk30": null
+    },
+    {
+      "word": "水",
+      "pinyin": "shuǐ",
+      "meaning": "вода",
+      "hsk30": 1
+    },
+    {
+      "word": "火",
+      "pinyin": "huǒ",
+      "meaning": "огонь",
+      "hsk30": 3
+    },
+    {
+      "word": "土",
+      "pinyin": "tǔ",
+      "meaning": "почва",
+      "hsk30": 3
+    },
+    {
+      "word": "一",
+      "pinyin": "yī",
+      "meaning": "один",
+      "hsk30": 1
+    },
+    {
+      "word": "二",
+      "pinyin": "èr",
+      "meaning": "два",
+      "hsk30": 1
+    },
+    {
+      "word": "三",
+      "pinyin": "sān",
+      "meaning": "три",
+      "hsk30": 1
+    },
+    {
+      "word": "四",
+      "pinyin": "sì",
+      "meaning": "четыре",
+      "hsk30": 1
+    },
+    {
+      "word": "五",
+      "pinyin": "wǔ",
+      "meaning": "пять",
+      "hsk30": 1
+    },
+    {
+      "word": "分",
+      "pinyin": "fēn",
+      "meaning": "разделиться",
+      "hsk30": 1
+    },
+    {
+      "word": "上",
+      "pinyin": "shàng",
+      "meaning": "вверх",
+      "hsk30": 1
+    },
+    {
+      "word": "下",
+      "pinyin": "xià",
+      "meaning": "низ",
+      "hsk30": 1
+    },
+    {
+      "word": "日",
+      "pinyin": "rì",
+      "meaning": "солнце",
+      "hsk30": 1
+    },
+    {
+      "word": "月",
+      "pinyin": "yuè",
+      "meaning": "луна",
+      "hsk30": 1
+    },
+    {
+      "word": "照",
+      "pinyin": "zhào",
+      "meaning": "светится",
+      "hsk30": 3
+    },
+    {
+      "word": "今",
+      "pinyin": "jīn",
+      "meaning": "сегодня",
+      "hsk30": null
+    },
+    {
+      "word": "古",
+      "pinyin": "gǔ",
+      "meaning": "древний",
+      "hsk30": 3
+    },
+    {
+      "word": "数字",
+      "pinyin": "shù zì",
+      "meaning": "цифра",
+      "hsk30": 2
+    },
+    {
+      "word": "事物",
+      "pinyin": "shì wù",
+      "meaning": "предмет",
+      "hsk30": 4
+    },
+    {
+      "word": "项链",
+      "pinyin": "xiàng liàn",
+      "meaning": "ожерелье",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "银",
+      "pinyin": "yín",
+      "meaning": "серебро",
+      "hsk30": 3
+    },
+    {
+      "word": "手镯",
+      "pinyin": "shǒu zhuó",
+      "meaning": "браслет",
+      "hsk30": null
+    },
+    {
+      "word": "树木",
+      "pinyin": "shù mù",
+      "meaning": "дерево",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "喝水",
+      "pinyin": "hē shuǐ",
+      "meaning": "пить воду",
+      "hsk30": null
+    },
+    {
+      "word": "刷牙",
+      "pinyin": "shuā yá",
+      "meaning": "чистить зубы",
+      "hsk30": 4
+    },
+    {
+      "word": "浇水",
+      "pinyin": "jiāo shuǐ",
+      "meaning": "поливать цветы",
+      "hsk30": null
+    },
+    {
+      "word": "洗碗",
+      "pinyin": "xǐ wǎn",
+      "meaning": "мыть посуду",
+      "hsk30": null
+    },
+    {
+      "word": "洗脚",
+      "pinyin": "xǐ jiǎo",
+      "meaning": "мыть ноги",
+      "hsk30": null
+    },
+    {
+      "word": "篝火",
+      "pinyin": "gōu huǒ",
+      "meaning": "костер",
+      "hsk30": null
+    },
+    {
+      "word": "照明",
+      "pinyin": "zhào míng",
+      "meaning": "освещать",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "取暖",
+      "pinyin": "qǔ nuǎn",
+      "meaning": "отапливать",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "灶火",
+      "pinyin": "zào huǒ",
+      "meaning": "огонь в очаге",
+      "hsk30": null
+    },
+    {
+      "word": "炒菜",
+      "pinyin": "chǎo cài",
+      "meaning": "жарить овощи",
+      "hsk30": null
+    },
+    {
+      "word": "做饭",
+      "pinyin": "zuò fàn",
+      "meaning": "готовить еду",
+      "hsk30": 2
+    },
+    {
+      "word": "大火",
+      "pinyin": "dà huǒ",
+      "meaning": "пожар",
+      "hsk30": null
+    },
+    {
+      "word": "植物",
+      "pinyin": "zhí wù",
+      "meaning": "растение",
+      "hsk30": 4
+    },
+    {
+      "word": "生长",
+      "pinyin": "shēng zhǎng",
+      "meaning": "вырасти",
+      "hsk30": 3
+    },
+    {
+      "word": "离不开",
+      "pinyin": "lí bù kāi",
+      "meaning": "без чего-либо",
+      "hsk30": 4
+    },
+    {
+      "word": "土壤",
+      "pinyin": "tǔ rǎng",
+      "meaning": "почва",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "小鸟",
+      "pinyin": "xiǎo niǎo",
+      "meaning": "маленькая птичка",
+      "hsk30": null
+    },
+    {
+      "word": "在",
+      "pinyin": "zài",
+      "meaning": "течение, в процессе",
+      "hsk30": 1
+    },
+    {
+      "word": "蚯蚓",
+      "pinyin": "qiū yǐn",
+      "meaning": "дождевой червь",
+      "hsk30": null
+    },
+    {
+      "word": "左",
+      "pinyin": "zuǒ",
+      "meaning": "лево",
+      "hsk30": 1
+    },
+    {
+      "word": "右",
+      "pinyin": "yòu",
+      "meaning": "право",
+      "hsk30": 1
+    },
+    {
+      "word": "大拇指",
+      "pinyin": "dà mǔ zhǐ",
+      "meaning": "большой палец",
+      "hsk30": null
+    },
+    {
+      "word": "食指",
+      "pinyin": "shí zhǐ",
+      "meaning": "указательный палец",
+      "hsk30": null
+    },
+    {
+      "word": "中指",
+      "pinyin": "zhōng zhǐ",
+      "meaning": "средний палец",
+      "hsk30": null
+    },
+    {
+      "word": "无名指",
+      "pinyin": "wú míng zhǐ",
+      "meaning": "безымянный палец",
+      "hsk30": null
+    },
+    {
+      "word": "小指",
+      "pinyin": "xiǎo zhǐ",
+      "meaning": "мизинец",
+      "hsk30": null
+    },
+    {
+      "word": "手指",
+      "pinyin": "shǒu zhǐ",
+      "meaning": "пальцы руки",
+      "hsk30": 3
+    },
+    {
+      "word": "一个",
+      "pinyin": "yí gè",
+      "meaning": "1 штука",
+      "hsk30": null
+    },
+    {
+      "word": "一天",
+      "pinyin": "yì tiān",
+      "meaning": "1 день",
+      "hsk30": null
+    },
+    {
+      "word": "二月",
+      "pinyin": "èr yuè",
+      "meaning": "февраль",
+      "hsk30": null
+    },
+    {
+      "word": "二分",
+      "pinyin": "èr fēn",
+      "meaning": "2 балла",
+      "hsk30": null
+    },
+    {
+      "word": "三月",
+      "pinyin": "sān yuè",
+      "meaning": "март",
+      "hsk30": null
+    },
+    {
+      "word": "三天",
+      "pinyin": "sān tiān",
+      "meaning": "3 дня",
+      "hsk30": null
+    },
+    {
+      "word": "上山",
+      "pinyin": "shàng shān",
+      "meaning": "подниматься в гору",
+      "hsk30": null
+    },
+    {
+      "word": "上门",
+      "pinyin": "shàng mén",
+      "meaning": "до двери",
+      "hsk30": 4
+    },
+    {
+      "word": "去",
+      "pinyin": "qù",
+      "meaning": "идти",
+      "hsk30": 1
+    },
+    {
+      "word": "里",
+      "pinyin": "lǐ",
+      "meaning": "километр",
+      "hsk30": 1
+    },
+    {
+      "word": "烟",
+      "pinyin": "yān",
+      "meaning": "дым",
+      "hsk30": 3
+    },
+    {
+      "word": "村",
+      "pinyin": "cūn",
+      "meaning": "деревня",
+      "hsk30": 3
+    },
+    {
+      "word": "家",
+      "pinyin": "jiā",
+      "meaning": "счетн. слово для деревень",
+      "hsk30": 1
+    },
+    {
+      "word": "亭",
+      "pinyin": "tíng",
+      "meaning": "беседка",
+      "hsk30": null
+    },
+    {
+      "word": "台",
+      "pinyin": "tái",
+      "meaning": "смотровая площадка",
+      "hsk30": 3
+    },
+    {
+      "word": "座",
+      "pinyin": "zuò",
+      "meaning": "счетн. слово для 65 и 66",
+      "hsk30": 2
+    },
+    {
+      "word": "枝",
+      "pinyin": "zhī",
+      "meaning": "счетное слово для цветов",
+      "hsk30": 6
+    },
+    {
+      "word": "花",
+      "pinyin": "huā",
+      "meaning": "цветок",
+      "hsk30": 1
+    },
+    {
+      "word": "只",
+      "pinyin": "zhī",
+      "meaning": "счетн. слово для маленьких животных",
+      "hsk30": 2
+    },
+    {
+      "word": "睡觉",
+      "pinyin": "shuì jiào",
+      "meaning": "спать",
+      "hsk30": 1
+    },
+    {
+      "word": "兔子",
+      "pinyin": "tù zi",
+      "meaning": "заяц",
+      "hsk30": null
+    }
+  ],
   "rukodelnikova-lesson-1": [
     {
       "word": "老师",

@@ -56,11 +56,21 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
-  test('contains 15 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
+  test('contains 16 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
-    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
+    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
-    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1084);
+    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1156);
+  });
+
+  test('shows all 72 entries from Zhun lesson Gr2 in source order', async ({ page }) => {
+    const expected = '金 木 水 火 土 一 二 三 四 五 分 上 下 日 月 照 今 古 数字 事物 项链 银 手镯 树木 喝水 刷牙 浇水 洗碗 洗脚 篝火 照明 取暖 灶火 炒菜 做饭 大火 植物 生长 离不开 土壤 小鸟 在 蚯蚓 左 右 大拇指 食指 中指 无名指 小指 手指 一个 一天 二月 二分 三月 三天 上山 上门 去 里 烟 村 家 亭 台 座 枝 花 只 睡觉 兔子'.split(' ');
+    expect(await page.evaluate(() => allDictionaries['Урок Гр2'].map(item => item.word))).toEqual(expected);
+    expect(await page.evaluate(() => allDictionaries['Урок Гр2'].find(item => item.word === '洗碗'))).toMatchObject({ pinyin: 'xǐ wǎn', meaning: 'мыть посуду' });
+    expect(await page.evaluate(() => allDictionaries['Урок Гр2'].find(item => item.word === '灶火'))).toMatchObject({ pinyin: 'zào huǒ', meaning: 'огонь в очаге' });
+    const lesson = page.getByRole('button', { name: 'Урок Гр2', exact: true });
+    await lesson.click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(72);
   });
 
   test('shows all 35 entries from Zhun lesson Gr1 in source order', async ({ page }) => {
@@ -75,7 +85,7 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(35);
   });
 
-  test('keeps only the approved Gr1 repetitions across Zhun lessons', async ({ page }) => {
+  test('keeps only the approved Gr1 and Gr2 repetitions across Zhun lessons', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
       const duplicates = new Set();
@@ -88,7 +98,7 @@ test.describe('Initial load and structure', () => {
       }
       return [...duplicates];
     });
-    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟']);
+    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子']);
   });
 
   test('does NOT pre-select any dictionary', async ({ page }) => {
@@ -399,7 +409,7 @@ test.describe('Stability', () => {
 test.describe('Schools', () => {
   test('filters lessons and loads the approved textbook vocabulary', async ({ page }) => {
     await expect(page.getByLabel('Школа', { exact: true })).toHaveValue('zhun');
-    await expect(page.locator('.dict-chip')).toHaveCount(15);
+    await expect(page.locator('.dict-chip')).toHaveCount(16);
     await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('.vocab-card')).toHaveCount(14);
     await page.selectOption('#schoolSelect', 'rukodelnikova');
@@ -415,7 +425,7 @@ test.describe('Schools', () => {
 
   test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
     await page.selectOption('#schoolSelect', 'all');
-    await expect(page.locator('.dict-chip')).toHaveCount(22);
+    await expect(page.locator('.dict-chip')).toHaveCount(23);
     await page.getByRole('button', { name: 'Жун · Урок Ф1', exact: true }).click();
     await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
     await expect(page.locator('.dict-chip.active')).toHaveCount(2);
