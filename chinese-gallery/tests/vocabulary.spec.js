@@ -66,6 +66,8 @@ test.describe('Initial load and structure', () => {
   test('shows all 35 entries from Zhun lesson Gr1 in source order', async ({ page }) => {
     const expected = '天 地 人 你 我 他 中国人 男人 女人 老人 亲人 家人 晴天 阴天 雨天 春天 夏天 秋天 冬天 草地 菜地 麦地 雪地 上 间 小学生 谁 乖巧 娃娃 语文 一年级 云 哥哥 妹妹 弟弟'.split(' ');
     expect(await page.evaluate(() => allDictionaries['Урок Гр1'].map(item => item.word))).toEqual(expected);
+    expect(await page.evaluate(() => allDictionaries['Урок Гр1'].find(item => item.word === '女人'))).toMatchObject({ pinyin: 'nǚ rén', meaning: 'женщина' });
+    expect(await page.evaluate(() => allDictionaries['Урок Гр1'].find(item => item.word === '乖巧'))).toMatchObject({ pinyin: 'guāi qiǎo', meaning: 'послушный, смышлёный' });
     const lesson = page.getByRole('button', { name: 'Урок Гр1', exact: true });
     await expect(lesson).toBeVisible();
     await lesson.click();
