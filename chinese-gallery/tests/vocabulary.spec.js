@@ -56,11 +56,11 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
-  test('contains 16 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
+  test('contains 17 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
-    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
+    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', 'Урок Гр3', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
-    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1156);
+    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1229);
   });
 
   test('shows all 72 entries from Zhun lesson Gr2 in source order', async ({ page }) => {
@@ -71,6 +71,16 @@ test.describe('Initial load and structure', () => {
     const lesson = page.getByRole('button', { name: 'Урок Гр2', exact: true });
     await lesson.click();
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(72);
+  });
+
+  test('shows all 73 entries from Zhun lesson Gr3 in source order', async ({ page }) => {
+    const expected = '口 耳 目 眼睛 手 足 鼻子 嘴巴 头 头发 能 吃 说话 唱歌 听课 听音乐 听故事 看书 看电脑 看电视 看电影 看节目 写字 用 用 拍球 洗碗 跑步 踢毽子 踢足球 口罩 口红 口哨 耳环 耳机 耳罩 目录 目光 比目鱼 手心 手腕 手背 手指 挥手 举手 握手 拍手 手机 手表 手套 足球比赛 足疗 中国功夫 站 如 松 坐 钟 行 风 卧 弓 人口 门口 耳朵 木耳 手上 大手 目的 开口 双手 跳绳 打乒乓球'.split(' ');
+    expect(await page.evaluate(() => allDictionaries['Урок Гр3'].map(item => item.word))).toEqual(expected);
+    expect(await page.evaluate(() => allDictionaries['Урок Гр3'].find(item => item.word === '卧'))).toMatchObject({ pinyin: 'wò', meaning: 'лежать' });
+    expect(await page.evaluate(() => allDictionaries['Урок Гр3'].find(item => item.word === '踢毽子'))).toMatchObject({ pinyin: 'tī jiàn zi', meaning: 'играть в цзяньцзы (волан ногой)' });
+    const lesson = page.getByRole('button', { name: 'Урок Гр3', exact: true });
+    await lesson.click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(73);
   });
 
   test('shows all 35 entries from Zhun lesson Gr1 in source order', async ({ page }) => {
@@ -85,7 +95,7 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(35);
   });
 
-  test('keeps only the approved Gr1 and Gr2 repetitions across Zhun lessons', async ({ page }) => {
+  test('keeps only the approved Gr1–Gr3 repetitions across Zhun lessons', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
       const duplicates = new Set();
@@ -98,7 +108,7 @@ test.describe('Initial load and structure', () => {
       }
       return [...duplicates];
     });
-    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子']);
+    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子', '口', '鼻子', '嘴巴', '头发', '吃', '说话', '唱歌', '听课', '写字', '用', '洗碗', '跑步', '踢足球', '耳机', '手指', '挥手', '手表', '风', '门口', '耳朵', '跳绳', '打乒乓球']);
   });
 
   test('does NOT pre-select any dictionary', async ({ page }) => {
@@ -409,7 +419,7 @@ test.describe('Stability', () => {
 test.describe('Schools', () => {
   test('filters lessons and loads the approved textbook vocabulary', async ({ page }) => {
     await expect(page.getByLabel('Школа', { exact: true })).toHaveValue('zhun');
-    await expect(page.locator('.dict-chip')).toHaveCount(16);
+    await expect(page.locator('.dict-chip')).toHaveCount(17);
     await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('.vocab-card')).toHaveCount(14);
     await page.selectOption('#schoolSelect', 'rukodelnikova');
@@ -425,7 +435,7 @@ test.describe('Schools', () => {
 
   test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
     await page.selectOption('#schoolSelect', 'all');
-    await expect(page.locator('.dict-chip')).toHaveCount(23);
+    await expect(page.locator('.dict-chip')).toHaveCount(24);
     await page.getByRole('button', { name: 'Жун · Урок Ф1', exact: true }).click();
     await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
     await expect(page.locator('.dict-chip.active')).toHaveCount(2);

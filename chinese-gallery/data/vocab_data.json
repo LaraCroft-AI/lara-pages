@@ -5281,6 +5281,446 @@
       "hsk30": null
     }
   ],
+  "Урок Гр3": [
+    {
+      "word": "口",
+      "pinyin": "kǒu",
+      "meaning": "рот",
+      "hsk30": 1
+    },
+    {
+      "word": "耳",
+      "pinyin": "ěr",
+      "meaning": "ухо",
+      "hsk30": null
+    },
+    {
+      "word": "目",
+      "pinyin": "mù",
+      "meaning": "глаз",
+      "hsk30": null
+    },
+    {
+      "word": "眼睛",
+      "pinyin": "yǎn jing",
+      "meaning": "глаз",
+      "hsk30": 2
+    },
+    {
+      "word": "手",
+      "pinyin": "shǒu",
+      "meaning": "рука",
+      "hsk30": 1
+    },
+    {
+      "word": "足",
+      "pinyin": "zú",
+      "meaning": "нога",
+      "hsk30": 6
+    },
+    {
+      "word": "鼻子",
+      "pinyin": "bí zi",
+      "meaning": "нос",
+      "hsk30": 5
+    },
+    {
+      "word": "嘴巴",
+      "pinyin": "zuǐ ba",
+      "meaning": "рот",
+      "hsk30": 4
+    },
+    {
+      "word": "头",
+      "pinyin": "tóu",
+      "meaning": "голова",
+      "hsk30": 2
+    },
+    {
+      "word": "头发",
+      "pinyin": "tóu fa",
+      "meaning": "волосы",
+      "hsk30": 2
+    },
+    {
+      "word": "能",
+      "pinyin": "néng",
+      "meaning": "мочь",
+      "hsk30": 1
+    },
+    {
+      "word": "吃",
+      "pinyin": "chī",
+      "meaning": "кушать",
+      "hsk30": 1
+    },
+    {
+      "word": "说话",
+      "pinyin": "shuō huà",
+      "meaning": "говорить что-то",
+      "hsk30": 1
+    },
+    {
+      "word": "唱歌",
+      "pinyin": "chàng gē",
+      "meaning": "петь песню",
+      "hsk30": 1
+    },
+    {
+      "word": "听课",
+      "pinyin": "tīng kè",
+      "meaning": "слушать лекцию",
+      "hsk30": null
+    },
+    {
+      "word": "听音乐",
+      "pinyin": "tīng yīn yuè",
+      "meaning": "слушать музыку",
+      "hsk30": null
+    },
+    {
+      "word": "听故事",
+      "pinyin": "tīng gù shì",
+      "meaning": "слушать рассказ",
+      "hsk30": null
+    },
+    {
+      "word": "看书",
+      "pinyin": "kàn shū",
+      "meaning": "читать книгу",
+      "hsk30": null
+    },
+    {
+      "word": "看电脑",
+      "pinyin": "kàn diàn nǎo",
+      "meaning": "смотреть в компьютер",
+      "hsk30": null
+    },
+    {
+      "word": "看电视",
+      "pinyin": "kàn diàn shì",
+      "meaning": "смотреть телевизор",
+      "hsk30": null
+    },
+    {
+      "word": "看电影",
+      "pinyin": "kàn diàn yǐng",
+      "meaning": "смотреть кино",
+      "hsk30": null
+    },
+    {
+      "word": "看节目",
+      "pinyin": "kàn jié mù",
+      "meaning": "смотреть программу",
+      "hsk30": null
+    },
+    {
+      "word": "写字",
+      "pinyin": "xiě zì",
+      "meaning": "писать иероглифы",
+      "hsk30": null
+    },
+    {
+      "word": "用",
+      "pinyin": "yòng",
+      "meaning": "использовать",
+      "hsk30": 1
+    },
+    {
+      "word": "用",
+      "pinyin": "yòng",
+      "meaning": "применять, использовать",
+      "hsk30": 1
+    },
+    {
+      "word": "拍球",
+      "pinyin": "pāi qiú",
+      "meaning": "стучать по мячу",
+      "hsk30": null
+    },
+    {
+      "word": "洗碗",
+      "pinyin": "xǐ wǎn",
+      "meaning": "мыть посуду",
+      "hsk30": null
+    },
+    {
+      "word": "跑步",
+      "pinyin": "pǎo bù",
+      "meaning": "бегать",
+      "hsk30": 3
+    },
+    {
+      "word": "踢毽子",
+      "pinyin": "tī jiàn zi",
+      "meaning": "играть в цзяньцзы (волан ногой)",
+      "hsk30": null
+    },
+    {
+      "word": "踢足球",
+      "pinyin": "tī zú qiú",
+      "meaning": "играть в футбол",
+      "hsk30": null
+    },
+    {
+      "word": "口罩",
+      "pinyin": "kǒu zhào",
+      "meaning": "маска (для лица)",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "口红",
+      "pinyin": "kǒu hóng",
+      "meaning": "помада",
+      "hsk30": null
+    },
+    {
+      "word": "口哨",
+      "pinyin": "kǒu shào",
+      "meaning": "свисток",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "耳环",
+      "pinyin": "ěr huán",
+      "meaning": "сережка",
+      "hsk30": null
+    },
+    {
+      "word": "耳机",
+      "pinyin": "ěr jī",
+      "meaning": "наушники",
+      "hsk30": 4
+    },
+    {
+      "word": "耳罩",
+      "pinyin": "ěr zhào",
+      "meaning": "теплые наушники",
+      "hsk30": null
+    },
+    {
+      "word": "目录",
+      "pinyin": "mù lù",
+      "meaning": "каталог",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "目光",
+      "pinyin": "mù guāng",
+      "meaning": "взгляд",
+      "hsk30": 5
+    },
+    {
+      "word": "比目鱼",
+      "pinyin": "bǐ mù yú",
+      "meaning": "камбала",
+      "hsk30": null
+    },
+    {
+      "word": "手心",
+      "pinyin": "shǒu xīn",
+      "meaning": "ладонь",
+      "hsk30": null
+    },
+    {
+      "word": "手腕",
+      "pinyin": "shǒu wàn",
+      "meaning": "запястье",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "手背",
+      "pinyin": "shǒu bèi",
+      "meaning": "тыльная сторона руки",
+      "hsk30": null
+    },
+    {
+      "word": "手指",
+      "pinyin": "shǒu zhǐ",
+      "meaning": "пальцы",
+      "hsk30": 3
+    },
+    {
+      "word": "挥手",
+      "pinyin": "huī shǒu",
+      "meaning": "махать рукой",
+      "hsk30": null
+    },
+    {
+      "word": "举手",
+      "pinyin": "jǔ shǒu",
+      "meaning": "поднимать руку",
+      "hsk30": 2
+    },
+    {
+      "word": "握手",
+      "pinyin": "wò shǒu",
+      "meaning": "пожимать руки",
+      "hsk30": 3
+    },
+    {
+      "word": "拍手",
+      "pinyin": "pāi shǒu",
+      "meaning": "хлопать в ладоши",
+      "hsk30": null
+    },
+    {
+      "word": "手机",
+      "pinyin": "shǒu jī",
+      "meaning": "телефон мобильный",
+      "hsk30": 1
+    },
+    {
+      "word": "手表",
+      "pinyin": "shǒu biǎo",
+      "meaning": "наручные часы",
+      "hsk30": 2
+    },
+    {
+      "word": "手套",
+      "pinyin": "shǒu tào",
+      "meaning": "варежки",
+      "hsk30": 4
+    },
+    {
+      "word": "足球比赛",
+      "pinyin": "zú qiú bǐ sài",
+      "meaning": "соревнования по футболу",
+      "hsk30": null
+    },
+    {
+      "word": "足疗",
+      "pinyin": "zú liáo",
+      "meaning": "массаж ног",
+      "hsk30": null
+    },
+    {
+      "word": "中国功夫",
+      "pinyin": "zhōng guó gōng fu",
+      "meaning": "китайский кунг-фу",
+      "hsk30": null
+    },
+    {
+      "word": "站",
+      "pinyin": "zhàn",
+      "meaning": "стоять",
+      "hsk30": 1
+    },
+    {
+      "word": "如",
+      "pinyin": "rú",
+      "meaning": "как, похожий",
+      "hsk30": 6
+    },
+    {
+      "word": "松",
+      "pinyin": "sōng",
+      "meaning": "сосна",
+      "hsk30": 4
+    },
+    {
+      "word": "坐",
+      "pinyin": "zuò",
+      "meaning": "сидеть",
+      "hsk30": 1
+    },
+    {
+      "word": "钟",
+      "pinyin": "zhōng",
+      "meaning": "колокол",
+      "hsk30": 3
+    },
+    {
+      "word": "行",
+      "pinyin": "xíng",
+      "meaning": "ходить",
+      "hsk30": 1
+    },
+    {
+      "word": "风",
+      "pinyin": "fēng",
+      "meaning": "ветер",
+      "hsk30": 1
+    },
+    {
+      "word": "卧",
+      "pinyin": "wò",
+      "meaning": "лежать",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "弓",
+      "pinyin": "gōng",
+      "meaning": "лук",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "人口",
+      "pinyin": "rén kǒu",
+      "meaning": "население",
+      "hsk30": 2
+    },
+    {
+      "word": "门口",
+      "pinyin": "mén kǒu",
+      "meaning": "вход",
+      "hsk30": 1
+    },
+    {
+      "word": "耳朵",
+      "pinyin": "ěr duo",
+      "meaning": "уши",
+      "hsk30": 5
+    },
+    {
+      "word": "木耳",
+      "pinyin": "mù ěr",
+      "meaning": "древесные грибы",
+      "hsk30": null
+    },
+    {
+      "word": "手上",
+      "pinyin": "shǒu shàng",
+      "meaning": "на руки",
+      "hsk30": null
+    },
+    {
+      "word": "大手",
+      "pinyin": "dà shǒu",
+      "meaning": "большие руки",
+      "hsk30": null
+    },
+    {
+      "word": "目的",
+      "pinyin": "mù dì",
+      "meaning": "назначение",
+      "hsk30": 2
+    },
+    {
+      "word": "开口",
+      "pinyin": "kāi kǒu",
+      "meaning": "открывать рот",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "双手",
+      "pinyin": "shuāng shǒu",
+      "meaning": "пара рук",
+      "hsk30": 5
+    },
+    {
+      "word": "跳绳",
+      "pinyin": "tiào shéng",
+      "meaning": "скакалка",
+      "hsk30": null
+    },
+    {
+      "word": "打乒乓球",
+      "pinyin": "dǎ pīng pāng qiú",
+      "meaning": "играть в пинг-понг",
+      "hsk30": null
+    }
+  ],
   "rukodelnikova-lesson-1": [
     {
       "word": "老师",
