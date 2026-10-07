@@ -6053,6 +6053,494 @@
       "hsk30": null
     }
   ],
+  "Урок Гр5": [
+    {
+      "word": "对",
+      "pinyin": "duì",
+      "meaning": "пара",
+      "hsk30": 1
+    },
+    {
+      "word": "韵",
+      "pinyin": "yùn",
+      "meaning": "рифма",
+      "hsk30": null
+    },
+    {
+      "word": "歌",
+      "pinyin": "gē",
+      "meaning": "песни",
+      "hsk30": 1
+    },
+    {
+      "word": "对联",
+      "pinyin": "duì lián",
+      "meaning": "парные надписи",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "唱歌",
+      "pinyin": "chàng gē",
+      "meaning": "петь песню",
+      "hsk30": 1
+    },
+    {
+      "word": "儿歌",
+      "pinyin": "ér gē",
+      "meaning": "детская песня",
+      "hsk30": null
+    },
+    {
+      "word": "云",
+      "pinyin": "yún",
+      "meaning": "облако",
+      "hsk30": 2
+    },
+    {
+      "word": "雨",
+      "pinyin": "yǔ",
+      "meaning": "дождь",
+      "hsk30": 1
+    },
+    {
+      "word": "雪",
+      "pinyin": "xuě",
+      "meaning": "снег",
+      "hsk30": 2
+    },
+    {
+      "word": "风",
+      "pinyin": "fēng",
+      "meaning": "ветер",
+      "hsk30": 1
+    },
+    {
+      "word": "花",
+      "pinyin": "huā",
+      "meaning": "цветок",
+      "hsk30": 1
+    },
+    {
+      "word": "树",
+      "pinyin": "shù",
+      "meaning": "дерево",
+      "hsk30": 1
+    },
+    {
+      "word": "鸟",
+      "pinyin": "niǎo",
+      "meaning": "птица",
+      "hsk30": 2
+    },
+    {
+      "word": "虫",
+      "pinyin": "chóng",
+      "meaning": "насекомое",
+      "hsk30": null
+    },
+    {
+      "word": "山清",
+      "pinyin": "shān qīng",
+      "meaning": "зелёные горы",
+      "hsk30": null
+    },
+    {
+      "word": "水秀",
+      "pinyin": "shuǐ xiù",
+      "meaning": "прекрасные воды",
+      "hsk30": null
+    },
+    {
+      "word": "柳",
+      "pinyin": "liǔ",
+      "meaning": "ива",
+      "hsk30": null
+    },
+    {
+      "word": "绿",
+      "pinyin": "lǜ",
+      "meaning": "зелёный",
+      "hsk30": 2
+    },
+    {
+      "word": "桃",
+      "pinyin": "táo",
+      "meaning": "персик",
+      "hsk30": 5
+    },
+    {
+      "word": "红",
+      "pinyin": "hóng",
+      "meaning": "красный",
+      "hsk30": 2
+    },
+    {
+      "word": "毛毛雨",
+      "pinyin": "máo mao yǔ",
+      "meaning": "морось",
+      "hsk30": null
+    },
+    {
+      "word": "大雨",
+      "pinyin": "dà yǔ",
+      "meaning": "сильный дождь",
+      "hsk30": null
+    },
+    {
+      "word": "雷雨",
+      "pinyin": "léi yǔ",
+      "meaning": "гроза",
+      "hsk30": null
+    },
+    {
+      "word": "暴雨",
+      "pinyin": "bào yǔ",
+      "meaning": "ливень",
+      "hsk30": 6
+    },
+    {
+      "word": "微风",
+      "pinyin": "wēi fēng",
+      "meaning": "лёгкий ветер",
+      "hsk30": null
+    },
+    {
+      "word": "狂风",
+      "pinyin": "kuáng fēng",
+      "meaning": "ураган",
+      "hsk30": null
+    },
+    {
+      "word": "东风",
+      "pinyin": "dōng fēng",
+      "meaning": "восточный ветер",
+      "hsk30": null
+    },
+    {
+      "word": "西风",
+      "pinyin": "xī fēng",
+      "meaning": "западный ветер",
+      "hsk30": null
+    },
+    {
+      "word": "植物",
+      "pinyin": "zhí wù",
+      "meaning": "растение",
+      "hsk30": 4
+    },
+    {
+      "word": "动物",
+      "pinyin": "dòng wù",
+      "meaning": "животное",
+      "hsk30": 2
+    },
+    {
+      "word": "毛毛虫",
+      "pinyin": "máo mao chóng",
+      "meaning": "гусеница",
+      "hsk30": null
+    },
+    {
+      "word": "益虫",
+      "pinyin": "yì chóng",
+      "meaning": "полезное насекомое",
+      "hsk30": null
+    },
+    {
+      "word": "害虫",
+      "pinyin": "hài chóng",
+      "meaning": "вредное насекомое",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "白云",
+      "pinyin": "bái yún",
+      "meaning": "белое облако",
+      "hsk30": null
+    },
+    {
+      "word": "乌云",
+      "pinyin": "wū yún",
+      "meaning": "туча",
+      "hsk30": 6
+    },
+    {
+      "word": "下雨",
+      "pinyin": "xià yǔ",
+      "meaning": "идёт дождь",
+      "hsk30": 1
+    },
+    {
+      "word": "雨伞",
+      "pinyin": "yǔ sǎn",
+      "meaning": "зонт",
+      "hsk30": null
+    },
+    {
+      "word": "清水",
+      "pinyin": "qīng shuǐ",
+      "meaning": "чистая вода",
+      "hsk30": null
+    },
+    {
+      "word": "清爽",
+      "pinyin": "qīng shuǎng",
+      "meaning": "свежий, прохладный",
+      "hsk30": null
+    },
+    {
+      "word": "清晨",
+      "pinyin": "qīng chén",
+      "meaning": "раннее утро",
+      "hsk30": 5
+    },
+    {
+      "word": "绿叶",
+      "pinyin": "lǜ yè",
+      "meaning": "зелёный лист",
+      "hsk30": null
+    },
+    {
+      "word": "绿灯",
+      "pinyin": "lǜ dēng",
+      "meaning": "зелёный свет светофора",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "绿豆",
+      "pinyin": "lǜ dòu",
+      "meaning": "маш",
+      "hsk30": null
+    },
+    {
+      "word": "桃子",
+      "pinyin": "táo zi",
+      "meaning": "персик",
+      "hsk30": null
+    },
+    {
+      "word": "桃花",
+      "pinyin": "táo huā",
+      "meaning": "цветок персика",
+      "hsk30": 5
+    },
+    {
+      "word": "核桃",
+      "pinyin": "hé táo",
+      "meaning": "грецкий орех",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "红花",
+      "pinyin": "hóng huā",
+      "meaning": "красный цветок",
+      "hsk30": null
+    },
+    {
+      "word": "红枣",
+      "pinyin": "hóng zǎo",
+      "meaning": "красный финик",
+      "hsk30": null
+    },
+    {
+      "word": "红领巾",
+      "pinyin": "hóng lǐng jīn",
+      "meaning": "красный галстук",
+      "hsk30": null
+    },
+    {
+      "word": "双",
+      "pinyin": "shuāng",
+      "meaning": "пара",
+      "hsk30": 3
+    },
+    {
+      "word": "春",
+      "pinyin": "chūn",
+      "meaning": "весна",
+      "hsk30": null
+    },
+    {
+      "word": "夏",
+      "pinyin": "xià",
+      "meaning": "лето",
+      "hsk30": null
+    },
+    {
+      "word": "山",
+      "pinyin": "shān",
+      "meaning": "гора",
+      "hsk30": 1
+    },
+    {
+      "word": "海",
+      "pinyin": "hǎi",
+      "meaning": "море",
+      "hsk30": 2
+    },
+    {
+      "word": "歌",
+      "pinyin": "gē",
+      "meaning": "песня",
+      "hsk30": 1
+    },
+    {
+      "word": "舞",
+      "pinyin": "wǔ",
+      "meaning": "танец",
+      "hsk30": 5
+    },
+    {
+      "word": "高山",
+      "pinyin": "gāo shān",
+      "meaning": "высокая гора",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "流水",
+      "pinyin": "liú shuǐ",
+      "meaning": "текущая вода",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "蓝天",
+      "pinyin": "lán tiān",
+      "meaning": "голубое небо",
+      "hsk30": 6
+    },
+    {
+      "word": "大山",
+      "pinyin": "dà shān",
+      "meaning": "большая гора",
+      "hsk30": null
+    },
+    {
+      "word": "上山",
+      "pinyin": "shàng shān",
+      "meaning": "подниматься в гору",
+      "hsk30": null
+    },
+    {
+      "word": "山水",
+      "pinyin": "shān shuǐ",
+      "meaning": "пейзаж",
+      "hsk30": null
+    },
+    {
+      "word": "开水",
+      "pinyin": "kāi shuǐ",
+      "meaning": "кипяток",
+      "hsk30": 4
+    },
+    {
+      "word": "大陆",
+      "pinyin": "dà lù",
+      "meaning": "континент",
+      "hsk30": 4
+    },
+    {
+      "word": "长空",
+      "pinyin": "cháng kōng",
+      "meaning": "бескрайнее небо",
+      "hsk30": null
+    },
+    {
+      "word": "山花",
+      "pinyin": "shān huā",
+      "meaning": "горный цветок",
+      "hsk30": null
+    },
+    {
+      "word": "海树",
+      "pinyin": "hǎi shù",
+      "meaning": "морское растение",
+      "hsk30": null
+    },
+    {
+      "word": "赤日",
+      "pinyin": "chì rì",
+      "meaning": "яркое солнце",
+      "hsk30": null
+    },
+    {
+      "word": "苍穹",
+      "pinyin": "cāng qióng",
+      "meaning": "синее небо",
+      "hsk30": null
+    },
+    {
+      "word": "雷",
+      "pinyin": "léi",
+      "meaning": "гром",
+      "hsk30": null
+    },
+    {
+      "word": "隐隐",
+      "pinyin": "yǐn yǐn",
+      "meaning": "глухо гремит",
+      "hsk30": null
+    },
+    {
+      "word": "雾",
+      "pinyin": "wù",
+      "meaning": "туман",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "蒙蒙",
+      "pinyin": "méng méng",
+      "meaning": "туманный",
+      "hsk30": null
+    },
+    {
+      "word": "日下",
+      "pinyin": "rì xià",
+      "meaning": "под солнцем",
+      "hsk30": null
+    },
+    {
+      "word": "天中",
+      "pinyin": "tiān zhōng",
+      "meaning": "середина неба",
+      "hsk30": null
+    },
+    {
+      "word": "风高",
+      "pinyin": "fēng gāo",
+      "meaning": "сильный ветер",
+      "hsk30": null
+    },
+    {
+      "word": "秋月白",
+      "pinyin": "qiū yuè bái",
+      "meaning": "белая осенняя луна",
+      "hsk30": null
+    },
+    {
+      "word": "雨霁",
+      "pinyin": "yǔ jì",
+      "meaning": "дождь закончился",
+      "hsk30": null
+    },
+    {
+      "word": "晚霞红",
+      "pinyin": "wǎn xiá hóng",
+      "meaning": "красная вечерняя заря",
+      "hsk30": null
+    },
+    {
+      "word": "星",
+      "pinyin": "xīng",
+      "meaning": "звезда",
+      "hsk30": null
+    },
+    {
+      "word": "青山",
+      "pinyin": "qīng shān",
+      "meaning": "зелёная гора",
+      "hsk30": null
+    }
+  ],
   "rukodelnikova-lesson-1": [
     {
       "word": "老师",

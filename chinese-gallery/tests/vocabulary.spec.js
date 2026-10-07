@@ -56,11 +56,11 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
-  test('contains 18 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
+  test('contains 19 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
-    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', 'Урок Гр3', 'Урок Гр4', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
+    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', 'Урок Гр3', 'Урок Гр4', 'Урок Гр5', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
-    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1284);
+    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1365);
   });
 
   test('shows all 72 entries from Zhun lesson Gr2 in source order', async ({ page }) => {
@@ -93,6 +93,16 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(55);
   });
 
+  test('shows all 81 entries from Zhun lesson Gr5 in source order', async ({ page }) => {
+    const expected = '对 韵 歌 对联 唱歌 儿歌 云 雨 雪 风 花 树 鸟 虫 山清 水秀 柳 绿 桃 红 毛毛雨 大雨 雷雨 暴雨 微风 狂风 东风 西风 植物 动物 毛毛虫 益虫 害虫 白云 乌云 下雨 雨伞 清水 清爽 清晨 绿叶 绿灯 绿豆 桃子 桃花 核桃 红花 红枣 红领巾 双 春 夏 山 海 歌 舞 高山 流水 蓝天 大山 上山 山水 开水 大陆 长空 山花 海树 赤日 苍穹 雷 隐隐 雾 蒙蒙 日下 天中 风高 秋月白 雨霁 晚霞红 星 青山'.split(' ');
+    expect(await page.evaluate(() => allDictionaries['Урок Гр5'].map(item => item.word))).toEqual(expected);
+    expect(await page.evaluate(() => allDictionaries['Урок Гр5'].find(item => item.word === '绿豆'))).toMatchObject({ pinyin: 'lǜ dòu', meaning: 'маш' });
+    expect(await page.evaluate(() => allDictionaries['Урок Гр5'].find(item => item.word === '长空'))).toMatchObject({ pinyin: 'cháng kōng', meaning: 'бескрайнее небо' });
+    const lesson = page.getByRole('button', { name: 'Урок Гр5', exact: true });
+    await lesson.click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(81);
+  });
+
   test('shows all 35 entries from Zhun lesson Gr1 in source order', async ({ page }) => {
     const expected = '天 地 人 你 我 他 中国人 男人 女人 老人 亲人 家人 晴天 阴天 雨天 春天 夏天 秋天 冬天 草地 菜地 麦地 雪地 上 间 小学生 谁 乖巧 娃娃 语文 一年级 云 哥哥 妹妹 弟弟'.split(' ');
     expect(await page.evaluate(() => allDictionaries['Урок Гр1'].map(item => item.word))).toEqual(expected);
@@ -105,7 +115,7 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(35);
   });
 
-  test('keeps only the approved Gr1–Gr4 repetitions across Zhun lessons', async ({ page }) => {
+  test('keeps only the approved Gr1–Gr5 repetitions across Zhun lessons', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
       const duplicates = new Set();
@@ -118,7 +128,7 @@ test.describe('Initial load and structure', () => {
       }
       return [...duplicates];
     });
-    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子', '口', '鼻子', '嘴巴', '头发', '吃', '说话', '唱歌', '听课', '写字', '用', '洗碗', '跑步', '踢足球', '耳机', '手指', '挥手', '手表', '风', '门口', '耳朵', '跳绳', '打乒乓球', '日', '月', '日出', '日历', '日期', '月牙', '月亮', '小山', '上山', '日月', '水', '大火', '禾苗', '鸟', '木', '红日']);
+    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子', '口', '鼻子', '嘴巴', '头发', '吃', '说话', '唱歌', '听课', '写字', '用', '洗碗', '跑步', '踢足球', '耳机', '手指', '挥手', '手表', '风', '门口', '耳朵', '跳绳', '打乒乓球', '日', '月', '日出', '日历', '日期', '月牙', '月亮', '小山', '上山', '日月', '水', '大火', '禾苗', '鸟', '木', '红日', '雨', '花', '微风', '西风', '植物', '白云', '乌云', '下雨', '桃花', '核桃', '红枣', '山', '歌', '流水', '蓝天', '大山', '开水', '雷', '雾']);
   });
 
   test('does NOT pre-select any dictionary', async ({ page }) => {
@@ -445,7 +455,7 @@ test.describe('Schools', () => {
 
   test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
     await page.selectOption('#schoolSelect', 'all');
-    await expect(page.locator('.dict-chip')).toHaveCount(25);
+    await expect(page.locator('.dict-chip')).toHaveCount(26);
     await page.getByRole('button', { name: 'Жун · Урок Ф1', exact: true }).click();
     await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
     await expect(page.locator('.dict-chip.active')).toHaveCount(2);
