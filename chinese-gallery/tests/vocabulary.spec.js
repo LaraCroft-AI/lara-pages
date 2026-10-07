@@ -56,11 +56,19 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
-  test('contains 14 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
+  test('contains 15 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
-    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
+    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
     expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1049);
+  });
+
+  test('shows the empty Zhun lesson Gr1', async ({ page }) => {
+    const lesson = page.getByRole('button', { name: 'Урок Гр1', exact: true });
+    await expect(lesson).toBeVisible();
+    await lesson.click();
+    await expect(lesson).toHaveClass(/active/);
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(0);
   });
 
   test('keeps every word only in its earliest lesson', async ({ page }) => {
@@ -387,7 +395,7 @@ test.describe('Stability', () => {
 test.describe('Schools', () => {
   test('filters lessons and loads the approved textbook vocabulary', async ({ page }) => {
     await expect(page.getByLabel('Школа', { exact: true })).toHaveValue('zhun');
-    await expect(page.locator('.dict-chip')).toHaveCount(14);
+    await expect(page.locator('.dict-chip')).toHaveCount(15);
     await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('.vocab-card')).toHaveCount(14);
     await page.selectOption('#schoolSelect', 'rukodelnikova');
@@ -403,7 +411,7 @@ test.describe('Schools', () => {
 
   test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
     await page.selectOption('#schoolSelect', 'all');
-    await expect(page.locator('.dict-chip')).toHaveCount(21);
+    await expect(page.locator('.dict-chip')).toHaveCount(22);
     await page.getByRole('button', { name: 'Жун · Урок Ф1', exact: true }).click();
     await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
     await expect(page.locator('.dict-chip.active')).toHaveCount(2);
