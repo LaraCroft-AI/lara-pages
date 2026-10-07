@@ -26,6 +26,11 @@ if '〇' in characters:
 # https://www.zdic.net/hans/囍 (verified 2026-09-18).
 if '囍' in characters:
     radicals['囍'] = '口'
+# Make Me a Hanzi reports 民 as its own radical, which is not one of the 214
+# Kangxi radicals used by the map. Kangxi groups 民 under 氏.
+# https://www.zdic.net/hans/民 (verified 2026-10-07).
+if '民' in characters:
+    radicals['民'] = '氏'
 missing = characters - radicals.keys()
 if missing:
     raise ValueError(f'Missing characters: {"".join(sorted(missing))}')

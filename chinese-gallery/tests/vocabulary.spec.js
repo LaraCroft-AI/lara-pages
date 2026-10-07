@@ -56,11 +56,11 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(63);
   });
 
-  test('contains 17 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
+  test('contains 18 Zhun lessons and 7 Rukodelnikova lessons, without HSK dictionaries', async ({ page }) => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
-    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', 'Урок Гр3', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
+    expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', 'Урок Гр2', 'Урок Гр3', 'Урок Гр4', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
-    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1229);
+    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1284);
   });
 
   test('shows all 72 entries from Zhun lesson Gr2 in source order', async ({ page }) => {
@@ -83,6 +83,16 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(73);
   });
 
+  test('shows all 55 entries from Zhun lesson Gr4 in source order', async ({ page }) => {
+    const expected = '日 月 山 川 日光 日出 日落 日记 日历 日期 弯月 月牙 月儿 圆月 月亮 满月 大山 小山 山脚 山顶 上山 下山 山川 冰川 日月 水 火 田 禾 河水 海水 大火 火苗 田地 水田 农民 种田 禾苗 兔 鸟 竹 羊 木 网 禾谷 红日 圆圆 弯弯 清清 闪闪 石 靠着 连着 一堆堆土 一方方田'.split(' ');
+    expect(await page.evaluate(() => allDictionaries['Урок Гр4'].map(item => item.word))).toEqual(expected);
+    expect(await page.evaluate(() => allDictionaries['Урок Гр4'].find(item => item.word === '冰川'))).toMatchObject({ pinyin: 'bīng chuān', meaning: 'ледник' });
+    expect(await page.evaluate(() => allDictionaries['Урок Гр4'].find(item => item.word === '月儿'))).toMatchObject({ pinyin: 'yuèr', meaning: 'месяцок' });
+    const lesson = page.getByRole('button', { name: 'Урок Гр4', exact: true });
+    await lesson.click();
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(55);
+  });
+
   test('shows all 35 entries from Zhun lesson Gr1 in source order', async ({ page }) => {
     const expected = '天 地 人 你 我 他 中国人 男人 女人 老人 亲人 家人 晴天 阴天 雨天 春天 夏天 秋天 冬天 草地 菜地 麦地 雪地 上 间 小学生 谁 乖巧 娃娃 语文 一年级 云 哥哥 妹妹 弟弟'.split(' ');
     expect(await page.evaluate(() => allDictionaries['Урок Гр1'].map(item => item.word))).toEqual(expected);
@@ -95,7 +105,7 @@ test.describe('Initial load and structure', () => {
     await expect(page.locator('#vocabList .vocab-card')).toHaveCount(35);
   });
 
-  test('keeps only the approved Gr1–Gr3 repetitions across Zhun lessons', async ({ page }) => {
+  test('keeps only the approved Gr1–Gr4 repetitions across Zhun lessons', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
       const duplicates = new Set();
@@ -108,7 +118,7 @@ test.describe('Initial load and structure', () => {
       }
       return [...duplicates];
     });
-    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子', '口', '鼻子', '嘴巴', '头发', '吃', '说话', '唱歌', '听课', '写字', '用', '洗碗', '跑步', '踢足球', '耳机', '手指', '挥手', '手表', '风', '门口', '耳朵', '跳绳', '打乒乓球']);
+    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟', '火', '一', '二', '三', '四', '五', '上', '数字', '银', '手镯', '树木', '喝水', '刷牙', '小鸟', '蚯蚓', '家', '兔子', '口', '鼻子', '嘴巴', '头发', '吃', '说话', '唱歌', '听课', '写字', '用', '洗碗', '跑步', '踢足球', '耳机', '手指', '挥手', '手表', '风', '门口', '耳朵', '跳绳', '打乒乓球', '日', '月', '日出', '日历', '日期', '月牙', '月亮', '小山', '上山', '日月', '水', '大火', '禾苗', '鸟', '木', '红日']);
   });
 
   test('does NOT pre-select any dictionary', async ({ page }) => {
@@ -419,7 +429,7 @@ test.describe('Stability', () => {
 test.describe('Schools', () => {
   test('filters lessons and loads the approved textbook vocabulary', async ({ page }) => {
     await expect(page.getByLabel('Школа', { exact: true })).toHaveValue('zhun');
-    await expect(page.locator('.dict-chip')).toHaveCount(17);
+    await expect(page.locator('.dict-chip')).toHaveCount(18);
     await page.getByRole('button', { name: 'Урок Ф1', exact: true }).click();
     await expect(page.locator('.vocab-card')).toHaveCount(14);
     await page.selectOption('#schoolSelect', 'rukodelnikova');
@@ -435,7 +445,7 @@ test.describe('Schools', () => {
 
   test('all schools distinguishes same-number lessons and combines their selection', async ({ page }) => {
     await page.selectOption('#schoolSelect', 'all');
-    await expect(page.locator('.dict-chip')).toHaveCount(24);
+    await expect(page.locator('.dict-chip')).toHaveCount(25);
     await page.getByRole('button', { name: 'Жун · Урок Ф1', exact: true }).click();
     await page.getByRole('button', { name: 'Рукодельникова · Урок 1', exact: true }).click();
     await expect(page.locator('.dict-chip.active')).toHaveCount(2);

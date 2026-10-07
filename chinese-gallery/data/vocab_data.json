@@ -5721,6 +5721,338 @@
       "hsk30": null
     }
   ],
+  "Урок Гр4": [
+    {
+      "word": "日",
+      "pinyin": "rì",
+      "meaning": "солнце",
+      "hsk30": 1
+    },
+    {
+      "word": "月",
+      "pinyin": "yuè",
+      "meaning": "луна",
+      "hsk30": 1
+    },
+    {
+      "word": "山",
+      "pinyin": "shān",
+      "meaning": "гора",
+      "hsk30": 1
+    },
+    {
+      "word": "川",
+      "pinyin": "chuān",
+      "meaning": "горная река",
+      "hsk30": null
+    },
+    {
+      "word": "日光",
+      "pinyin": "rì guāng",
+      "meaning": "луч солнца",
+      "hsk30": null
+    },
+    {
+      "word": "日出",
+      "pinyin": "rì chū",
+      "meaning": "рассвет",
+      "hsk30": null
+    },
+    {
+      "word": "日落",
+      "pinyin": "rì luò",
+      "meaning": "закат",
+      "hsk30": null
+    },
+    {
+      "word": "日记",
+      "pinyin": "rì jì",
+      "meaning": "дневник",
+      "hsk30": 4
+    },
+    {
+      "word": "日历",
+      "pinyin": "rì lì",
+      "meaning": "календарь",
+      "hsk30": 4
+    },
+    {
+      "word": "日期",
+      "pinyin": "rì qī",
+      "meaning": "дата",
+      "hsk30": 1
+    },
+    {
+      "word": "弯月",
+      "pinyin": "wān yuè",
+      "meaning": "изогнутая луна",
+      "hsk30": null
+    },
+    {
+      "word": "月牙",
+      "pinyin": "yuè yá",
+      "meaning": "месяц",
+      "hsk30": null
+    },
+    {
+      "word": "月儿",
+      "pinyin": "yuèr",
+      "meaning": "месяцок",
+      "hsk30": null
+    },
+    {
+      "word": "圆月",
+      "pinyin": "yuán yuè",
+      "meaning": "круглая луна",
+      "hsk30": null
+    },
+    {
+      "word": "月亮",
+      "pinyin": "yuè liang",
+      "meaning": "светлая луна",
+      "hsk30": 2
+    },
+    {
+      "word": "满月",
+      "pinyin": "mǎn yuè",
+      "meaning": "полная луна",
+      "hsk30": null
+    },
+    {
+      "word": "大山",
+      "pinyin": "dà shān",
+      "meaning": "большая гора",
+      "hsk30": null
+    },
+    {
+      "word": "小山",
+      "pinyin": "xiǎo shān",
+      "meaning": "маленькая гора",
+      "hsk30": null
+    },
+    {
+      "word": "山脚",
+      "pinyin": "shān jiǎo",
+      "meaning": "подгорье",
+      "hsk30": null
+    },
+    {
+      "word": "山顶",
+      "pinyin": "shān dǐng",
+      "meaning": "пик горы",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "上山",
+      "pinyin": "shàng shān",
+      "meaning": "подниматься в гору",
+      "hsk30": null
+    },
+    {
+      "word": "下山",
+      "pinyin": "xià shān",
+      "meaning": "спускаться с горы",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "山川",
+      "pinyin": "shān chuān",
+      "meaning": "гора и река",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "冰川",
+      "pinyin": "bīng chuān",
+      "meaning": "ледник",
+      "hsk30": null
+    },
+    {
+      "word": "日月",
+      "pinyin": "rì yuè",
+      "meaning": "солнце и луна",
+      "hsk30": null
+    },
+    {
+      "word": "水",
+      "pinyin": "shuǐ",
+      "meaning": "вода",
+      "hsk30": 1
+    },
+    {
+      "word": "火",
+      "pinyin": "huǒ",
+      "meaning": "огонь",
+      "hsk30": 3
+    },
+    {
+      "word": "田",
+      "pinyin": "tián",
+      "meaning": "поле",
+      "hsk30": 6
+    },
+    {
+      "word": "禾",
+      "pinyin": "hé",
+      "meaning": "колосок",
+      "hsk30": null
+    },
+    {
+      "word": "河水",
+      "pinyin": "hé shuǐ",
+      "meaning": "речная вода",
+      "hsk30": null
+    },
+    {
+      "word": "海水",
+      "pinyin": "hǎi shuǐ",
+      "meaning": "морская вода",
+      "hsk30": 4
+    },
+    {
+      "word": "大火",
+      "pinyin": "dà huǒ",
+      "meaning": "пожар",
+      "hsk30": null
+    },
+    {
+      "word": "火苗",
+      "pinyin": "huǒ miáo",
+      "meaning": "пламя",
+      "hsk30": null
+    },
+    {
+      "word": "田地",
+      "pinyin": "tián dì",
+      "meaning": "поле",
+      "hsk30": null
+    },
+    {
+      "word": "水田",
+      "pinyin": "shuǐ tián",
+      "meaning": "рисовое поле",
+      "hsk30": null
+    },
+    {
+      "word": "农民",
+      "pinyin": "nóng mín",
+      "meaning": "крестьянин",
+      "hsk30": 3
+    },
+    {
+      "word": "种田",
+      "pinyin": "zhòng tián",
+      "meaning": "возделывать землю",
+      "hsk30": null
+    },
+    {
+      "word": "禾苗",
+      "pinyin": "hé miáo",
+      "meaning": "всходы злаков",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "兔",
+      "pinyin": "tù",
+      "meaning": "заяц",
+      "hsk30": 5
+    },
+    {
+      "word": "鸟",
+      "pinyin": "niǎo",
+      "meaning": "птица",
+      "hsk30": 2
+    },
+    {
+      "word": "竹",
+      "pinyin": "zhú",
+      "meaning": "бамбук",
+      "hsk30": null
+    },
+    {
+      "word": "羊",
+      "pinyin": "yáng",
+      "meaning": "баран",
+      "hsk30": 3
+    },
+    {
+      "word": "木",
+      "pinyin": "mù",
+      "meaning": "бревно",
+      "hsk30": null
+    },
+    {
+      "word": "网",
+      "pinyin": "wǎng",
+      "meaning": "сеть",
+      "hsk30": 2
+    },
+    {
+      "word": "禾谷",
+      "pinyin": "hé gǔ",
+      "meaning": "зерно",
+      "hsk30": null
+    },
+    {
+      "word": "红日",
+      "pinyin": "hóng rì",
+      "meaning": "красное солнце",
+      "hsk30": null
+    },
+    {
+      "word": "圆圆",
+      "pinyin": "yuán yuán",
+      "meaning": "круглый",
+      "hsk30": null
+    },
+    {
+      "word": "弯弯",
+      "pinyin": "wān wān",
+      "meaning": "изогнутый",
+      "hsk30": null
+    },
+    {
+      "word": "清清",
+      "pinyin": "qīng qīng",
+      "meaning": "чистый",
+      "hsk30": null
+    },
+    {
+      "word": "闪闪",
+      "pinyin": "shǎn shǎn",
+      "meaning": "сверкающий",
+      "hsk30": null
+    },
+    {
+      "word": "石",
+      "pinyin": "shí",
+      "meaning": "камень",
+      "hsk30": null
+    },
+    {
+      "word": "靠着",
+      "pinyin": "kào zhe",
+      "meaning": "прислоняясь",
+      "hsk30": null
+    },
+    {
+      "word": "连着",
+      "pinyin": "lián zhe",
+      "meaning": "соединяясь",
+      "hsk30": null
+    },
+    {
+      "word": "一堆堆土",
+      "pinyin": "yī duī duī tǔ",
+      "meaning": "куча почвы",
+      "hsk30": null
+    },
+    {
+      "word": "一方方田",
+      "pinyin": "yī fāng fāng tián",
+      "meaning": "квадратное поле",
+      "hsk30": null
+    }
+  ],
   "rukodelnikova-lesson-1": [
     {
       "word": "老师",
