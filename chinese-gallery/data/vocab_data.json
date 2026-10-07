@@ -4635,7 +4635,218 @@
       "hsk30": 2
     }
   ],
-  "Урок Гр1": [],
+  "Урок Гр1": [
+    {
+      "word": "天",
+      "pinyin": "tiān",
+      "meaning": "небо, день",
+      "hsk30": 1
+    },
+    {
+      "word": "地",
+      "pinyin": "dì",
+      "meaning": "земля",
+      "hsk30": 1
+    },
+    {
+      "word": "人",
+      "pinyin": "rén",
+      "meaning": "человек",
+      "hsk30": 1
+    },
+    {
+      "word": "你",
+      "pinyin": "nǐ",
+      "meaning": "ты",
+      "hsk30": 1
+    },
+    {
+      "word": "我",
+      "pinyin": "wǒ",
+      "meaning": "я",
+      "hsk30": 1
+    },
+    {
+      "word": "他",
+      "pinyin": "tā",
+      "meaning": "он",
+      "hsk30": 1
+    },
+    {
+      "word": "中国人",
+      "pinyin": "zhōng guó rén",
+      "meaning": "китаец",
+      "hsk30": null
+    },
+    {
+      "word": "男人",
+      "pinyin": "nán rén",
+      "meaning": "мужчина",
+      "hsk30": 1
+    },
+    {
+      "word": "女人",
+      "pinyin": "nǚ",
+      "meaning": "женщина",
+      "hsk30": 1
+    },
+    {
+      "word": "老人",
+      "pinyin": "lǎo rén",
+      "meaning": "старик",
+      "hsk30": 1
+    },
+    {
+      "word": "亲人",
+      "pinyin": "qīn rén",
+      "meaning": "родственники",
+      "hsk30": 3
+    },
+    {
+      "word": "家人",
+      "pinyin": "jiā rén",
+      "meaning": "родственники",
+      "hsk30": 1
+    },
+    {
+      "word": "晴天",
+      "pinyin": "qíng tiān",
+      "meaning": "солнечный день",
+      "hsk30": 2
+    },
+    {
+      "word": "阴天",
+      "pinyin": "yīn tiān",
+      "meaning": "пасмурный день",
+      "hsk30": 2
+    },
+    {
+      "word": "雨天",
+      "pinyin": "yǔ tiān",
+      "meaning": "дождливый день",
+      "hsk30": null
+    },
+    {
+      "word": "春天",
+      "pinyin": "chūn tiān",
+      "meaning": "весна",
+      "hsk30": 2
+    },
+    {
+      "word": "夏天",
+      "pinyin": "xià tiān",
+      "meaning": "лето",
+      "hsk30": 2
+    },
+    {
+      "word": "秋天",
+      "pinyin": "qiū tiān",
+      "meaning": "осень",
+      "hsk30": 2
+    },
+    {
+      "word": "冬天",
+      "pinyin": "dōng tiān",
+      "meaning": "зима",
+      "hsk30": 2
+    },
+    {
+      "word": "草地",
+      "pinyin": "cǎo dì",
+      "meaning": "луг",
+      "hsk30": 2
+    },
+    {
+      "word": "菜地",
+      "pinyin": "cài dì",
+      "meaning": "огород",
+      "hsk30": null
+    },
+    {
+      "word": "麦地",
+      "pinyin": "mài dì",
+      "meaning": "поле с пшеницей",
+      "hsk30": null
+    },
+    {
+      "word": "雪地",
+      "pinyin": "xuě dì",
+      "meaning": "снежное поле",
+      "hsk30": null
+    },
+    {
+      "word": "上",
+      "pinyin": "shàng",
+      "meaning": "вверх",
+      "hsk30": 1
+    },
+    {
+      "word": "间",
+      "pinyin": "jiān",
+      "meaning": "между",
+      "hsk30": 1
+    },
+    {
+      "word": "小学生",
+      "pinyin": "xiǎo xué shēng",
+      "meaning": "школьник",
+      "hsk30": 1
+    },
+    {
+      "word": "谁",
+      "pinyin": "shuí",
+      "meaning": "кто?",
+      "hsk30": 1
+    },
+    {
+      "word": "乖巧",
+      "pinyin": "guāi qiǎo",
+      "meaning": "поющий",
+      "hsk30": "7–9"
+    },
+    {
+      "word": "娃娃",
+      "pinyin": "wá wa",
+      "meaning": "кукла, ребенок",
+      "hsk30": 6
+    },
+    {
+      "word": "语文",
+      "pinyin": "yǔ wén",
+      "meaning": "китайский язык и литература",
+      "hsk30": null
+    },
+    {
+      "word": "一年级",
+      "pinyin": "yī nián jí",
+      "meaning": "первый класс",
+      "hsk30": null
+    },
+    {
+      "word": "云",
+      "pinyin": "yún",
+      "meaning": "облако",
+      "hsk30": 2
+    },
+    {
+      "word": "哥哥",
+      "pinyin": "gē ge",
+      "meaning": "старший брат",
+      "hsk30": 1
+    },
+    {
+      "word": "妹妹",
+      "pinyin": "mèi mei",
+      "meaning": "младшая сестра",
+      "hsk30": 1
+    },
+    {
+      "word": "弟弟",
+      "pinyin": "dì di",
+      "meaning": "младший брат",
+      "hsk30": 1
+    }
+  ],
   "rukodelnikova-lesson-1": [
     {
       "word": "老师",

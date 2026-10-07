@@ -60,18 +60,20 @@ test.describe('Initial load and structure', () => {
     const names = await page.evaluate(() => Object.keys(allDictionaries));
     expect(names).toEqual([...Array.from({ length: 14 }, (_, i) => `Урок ${i + 1}`), 'Урок Гр1', ...Array.from({ length: 7 }, (_, i) => `rukodelnikova-lesson-${i + 1}`)]);
     await expect(page.getByRole('button', { name: /^HSK 3\.0/ })).toHaveCount(0);
-    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1049);
+    expect(await page.evaluate(() => Object.values(allDictionaries).flat().length)).toBe(1084);
   });
 
-  test('shows the empty Zhun lesson Gr1', async ({ page }) => {
+  test('shows all 35 entries from Zhun lesson Gr1 in source order', async ({ page }) => {
+    const expected = '天 地 人 你 我 他 中国人 男人 女人 老人 亲人 家人 晴天 阴天 雨天 春天 夏天 秋天 冬天 草地 菜地 麦地 雪地 上 间 小学生 谁 乖巧 娃娃 语文 一年级 云 哥哥 妹妹 弟弟'.split(' ');
+    expect(await page.evaluate(() => allDictionaries['Урок Гр1'].map(item => item.word))).toEqual(expected);
     const lesson = page.getByRole('button', { name: 'Урок Гр1', exact: true });
     await expect(lesson).toBeVisible();
     await lesson.click();
     await expect(lesson).toHaveClass(/active/);
-    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(0);
+    await expect(page.locator('#vocabList .vocab-card')).toHaveCount(35);
   });
 
-  test('keeps every word only in its earliest lesson', async ({ page }) => {
+  test('keeps only the approved Gr1 repetitions across Zhun lessons', async ({ page }) => {
     const duplicateWords = await page.evaluate(() => {
       const seen = new Set();
       const duplicates = new Set();
@@ -84,7 +86,7 @@ test.describe('Initial load and structure', () => {
       }
       return [...duplicates];
     });
-    expect(duplicateWords).toEqual([]);
+    expect(duplicateWords).toEqual(['我', '他', '老人', '阴天', '春天', '夏天', '冬天', '草地', '娃娃', '云', '哥哥', '弟弟']);
   });
 
   test('does NOT pre-select any dictionary', async ({ page }) => {
